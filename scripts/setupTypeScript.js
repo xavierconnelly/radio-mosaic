@@ -101,10 +101,6 @@ function updateSingleSvelteFile({ view, vars, contextModule }) {
 function updateSvelteFiles() {
 	[
 		{
-			view: 'components/Nav',
-			vars: [{ name: 'segment', type: 'string' }]
-		},
-		{
 			view: 'routes/_layout',
 			vars: [{ name: 'segment', type: 'string' }]
 		},
@@ -115,24 +111,6 @@ function updateSvelteFiles() {
 				{ name: 'error', type: 'Error' }
 			]
 		},
-		{
-			view: 'routes/blog/index',
-			vars: [{ name: 'posts', type: '{ slug: string; title: string, html: any }[]' }],
-			contextModule: [
-				{
-					js: '.then(r => r.json())',
-					ts: '.then((r: { json: () => any; }) => r.json())'
-				},
-				{
-					js: '.then(posts => {',
-					ts: '.then((posts: { slug: string; title: string, html: any }[]) => {'
-				}
-			]
-		},
-		{
-			view: 'routes/blog/[slug]',
-			vars: [{ name: 'post', type: '{ slug: string; title: string, html: any }' }]
-		}
 	].forEach(updateSingleSvelteFile);
 }
 
