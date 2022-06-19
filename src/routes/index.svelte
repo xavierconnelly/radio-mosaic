@@ -37,10 +37,8 @@
 	:global(body) {
 			margin: 0;
 			padding: 0;
-			background: #F4F2EA;
-			color: #1F3470;
+			color: #F4F2EA;
 	}
-	
 	#filler{
 		height: 1000vh;
 	}
@@ -57,7 +55,6 @@
 }
 	
 .clock {
-		background: #F2F0EA;
 		height: 550px; 
 		width: 550px;  /*border: px solid pink;*/
 		border-radius: 50%; 
@@ -65,17 +62,19 @@
 	 /* top: ;
 		/*transform: translate(-50%, -50%);*/
 }
-	
+
 #gradients {
-  background: ;
   height: 100vh;
   width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 #gradients div {
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   /*mix-blend-mode: multiply;*/
 }
 
@@ -112,6 +111,6 @@
     rgba(3, 113, 60, 1) 10%,
     rgba(3, 113, 60, 0) 90%
   );
-}	
+}
 	
 </style>
