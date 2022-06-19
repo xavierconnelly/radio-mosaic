@@ -119,7 +119,7 @@ export let stations = writable(
    "class": "hidden",
    "utc": 0,
    "name": "NTS 1",
-   "audio": "http://stream-relay-geo.ntslive.net/stream"
+   "audio": "https://stream-relay-geo.ntslive.net/stream"
  },
  {
    "hex": "96B8E3",
@@ -391,13 +391,6 @@ export let stations = writable(
    "hex": "106BD6",
    "class": "hidden",
    "utc": 3,
-   "name": "Cannibal Radio",
-   "audio": "http://rdst.win:8238/stream"
- },
- {
-   "hex": "106BD6",
-   "class": "hidden",
-   "utc": 3,
    "name": "Fade Radio",
    "audio": "https://stream.radiojar.com/072mdmpbfq8uv?1650262434"
  },
@@ -414,13 +407,6 @@ export let stations = writable(
    "utc": 3,
    "name": "Root Radio",
    "audio": "https://stream.radiojar.com/q1mgvh4u4yzuv?1650173687"
- },
- {
-   "hex": "690C1B",
-   "class": "show",
-   "utc": 4,
-   "name": "East East Radio",
-   "audio": "https://listen7.myradio24.com/eastradio"
  },
  {
    "hex": "690C1B",
@@ -441,7 +427,7 @@ export let stations = writable(
    "class": "show",
    "utc": 8,
    "name": "Norrm Radio",
-   "audio": "http://radio.norrm.com:8000/stream?cba=0.08943239882315046"
+   "audio": "http://radio.norrm.com:8000/stream?cba=""
  },
  {
    "hex": "D03D02",
@@ -455,7 +441,7 @@ export let stations = writable(
    "class": "show",
    "utc": 10,
    "name": "Hope St Radio",
-   "audio": "http://hopestreetradio.out.airtime.pro:8000/hopestreetradio_a"
+   "audio": "https://hopestreetradio.out.airtime.pro:8000/hopestreetradio_a"
  },
  {
    "hex": "1F3470",
