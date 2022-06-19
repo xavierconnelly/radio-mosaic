@@ -56,12 +56,7 @@
 
 
 <style>
-:global(body) {
-		margin: 0;
-		padding: 0;
-		background: #F4F2EA;
-		color: #1F3470;
-}
+
 .hand {
 		width: 150px; 
 		position: absolute;
@@ -70,7 +65,7 @@
 		text-align: right;
 		cursor: pointer;
 		will-change: transform;
-		color: #453939;
+		color: #F4F2EA;
 	 	transform-origin: center left;
 }	
 .details .name {
