@@ -9,6 +9,13 @@
 <svelte:window bind:scrollY={y}/>
 <div id="filler"></div>
 
+<div id="gradients">
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <div class="four"></div>
+</div>
+
 <div id="earth">
 	<div class="clock"
 			 style="transform: rotate({y}deg)">
@@ -59,5 +66,52 @@
 		/*transform: translate(-50%, -50%);*/
 }
 	
+#gradients {
+  background: ;
+  height: 100vh;
+  width: 100vw;
+}
 
+#gradients div {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  /*mix-blend-mode: multiply;*/
+}
+
+.one {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    at 60% 80%,
+    rgba(63, 94, 251, 1) 50%,
+    rgba(16, 107, 214, 0) 90%
+  );
+}
+
+.two {
+  background: rgb(3, 113, 60);
+  background: radial-gradient(
+    at 15% 0%,
+    rgba(3, 113, 60, 1) 1%,
+    rgba(3, 113, 60, 0) 70%
+  );
+}
+
+.three {
+  background: rgb(208, 61, 2);
+  background: radial-gradient(
+    at 70% 30%,
+    rgba(208, 61, 2, 1) 40%,
+    rgba(208, 61, 2, 0) 80%
+  );
+}
+
+.four {
+  background: radial-gradient(
+    at 0% 80%,
+    rgba(3, 113, 60, 1) 10%,
+    rgba(3, 113, 60, 0) 90%
+  );
+}	
+	
 </style>
