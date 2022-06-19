@@ -2,8 +2,6 @@
 	let paused = true;
 	let volume = 1;
 </script>
-
-<body>
 	
 <div>
 	
@@ -26,7 +24,6 @@
 			 bind:value={volume}
 			 max="1"
 			 step="0.01"/>
-</body>
 
 <style>
 	* {
@@ -47,15 +44,16 @@
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
-      overflow: hidden;
-      width: 100vh;
-			
-      -webkit-appearance: none;
-      background-color: white;
-			transform: rotate(270deg) translate(calc(-50% + 20px), calc(-50vh + 50%));
-			position: fixed;
-			top: 0;
-			left: 0;
+    overflow: hidden;
+    width: 100vh;
+    height: 30px;
+    -webkit-appearance: none;
+    background-color: white;
+    transform: rotate(270deg);
+    transform-origin: top;
+    position: fixed;
+    top: 50vh;
+    left: -50vh;
     }
     
     input[type='range']::-webkit-slider-runnable-track {
