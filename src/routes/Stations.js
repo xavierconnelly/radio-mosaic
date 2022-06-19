@@ -427,7 +427,7 @@ export let stations = writable(
    "class": "show",
    "utc": 8,
    "name": "Norrm Radio",
-   "audio": "http://radio.norrm.com:8000/stream?cba=""
+   "audio": "http://radio.norrm.com:8000/stream?cba="
  },
  {
    "hex": "D03D02",
