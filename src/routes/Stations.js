@@ -18,13 +18,6 @@ export let stations = writable(
  },
  {
    "hex": "D03D02",
-   "class": "show",
-   "utc": -5,
-   "name": "Radio Nopal",
-   "audio": "https://radio.mensajito.mx/nopalradio"
- },
- {
-   "hex": "D03D02",
    "class": "hidden",
    "utc": -5,
    "name": "Radio Veintiocho",
@@ -46,13 +39,6 @@ export let stations = writable(
  },
  {
    "hex": "690C1B",
-   "class": "show",
-   "utc": -3,
-   "name": "Dublab Brasil",
-   "audio": "https://stream.radiojar.com/64yv74qzb0quv?1650243633"
- },
- {
-   "hex": "690C1B",
    "class": "hidden",
    "utc": -3,
    "name": "Veneno",
@@ -63,7 +49,7 @@ export let stations = writable(
    "class": "hidden",
    "utc": 0,
    "name": "Oroko Radio",
-   "audio": "https://s3.radio.co/s27cf5b4e2/listen"
+   "audio": "https://s5.radio.co/s23b8ada46/listen"
  },
  {
    "hex": "96B8E3",
@@ -78,13 +64,6 @@ export let stations = writable(
    "utc": 0,
    "name": "1020",
    "audio": "https://radio1020.out.airtime.pro/radio1020_a"
- },
- {
-   "hex": "96B8E3",
-   "class": "hidden",
-   "utc": 0,
-   "name": "Noods FM",
-   "audio": "https://noodsradio.out.airtime.pro/noodsradio_a"
  },
  {
    "hex": "96B8E3",
@@ -134,13 +113,6 @@ export let stations = writable(
    "utc": 1,
    "name": "Kiosk Radio",
    "audio": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b"
- },
- {
-   "hex": "03713C",
-   "class": "hidden",
-   "utc": 1,
-   "name": "The Word Radio",
-   "audio": "https://thewordradio.out.airtime.pro/thewordradio_a"
  },
  {
    "hex": "03713C",
@@ -211,13 +183,6 @@ export let stations = writable(
    "utc": 1,
    "name": "Tesla FM",
    "audio": "https://tesla1.teslafm.net:8443/tesla1"
- },
- {
-   "hex": "03713C",
-   "class": "hidden",
-   "utc": 1,
-   "name": "Radyoon",
-   "audio": "https://rady00n.out.airtime.pro/rady00n_a"
  },
  {
    "hex": "F8E71C",
@@ -365,20 +330,6 @@ export let stations = writable(
    "utc": 3,
    "name": "Radio.Syg.Ma",
    "audio": "https://radio.syg.ma/audio"
- },
- {
-   "hex": "106BD6",
-   "class": "hidden",
-   "utc": 3,
-   "name": "New New World Radio",
-   "audio": "https://nnw.out.airtime.pro/nnw_a"
- },
- {
-   "hex": "106BD6",
-   "class": "hidden",
-   "utc": 3,
-   "name": "Morheus Radio",
-   "audio": "https://c4.radioboss.fm:18214/stream"
  },
  {
    "hex": "106BD6",
