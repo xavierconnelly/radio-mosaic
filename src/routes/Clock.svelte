@@ -1,35 +1,47 @@
 <script context="module">
-	let current;
+	let selected;
 </script>
 
 <script>
+	
+	import { INDEX, stations } from './Stations.js'
+	
+	let clicked;	
+	const unsubscribe = INDEX.subscribe(value => clicked = value);
+	
 	export let src;
 	export let name;
 	export let i;
 	export let hex;
 	export let utc;
 	
+		let radius = 360 / stations.length;
+		let Index = stations[0];
+	
 	let audio;
-		let paused = true;
+	let paused = true;
 
-	function stopOthers() {
-		if (current && current !== audio) current.pause();
-		current = audio;
+	const handleClick = () => {
+		 paused = !paused;
+		INDEX.set(i);
 	}
-		import {stations} from './Stations.js';
-		let radius = 360 / $stations.length;
-		let Index = $stations[0];
+	// let INDEX = !paused
+		
+	function stopOthers() {
+		if (selected && selected !== audio) selected.pause();
+		selected = audio;
+	}
 </script>
 
 <!-- height: calc(2 * 3.14px * {radius});-->
 
-<article 	class="hand"
+<article class="hand"
+				 class:playing={!paused}
+				 on:click={handleClick}
 					style="	transform: rotate(calc({i} * {radius}deg))
 									translateX(100px);
 									height: 30px;
-									font-size: 7px"
-					class:playing={!paused}
-					on:click={() => paused = !paused}>
+									font-size: 7px">
 	<span class="details">
 		<span class="name">
 			{name}
@@ -42,18 +54,13 @@
 						{utc}
 		</span>	
 	</span>
-	<audio
-		bind:this={audio}
-		bind:paused
-		on:play={stopOthers}
-		{src}>
-	</audio>
+		<audio
+			bind:this={audio}
+			bind:paused
+			on:play={stopOthers}
+			{src}>
+		</audio>
 </article>
-
-<div class="title">
-	{name}
-</div>
-
 
 <style>
 
@@ -100,19 +107,6 @@
 		z-index: 1;
 }
 
-		.title  {
-			font-size: 16px;
-			display: none;
-			transition: .2s;
-		position: fixed;
-			top: 50%;
-			left: 50%;
-		transform: -50%;
-	}
-		.hand:hover + .title {
-			display: block;
-	}
-	
 .hand:hover {color: blue;}
 .playing {color: #ff3e00;}
 </style>
