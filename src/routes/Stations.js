@@ -1,7 +1,9 @@
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
-export let stations = writable(
-[
+export const INDEX = writable(1);
+
+export const stations = [
+
  {
    "hex": "10AB26",
    "class": "show",
@@ -403,4 +405,4 @@ export let stations = writable(
  }
 ]
 
-);
+;
