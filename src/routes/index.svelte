@@ -14,7 +14,7 @@
 <div id="filler"></div>
 
 <div id="gradients">
-  <div class="one"></div>
+  <div class="one" style="background: #{stations[clicked].hex}"></div>
   <div class="two"></div>
   <div class="three"></div>
   <div class="four"></div>
