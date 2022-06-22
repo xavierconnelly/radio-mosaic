@@ -2,16 +2,17 @@
 	let paused = true;
 	let volume = 1;
 </script>
+
+<body>
 	
 <div>
 	
 
 <audio 
-	src="http://stream-relay-geo.ntslive.net/stream"
+	src="https://sveltejs.github.io/assets/music/strauss.mp3"
 	bind:paused={paused}
 	bind:volume
 	>
-	<track kind="captions">
 </audio>
 	
 <button on:click={() => paused = !paused}>
@@ -24,6 +25,7 @@
 			 bind:value={volume}
 			 max="1"
 			 step="0.01"/>
+</body>
 
 <style>
 	* {
@@ -46,7 +48,7 @@
     input[type='range'] {
     overflow: hidden;
     width: 100vh;
-    height: 30px;
+    height: 50px;
     -webkit-appearance: none;
     background-color: white;
     transform: rotate(270deg);
