@@ -1,9 +1,13 @@
 <script>
 	import Clock from './Clock.svelte';
-	import Volume from './Volume.svelte'
-	import {stations} from './Stations.js';
+	import Volume from './Volume.svelte';
 
 	let y;
+		import { INDEX, stations } from './Stations.js'
+		import Sidebar from './Sidebar.svelte';
+
+	let clicked;	
+	const unsubscribe = INDEX.subscribe(value => clicked = value);
 </script>
 
 <svelte:window bind:scrollY={y}/>
@@ -16,10 +20,12 @@
   <div class="four"></div>
 </div>
 
+
+
 <div id="earth">
 	<div class="clock"
 			 style="transform: rotate({y}deg)">
-		{#each $stations as station, i}
+	{#each stations as station, i}
 			<Clock 
 					i={i}		
 					hex={station.hex}
@@ -32,6 +38,8 @@
 </div>
 
 <Volume />
+<Sidebar />
+
 
 <style>
 	:global(body) {
@@ -41,6 +49,8 @@
 	}
 	#filler{
 		height: 1000vh;
+		width: 50vw;
+		left: 0;
 	}
 	
 	#earth{
