@@ -12,7 +12,6 @@
 	export let src;
 	export let name;
 	export let i;
-	export let hex;
 	export let utc;
 	
 		let radius = 360 / stations.length;
@@ -39,17 +38,11 @@
 				 class:playing={!paused}
 				 on:click={handleClick}
 					style="	transform: rotate(calc({i} * {radius}deg))
-									translateX(100px);
-									height: 30px;
-									font-size: 7px">
+									translateX(100px);">
 	<span class="details">
 		<span class="name">
 			{name}
 		</span>
-		<span
-			class="band"
-			style="background: #{hex}; color: #{hex}">
-		</span>		
 		<span class="utc">
 						{utc}
 		</span>	
@@ -63,40 +56,44 @@
 </article>
 
 <style>
-
-.hand {
-		width: 150px; 
-		position: absolute;
-		left: calc(50% - 1px);
-		top: calc(50% - 14px);
-		text-align: right;
-		cursor: pointer;
-		will-change: transform;
+	:global(body) {
+		margin: 0;
+		padding: 0;
 		color: #F4F2EA;
-	 	transform-origin: center left;
+		background: #453939;
+}
+	
+.hand {
+		height: 20px;
+    line-height: 7px;
+    background: #453939;
+    width: 225px;
+    position: absolute;
+    /* left: calc(50% - 0px); */
+    top: calc(50% - 10px);
+    text-align: right;
+    cursor: pointer;
+    color: #F4F2EA;
+    transform-origin: center;
 }	
+	
 .details .name {
 		padding-right: 5px;
+		transition: 1s;
+	font-size: 4px;
+		will-change: transform;
 }
-/*
-.details .name:hover  {
+
+.hand:hover .name  {
 		font-size: 16px;
 		opacity: 100%;
 		transition: .2s;
+		z-index: 99;
 }
-*/
-.details .band {
-		margin: 0;
-		position: absolute;
-		top: 50%;
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-		width: 20px;
-		height: 80%;
-		z-index: 2;
-}
+
 .details .utc {
 		margin: 0;
+		color:  #453939;
 		position: absolute;
 		top: 50%;
 		-ms-transform: translateY(-50%);
@@ -107,6 +104,5 @@
 		z-index: 1;
 }
 
-.hand:hover {color: blue;}
 .playing {color: #ff3e00;}
 </style>
