@@ -25,21 +25,35 @@
  			need to include if statement: is at start 
 			though would rather place this inside the component -->
 <button on:click={decrement}>
-	{#if clicked == 0}
-		{lastStation}
+	<h2>
+{#if clicked == 0}
+		{stations[lastStation].name}
 	{:else}
-		{clicked - 1}
+		{stations[clicked - 1].name}
 	{/if}
+	</h2>
+	
 </button>
-
 
 
 <style>
 	button {
-		background: #1F3470;
-		color: white;
+		writing-mode: vertical-rl;
+				margin: 0 auto;
+		background: #453939;
+		color: #F1EDED;
 		border: none;
-		height: 50px;
+		height: 100%;
 		margin: 0;
+		transform: rotate(-180deg);		
+	}
+		button * {
+		margin: 0 auto;
+	}
+	button h2 {
+		writing-mode: vertical-rl;
+		height: 50%;
+		text-align: center;
+		font-size: 1em;
 	}
 </style>
