@@ -23,19 +23,34 @@
 </script>
 
 <button on:click={increment}>
-	{#if clicked == lastStation}
-		0
+<h2>
+	
+		{#if clicked == lastStation}
+		{stations[0].name}
 	{:else}
-		{clicked + 1}
+		{stations[clicked + 1].name}
 	{/if}
+	</h2>
 </button>
 
 <style>
 	button {
-		background: #1F3470;
-		color: white;
+		writing-mode: vertical-rl;
+		margin: 0 auto;
+		background: #453939;
+		color: #F1EDED;
 		border: none;
-		height: 50px;
+		height: 100%;
 		margin: 0;
+	}
+	
+		button * {
+		margin: 0 auto;
+	}
+	button h2 {
+		writing-mode: vertical-lr;
+		height: 50%;
+		text-align: center;
+				font-size: 1em;
 	}
 </style>
