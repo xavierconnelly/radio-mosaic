@@ -1,6 +1,6 @@
 <script>
 	// import data for radio stations
-	import { INDEX, stations } from './Stations.js'
+	import { INDEX, HOVER, stations } from './Stations.js'
 	
 	// determine the length
 	let lastStation = stations.length - 1;
@@ -39,13 +39,14 @@
 <style>
 	button {
 		writing-mode: vertical-rl;
-				margin: 0 auto;
+		margin: 0 auto;
 		background: #453939;
 		color: #F1EDED;
 		border: none;
 		height: 100%;
 		margin: 0;
 		transform: rotate(-180deg);		
+		cursor: pointer;
 	}
 		button * {
 		margin: 0 auto;
@@ -54,6 +55,6 @@
 		writing-mode: vertical-rl;
 		height: 50%;
 		text-align: center;
-		font-size: 1em;
+		font-size: 16px;
 	}
 </style>
