@@ -1,14 +1,22 @@
 <script>
-	import { INDEX, stations } from './Stations.js'
-	import Plus from './Plus.svelte';
-	import Minus from './Minus.svelte';
+	import { INDEX, HOVER, stations } from './Stations.js'
 	
 	let clicked;	
 	const unsubscribe = INDEX.subscribe(value => clicked = value);
+	
+	let hovered = false;
+	let moused;	
+	const something = HOVER.subscribe(value => moused = value);
 </script>
 
 <header>	
-	<h1>{stations[clicked].name}</h1>
+	<h1>
+	{#if hovered == true}
+		{stations[moused].name}
+	{:else}
+		{stations[clicked].name}
+	{/if}
+	</h1>
 	<div>
 		<h2>{stations[clicked].country}</h2>
 		<h2>{stations[clicked].city}</h2>
