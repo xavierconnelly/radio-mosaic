@@ -1,6 +1,6 @@
 <script>
 	// import data for radio stations
-	import { INDEX, stations } from './Stations.js'
+	import { INDEX, HOVER, stations } from './Stations.js'
 	
 	// determine the length
 	let lastStation = stations.length - 1;
@@ -24,8 +24,7 @@
 
 <button on:click={increment}>
 <h2>
-	
-		{#if clicked == lastStation}
+	{#if clicked == lastStation}
 		{stations[0].name}
 	{:else}
 		{stations[clicked + 1].name}
@@ -42,6 +41,7 @@
 		border: none;
 		height: 100%;
 		margin: 0;
+		cursor: pointer;
 	}
 	
 		button * {
@@ -51,6 +51,6 @@
 		writing-mode: vertical-lr;
 		height: 50%;
 		text-align: center;
-				font-size: 1em;
+		font-size: 16px;
 	}
 </style>
