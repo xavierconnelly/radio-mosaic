@@ -4,7 +4,7 @@
 
 <script>
 	
-	import { INDEX, stations } from './Stations.js'
+	import { INDEX, HOVER, stations } from './Stations.js'
 	
 	let clicked;	
 	const unsubscribe = INDEX.subscribe(value => clicked = value);
@@ -19,11 +19,23 @@
 	
 	let audio;
 	let paused = true;
+	let hovered = false;
 
 	const handleClick = () => {
 		 paused = !paused;
 		INDEX.set(i);
 	}
+	
+	const mouseOver = () => {
+		hovered = true;
+		HOVER.set(i);
+	}
+	
+	const mouseOut = () => {
+		hovered = true;
+		HOVER[i] = INDEX;
+	}
+	
 	// let INDEX = !paused
 		
 	function stopOthers() {
@@ -37,10 +49,12 @@
 <article class="hand"
 				 class:playing={!paused}
 				 on:click={handleClick}
+				 on:mouseenter={mouseOver}
 					style="	transform: rotate(calc({i} * {radius}deg))
-									translateX(100px);">
+									translateX(50%);">
 	<span class="details">
-		<span class="name">
+		<span class="name"
+					>
 			{name}
 		</span>
 		<span class="utc">
@@ -67,14 +81,17 @@
 		height: 20px;
     line-height: 7px;
     background: #453939;
-    width: 225px;
+    width: 50%;
     position: absolute;
     /* left: calc(50% - 0px); */
     top: calc(50% - 10px);
+	left: 25%;
     text-align: right;
     cursor: pointer;
     color: #F4F2EA;
     transform-origin: center;
+	border-top: 1px solid white;
+	mix-blend-mode: lighten;
 }	
 	
 .details .name {
@@ -100,9 +117,10 @@
 		transform: translateY(-50%);
 		width: 50px;
 		height: 100%;
-	/*	border-top: 1px solid;*/
+	/*border-top: 1px solid;*/
 		z-index: 1;
 }
 
-.playing {color: #ff3e00;}
+.playing {color: #453939}
+
 </style>
