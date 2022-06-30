@@ -4,26 +4,35 @@
 	import Minus from './Minus.svelte';
 	
 	let y;
-		import { INDEX, stations } from './Stations.js'
+	import { INDEX, HOVER, stations } from './Stations.js'
 		import Header from './Header.svelte';
+			import Footer from './Footer.svelte';
+
 	let view = 'closed';
 	let clicked;	
 	const unsubscribe = INDEX.subscribe(value => clicked = value);
+	
+let moused;	
+	const something = HOVER.subscribe(value => moused = value);
 </script>
 
 <svelte:window bind:scrollY={y}/>
 
-
 <div id="filler"></div>
+<Header />
 
-<div id="gradients">
-	
-		<div class="image-wrap">
-		<div class="image"
-				 style="background-image: url({stations[clicked].image})">
+<aside class="left">	<Minus/></aside>
+<aside class="right">	<Plus/></aside>
+
+
+<div id="bg-fill">
+
+			<div class="image-wrap">
+				<div class="image"
+						 style="background-image: url({stations[moused].image})">
+				</div>
 		</div>
-	</div>
-<!--
+	
   <div class="one"
 						style="background:
 									rgb{stations[clicked].one};
@@ -55,12 +64,11 @@
 							rgba(255, 255, 255, 0) 60%);
 							transition: 2s;">
 	</div>
-	-->
-</div>
-<aside class="left">	<Minus/></aside>
-<aside class="right">	<Plus/></aside>
 
-	<Header />
+
+	
+</div>
+
 <div id="earth">
 	<div class="clock"
 			 style="transform: rotate({y}deg);
@@ -78,6 +86,9 @@
 	</div>
 </div>
 
+<Footer />
+
+
 <style>
 	:global(body) {
 			margin: 0;
@@ -85,6 +96,11 @@
 			color: #F4F2EA;
 		background: #453939;
 	}
+	
+:global(#earth:hover + footer) {
+		display: flex;
+	}
+	
 * {
   box-sizing: border-box;
 }
@@ -94,6 +110,25 @@
 		left: 0;
 	}
 	
+#bg-fill {
+  height: 90vw;
+  width: 90vw;
+  position: fixed;
+  top: 20vh;
+  left: 5vw;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  overflow: hidden;
+}
+	
+
+
+#bg-fill div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+	/*
 	#earth{
     width: 225px;
     height: 225px;
@@ -104,34 +139,28 @@
     z-index: 2;
     transform: translate(-50%, -50%)
 	}
+	*/
+	#earth {
+  height: 80vh;
+  width: 80vh;
+  position: fixed;
+  background: #453939;
+  border-radius: 50%;
+  left: 50%;
+		top: 20vh;
+  transform: translate(-50%);
+  transition: 1s;
+}
 	
 .clock {
 		background: #453939;
-    height:225px;
-    width: 225px;
+    height:100%;
+    width: 100%;
     border-radius: 50%;
     position: absolute;
     bottom: 0;
 }
 
-	
-	
-#gradients {
-  height: 900px;
-  width: 900px;
-  position: fixed;
-  bottom: -900px;
-  left: 50%;
-	transform: translate(-50%, -50%);
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-#gradients div {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-}
 
 .image-wrap {
 		background: #453939;
@@ -168,7 +197,18 @@ aside {
 	.right {
 		right: 0;
 	}
-
+	
+@media screen and (max-width: 750px) {
+  #bg-fill {
+    top: unset;
+    bottom: 0;
+  }
+	#earth {
+  height: 80%;
+  width: 80%;
+  transition: 1s;
+}
+	}
 
 	
 </style>
