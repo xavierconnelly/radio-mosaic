@@ -1030,25 +1030,6 @@ export const stations =
    "about": "An online radio station based in Melbourne, Australia. At the core we are motivated to giving a platform to presenters that dont already have one. Skylab celebrates the eclectic music, artistic flair and cultural inclusiveness canvassing this city and abroad.",
    "logo": "",
    "support": ""
- },
- {
-   "name": "Area 3000",
-   "colour": "Federal",
-   "one": "(31, 52, 112)",
-   "Text": "White",
-   "utc": "·",
-   "two": "(208, 61, 2)",
-   "country": "Australia",
-   "three": "(31, 52, 112)",
-   "city": "Melbourne",
-   "four": "(150, 184, 227)",
-   "audio": "https://s2.radio.co/s178905a52/listen",
-   "FIELD12": "",
-   "url": "https://www.area3000.radio/",
-   "image": "https://scontent-syd2-1.cdninstagram.com/v/t51.2885-15/240859246_4589113854446627_3653740827607424458_n.jpg?stp=dst-jpg_e35_s1080x1080&_nc_ht=scontent-syd2-1.cdninstagram.com&_nc_cat=111&_nc_ohc=YlOydpcl764AX_CbZUA&edm=AP_V10EBAAAA&ccb=7-4&oh=00_AT_LcJ_tOVt6H2d9gCQ_RVDxbkweARbOoMbvAFF_ArAzNQ&oe=6263C44C&_nc_sid=4f375e",
-   "about": "",
-   "logo": "",
-   "support": ""
  }
 ]
 ;
