@@ -7,7 +7,6 @@ export const stations =
 [
  {
    "name": "Dublab",
-   "colour": "Apple",
    "one": "(16, 171, 38)",
    "Text": "Black",
    "utc": "-8",
@@ -16,17 +15,46 @@ export const stations =
    "three": "(105, 12, 27)",
    "city": "Los Angeles",
    "four": "(150, 184, 227)",
-   "audio": "https://dublab.out.airtime.pro/dublab_a",
-   "FIELD12": "",
-   "url": "https://www.dublab.com/",
-   "image": "https://cdn2.lamag.com/wp-content/uploads/sites/6/2013/09/dublab_660x450.jpg",
-   "about": "dublab is a non-profit, radio station dedicated to the growth of music, arts, and culture.Since 1999, we have been broadcasting wide-spectrum music from around the world. Our programming has expanded to include the production of original art exhibits, films, events record releases and educational programs related to health, youth, development, education and creative processes. dublab is a platform for discovery and the cultivation of next-wave music, arts and culture.",
-   "logo": "https://cdn-profiles.tunein.com/s17176/images/logog.png",
-   "support": "dublab.com/support/memberships"
+   "audio": "https://dublab.out.airtime.pro/dublab_a"
+ },
+ {
+   "name": "Lookout FM",
+   "one": "(16, 171, 38)",
+   "Text": "Black",
+   "utc": "·",
+   "two": "(208, 61, 2)",
+   "country": "USA",
+   "three": "(105, 12, 27)",
+   "city": "Los Angeles",
+   "four": "(31, 52, 112)",
+   "audio": "https://radio.mensajito.mx/nopalradio"
+ },
+ {
+   "name": "Radio Nopal",
+   "one": "(208, 61, 2)",
+   "Text": "White",
+   "utc": "·",
+   "two": "(253, 189, 43)",
+   "country": "Mexico",
+   "three": "(31, 52, 112)",
+   "city": "Mexico City",
+   "four": "(16, 171, 38)",
+   "audio": "https://radio.mensajito.mx/nopalradio"
+ },
+ {
+   "name": "Radio Veintiocho",
+   "one": "(208, 61, 2)",
+   "Text": "White",
+   "utc": "·",
+   "two": "(253, 189, 43)",
+   "country": "Mexico",
+   "three": "(16, 107, 214)",
+   "city": "San Andrés Cholula",
+   "four": "(253, 189, 43)",
+   "audio": "https://www-radio28-net.filesusr.com/html/ffc736_d1a2c392d0663a4ef7734d41b498afb7.html"
  },
  {
    "name": "8 Ball Radio",
-   "colour": "Apricot",
    "one": "(253, 189, 43)",
    "Text": "Black",
    "utc": "-4",
@@ -35,55 +63,10 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "New York",
    "four": "(248, 231, 28)",
-   "audio": "https://eightball.out.airtime.pro/eightball_a",
-   "FIELD12": "",
-   "url": "https://8ballradio.nyc/",
-   "image": "https://payload.cargocollective.com/1/11/370567/5395900/39420035_1340_c.JPG",
-   "about": "8-Ball is an independent not-for-profit organization that — through free, open-access platforms and events — nurtures and supports a community of artists. We provide virtual and physical meeting sites for people of all ages and backgrounds. Our mission is to generate collaborative and educational exchange through public access television and radio stations, an imprint, a self publishing fair, a public library, an internship program, a residency and series of workshops in art-related trades. 8-Ball Community operates free of elitism and is governed by its participants.",
-   "logo": "https://8ballradio.nyc/img/logo.b6147240.svg",
-   "support": "https://fundraising.fracturedatlas.org/8-ball-community-inc"
- },
- {
-   "name": "N10.AS",
-   "colour": "Apricot",
-   "one": "(253, 189, 43)",
-   "Text": "Black",
-   "utc": "·",
-   "two": "(105, 12, 27)",
-   "country": "Canada",
-   "three": "(255, 255, 255)",
-   "city": "Montreal",
-   "four": "(150, 184, 227)",
-   "audio": "https://n10as.out.airtime.pro/n10as_a",
-   "FIELD12": "",
-   "url": "https://n10.as/",
-   "image": "https://scontent-syd2-1.xx.fbcdn.net/v/t31.18172-8/14352118_1822063324707060_7157211301648365627_o.jpg?_nc_cat=100&ccb=1-5&_nc_sid=e3f864&_nc_ohc=Lh-i4dONBakAX9AC1Ok&_nc_ht=scontent-syd2-1.xx&oh=00_AT9W21u22wOzXQP6PPs_MtqWie22gol3UuRXO4k32PvYnQ&oe=62914122",
-   "about": "",
-   "logo": "",
-   "support": ""
- },
- {
-   "name": "Veneno",
-   "colour": "Burgundy",
-   "one": "(105, 12, 27)",
-   "Text": "White",
-   "utc": "·",
-   "two": "(16, 171, 38)",
-   "country": "Brasil",
-   "three": "(16, 171, 38)",
-   "city": "Sao Paulo",
-   "four": "(16, 107, 214)",
-   "audio": "https://veneno.out.airtime.pro/veneno_b",
-   "FIELD12": "",
-   "url": "https://veneno.live/",
-   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKYplk464UhyTe8iOzjHnDTEai_e1AAUGy9s6_UjIdc4bxgyjo9k2qPrw-bCcR8iz0AA&usqp=CAU",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://eightball.out.airtime.pro/eightball_a"
  },
  {
    "name": "Oroko Radio",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "0",
@@ -92,17 +75,10 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Accra",
    "four": "(3, 113, 60)",
-   "audio": "https://s3.radio.co/s27cf5b4e2/listen",
-   "FIELD12": "",
-   "url": "https://oroko.live/",
-   "image": "https://oroko.live/_next/image?url=%2F_next%2Fstatic%2Fimage%2Fimages%2Flogo-full-color-notext.e3f6080de0fa8cc36ed868bcee3f2854.svg&w=640&q=75",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://s3.radio.co/s27cf5b4e2/listen"
  },
  {
    "name": "Dublin Digital Radio",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -111,17 +87,10 @@ export const stations =
    "three": "(16, 171, 38)",
    "city": "Dublin",
    "four": "(253, 189, 43)",
-   "audio": "https://dublindigitalradio.out.airtime.pro/dublindigitalradio_a",
-   "FIELD12": "",
-   "url": "https://listen.dublindigitalradio.com/",
-   "image": "https://s3-eu-central-1.amazonaws.com/a.airtime.pro/60/31960/radio-page-background-images/d97fa9ad415f4c1efbca1181b1a7fa2e.jpg",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://dublindigitalradio.out.airtime.pro/dublindigitalradio_a"
  },
  {
    "name": "Clyde Built Radio",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -130,17 +99,10 @@ export const stations =
    "three": "(150, 184, 227)",
    "city": "Glasgow",
    "four": "(16, 171, 38)",
-   "audio": "https://s3.radio.co/s27cf5b4e2/listen",
-   "FIELD12": "",
-   "url": "https://www.clydebuiltradio.com/",
-   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWfi22gv95NRtr_pSezXjbW4L4fmtwXGOGB6BeXt3cDMOtrNmLUpxRby7hID8pLh6k58k&usqp=CAU",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://s3.radio.co/s27cf5b4e2/listen"
  },
  {
    "name": "1020",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -149,17 +111,22 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Bristol",
    "four": "(253, 189, 43)",
-   "audio": "https://radio1020.out.airtime.pro/radio1020_a",
-   "FIELD12": "",
-   "url": "https://1020.live/",
-   "image": "https://www.nitelifeonline.com/wp-content/uploads/2020/04/unperson-2-e1586452265834.jpg",
-   "about": "Worldwide music platform broadcasting from Bristol and around the world",
-   "logo": "",
-   "support": "https://1020radio.bigcartel.com/"
+   "audio": "https://radio1020.out.airtime.pro/radio1020_a"
+ },
+ {
+   "name": "Noods FM",
+   "one": "(150, 184, 227)",
+   "Text": "Black",
+   "utc": "·",
+   "two": "(255, 255, 255)",
+   "country": "England",
+   "three": "(31, 52, 112)",
+   "city": "Bristol",
+   "four": "(248, 231, 28)",
+   "audio": "https://noodsradio.out.airtime.pro/noodsradio_a"
  },
  {
    "name": "Reform Radio",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -168,17 +135,10 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "Manchester",
    "four": "(105, 12, 27)",
-   "audio": "https://testform.out.airtime.pro/testform_a",
-   "FIELD12": "",
-   "url": "https://www.reformradio.co.uk/",
-   "image": "",
-   "about": "Reform Radio broadcasts the best in music, arts and culture from Manchester to the World. We’re a multi-award winning online radio station and arts organisation working with local creatives, DJs and young people to develop and showcase new work via our online platforms. This large active community works together to create all the content on Reform Radio, supported by regular outside broadcasts within the city, as well as specially recorded shows from artists across the globe.",
-   "logo": "",
-   "support": ""
+   "audio": "https://testform.out.airtime.pro/testform_a"
  },
  {
    "name": "Balamii",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -187,17 +147,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "London",
    "four": "(255, 255, 255)",
-   "audio": "https://balamii.out.airtime.pro/balamii_a",
-   "FIELD12": "",
-   "url": "https://www.balamii.com/",
-   "image": "https://d2cup43q5qzhdv.cloudfront.net/StudioMAR2017.jpg?mtime=20200630232109&focal=none",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://balamii.out.airtime.pro/balamii_a"
  },
  {
    "name": "Netil Radio",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -206,17 +159,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "London",
    "four": "(150, 184, 227)",
-   "audio": "https://netilradio.out.airtime.pro/netilradio_a",
-   "FIELD12": "",
-   "url": "https://netilradio.com/",
-   "image": "https://assets.fontsinuse.com/static/use-media-items/70/69894/upto-700xauto/5b293488/@2x/009461b0-2d2e-11e8-b3de-b97e1eef370c.webp",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://netilradio.out.airtime.pro/netilradio_a"
  },
  {
    "name": "Foundation FM",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -225,17 +171,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "London",
    "four": "(31, 52, 112)",
-   "audio": "https://streamer.radio.co/s0628bdd53/listen",
-   "FIELD12": "",
-   "url": "https://foundation.fm/",
-   "image": "https://media.timeout.com/images/105313443/1372/772/image.jpg",
-   "about": "With an uprising in the industry of communities trying to find safe spaces to play, create and grow, foundation.fm’s mission is to showcase the hottest emerging talent in the underground music scene led by a diverse group of women, LGTBQI+ person’s and talented creatives who support our values – with women at the forefront.",
-   "logo": "",
-   "support": ""
+   "audio": "https://streamer.radio.co/s0628bdd53/listen"
  },
  {
    "name": "NTS 1",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -244,17 +183,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "London",
    "four": "(16, 107, 214)",
-   "audio": "https://stream-relay-geo.ntslive.net/stream",
-   "FIELD12": "No sound",
-   "url": "https://www.nts.live/",
-   "image": "https://media2.ntslive.co.uk/resize/1600x1600/83a5ee9c-d961-456d-953f-68092a9c5d6b_1537142400.jpeg",
-   "about": "NTS is a global family of music lovers. We strive to broadcast diverse and unique music that excites, inspires and moves you. NTS is where eclecticism is celebrated and niche music takes centre stage. It’s where passionate people, not algorithms, play exceptional music that is hard to find anywhere else. All without on-air advertising.",
-   "logo": "",
-   "support": "https://www.nts.live/supporters"
+   "audio": "https://stream-relay-geo.ntslive.net/stream"
  },
  {
    "name": "NTS 2",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "·",
@@ -263,17 +195,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "London",
    "four": "(3, 113, 60)",
-   "audio": "https://stream-relay-geo.ntslive.net/stream2",
-   "FIELD12": "No sound",
-   "url": "https://www.nts.live/",
-   "image": "https://media-s3-us-east-1.ceros.com/hype-beast/images/2019/09/18/93d677ea8aa05036a1259eeb65ebd9c9/hypebeast-magazine-26-interview-nts-radio-05.jpg?imageOpt=1&fit=bounds&width=2880",
-   "about": "NTS is a global family of music lovers. We strive to broadcast diverse and unique music that excites, inspires and moves you. NTS is where eclecticism is celebrated and niche music takes centre stage. It’s where passionate people, not algorithms, play exceptional music that is hard to find anywhere else. All without on-air advertising.",
-   "logo": "",
-   "support": "https://www.nts.live/supporters"
+   "audio": "https://stream-relay-geo.ntslive.net/stream2"
  },
  {
    "name": "Kiosk Radio",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "+1",
@@ -282,17 +207,22 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Brussels",
    "four": "(16, 171, 38)",
-   "audio": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b",
-   "FIELD12": "",
-   "url": "https://kioskradio.com/",
-   "image": "https://weare-europe.eu/public/uploads/2021/06/Kiosk-Radio-scaled.jpeg",
-   "about": "Our society is increasingly dominated by mainstream culture and its industry. The current coronavirus pandemic struck a heavy blow to an already fragile counterculture ecosystem, rendering the survival of underground artists virtually impossible. In this context, we believe it is time to reimagine the role of independent online radios. Only through closer cooperation we will we be able to achieve a wider impact.",
-   "logo": "",
-   "support": "https://shop.kioskradio.com/"
+   "audio": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b"
+ },
+ {
+   "name": "The Word Radio",
+   "one": "(3, 113, 60)",
+   "Text": "White",
+   "utc": "·",
+   "two": "(248, 231, 28)",
+   "country": "Belgium",
+   "three": "(255, 255, 255)",
+   "city": "Brussels",
+   "four": "(253, 189, 43)",
+   "audio": "https://thewordradio.out.airtime.pro/thewordradio_a"
  },
  {
    "name": "Lyl Radio",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -301,17 +231,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Lyon",
    "four": "(248, 231, 28)",
-   "audio": "https://icecast.lyl.live/live",
-   "FIELD12": "Unreliable",
-   "url": "https://lyl.live/",
-   "image": "https://static.lyl.live/uploads/LYL_STUDIO_1200x802_713ba4cb30.jpg",
-   "about": "LYL is a cultural project that has elected music as its main ethic, or paradigm. We aim at suggesting a global comprehension of the world and its cultures, through the promotion and exploration of sound. The webradio has been created for this purpose, and so gathers activists, record store owners, label founders, djs, musicians, specialists, geeks, weirdos and amateurs, who all continue to expand the scope of our project with daily broadcasts produced either in our three studios, here and there in the world or in special locations.",
-   "logo": "https://thumbnailer.mixcloud.com/unsafe/160x160/profile/5/0/9/1/6131-21c7-44db-8d9e-2bd73a9ad8d2",
-   "support": "https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=C37FVDHHSZCA6"
+   "audio": "https://icecast.lyl.live/live"
  },
  {
    "name": "Radio Beguin",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -320,17 +243,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Lyon",
    "four": "(208, 61, 2)",
-   "audio": "https://listen.radioking.com/radio/284398/stream/330307",
-   "FIELD12": "",
-   "url": "https://radiobeguin.com/",
-   "image": "https://radiobeguin.com/wp-content/uploads/2021/05/team.jpg",
-   "about": "A 24/7 online music radio based in Lyon, showing the best of emerging artists",
-   "logo": "https://dbs.radioline.fr/pictures/radio_c307e4a4486a7859af0ff061d0c5009a/logo200.jpg?size=600",
-   "support": ""
+   "audio": "https://listen.radioking.com/radio/284398/stream/330307"
  },
  {
    "name": "Radio DY10",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -339,17 +255,10 @@ export const stations =
    "three": "(253, 189, 43)",
    "city": "Nantes",
    "four": "(3, 113, 60)",
-   "audio": "https://flux.radiody10.com/airtime_128",
-   "FIELD12": "",
-   "url": "https://radiody10.com/",
-   "image": "https://res.cloudinary.com/dcyafbpoh/image/upload/c_fill,f_auto,g_auto,q_auto:eco/v1648199418/uwkpgzagcjgasmi5mqcd.jpg",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://flux.radiody10.com/airtime_128"
  },
  {
    "name": "Radio Flouka",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -358,17 +267,10 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "Paris",
    "four": "(105, 12, 27)",
-   "audio": "https://flouka.out.airtime.pro/flouka_a",
-   "FIELD12": "",
-   "url": "https://radioflouka.com/",
-   "image": "https://scontent-syd2-1.xx.fbcdn.net/v/t39.30808-6/276094540_988090215400061_1758277539842066920_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=a26aad&_nc_ohc=tHhnJD9CKjIAX-FEYd6&tn=pl6Dg8HoC4Qht-Uz&_nc_ht=scontent-syd2-1.xx&oh=00_AT92WnUN6aOc2Wd46L7F4_ie1bsXziG7hpwLVtQHzo2M5w&oe=62710B32",
-   "about": "FROM MASHRIQ TO MAGHREB",
-   "logo": "https://scontent-syd2-1.xx.fbcdn.net/v/t39.30808-6/218311626_832835990925485_1918949848208554265_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=AlnDC-U8aDUAX_WtQff&_nc_ht=scontent-syd2-1.xx&oh=00_AT8MMqp00G-eo6c736kP9ZRAMrj6Xjl9JQMElWfoHFsrQg&oe=62712EAF",
-   "support": "https://www.helloasso.com/associations/radio-flouka/formulaires/1/widget"
+   "audio": "https://flouka.out.airtime.pro/flouka_a"
  },
  {
    "name": "Ola Radio",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -377,17 +279,10 @@ export const stations =
    "three": "(248, 231, 28)",
    "city": "Bordeaux",
    "four": "(255, 255, 255)",
-   "audio": "https://www.radioking.com/play/ola-radio",
-   "FIELD12": "No sound",
-   "url": "https://olaradio.fr/",
-   "image": "https://www.pwfm.fr/wp-content/uploads/2020/01/IMG_7910-3-1024x683.jpg",
-   "about": "",
-   "logo": "https://olaradio.fr/images/logo_black_text.svg",
-   "support": "https://www.helloasso.com/associations/ola-radio/formulaires/1/widget"
+   "audio": "https://www.radioking.com/play/ola-radio"
  },
  {
    "name": "Dia Radio",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -396,17 +291,10 @@ export const stations =
    "three": "(3, 113, 60)",
    "city": "Saint-Jean-de-Luz",
    "four": "(150, 184, 227)",
-   "audio": "https://www.radioking.com/play/dia-radio",
-   "FIELD12": "No sound",
-   "url": "https://www.diaradio.live/",
-   "image": "https://media.sudouest.fr/1777020/1200x600/164070755-1137673020017028-3210618311807861060-n.jpg",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://listen.radioking.com/radio/392587/stream/444280"
  },
  {
    "name": "Radio Raheem",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -415,17 +303,10 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Milan",
    "four": "(31, 52, 112)",
-   "audio": "https://streams.radio.co/s63f12ebcb/listen",
-   "FIELD12": "",
-   "url": "http://www.radioraheem.it/",
-   "image": "https://pbs.twimg.com/media/DutH5AFXcAAXcVi?format=jpg&name=small",
-   "about": "Radio Raheem is a web radio located now in the iconic Museum of Design Triennale Milano. An independent digital media that, starting from music, explores the world of contemporary culture.",
-   "logo": "https://assets.fontsinuse.com/static/use-media-items/88/87591/full-960x960/5cc850c6/56786180_2081016325524365_9175927676324544512_n.png",
-   "support": ""
+   "audio": "https://streams.radio.co/s63f12ebcb/listen"
  },
  {
    "name": "Rocket Radio 1",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -434,17 +315,10 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Verona",
    "four": "(16, 107, 214)",
-   "audio": "https://stream.radiojar.com/nvvyes7gud5tv",
-   "FIELD12": "",
-   "url": "https://rocketradiolive.com/",
-   "image": "https://images.squarespace-cdn.com/content/v1/53d6c3efe4b07a1cdbbae414/1616948207380-D30VTBR9T8ABJ182N60F/HOME-SITO-DONATE.jpg?format=1000w",
-   "about": "Rocket Radio is a community web radio devoted to music culture and promotion of independent artists. Founded in Verona, Italy, in 2014, along the years RR have become a crossroads for creative people keen to participate in a community project that supports and gives voice to emerging artists through a network of local and international partnerships. We keep our doors open to the public and to new collaborations, broadcasting original series and special in-studio events. Connecting local djs and producers to international guests, collaborating with high profile brands and festivals while supporting town based cultural projects and events: this is how we work to enhance the creative potential of our community. With two more studios, in Bologna and Milan, regular contributions from Berlin and Ibiza, and a video streaming project called RRTV, Rocket Radio channels diverse and unique music realities, exploring all the potentials of a modern web radio.",
-   "logo": "https://images.squarespace-cdn.com/content/v1/53d6c3efe4b07a1cdbbae414/1619977457899-L5C40KNU508QKSLG5YFA/Logo2018_RocketRadio_white.png?format=750w",
-   "support": "https://rocketradiolive.com/donate"
+   "audio": "https://n05.radiojar.com/nvvyes7gud5tv?rj-ttl=5&rj-tok=AAABhCHWLvoAQ2webGfiqIjQfA"
  },
  {
    "name": "Rocket Radio 2",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -453,17 +327,10 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Verona",
    "four": "(3, 113, 60)",
-   "audio": "https://stream.radiojar.com/nvvyes7gud5tv",
-   "FIELD12": "",
-   "url": "https://rocketradiolive.com/",
-   "image": "https://images.squarespace-cdn.com/content/v1/53d6c3efe4b07a1cdbbae414/1616948207380-D30VTBR9T8ABJ182N60F/HOME-SITO-DONATE.jpg?format=1000w",
-   "about": "Rocket Radio is a community web radio devoted to music culture and promotion of independent artists. Founded in Verona, Italy, in 2014, along the years RR have become a crossroads for creative people keen to participate in a community project that supports and gives voice to emerging artists through a network of local and international partnerships. We keep our doors open to the public and to new collaborations, broadcasting original series and special in-studio events. Connecting local djs and producers to international guests, collaborating with high profile brands and festivals while supporting town based cultural projects and events: this is how we work to enhance the creative potential of our community. With two more studios, in Bologna and Milan, regular contributions from Berlin and Ibiza, and a video streaming project called RRTV, Rocket Radio channels diverse and unique music realities, exploring all the potentials of a modern web radio.",
-   "logo": "https://images.squarespace-cdn.com/content/v1/53d6c3efe4b07a1cdbbae414/1619977457899-L5C40KNU508QKSLG5YFA/Logo2018_RocketRadio_white.png?format=750w",
-   "support": "https://rocketradiolive.com/donate"
+   "audio": "https://n05.radiojar.com/nvvyes7gud5tv?rj-ttl=5&rj-tok=AAABhCHWLvoAQ2webGfiqIjQfA"
  },
  {
    "name": "Radio Quantica",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -472,17 +339,10 @@ export const stations =
    "three": "(253, 189, 43)",
    "city": "Lisbon",
    "four": "(253, 189, 43)",
-   "audio": "https://stream.radioquantica.com:8443/stream",
-   "FIELD12": "",
-   "url": "https://www.radioquantica.com/",
-   "image": "https://imgproxy.ra.co/_/quality:100/plain/https://static.ra.co/images/news/2022/quanticamarket.jpeg",
-   "about": "RÁDIO QUANTICA IS A LISBON-BASED COMMUNITY RADIO STATION ESTABLISHED IN 2015, AND DEVELOPED WITH A DIVERSE GROUP OF ARTISTS AND CREWS – A SAFE HAVEN WHERE THE VOICES OF UNDERGROUND ARTISTS AND ACTIVISTS CAN BE HEARD.",
-   "logo": "https://factmag-images.s3.amazonaws.com/wp-content/uploads/2019/11/Radio-Quantica-Art.jpg",
-   "support": ""
+   "audio": "https://stream.radioquantica.com:8443/stream"
  },
  {
    "name": "Radio Relativa",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -491,17 +351,10 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "Madrid",
    "four": "(208, 61, 2)",
-   "audio": "https://streamer.radio.co/sd6131729c/listen",
-   "FIELD12": "",
-   "url": "https://radiorelativa.eu/",
-   "image": "https://radiorelativa.eu/wp-content/uploads/2020/04/IMG_8559-copia-scaled.jpg",
-   "about": "",
-   "logo": "https://radiorelativa.eu/wp-content/uploads/2021/08/l2-e1630326339460.png",
-   "support": ""
+   "audio": "https://streamer.radio.co/sd6131729c/listen"
  },
  {
    "name": "Tesla FM",
-   "colour": "Forest",
    "one": "(3, 113, 60)",
    "Text": "White",
    "utc": "·",
@@ -510,17 +363,10 @@ export const stations =
    "three": "",
    "city": "Barcelona",
    "four": "(105, 12, 27)",
-   "audio": "https://tesla1.teslafm.net:8443/tesla1",
-   "FIELD12": "",
-   "url": "https://teslafm.net/",
-   "image": "",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://tesla1.teslafm.net:8443/tesla1"
  },
  {
    "name": "The Lake Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "+2",
@@ -529,17 +375,10 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Copenhagen",
    "four": "(105, 12, 27)",
-   "audio": "https://thelakeradio.radioca.st/stream",
-   "FIELD12": "",
-   "url": "https://thelakeradio.com/",
-   "image": "https://thelakeradio.com/wp-content/uploads/2020/05/Lake1.jpg",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://thelakeradio.radioca.st/stream"
  },
  {
    "name": "Retreat Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -548,17 +387,10 @@ export const stations =
    "three": "",
    "city": "Malmö",
    "four": "(150, 184, 227)",
-   "audio": "https://retreatradio.out.airtime.pro/retreatradio_a",
-   "FIELD12": "",
-   "url": "https://www.retreatradio.net/",
-   "image": "",
-   "about": "Retreat Radio is an independent, non-commercial radio station, broadcasting from Malmö, Scandinavia and beyond.",
-   "logo": "",
-   "support": ""
+   "audio": "https://retreatradio.out.airtime.pro/retreatradio_a"
  },
  {
    "name": "20ft Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -567,17 +399,10 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Kiev",
    "four": "(31, 52, 112)",
-   "audio": "https://20ft.ippro.co/live/",
-   "FIELD12": "",
-   "url": "https://www.20ftradio.net/",
-   "image": "",
-   "about": "Kyiv-based radio station that broadcasts music from the former ribbon-weaving factory “Strichka”. Since 2017 we recorded over 1000 mixes in different genres and moods. Spreading of music and information is carried out for informational purposes. 20ft Radio is non-commercial and free from advertising.",
-   "logo": "",
-   "support": "https://www.20ftradio.net/donate"
+   "audio": "https://20ft.ippro.co/live/"
  },
  {
    "name": "Radio 80000",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -586,17 +411,10 @@ export const stations =
    "three": "(105, 12, 27)",
    "city": "Munich",
    "four": "(208, 61, 2)",
-   "audio": "https://radio80k.out.airtime.pro/radio80k_a",
-   "FIELD12": "",
-   "url": "https://www.radio80k.de/",
-   "image": "",
-   "about": "Radio 80000 was born out of our love of music. From the beginning we considered the non-profit project as a platform for all those who want to get involved – without any genre borders. Daily broadcasted shows are curated by over 100 hosts, offering a unique selection of timeless and contemporary music, with quality always being a top priority. Additionally we regularly invite emerging musicians and DJs to feature on guest-shows.",
-   "logo": "",
-   "support": "https://www.radio80k.de/support/"
+   "audio": "https://radio80k.out.airtime.pro/radio80k_a"
  },
  {
    "name": "EOS Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -605,17 +423,10 @@ export const stations =
    "three": "(253, 189, 43)",
    "city": "Frankfurt am Main",
    "four": "(255, 255, 255)",
-   "audio": "https://s5.radio.co/s21c5fbf27/listen?i1650264069077",
-   "FIELD12": "",
-   "url": "https://eosradio.de/",
-   "image": "",
-   "about": "CEOS Radio is an emerging online platform for contemporary electronic music operating from Frankfurt am Main. It aims at building an expansive, community-oriented infrastructure for fostering and interconnecting artists and music professionals. In addition to a web radio at its core, EOS incorporates an affiliated label and a broad network of experts and collaborators as a starting point for new possible formats, mentorings and alliances.",
-   "logo": "",
-   "support": ""
+   "audio": "https://s5.radio.co/s21c5fbf27/listen?i1650264069077"
  },
  {
    "name": "Cashmere Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -624,17 +435,10 @@ export const stations =
    "three": "(150, 184, 227)",
    "city": "Wedding",
    "four": "(150, 184, 227)",
-   "audio": "https://cashmereradio.out.airtime.pro/cashmereradio_a",
-   "FIELD12": "",
-   "url": "https://cashmereradio.com/",
-   "image": "https://www.exberliner.com/wp-content/uploads/2022/01/Cashmere-Radio-1.jpg",
-   "about": "Celebrating community and experimental broadcasting live aus dem Wedding",
-   "logo": "",
-   "support": ""
+   "audio": "https://cashmereradio.out.airtime.pro/cashmereradio_a"
  },
  {
    "name": "THF Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -643,17 +447,10 @@ export const stations =
    "three": "(248, 231, 28)",
    "city": "Berlin",
    "four": "(31, 52, 112)",
-   "audio": "https://thfradio2.out.airtime.pro/thfradio2_b",
-   "FIELD12": "",
-   "url": "https://thfradio.de/",
-   "image": "https://thfradio.de/static/b679b6cca3e10440c6ca3c8b50156ef6/813b6/landingpage.webp",
-   "about": "THF Radio is the radio station in the former porters house at Tempelhof Airport. Experiment room and mouthpiece for citizens, artists, musicians, creatives and initiatives. We are part of the TORHAUS at Tempelhof Airport. THF Radio is intended as an experimental forum: We want to address the airport and its history and give artists in the city a platform.",
-   "logo": "",
-   "support": ""
+   "audio": "https://thfradio2.out.airtime.pro/thfradio2_b"
  },
  {
    "name": "Refuge Worldwide",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -662,17 +459,10 @@ export const stations =
    "three": "(248, 231, 28)",
    "city": "Berlin",
    "four": "(16, 107, 214)",
-   "audio": "https://streaming.radio.co/s3699c5e49/listen",
-   "FIELD12": "",
-   "url": "https://refugeworldwide.com/",
-   "image": "https://images.ctfassets.net/taoiy3h84mql/3h4C0Rw0Susw6YeLfTMxvM/a720b30ca4abba665d5ff2147f521d7e/DSC01365.jpg?w=3840&q=75&fm=jpg&fl=progressive",
-   "about": "Refuge Worldwide commits to striving for a gender balanced station, representative of minorities. The station is focused on community-building and creating space / visibility for underrepresented artists.",
-   "logo": "",
-   "support": ""
+   "audio": "https://streaming.radio.co/s3699c5e49/listen"
  },
  {
    "name": "Worldwide FM",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -681,17 +471,10 @@ export const stations =
    "three": "(248, 231, 28)",
    "city": "Berlin",
    "four": "(3, 113, 60)",
-   "audio": "https://worldwidefm.out.airtime.pro/worldwidefm_b",
-   "FIELD12": "",
-   "url": "https://worldwidefm.net/",
-   "image": "https://optimise2.assets-servd.host/vague-roadrunner/production/episode/3-920x614.jpeg?w=1200&h=1200&auto=compress%2Cformat&fit=crop&fp-x=0.5&fp-y=0.5&dm=1618901892&s=1b443e9749570d2983e4afcb7db80e78",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://worldwidefm.out.airtime.pro/worldwidefm_b"
  },
  {
    "name": "Hammam Radio",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -700,17 +483,10 @@ export const stations =
    "three": "(248, 231, 28)",
    "city": "Berlin",
    "four": "(16, 171, 38)",
-   "audio": "https://stream.radiojar.com/svbttmf9ztzuv?1650245417",
-   "FIELD12": "",
-   "url": "https://hammamradio.com/#liveradio",
-   "image": "",
-   "about": "In a time of need for a coping mechanism, we thought of starting an online broadcast of love, music, and stories. We firmly believe that now more than ever, women’s voices matter. That they are important, if not crucial in these times of crisis of capitalism and patriarchy. The womxn behind Hammam Radio are Abir, Rasha, Paola, Jojo, and Hayat. Hammam Radio is meant to be a place where women in all their diversity meet, talk, participate, think, shout, cry, laugh, become angry, love, and raise their voices. We will be cursing, dancing, singing, playing music, and songs that reflect our moods and current state. We will also be reading, telling stories, and everything else in between.",
-   "logo": "",
-   "support": ""
+   "audio": "http://n09.radiojar.com/svbttmf9ztzuv?1650245417=&rj-tok=AAABhCHWLaAAk3FFdlqRVkLzUA&rj-ttl=5"
  },
  {
    "name": "Radio Kapital",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -719,17 +495,34 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Warsaw",
    "four": "(253, 189, 43)",
-   "audio": "https://radiokapitalpl.out.airtime.pro/radiokapitalpl_a",
-   "FIELD12": "",
-   "url": "https://radiokapital.pl/",
-   "image": "https://www.radiokapital.pl/img/1956/825/551/1",
-   "about": "Radio Kapitał is a social internet radio station that broadcasts 24 hours a day, 7 days a week. It is a modern platform for social and artistic dialogue, presenting original programs about culture, society, history, literature, art and music in various genres. Radio Kapitał is also a response to the need to create an independent and non-commercial space of expression, grassroots activity - not for profit, but for personal satisfaction and social benefit. It is also an innovative nationwide cultural project, which, based on the rich tradition of radio broadcasting, at the same time sets new horizons for the radio medium.",
-   "logo": "",
-   "support": ""
+   "audio": "https://radiokapitalpl.out.airtime.pro/radiokapitalpl_a"
+ },
+ {
+   "name": "Punctum Radio",
+   "one": "(248, 231, 28)",
+   "Text": "Black",
+   "utc": "·",
+   "two": "(150, 184, 227)",
+   "country": "Czech Republic",
+   "three": "(31, 52, 112)",
+   "city": "Prague",
+   "four": "(248, 231, 28)",
+   "audio": "https://radiopunctum.cz:8001/radio"
+ },
+ {
+   "name": "Res Radio",
+   "one": "(248, 231, 28)",
+   "Text": "Black",
+   "utc": "·",
+   "two": "(248, 231, 28)",
+   "country": "Austria",
+   "three": "(31, 52, 112)",
+   "city": "Vienna",
+   "four": "(208, 61, 2)",
+   "audio": "https://edge.mixlr.com/channel/zwtuo"
  },
  {
    "name": "Loose Antenna",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -738,17 +531,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Lausanne",
    "four": "(105, 12, 27)",
-   "audio": "https://stream.looseantenna.fm:8000/default.mp3",
-   "FIELD12": "",
-   "url": "https://looseantenna.fm/",
-   "image": "https://lecourrier.ch/app/uploads/2020/08/radio-1-936x546.jpg",
-   "about": "In accordance with the long heritage of pirate and community radio, Loose Antenna is a polyphonic platform, giving a voice to otherwise lesser-represented minorities, alternate and/or marginalized people. It wages a war on stereotypes while championning plural manifestations.",
-   "logo": "",
-   "support": ""
+   "audio": "https://stream.looseantenna.fm:8000/default.mp3"
  },
  {
    "name": "Radio Bollwerk",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -757,17 +543,10 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Bern",
    "four": "(150, 184, 227)",
-   "audio": "https://radiobollwerk.out.airtime.pro/radiobollwerk_a",
-   "FIELD12": "",
-   "url": "https://www.radio-bollwerk.ch/",
-   "image": "https://scontent-syd2-1.xx.fbcdn.net/v/t1.6435-9/186549861_2814851178780682_9112009472339387680_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=730e14&_nc_ohc=UX1g4gdroUoAX9zkBXB&_nc_ht=scontent-syd2-1.xx&oh=822e6d560cd74dc53684cb1833b3f877&oe=60E83705",
-   "about": "",
-   "logo": "https://pbs.twimg.com/profile_images/1089090569887010816/xGjyWSXu_400x400.jpg",
-   "support": "https://www.radio-bollwerk.ch/list/info"
+   "audio": "https://radiobollwerk.out.airtime.pro/radiobollwerk_a"
  },
  {
    "name": "Lahmacun",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -776,36 +555,10 @@ export const stations =
    "three": "(3, 113, 60)",
    "city": "Budapest",
    "four": "(31, 52, 112)",
-   "audio": "https://streaming.lahmacun.hu/radio/8000/radio.mp3",
-   "FIELD12": "",
-   "url": "https://lahmacun.hu/",
-   "image": "https://media.lahmacun.hu/rnr666-radioshow/29/rnr666_radioshow-kozmikus_adas.png",
-   "about": "Lahmacun.hu is an online music & more radio from Budapest.",
-   "logo": "",
-   "support": ""
- },
- {
-   "name": "Amok Radio",
-   "colour": "Sunshine",
-   "one": "(248, 231, 28)",
-   "Text": "Black",
-   "utc": "·",
-   "two": "(208, 61, 2)",
-   "country": "Skopje ",
-   "three": "(248, 231, 28)",
-   "city": "Macedonia",
-   "four": "(208, 61, 2)",
-   "audio": "",
-   "FIELD12": "",
-   "url": "https://www.amokradio.co/about",
-   "image": "https://www.amokradio.co/static/media/1.e598e3df.JPG",
-   "about": "",
-   "logo": "",
-   "support": ""
+   "audio": "https://streaming.lahmacun.hu/radio/8000/radio.mp3"
  },
  {
    "name": "Radio alHara",
-   "colour": "Sunshine",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -814,17 +567,22 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Bethlehem",
    "four": "(16, 107, 214)",
-   "audio": "https://stream.radiojar.com/78cxy6wkxtzuv?1650173445",
-   "FIELD12": "",
-   "url": "https://www.radioalhara.net/",
-   "image": "",
-   "about": "Radio Alhara emerges in a time of isolation and boredom, a time where the future of the world as we know it remains unknown.",
-   "logo": "",
-   "support": ""
+   "audio": "https://n12.radiojar.com/78cxy6wkxtzuv?1650173445=&rj-tok=AAABhCHWLZsAq4KnIDjI52_CAA&rj-ttl=5"
  },
  {
-   "name": "Hamshack Radio",
-   "colour": "Sunshine",
+   "name": "Pan African Space Station",
+   "one": "(248, 231, 28)",
+   "Text": "Black",
+   "utc": "·",
+   "two": "(31, 52, 112)",
+   "country": "South Africa",
+   "three": "(31, 52, 112)",
+   "city": "",
+   "four": "(3, 113, 60)",
+   "audio": "https://pass.airtime.pro/embed/player?stream=auto"
+ },
+ {
+   "name": "The Other Radio",
    "one": "(248, 231, 28)",
    "Text": "Black",
    "utc": "·",
@@ -832,18 +590,11 @@ export const stations =
    "country": "South Africa",
    "three": "(105, 12, 27)",
    "city": "Cape Town",
-   "four": "(208, 61, 2)",
-   "audio": "https://s3.radio.co/sc7aeef6c0/listen",
-   "FIELD12": "",
-   "url": "https://hamshackradio.live/",
-   "image": "https://hamshackradio.live/wp-content/uploads/2022/02/Screenshot-2022-02-11-at-11.52.19.png",
-   "about": "Hamshack Radio is an online radio station and independent cultural platform based in Cape Town, South Africa. Our studio is located in the Public House Restaurant courtyard, 84 Kloof St, Gardens, Cape Town.",
-   "logo": "https://hamshackradio.live/wp-content/uploads/2020/07/hamshack_radio_logo_vector.svg",
-   "support": ""
+   "four": "(248, 231, 28)",
+   "audio": "https://embed.radio.co/player/2ff18e6.html"
  },
  {
    "name": "Radio.Syg.Ma",
-   "colour": "Sky",
    "one": "(16, 107, 214)",
    "Text": "White",
    "utc": "·",
@@ -852,17 +603,22 @@ export const stations =
    "three": "(253, 189, 43)",
    "city": "Moscow",
    "four": "(150, 184, 227)",
-   "audio": "https://radio.syg.ma/audio",
-   "FIELD12": "",
-   "url": "https://radio.syg.ma/",
-   "image": "",
-   "about": "radio.syg.ma is a curated label and broadcasting platform with mixes and podcasts contributed by independent musicians, sound artists and communities.",
-   "logo": "",
-   "support": "https://radio.syg.ma/donate"
+   "audio": "https://radio.syg.ma/audio"
+ },
+ {
+   "name": "Kruzhok Radio",
+   "one": "(16, 107, 214)",
+   "Text": "White",
+   "utc": "·",
+   "two": "(3, 113, 60)",
+   "country": "Russia",
+   "three": "(253, 189, 43)",
+   "city": "Moscow",
+   "four": "(255, 255, 255)",
+   "audio": "https://a3.radioheart.ru:9003/RH19489"
  },
  {
    "name": "Movement Radio (1)",
-   "colour": "Sky",
    "one": "(16, 107, 214)",
    "Text": "White",
    "utc": "·",
@@ -871,17 +627,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Athens",
    "four": "(3, 113, 60)",
-   "audio": "https://movementathens.out.airtime.pro/movementathens_a",
-   "FIELD12": "",
-   "url": "http://movement.radio/",
-   "image": "https://movement.radio/img/about.ba5fb072.jpg",
-   "about": "movement radio is an international online radio station based in Athens. It explores the cross-cultural interactions, political and theoretical discourses and reflections of movement of people from the Mediterranean and beyond, through a series of commissioned pieces, thematic mixtapes, interviews, DJ sets and more.",
-   "logo": "",
-   "support": ""
+   "audio": "https://movementathens.out.airtime.pro/movementathens_a"
  },
  {
    "name": "Movement Radio (2)",
-   "colour": "Sky",
    "one": "(16, 107, 214)",
    "Text": "White",
    "utc": "·",
@@ -890,17 +639,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Athens",
    "four": "(16, 171, 38)",
-   "audio": "https://movementathens.out.airtime.pro/movementathens_b",
-   "FIELD12": "",
-   "url": "http://movement.radio/",
-   "image": "https://movement.radio/img/about.ba5fb072.jpg",
-   "about": "movement radio is an international online radio station based in Athens. It explores the cross-cultural interactions, political and theoretical discourses and reflections of movement of people from the Mediterranean and beyond, through a series of commissioned pieces, thematic mixtapes, interviews, DJ sets and more.",
-   "logo": "",
-   "support": ""
+   "audio": "https://movementathens.out.airtime.pro/movementathens_b"
  },
  {
    "name": "Fade Radio",
-   "colour": "Sky",
    "one": "(16, 107, 214)",
    "Text": "White",
    "utc": "·",
@@ -909,17 +651,10 @@ export const stations =
    "three": "(16, 107, 214)",
    "city": "Athens",
    "four": "(248, 231, 28)",
-   "audio": "https://stream.radiojar.com/072mdmpbfq8uv?1650262434",
-   "FIELD12": "",
-   "url": "https://www.fade.radio/",
-   "image": "",
-   "about": "FADE RADIO IS A MULTICULTURAL COMMUNITY OF LIKE-MINDED INDIVIDUALS WHO ARE PASSIONATE FOR ALL GENRES OF MUSIC.\n‍\nWE FOCUS ON SHOWCASING THE VARIETY OF ART FORMS THROUGH MUSIC SHOWS, PODCASTS, ONLINE EXHIBITIONS AND EVENTS.\n‍\nTHE PURPOSE OF THIS PLATFORM IS TO COLLECT AN ARCHIVE OF MUSIC AND ARTS DEDICATED TO SUPPORTING\nINDEPENDENT ARTISTS. ​\n",
-   "logo": "",
-   "support": ""
+   "audio": "https://n02.radiojar.com/072mdmpbfq8uv?1650262434=&rj-tok=AAABhCHWLZ4ACLCFTyyawUpmVg&rj-ttl=5"
  },
  {
    "name": "Paranoise Radio",
-   "colour": "Sky",
    "one": "(16, 107, 214)",
    "Text": "White",
    "utc": "·",
@@ -928,17 +663,10 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Thessaloniki",
    "four": "(208, 61, 2)",
-   "audio": "https://paranoisewebcast.radioca.st/stream",
-   "FIELD12": "",
-   "url": "https://www.paranoiseradio.com/",
-   "image": "",
-   "about": "",
-   "logo": "",
-   "support": "https://www.paypal.com/pools/c/8ud0sWuDj9"
+   "audio": "https://paranoisewebcast.radioca.st/stream"
  },
  {
    "name": "Root Radio",
-   "colour": "Sky",
    "one": "(16, 107, 214)",
    "Text": "White",
    "utc": "·",
@@ -947,17 +675,22 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "Istanbul",
    "four": "(255, 255, 255)",
-   "audio": "https://stream.radiojar.com/q1mgvh4u4yzuv?1650173687",
-   "FIELD12": "",
-   "url": "https://rootradio.live/",
-   "image": "https://rootradio.live/static/media/flowers.f756aa57ae5878360195.png",
-   "about": "Root Radio is an independent radio based in Istanbul broadcasting from all around the world. The projects purpose is to create a community where artists crate diggers activists and passionates can experiment contribute share and expand the project itself.",
-   "logo": "https://rootradio.live/static/media/logo.1265fc8fb9b35608fec5.png",
-   "support": ""
+   "audio": "http://n09.radiojar.com/q1mgvh4u4yzuv?1650173687=&rj-tok=AAABhCHWLZwAN9qgv9lqW3B4_Q&rj-ttl=5"
+ },
+ {
+   "name": "East East Radio",
+   "one": "(105, 12, 27)",
+   "Text": "White",
+   "utc": "+4",
+   "two": "(248, 231, 28)",
+   "country": "Qatar",
+   "three": "(105, 12, 27)",
+   "city": "Doha",
+   "four": "(150, 184, 227)",
+   "audio": "https://listen7.myradio24.com/eastradio"
  },
  {
    "name": "Mutant Radio",
-   "colour": "Burgundy",
    "one": "(105, 12, 27)",
    "Text": "White",
    "utc": "·",
@@ -966,17 +699,10 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Tbilisi",
    "four": "(31, 52, 112)",
-   "audio": "https://www.radioking.com/play/mutant-radio",
-   "FIELD12": "",
-   "url": "https://mutantradio.net/",
-   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1RAR_ny9RcaghS1B2SsuujoXfAvpC_Vvhhw&usqp=CAU",
-   "about": "",
-   "logo": "https://mutantradio.net/wp-content/uploads/2019/10/mutant-web-OG-1.png",
-   "support": ""
+   "audio": "https://listen.radioking.com/radio/282820/stream/328621"
  },
  {
    "name": "Paddygrooves Radio",
-   "colour": "Babyblue",
    "one": "(150, 184, 227)",
    "Text": "Black",
    "utc": "+7",
@@ -985,17 +711,10 @@ export const stations =
    "three": "(255, 255, 255)",
    "city": "Denpasar",
    "four": "(16, 107, 214)",
-   "audio": "https://a12.siar.us/radio/8230/radio.mp3",
-   "FIELD12": "",
-   "url": "https://paddygrooves.radio/",
-   "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzlDGWxmcS66EL5P1_1CcfZn3TN2ww2QmwvA&usqp=CAU",
-   "about": "Paddy Grooves is the imaginary home away from home for lovers, record collectors, music enthusiasts, party kids, hustlers & dealers, and all our brother and sisters from all walks of life.",
-   "logo": "https://i1.sndcdn.com/avatars-MYvK1btiud2TdiTd-DuVkmQ-t240x240.jpg",
-   "support": ""
+   "audio": "https://a12.siar.us/radio/8230/radio.mp3"
  },
  {
    "name": "Data Fruits",
-   "colour": "Ruby",
    "one": "(208, 61, 2)",
    "Text": "White",
    "utc": "·",
@@ -1004,17 +723,22 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "Tokyo",
    "four": "(208, 61, 2)",
-   "audio": "https://streampusher-relay.club/datafruits.mp3",
-   "FIELD12": "",
-   "url": "https://datafruits.fm/",
-   "image": "",
-   "about": "Independent radio made for and by the international music community. Open source. Breaking down borders and genres. We play any song. We are dedicated to putting the spotlight and sharing music from underserved and marginalized communities. We believe that the only platform that can *truely* serve its users is one that is owned and operated by the people using the platform, the DJs and the listeners!",
-   "logo": "",
-   "support": ""
+   "audio": "https://streampusher-relay.club/datafruits.mp3"
+ },
+ {
+   "name": "Hope St Radio",
+   "one": "(31, 52, 112)",
+   "Text": "White",
+   "utc": "+10",
+   "two": "(208, 61, 2)",
+   "country": "Australia",
+   "three": "(31, 52, 112)",
+   "city": "Melbourne",
+   "four": "(105, 12, 27)",
+   "audio": "http://hopestreetradio.out.airtime.pro:8000/hopestreetradio_a"
  },
  {
    "name": "Skylab Radio",
-   "colour": "Federal",
    "one": "(31, 52, 112)",
    "Text": "White",
    "utc": "·",
@@ -1023,13 +747,19 @@ export const stations =
    "three": "(31, 52, 112)",
    "city": "Melbourne",
    "four": "(255, 255, 255)",
-   "audio": "https://stream.skylab-radio.com/live",
-   "FIELD12": "",
-   "url": "https://skylab-radio.com/pages/",
-   "image": "https://pr0.nicelocal.com.au/3uE2V1zbN0eS23p0QrKNbw/640x427,q85/4px-BW84_n0QJGVPszge3NRBsKw-2VcOifrJIjPYFYkOtaCZxxXQ2Wg0unCgNl-5k6qK-EaRohJseoJxOlpVWPtVeWXwzzZC3fKvpbTrTh3nr4jTtjUNng",
-   "about": "An online radio station based in Melbourne, Australia. At the core we are motivated to giving a platform to presenters that dont already have one. Skylab celebrates the eclectic music, artistic flair and cultural inclusiveness canvassing this city and abroad.",
-   "logo": "",
-   "support": ""
+   "audio": "https://stream.skylab-radio.com/live"
+ },
+ {
+   "name": "Area 3000",
+   "one": "(31, 52, 112)",
+   "Text": "White",
+   "utc": "·",
+   "two": "(208, 61, 2)",
+   "country": "Australia",
+   "three": "(31, 52, 112)",
+   "city": "Melbourne",
+   "four": "(150, 184, 227)",
+   "audio": "https://s2.radio.co/s178905a52/listen"
  }
 ]
 ;
