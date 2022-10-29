@@ -30,30 +30,6 @@ export const stations =
    "audio": "https://radio.mensajito.mx/nopalradio"
  },
  {
-   "name": "Radio Nopal",
-   "one": "(208, 61, 2)",
-   "Text": "White",
-   "utc": "·",
-   "two": "(253, 189, 43)",
-   "country": "Mexico",
-   "three": "(31, 52, 112)",
-   "city": "Mexico City",
-   "four": "(16, 171, 38)",
-   "audio": "https://radio.mensajito.mx/nopalradio"
- },
- {
-   "name": "Radio Veintiocho",
-   "one": "(208, 61, 2)",
-   "Text": "White",
-   "utc": "·",
-   "two": "(253, 189, 43)",
-   "country": "Mexico",
-   "three": "(16, 107, 214)",
-   "city": "San Andrés Cholula",
-   "four": "(253, 189, 43)",
-   "audio": "https://www-radio28-net.filesusr.com/html/ffc736_d1a2c392d0663a4ef7734d41b498afb7.html"
- },
- {
    "name": "8 Ball Radio",
    "one": "(253, 189, 43)",
    "Text": "Black",
@@ -208,18 +184,6 @@ export const stations =
    "city": "Brussels",
    "four": "(16, 171, 38)",
    "audio": "https://kioskradiobxl.out.airtime.pro/kioskradiobxl_b"
- },
- {
-   "name": "The Word Radio",
-   "one": "(3, 113, 60)",
-   "Text": "White",
-   "utc": "·",
-   "two": "(248, 231, 28)",
-   "country": "Belgium",
-   "three": "(255, 255, 255)",
-   "city": "Brussels",
-   "four": "(253, 189, 43)",
-   "audio": "https://thewordradio.out.airtime.pro/thewordradio_a"
  },
  {
    "name": "Lyl Radio",
@@ -675,19 +639,7 @@ export const stations =
    "three": "(208, 61, 2)",
    "city": "Istanbul",
    "four": "(255, 255, 255)",
-   "audio": "http://n09.radiojar.com/q1mgvh4u4yzuv?1650173687=&rj-tok=AAABhCHWLZwAN9qgv9lqW3B4_Q&rj-ttl=5"
- },
- {
-   "name": "East East Radio",
-   "one": "(105, 12, 27)",
-   "Text": "White",
-   "utc": "+4",
-   "two": "(248, 231, 28)",
-   "country": "Qatar",
-   "three": "(105, 12, 27)",
-   "city": "Doha",
-   "four": "(150, 184, 227)",
-   "audio": "https://listen7.myradio24.com/eastradio"
+   "audio": "https://n09.radiojar.com/q1mgvh4u4yzuv?1650173687=&rj-tok=AAABhCHWLZwAN9qgv9lqW3B4_Q&rj-ttl=5"
  },
  {
    "name": "Mutant Radio",
@@ -724,18 +676,6 @@ export const stations =
    "city": "Tokyo",
    "four": "(208, 61, 2)",
    "audio": "https://streampusher-relay.club/datafruits.mp3"
- },
- {
-   "name": "Hope St Radio",
-   "one": "(31, 52, 112)",
-   "Text": "White",
-   "utc": "+10",
-   "two": "(208, 61, 2)",
-   "country": "Australia",
-   "three": "(31, 52, 112)",
-   "city": "Melbourne",
-   "four": "(105, 12, 27)",
-   "audio": "http://hopestreetradio.out.airtime.pro:8000/hopestreetradio_a"
  },
  {
    "name": "Skylab Radio",
