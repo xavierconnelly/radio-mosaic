@@ -447,7 +447,7 @@ export const stations =
    "three": "(248, 231, 28)",
    "city": "Berlin",
    "four": "(16, 171, 38)",
-   "audio": "http://n09.radiojar.com/svbttmf9ztzuv?1650245417=&rj-tok=AAABhCHWLaAAk3FFdlqRVkLzUA&rj-ttl=5"
+   "audio": "https://n09.radiojar.com/svbttmf9ztzuv?1650245417=&rj-tok=AAABhCHWLaAAk3FFdlqRVkLzUA&rj-ttl=5"
  },
  {
    "name": "Radio Kapital",
