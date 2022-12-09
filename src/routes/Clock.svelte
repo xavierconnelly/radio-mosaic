@@ -61,7 +61,7 @@
 						{utc}
 		</span>	
 	</span>
-		<audio preload="auto"
+		<audio  preload="none"
 			bind:this={audio}
 			bind:paused
 			on:play={stopOthers}
