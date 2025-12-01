@@ -1,0 +1,110 @@
+<script>
+    import { HOVER, stationData } from '/src/routes/stations/radioData.js';
+    import '../app.css'
+
+	import MediaQuery from '$lib/mediaQuery.svelte';
+    import Scroller from "$lib/scroller.svelte";
+	import ClockBigger from '$lib/clockBigger.svelte';
+	import Intro from '$lib/intro.svelte';
+    import Painting from '$lib/painting.svelte';
+
+    // hovering things
+
+    // variable for current hovered on
+	let moused;	
+	
+	// something to do with above
+	const something = HOVER.subscribe(value => moused = value);
+
+    // scrolling dial
+	let activeIndex = 0;
+
+	function updateActive(i) {
+		activeIndex = i;
+	}
+</script>
+
+<MediaQuery query="(max-width: 700px)" let:matches>
+    {#if matches}
+        <Scroller items={stationData} onActiveChange={updateActive} />
+        <Painting  
+            name={stationData[activeIndex].name}
+            slug={stationData[activeIndex].slug}
+            city={stationData[activeIndex].city}
+            country={stationData[activeIndex].country}
+        />
+        <a id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a>
+    {/if}
+</MediaQuery>
+
+<MediaQuery query="(min-width: 700px)" let:matches>
+    {#if matches}
+        <Intro />
+        <ClockBigger />
+    {/if}
+</MediaQuery>
+
+<MediaQuery query="(min-width: 1280px)" let:matches>
+    {#if matches}
+        <div class="image-wrap">
+            <div id="flyover"  style="background-image: url(/src/lib/assets/flyover/{stationData[moused].slug}.png">
+            </div>
+        </div>
+    {/if}
+</MediaQuery>
+
+<style>
+    /* #hugger {
+        display: flex;
+        flex-direction: row;
+        background-color: #F6F3F0;
+    } */
+    .image-wrap {
+		background: var(--yang);
+        display: block;
+        position: fixed;
+        z-index: 999;
+        top: 44px;
+        left: 0px;
+        height: calc(100vh - 44px);
+        width: calc(300px);
+	}
+
+     #flyover {
+        display: block;
+        /* opacity: 0; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        padding: 10px;
+        height: calc(100vh - 44px);
+        width: calc(300px);
+        /* background-color: #F6F3F0; */
+        filter: grayscale(100%);
+        mix-blend-mode: screen;
+        color: inherit;
+        background-size: cover;
+        background-position: center;
+        z-index: 199;
+        object-fit: cover;
+        transition: 3s;
+        transition-delay: 20ms;
+        border-right: 1px solid var(--yang);
+    }
+    #play-me {
+        z-index: 101;
+        position: fixed;
+        bottom: calc(25vh - 44px);
+        right: 0;
+        height: 5vh;
+        line-height: 5vh;
+        padding: 0px 10px;
+        /* background: var(--yin); */
+    }
+    @media (max-width: 500px) {
+        #play-me {
+            bottom: calc(25vh - 28px);
+        }
+    }
+</style>
