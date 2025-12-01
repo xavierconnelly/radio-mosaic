@@ -1,33 +1,26 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "sapper dev",
-    "build": "sapper build --legacy",
-    "export": "sapper export --legacy",
-    "start": "node __sapper__/build"
-  },
-  "dependencies": {
-    "compression": "^1.7.1",
-    "polka": "next",
-    "sirv": "^1.0.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/runtime": "^7.0.0",
-    "@rollup/plugin-babel": "^5.0.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-replace": "^2.4.0",
-    "@rollup/plugin-url": "^5.0.0",
-    "rollup": "^2.3.4",
-    "rollup-plugin-svelte": "^7.1.0",
-    "rollup-plugin-terser": "^7.0.0",
-    "sapper": "^0.28.0",
-    "svelte": "^3.17.3"
-  }
+	"name": "myapp",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"lint": "eslint ."
+	},
+	"devDependencies": {
+		"@eslint/compat": "^1.4.0",
+		"@eslint/js": "^9.38.0",
+		"@sveltejs/adapter-auto": "^7.0.0",
+		"@sveltejs/kit": "^2.47.1",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@types/node": "^22",
+		"eslint": "^9.38.0",
+		"eslint-plugin-svelte": "^3.12.4",
+		"globals": "^16.4.0",
+		"svelte": "^5.41.0",
+		"vite": "^7.1.10"
+	}
 }
