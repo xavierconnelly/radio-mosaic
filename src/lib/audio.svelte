@@ -48,7 +48,15 @@
 		step="0.01"/>
 
 <style>
-	
+
+button {
+	position: fixed;
+	top: 0;
+	right: 100px;
+	height: 44px;
+	border: none;
+}
+
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
