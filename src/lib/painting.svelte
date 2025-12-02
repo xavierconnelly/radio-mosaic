@@ -52,16 +52,17 @@ img {
 
 .station {
     height: 5vh;
-    padding: 0 10px;
+    padding: 0 30px;
     position: fixed;
-    bottom: calc(15vh - 22px);
+    bottom: calc(18vh - 22px);
     left: 50%;
+    width: max-content;
     display: flex;
     margin: auto;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     transform: translateX(-50%);
-    align-items: baseline;
+    align-items: center;
     border: 1px solid;
     border-radius: 2px;
     justify-content: space-evenly;
@@ -76,7 +77,7 @@ img {
             top: 28px;
         }
         .station {
-            bottom: calc(15vh - 11px);
+            bottom: calc(18vh - 11px);
         }
     }
 </style>
