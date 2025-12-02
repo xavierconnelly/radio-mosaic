@@ -109,4 +109,20 @@
     height: 100%;
     z-index: 1;
 }
+
+@media (max-width: 700px) {
+    .hand {
+        height: 14px;
+        top: calc(50% - 7px); 
+        border-bottom-left-radius: 14px;
+    }
+    .details .name {
+        font-size: 9px;
+        line-height: 14px;
+    }
+    .details {
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
+}
 </style>
