@@ -31,7 +31,7 @@
 <div id="filler">
 </div>
 
-<div id="box">
+<div data-sveltekit-noscroll id="box">
     <div    data-sveltekit-noscroll 
             class="scene">
         <div data-sveltekit-noscroll 
