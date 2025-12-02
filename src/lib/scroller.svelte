@@ -95,7 +95,7 @@
     border-right: 0.5px solid;
     writing-mode: sideways-rl;
     width: 24px;
-    height: calc(25dvh - 44px);
+    height: calc(25vh - 44px);
     font-size: 7px;
     padding-top: 10px;
     position: absolute;
@@ -109,7 +109,7 @@
         height: calc(25vh - 28px);
     }
     .face {
-        height: calc(25dvh - 28px);
+        height: calc(25vh - 28px);
     }
 }
 </style>

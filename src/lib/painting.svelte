@@ -51,19 +51,21 @@ img {
 }
 
 .station {
+    height: 5vh;
+    width: 100dvw;
+    padding: 0 10px;
     position: fixed;
+
+    /* not sitting correctly */
+    bottom: calc(25vh - 44px);
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: space-evenly;
-    bottom: calc(25vh - 44px);
-    right: 0;
-    width: 100dvw;
     z-index: 99;
-    height: 5vh;
     background-color: var(--yin);
     color: var(--yang);
-    padding: 0 10px;
 }
 
 /* media stylings ~ TABLET */
@@ -72,6 +74,7 @@ img {
             top: 28px;
         }
         .station {
+            /* not sitting correctly */
             bottom: calc(25vh - 28px);
         }
     }
