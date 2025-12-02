@@ -33,7 +33,7 @@
 
 <div id="box">
     <div class="scene">
-        <div 
+        <div data-sveltekit-noscroll 
             class="cube"
             style="transform: translateZ(-{radius}em) rotateY({x}deg)"
         >
