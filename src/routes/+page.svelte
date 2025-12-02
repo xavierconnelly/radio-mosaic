@@ -36,7 +36,6 @@
             slug={stationData[activeIndex].slug}
             city={stationData[activeIndex].city}
             country={stationData[activeIndex].country}
-            slug={stationData[activeIndex].slug}
         />
         <!-- <a data-sveltekit-noscroll id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a> -->
     {/if}

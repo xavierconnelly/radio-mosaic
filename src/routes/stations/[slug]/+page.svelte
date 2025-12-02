@@ -44,7 +44,7 @@
 </MediaQuery>
 
 {#if $INDEX !== null}
-    <h2 style="color: #{stationData[$INDEX].mosaicBg}; background: #{stationData[$INDEX].fill}">{stationData[$INDEX].name}</h2>
+    <h2 style="color: #{stationData[$INDEX].mosaicBg};">{stationData[$INDEX].name}</h2>
     <div class="image-wrap" style="background-color: #{stationData[$INDEX].mosaicBg}; color: #{stationData[$INDEX].fill}">
         <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
     </div>

@@ -7,8 +7,6 @@
 	export let city;
 	export let country;
 	export let slug;
-
-
 </script>
 
 <div id="glimpse">
@@ -20,7 +18,7 @@
 	<h4>{name}</h4>
 	<!-- <p>{city}</p>
 	<p>{country}</p> -->
-    <a data-sveltekit-noscroll id="play-me" href="/stations/{slug}">play</a>
+    <a data-sveltekit-noscroll href="/stations/{slug}">play</a>
 </div>
 
 <style>
