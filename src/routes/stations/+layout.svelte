@@ -1,8 +1,8 @@
 <script>
 	import ClockSmall from './clockSmall.svelte';
-	import Audio from '/src/lib/audio.svelte';
-	import Plus from '/src/lib/plus.svelte';
-	import Minus from '/src/lib/minus.svelte';
+	import Plus from './lib/plus.svelte';
+	import Minus from './lib/minus.svelte';
+	import Audio from '$lib/audio.svelte';
 	import MediaQuery from '$lib/mediaQuery.svelte';
 
 	import '/src/app.css'
