@@ -1,5 +1,5 @@
 <script>
-	import ClockSmall from '/clockSmall.svelte';
+	import ClockSmall from './clockSmall.svelte';
 	import Audio from '/src/lib/audio.svelte';
 	import Plus from '/src/lib/plus.svelte';
 	import Minus from '/src/lib/minus.svelte';

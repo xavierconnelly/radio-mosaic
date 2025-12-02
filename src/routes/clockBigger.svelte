@@ -1,6 +1,6 @@
 <script>
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
-	import Clockhand from '/clockBigHand.svelte'; 
+	import Clockhand from './clockBigHand.svelte'; 
 
     let y = 0;
 

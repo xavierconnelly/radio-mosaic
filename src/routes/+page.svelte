@@ -4,7 +4,7 @@
 
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
-	import ClockBigger from '/clockBigger.svelte';
+	import ClockBigger from './clockBigger.svelte';
 	import Intro from '$lib/intro.svelte';
     import Painting from '$lib/painting.svelte';
 

@@ -2,7 +2,7 @@
     import { page } from '$app/stores';
     import { INDEX, updateIndexFromSlug } from '$lib/store.js';
     import { stationData } from '/src/routes/stations/radioData.js';
-	import Clockhand from '../../lib/clockSmallHand.svelte';
+	import Clockhand from './clockSmallHand.svelte';
 
     let y = 0;
 
