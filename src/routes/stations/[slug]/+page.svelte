@@ -161,7 +161,7 @@
             left: 0;
             width: 100dvw;
             text-align: center;
-            height: 75vh;
+            height: 70vh;
             z-index: 99;
             line-height: unset;
             place-items: center;
@@ -170,7 +170,7 @@
         }
 		.image-wrap {
             top: 44px;
-            height: calc(75vh);
+            height: calc(70vh);
             width: 100vw;
         }
         #flyover {

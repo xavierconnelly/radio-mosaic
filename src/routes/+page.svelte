@@ -104,6 +104,7 @@
         height: 5vh;
         line-height: 5vh;
         padding: 0px 10px;
+        color: var(--yin);
         /* background: var(--yin); */
     }
     @media (max-width: 500px) {

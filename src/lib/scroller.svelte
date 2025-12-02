@@ -63,7 +63,7 @@
 
 #box {
     width: 100vw;
-    height: calc(25vh - 44px);
+    height: calc(30vh - 44px);
     z-index: 99;
 	overflow: hidden;
     position: fixed;
@@ -95,7 +95,7 @@
     border-right: 0.5px solid;
     writing-mode: sideways-rl;
     width: 24px;
-    height: calc(25vh - 44px);
+    height: calc(30vh - 44px);
     font-size: 7px;
     padding-top: 10px;
     position: absolute;
@@ -106,10 +106,10 @@
 
 @media (max-width: 500px) {
     #box {
-        height: calc(25vh - 28px);
+        height: calc(30vh - 28px);
     }
     .face {
-        height: calc(25vh - 28px);
+        height: calc(30vh - 28px);
     }
 }
 </style>

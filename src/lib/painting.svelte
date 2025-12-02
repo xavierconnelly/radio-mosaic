@@ -25,7 +25,7 @@
 #glimpse {
     display: none;
     width: 100dvw;
-    height: calc(75dvh);
+    height: calc(70dvh);
     position: fixed;
     top: 44px;
     left: 0;
@@ -52,20 +52,19 @@ img {
 
 .station {
     height: 5vh;
-    width: 100dvw;
+    /* width: 100dvw; */
+
     padding: 0 10px;
     position: fixed;
-
-    /* not sitting correctly */
     bottom: calc(25vh - 44px);
-    right: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: baseline;
     justify-content: space-evenly;
     z-index: 99;
-    background-color: var(--yin);
-    color: var(--yang);
+    background-color: var(--yang);
+    color: var(--yin);
 }
 
 /* media stylings ~ TABLET */
