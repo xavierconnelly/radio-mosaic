@@ -22,7 +22,7 @@
 </div>
 
 <div id="house">
-    <div    data-sveltekit-noscroll 
+    <div    data-sveltekit-noscroll
             class="clock" 
             style=" color: #{stationData[$INDEX].sparkle}; 
                     background: #{stationData[$INDEX].fill}; 

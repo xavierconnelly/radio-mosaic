@@ -37,7 +37,7 @@
             city={stationData[activeIndex].city}
             country={stationData[activeIndex].country}
         />
-        <a id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a>
+        <a data-sveltekit-noscroll id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a>
     {/if}
 </MediaQuery>
 
