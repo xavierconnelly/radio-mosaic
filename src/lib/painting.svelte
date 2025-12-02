@@ -10,7 +10,7 @@
 </script>
 
 <div id="glimpse">
-<img src="https://radio-mosaic.netlify.app/src/lib/assets/flyover/{slug}.png" alt="" />
+<img src="../images/flyover/{slug}.webp" alt="" />
 
 </div>
 
