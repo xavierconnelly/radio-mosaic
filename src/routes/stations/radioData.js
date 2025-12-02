@@ -5,7 +5,7 @@ import { writable } from 'svelte/store';
 // will help later
 export const INDEX = writable(null);
 export const HOVER = writable(0);
-export const activeIndex = writable(0);
+export const activeIndex = writable(null);
 
 export const stationData = [
  {
