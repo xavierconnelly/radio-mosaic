@@ -1,12 +1,15 @@
 <script>
+    // shared components
     import { page } from '$app/stores';
     import { INDEX, updateIndexFromSlug } from '$lib/store.js';
     import { stationData } from '/src/routes/stations/radioData.js';
+
+    // local components
 	import Clockhand from './clockSmallHand.svelte';
 
+    // Set variable to kick off the scroller
     let y = 0;
 
-    // Maybe I don't need this here?
     // Keep INDEX synced with the current URL slug
     $: if ($page.params.slug) {
         updateIndexFromSlug($page.params.slug, stationData);

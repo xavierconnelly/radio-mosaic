@@ -1,12 +1,16 @@
 <script>
+    // passing in data
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
     import '../app.css'
 
+    // shared components
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
-	import ClockBigger from './clockBigger.svelte';
 	import Intro from '$lib/intro.svelte';
     import Painting from '$lib/painting.svelte';
+
+    // local components
+	import ClockBigger from './clockBigger.svelte';
 
     // hovering things
 
