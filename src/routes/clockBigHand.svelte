@@ -117,7 +117,7 @@
         border-bottom-left-radius: 14px;
     }
     .details .name {
-        font-size: 9px;
+        font-size: 5px;
         line-height: 14px;
     }
     .details {

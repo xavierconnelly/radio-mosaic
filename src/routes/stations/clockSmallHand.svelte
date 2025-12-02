@@ -43,7 +43,6 @@
     transform-origin: center;
     transition: 7s;
 }
-
 .hand .station-name {
     display: block;
     padding-right: 6px;
@@ -54,7 +53,6 @@
     border-top: 0.5px solid;
     will-change: transform;
     transition: 2s;
-
     /* probably not needed by trying to make the un-hovering less janky */
     width: 100%;
     position: absolute;
@@ -63,14 +61,12 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
 .hand:hover .station-name {
     opacity: 0.8;
     font-size: 12px;
     font-weight: bold;
     transition: 0s;
 }
-
 .hand .utc {
     /* display: none; */
     margin: 0;
@@ -101,5 +97,21 @@
     border-radius: 14px;
     -moz-border-radius: 14px;
     -webkit-border-radius: 14px;
+}
+
+@media (max-width: 700px) {
+    .hand {
+        height: 14px;
+        top: calc(50% - 7px); 
+        border-bottom-left-radius: 14px;
+    }
+    .hand .station-name{
+        font-size: 5px;
+        line-height: 14px;
+    }
+    .details {
+        border-top-left-radius: 14px;
+        border-bottom-left-radius: 14px;
+    }
 }
 </style>
