@@ -52,14 +52,14 @@ img {
 
 .station {
     height: 5vh;
-    /* width: 100dvw; */
-
     padding: 0 10px;
     position: fixed;
-    bottom: calc(25vh - 44px);
-    left: 0;
+    bottom: calc(15vh - 22px);
+    left: 50%;
     display: flex;
+    margin: auto;
     flex-direction: column;
+    transform: translateX(-50%);
     align-items: baseline;
     justify-content: space-evenly;
     z-index: 99;

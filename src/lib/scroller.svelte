@@ -69,7 +69,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    background: var(--yang);
+    background: var(--yin);
 }
 
 .scene {
@@ -90,10 +90,10 @@
 }
 
 .face {
-    color: var(--yin);
-    background: var(--yang);
+    color: var(--yang);
+    background: var(--yin);
     border-right: 0.5px solid;
-    writing-mode: sideways-rl;
+    writing-mode: sideways-lr;
     width: 24px;
     height: calc(30vh - 44px);
     font-size: 7px;

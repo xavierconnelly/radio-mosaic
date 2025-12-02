@@ -44,7 +44,7 @@
 </MediaQuery>
 
 {#if $INDEX !== null}
-    <h2 style="color: #{stationData[$INDEX].mosaicBg};">{stationData[$INDEX].name}</h2>
+    <h2 style="color: #{stationData[$INDEX].mosaicBg}; background: #{stationData[$INDEX].fill}">{stationData[$INDEX].name}</h2>
     <div class="image-wrap" style="background-color: #{stationData[$INDEX].mosaicBg}; color: #{stationData[$INDEX].fill}">
         <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
     </div>
@@ -89,6 +89,7 @@
         height: 44px;
         padding: 0 10px;
 		justify-content: center;
+        
         font-size: 32px;
         line-height: 44px;
         margin: auto 0;
@@ -141,7 +142,7 @@
         height: 5vh;
         line-height: 5vh;
         padding: 0px 10px;
-        /* background: var(--yin); */
+        background: var(--yin);
     }
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {
@@ -157,9 +158,10 @@
             flex-direction: column;
             align-items: baseline;
             justify-content: space-evenly;
+                  writing-mode: sideways-lr;
             top: calc(44px);
             left: 0;
-            width: 100dvw;
+            /* width: 100dvw; */
             text-align: center;
             height: 70vh;
             z-index: 99;
