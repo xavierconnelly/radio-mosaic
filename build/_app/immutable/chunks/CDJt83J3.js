@@ -1,0 +1,1 @@
+import{s as n}from"./4iQNmZqH.js";import{w as o}from"./C0Ka4R7p.js";const a=()=>{const s=n;return{page:{subscribe:s.page.subscribe},navigating:{subscribe:s.navigating.subscribe},updated:s.updated}},c={subscribe(s){return a().page.subscribe(s)}},u=o(null);function g(s,e){const t=e.findIndex(r=>r.slug===s);t!==-1&&u.set(t)}export{u as I,c as p,g as u};
