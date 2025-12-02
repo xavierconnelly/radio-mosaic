@@ -30,14 +30,15 @@
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
-        <Scroller data-sveltekit-noscroll items={stationData} onActiveChange={updateActive} />
+        <Scroller items={stationData} onActiveChange={updateActive} />
         <Painting  
             name={stationData[activeIndex].name}
             slug={stationData[activeIndex].slug}
             city={stationData[activeIndex].city}
             country={stationData[activeIndex].country}
+            slug={stationData[activeIndex].slug}
         />
-        <a data-sveltekit-noscroll id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a>
+        <!-- <a data-sveltekit-noscroll id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a> -->
     {/if}
 </MediaQuery>
 

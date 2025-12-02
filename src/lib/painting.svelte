@@ -6,6 +6,8 @@
 	export let slug;
 	export let city;
 	export let country;
+	export let slug;
+
 
 </script>
 
@@ -18,6 +20,7 @@
 	<h4>{name}</h4>
 	<!-- <p>{city}</p>
 	<p>{country}</p> -->
+    <a data-sveltekit-noscroll id="play-me" href="/stations/{slug}">play</a>
 </div>
 
 <style>
@@ -58,13 +61,16 @@ img {
     left: 50%;
     display: flex;
     margin: auto;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
     transform: translateX(-50%);
     align-items: baseline;
+    border: 1px solid;
+    border-radius: 2px;
     justify-content: space-evenly;
     z-index: 99;
-    background-color: var(--yang);
-    color: var(--yin);
+    background-color: var(--yin);
+    color: var(--yang);
 }
 
 /* media stylings ~ TABLET */
@@ -73,8 +79,7 @@ img {
             top: 28px;
         }
         .station {
-            /* not sitting correctly */
-            bottom: calc(25vh - 28px);
+            bottom: calc(15vh - 11px);
         }
     }
 </style>
