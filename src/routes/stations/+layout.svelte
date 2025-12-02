@@ -1,14 +1,14 @@
 <script>
     // local components
 	import ClockSmall from './clockSmall.svelte';
-	import Plus from './lib/plus.svelte';
-	import Minus from './lib/minus.svelte';
+	import Plus from './plus.svelte';
+	import Minus from './minus.svelte';
 
     // shared components
 	import Audio from '$lib/audio.svelte';
 	import MediaQuery from '$lib/mediaQuery.svelte';
 
-    // padding in data
+    // passing in data
 	import '/src/app.css'
     import { page } from '$app/stores';
     import { INDEX, updateIndexFromSlug } from '$lib/store.js';
