@@ -99,7 +99,7 @@
     -webkit-border-radius: 14px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     .hand {
         height: 14px;
         top: calc(50% - 7px); 

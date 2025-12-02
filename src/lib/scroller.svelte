@@ -32,13 +32,15 @@
 </div>
 
 <div id="box">
-    <div class="scene">
+    <div    data-sveltekit-noscroll 
+            class="scene">
         <div data-sveltekit-noscroll 
             class="cube"
             style="transform: translateZ(-{radius}em) rotateY({x}deg)"
         >
             {#each items as item, i}
-                <div    class="face"
+                <div    data-sveltekit-noscroll 
+                        class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
                                             translateZ({radius}em)">
                     {item.name}
