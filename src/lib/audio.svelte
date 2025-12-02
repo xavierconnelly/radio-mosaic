@@ -55,6 +55,7 @@ button {
 	right: 100px;
 	height: 44px;
 	border: none;
+	z-index: 999;
 }
 
 /*Chrome*/
@@ -66,10 +67,11 @@ button {
       -webkit-appearance: none;
       background-color: var(--yin);
 		/* transform: rotate(270deg) translate(calc(-50% + 15px), calc(-50vh + 50%)); */
-		transform: rotate(270deg);
+		transform: rotate(270deg) translate(calc(50% - 15px), calc(50vh - 50%));
 		position: fixed;
 		top: 44px;
 		right: 0;
+		z-index: 999;
     }
     
     input[type='range']::-webkit-slider-runnable-track {
