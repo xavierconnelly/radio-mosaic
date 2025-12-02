@@ -4,27 +4,22 @@
 </script>
 
 <body>
-	
-<div>
-	
-
-<audio 
-	src="https://sveltejs.github.io/assets/music/strauss.mp3"
-	bind:paused={paused}
-	bind:volume
-	>
-</audio>
-	
-<button on:click={() => paused = !paused}>
-	{paused ? "PLAY" : "STOP"}
-</button>
-	{Math.floor(volume * 100)}
-	</div>
-	
-<input type="range" 
-			 bind:value={volume}
-			 max="1"
-			 step="0.01"/>
+  <div>
+    <audio 
+            src="https://sveltejs.github.io/assets/music/strauss.mp3"
+            bind:paused={paused}
+            bind:volume
+            >
+    </audio>
+    <button on:click={() => paused = !paused}>
+      {paused ? "PLAY" : "STOP"}
+    </button>
+    {Math.floor(volume * 100)}
+  </div>
+  <input type="range" 
+        bind:value={volume}
+        max="1"
+        step="0.01"/>
 </body>
 
 <style>
