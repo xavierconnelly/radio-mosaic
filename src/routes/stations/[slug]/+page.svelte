@@ -26,7 +26,7 @@
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
-        <Scroller items={stationData} onActiveChange={updateActive} />
+        <Scroller data-sveltekit-noscroll items={stationData} onActiveChange={updateActive} />
         <Painting  
             name={stationData[activeIndex].name}
             slug={stationData[activeIndex].slug}
