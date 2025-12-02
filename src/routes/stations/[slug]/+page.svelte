@@ -33,7 +33,6 @@
             city={stationData[activeIndex].city}
             country={stationData[activeIndex].country}
         />
-        <a data-sveltekit-noscroll id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a>
     {/if}
 </MediaQuery>
 
@@ -134,16 +133,6 @@
         object-fit: cover;
         transition: 3s;
     }
-    #play-me {
-        z-index: 101;
-        position: fixed;
-        bottom: calc(25vh - 44px);
-        right: 0;
-        height: 5vh;
-        line-height: 5vh;
-        padding: 0px 10px;
-        background: var(--yin);
-    }
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {
 
@@ -158,12 +147,12 @@
             flex-direction: column;
             align-items: baseline;
             justify-content: space-evenly;
-                  writing-mode: sideways-lr;
-            top: calc(44px);
+                  /* writing-mode: sideways-lr; */
+            top: 70vh;
             left: 0;
             /* width: 100dvw; */
             text-align: center;
-            height: 70vh;
+            /* height: 70vh; */
             z-index: 99;
             line-height: unset;
             place-items: center;
@@ -172,7 +161,7 @@
         }
 		.image-wrap {
             top: 44px;
-            height: calc(70vh);
+            height: calc(72vh);
             width: 100vw;
         }
         #flyover {
@@ -185,9 +174,6 @@
         }
 		.image-wrap {
             top: 28px;
-        }
-        #play-me {
-            bottom: calc(25vh - 28px);
         }
     }
 </style>

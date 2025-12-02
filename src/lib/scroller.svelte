@@ -63,12 +63,13 @@
 
 #box {
     width: 100vw;
-    height: calc(30vh - 44px);
+    height: calc(28vh - 44px);
     z-index: 99;
 	overflow: hidden;
     position: fixed;
     bottom: 0;
     left: 0;
+    border-top: 1px solid var(--yang);
     background: var(--yin);
 }
 
@@ -95,9 +96,9 @@
     border-right: 0.5px solid;
     writing-mode: sideways-lr;
     width: 24px;
-    height: calc(30vh - 44px);
+    height: calc(28vh - 44px);
     font-size: 7px;
-    padding-top: 10px;
+    padding-bottom: 10px;
     position: absolute;
     display: flex;
     align-items: center;
@@ -106,10 +107,10 @@
 
 @media (max-width: 500px) {
     #box {
-        height: calc(30vh - 28px);
+        height: calc(28vh - 28px);
     }
     .face {
-        height: calc(30vh - 28px);
+        height: calc(28vh - 28px);
     }
 }
 </style>

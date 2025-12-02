@@ -96,20 +96,4 @@
         transition-delay: 20ms;
         border-right: 1px solid var(--yang);
     }
-    #play-me {
-        z-index: 101;
-        position: fixed;
-        bottom: calc(25vh - 44px);
-        right: 0;
-        height: 5vh;
-        line-height: 5vh;
-        padding: 0px 10px;
-        color: var(--yin);
-        /* background: var(--yin); */
-    }
-    @media (max-width: 500px) {
-        #play-me {
-            bottom: calc(25vh - 28px);
-        }
-    }
 </style>

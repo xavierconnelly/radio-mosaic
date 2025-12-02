@@ -25,7 +25,7 @@
 #glimpse {
     display: none;
     width: 100dvw;
-    height: calc(70dvh);
+    height: calc(72dvh);
     position: fixed;
     top: 44px;
     left: 0;
@@ -54,7 +54,7 @@ img {
     height: 5vh;
     padding: 0 30px;
     position: fixed;
-    bottom: calc(18vh - 22px);
+    bottom: calc(17vh - 22px);
     left: 50%;
     width: max-content;
     display: flex;
@@ -77,7 +77,7 @@ img {
             top: 28px;
         }
         .station {
-            bottom: calc(18vh - 11px);
+            bottom: calc(17vh - 11px);
         }
     }
 </style>
