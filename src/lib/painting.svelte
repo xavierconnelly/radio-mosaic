@@ -6,7 +6,6 @@
 	export let slug;
 	export let city;
 	export let country;
-	export let slug;
 </script>
 
 <div id="glimpse">
