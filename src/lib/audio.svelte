@@ -74,7 +74,7 @@ button {
 		/* transform: rotate(270deg) translate(calc(-50% + 15px), calc(-50vh + 50%)); */
 		transform: rotate(270deg) translate(calc(-50% + 22px),calc(50vh - 100%));
 		position: fixed;
-		top: 44px;
+		top: 45px;
 		right: 0;
 		z-index: 999;
     }
@@ -117,13 +117,17 @@ input[type="range"]::-ms-fill-upper {
 			display:none;
 		}
 		button {
+			height: 200px;
+			width: 200px;
+			font-size: 200px;
 			position: fixed;
-			top: 50%;
+			top: calc(35vh + 44px);
 			right: unset;
 			left: 50%;
-			height: 100px;
-			width: 100px;
-			font-size: 48px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transform: translate(-50%, -50%);
 			background-color: unset;
 			border: none;
 			z-index: 999;

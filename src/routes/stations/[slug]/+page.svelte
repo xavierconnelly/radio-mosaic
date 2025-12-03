@@ -242,7 +242,9 @@
 
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {
-
+        h2 {
+            left: 330px;
+        }
 	}
 
 	/* media stylings ~ MOBILE */

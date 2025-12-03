@@ -13,8 +13,6 @@
 	import ClockBigger from './clockBigger.svelte';
 
     // hovering things
-
-    // variable for current hovered on
     $: moused = $HOVER;
 
     // scrolling dial
