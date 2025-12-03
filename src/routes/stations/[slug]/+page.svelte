@@ -1,7 +1,7 @@
 <script>
     import { page } from '$app/stores';
-    import { HOVER, INDEX, updateIndexFromSlug } from '$lib/store.js';
-    import { stationData } from '/src/routes/stations/radioData.js';
+    import { INDEX, updateIndexFromSlug } from '$lib/store.js';
+    import { HOVER, stationData } from '/src/routes/stations/radioData.js';
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
     import Painting from '$lib/painting.svelte';
