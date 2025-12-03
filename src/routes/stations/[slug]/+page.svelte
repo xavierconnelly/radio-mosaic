@@ -5,6 +5,8 @@
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
     import Painting from '$lib/painting.svelte';
+    import Time from "$lib/time.svelte";
+
 
     // Keep INDEX synced with the current URL slug
     $: if ($page.params.slug) {
@@ -79,7 +81,8 @@
             </div>
         </div>
         <div class="local">
-            <p>{stationData[moused].city}</p>
+            <p><Time /></p>
+            <b>{stationData[moused].city}</b>
             <p>{stationData[moused].country}</p>
         </div>
     <!-- {/if}
@@ -222,7 +225,7 @@
     }
     .local {
         width: 20px;
-        padding: 20px 12px 48px 12px;
+        padding: 16px 12px 48px 12px;
         position: fixed;
         display: flex;
         bottom: 0;
@@ -230,6 +233,7 @@
         font-size: 14px;
         align-items: center;
         left: 0;
+        border: 1px solid;
         border-radius: 2px;
         z-index: 19999;
         writing-mode: sideways-rl;

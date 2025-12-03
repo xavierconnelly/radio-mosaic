@@ -3,10 +3,6 @@
 </script>
 
 {#key data.url} 
-  <!-- <nav>
-      <span id="play">play/pause</span>
-      <span id="volume">volume</span>
-  </nav> -->
 	<slot />
 {/key}
 
