@@ -29,6 +29,7 @@
 .minus {
 	writing-mode: sideways-lr;
 	left: 270px;
+	z-index: 9999;
 }
 
 /* media stylings ~ TABLET */

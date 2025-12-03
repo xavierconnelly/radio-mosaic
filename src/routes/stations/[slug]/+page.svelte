@@ -76,6 +76,11 @@
     {#if matches}
         <div class="image-wrap">
             <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+                <div class="station">
+	                <h4>{stationData[moused].name}</h4>
+	                <p>{stationData[moused].city}</p>
+	                <p>{stationData[moused].country}</p>
+                </div>
             </div>
         </div>
     {/if}
@@ -195,6 +200,26 @@
         transition: 3s;
         transition-delay: 20ms;
         border-right: 1px solid var(--yang);
+    }
+    .station {
+        height: 5vh;
+        padding: 0 30px;
+        position: fixed;
+        bottom: 50%;
+        left: 50%;
+        width: max-content;
+        display: flex;
+        margin: auto;
+        flex-direction: row;
+        gap: 10px;
+        transform: translate(-50%, -50%%);
+        align-items: center;
+        border: 1px solid;
+        border-radius: 2px;
+        justify-content: space-evenly;
+        z-index: 9999;
+        background-color: var(--yin);
+        color: var(--yang);
     }
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {
