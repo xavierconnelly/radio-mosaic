@@ -42,8 +42,8 @@
     {/if}
 
     <nav style="color: #{stationData[$INDEX].mosaicBg}">
-      <span id="city">{stationData[activeIndex].city}</span>
-      <span id="country">{stationData[activeIndex].country}</span>
+      <span id="city">{stationData[$INDEX].city}</span>
+      <span id="country">{stationData[$INDEX].country}</span>
     </nav>
 </MediaQuery>
 

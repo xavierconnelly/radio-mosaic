@@ -103,4 +103,7 @@
         /* transition-delay: 20ms; */
         border-right: 1px solid var(--yang);
     }
+    .mosaic {
+        background-size: 300px;
+    }
 </style>
