@@ -15,8 +15,6 @@
     // hovering things
 
     // variable for current hovered on
-	// let moused;	
-	// const something = HOVER.subscribe(value => moused = value);
     $: moused = $HOVER;
 
     // scrolling dial
@@ -50,18 +48,29 @@
 <MediaQuery query="(min-width: 1280px)" let:matches>
     {#if matches}
         <div class="image-wrap">
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+            <div class="local">
+                <p>{stationData[moused].city}</p>
+                <p>{stationData[moused].country}</p>
+            </div>
+            <div class="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+            </div>
+            <div class="flyover"  style="background-image: url(../images/mosaic.png">
             </div>
         </div>
     {/if}
 </MediaQuery>
 
 <style>
-    /* #hugger {
-        display: flex;
-        flex-direction: row;
-        background-color: #F6F3F0;
-    } */
+    .local {
+        height: 20px;
+        padding: 0 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        writing-mode: rl;
+        background-color: var(--yang);
+        color: var(--yin);
+    }
     .image-wrap {
 		background: var(--yang);
         display: block;
@@ -72,8 +81,7 @@
         height: calc(100vh - 44px);
         width: calc(300px);
 	}
-
-     #flyover {
+    .flyover {
         display: block;
         /* opacity: 0; */
         position: absolute;
@@ -92,7 +100,7 @@
         z-index: 199;
         object-fit: cover;
         transition: 3s;
-        transition-delay: 20ms;
+        /* transition-delay: 20ms; */
         border-right: 1px solid var(--yang);
     }
 </style>

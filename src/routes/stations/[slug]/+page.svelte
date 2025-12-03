@@ -23,8 +23,6 @@
 		activeIndex = i;
 	}
     // variable for current hovered on
-	// let moused;	
-	// const something = HOVER.subscribe(value => moused = value);
     $: moused = $HOVER;
 </script>
 
@@ -229,7 +227,7 @@
         bottom: 0;
         left: 0;
         writing-mode: rl;
-                background-color: var(--yang);
+        background-color: var(--yang);
         color: var(--yin);
     }
 	/* media stylings ~ TABLET */
