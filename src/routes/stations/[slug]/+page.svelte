@@ -83,7 +83,7 @@
 	                <h4>{stationData[moused].name}</h4>
                 </div>
             </div> -->
-        </div>
+        <!-- </div> -->
     <!-- {/if}
 </MediaQuery> -->
 
