@@ -36,8 +36,18 @@
 	>
 </audio> -->
 
-<button onclick={() => paused = !paused}>
-	{paused ? "▶" : "■"}
+<button class="player-btn" on:click={() => paused = !paused}>
+    {#if paused}
+        <!-- PLAY -->
+        <svg class="icon" viewBox="0 0 24 24">
+            <polygon points="6,4 20,12 6,20" />
+        </svg>
+    {:else}
+        <!-- STOP -->
+        <svg class="icon" viewBox="0 0 24 24">
+            <rect x="6" y="6" width="12" height="12" />
+        </svg>
+    {/if}
 </button>
 <!-- output of the number
 {Math.floor(volume * 100)} -->
@@ -49,17 +59,30 @@
 
 <style>
 
+    .player-btn {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+		position: fixed;
+		top: 0;
+		right: 0px;
+		height: 44px;
+		font-size: 32px;
+		background-color: unset;
+		color: var(--yang);
+		width: 44px;
+		z-index: 999;
+    }
+
+    /* default desktop size */
+    .icon {
+        width: 32px;
+        height: 32px;
+        display: block;
+    }
+
 button {
-	position: fixed;
-	top: 0;
-	right: 0px;
-	height: 44px;
-	font-size: 32px;
-	background-color: unset;
-	color: var(--yang);
-	width: 44px;
-	border: none;
-	z-index: 999;
 
 }
 
@@ -111,15 +134,21 @@ input[type="range"]::-ms-fill-upper {
       background: var(--yang);
 }
 
+
+    /* mobile breakpoint — scale up */
+    @media (max-width: 600px) {
+    
+    }
+
 	/* media stylings ~ TABLET */
 	@media (max-width: 700px) {
 		input {
 			display:none;
 		}
-		button {
-			height: 200px;
+		.player-btn  {
+			/* height: 200px;
 			width: 200px;
-			font-size: 200px;
+			font-size: 200px; */
 			position: fixed;
 			top: calc(36vh + 44px);
 			right: unset;
@@ -133,6 +162,10 @@ input[type="range"]::-ms-fill-upper {
 			z-index: 999;
 			color: var(--yin);
 		}
+		.icon {
+            width: 200px;
+            height: 200px;
+        }
 	}
 		/* media stylings ~ TABLET */
 	@media (max-width: 500px) {
