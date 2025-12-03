@@ -30,8 +30,6 @@
         <Painting  
             name={stationData[activeIndex].name}
             slug={stationData[activeIndex].slug}
-            city={stationData[activeIndex].city}
-            country={stationData[activeIndex].country}
         />
     {/if}
 </MediaQuery>
@@ -40,6 +38,11 @@
     {#if matches}
         <Intro style="color: #{stationData[$INDEX].mosaicBg};"/>
     {/if}
+
+    <nav>
+      <span id="city">{stationData[activeIndex].city}</span>
+      <span id="country">{stationData[activeIndex].country}</span>
+    </nav>
 </MediaQuery>
 
 {#if $INDEX !== null}
@@ -65,6 +68,19 @@
 {/if}
 
 <style>
+    nav {
+        position: fixed;
+        top: 0;
+        right: 44px;
+        height: 44px;
+        padding-right: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        font-size: 24px;
+        line-height: 44px;
+        z-index: 99;
+    }
     aside {
         height: calc(100vh - 44px);
         width: 300px;

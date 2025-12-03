@@ -54,6 +54,8 @@ button {
 	top: 0;
 	right: 0px;
 	height: 44px;
+	font-size: 40px;
+	background-color: none;
 	width: 44px;
 	border: none;
 	z-index: 999;
