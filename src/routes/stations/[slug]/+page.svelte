@@ -41,18 +41,24 @@
     {#if matches}
         <Intro style="color: #{stationData[$INDEX].mosaicBg};"/>
     {/if}
+</MediaQuery>
 
     <nav style="color: #{stationData[$INDEX].mosaicBg}">
         <span><Time /></span>
         <b id="city">{stationData[$INDEX].city}</b>
         <span id="country">{stationData[$INDEX].country}</span>
     </nav>
-</MediaQuery>
+
 
 {#if $INDEX !== null}
     <h2 style="color: #{stationData[$INDEX].mosaicBg};">{stationData[$INDEX].name}</h2>
     <div class="background" style="background-color: #{stationData[$INDEX].mosaicBg}; color: #{stationData[$INDEX].fill}">
         <div id="wallpaper"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
+
+
+            <!-- place station bio content here -->
+
+
     </div>
     <!-- <aside style="background: #{stationData[$INDEX].fill}; color: #{stationData[$INDEX].sparkle};">
         <div id="bio" style="color: #{stationData[$INDEX].sparkle};">
@@ -155,7 +161,7 @@
         display: block;
         position: absolute;
         left: 0;
-        opacity: .8;
+        opacity: .75;
         padding: 10px;
         height: 100%;
         width: 100%;

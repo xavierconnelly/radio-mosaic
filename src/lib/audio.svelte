@@ -121,7 +121,7 @@ input[type="range"]::-ms-fill-upper {
 			width: 200px;
 			font-size: 200px;
 			position: fixed;
-			top: calc(36vh + 22px);
+			top: calc(36vh + 44px);
 			right: unset;
 			left: 50%;
 			display: flex;
@@ -132,6 +132,15 @@ input[type="range"]::-ms-fill-upper {
 			border: none;
 			z-index: 999;
 			color: var(--yin);
+		}
+	}
+		/* media stylings ~ TABLET */
+	@media (max-width: 500px) {
+		input {
+			display:none;
+		}
+		button {
+			top: calc(36vh + 28px);
 		}
 	}
 </style>
