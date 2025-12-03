@@ -75,13 +75,15 @@
 <MediaQuery query="(min-width: 1280px)" let:matches>
     {#if matches}
         <div class="image-wrap">
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
-                <div class="station">
+            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$moused].slug}.webp">
+                <div class="blurb">
 	                <h4>{stationData[moused].name}</h4>
-	                <p>{stationData[moused].city}</p>
-	                <p>{stationData[moused].country}</p>
                 </div>
             </div>
+        </div>
+        <div class="local">
+            <p>{stationData[moused].city}</p>
+            <p>{stationData[moused].country}</p>
         </div>
     {/if}
 </MediaQuery>
@@ -201,18 +203,18 @@
         transition-delay: 20ms;
         border-right: 1px solid var(--yang);
     }
-    .station {
+    .blurb {
         height: 5vh;
         padding: 0 30px;
         position: fixed;
         bottom: 50%;
-        left: 50%;
+        left: calc(50% - 15px);
         width: max-content;
         display: flex;
         margin: auto;
         flex-direction: row;
         gap: 10px;
-        transform: translate(-50%, -50%%);
+        transform: translate(-50%, -50%);
         align-items: center;
         border: 1px solid;
         border-radius: 2px;
@@ -220,6 +222,16 @@
         z-index: 9999;
         background-color: var(--yin);
         color: var(--yang);
+    }
+    .local {
+        height: 20px;
+        padding: 0 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        writing-mode: rl;
+                background-color: var(--yang);
+        color: var(--yin);
     }
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {

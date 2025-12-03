@@ -108,4 +108,23 @@ input[type="range"]::-ms-fill-lower {
 input[type="range"]::-ms-fill-upper {  
       background: var(--yang);
 }
+
+	/* media stylings ~ TABLET */
+	@media (min-width: 700px) {
+		input {
+			display:none;
+		}
+		button {
+			position: fixed;
+			top: 50%;
+			right: unset;
+			left: 50%;
+			height: 100px;
+			width: 100px;
+			font-size: 48px;
+			background-color: unset;
+			border: none;
+			z-index: 999;
+		}
+	}
 </style>
