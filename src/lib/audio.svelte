@@ -37,7 +37,7 @@
 </audio> -->
 
 <button onclick={() => paused = !paused}>
-	{paused ? "⏵" : "◼"}
+	{paused ? "&#9654;" : "&#9632;"}
 </button>
 <!-- output of the number
 {Math.floor(volume * 100)} -->
@@ -121,7 +121,7 @@ input[type="range"]::-ms-fill-upper {
 			width: 200px;
 			font-size: 200px;
 			position: fixed;
-			top: calc(35vh + 44px);
+			top: calc(36vh + 22px);
 			right: unset;
 			left: 50%;
 			display: flex;
@@ -131,6 +131,7 @@ input[type="range"]::-ms-fill-upper {
 			background-color: unset;
 			border: none;
 			z-index: 999;
+			color: var(--yin);
 		}
 	}
 </style>
