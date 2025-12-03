@@ -5,7 +5,7 @@
 	import Minus from './minus.svelte';
 
     // shared components
-	import Audio from '$lib/audio.svelte';
+	// import Audio from '$lib/audio.svelte';
 	import MediaQuery from '$lib/mediaQuery.svelte';
 
     // passing in data
@@ -20,7 +20,7 @@
     }
 </script>
 
-<Audio/>
+<!-- <Audio/> -->
 <slot />
 
 <MediaQuery query="(min-width: 700px)" let:matches>

@@ -1,12 +1,17 @@
-<!-- <script>
-    import { fly } from 'svelte/transition';
-    import { page } from '$app/state';
-</script> -->
+<script>
+    // import { fly } from 'svelte/transition';
+    // import { page } from '$app/state';
+    
+    import Audio from '$lib/audio.svelte';
+</script>
+
+
 
 <header>
     <h1>
         <a href="/">RADIO MOSAIC </a>
     </h1>
+    <Audio/>
 </header>
 
 <slot />
