@@ -71,8 +71,8 @@
     </aside> -->
 {/if}
 
-<MediaQuery query="(min-width: 1280px)" let:matches>
-    {#if matches}
+<!-- <MediaQuery query="(min-width: 1280px)" let:matches>
+    {#if matches} -->
         <div class="image-wrap">
             <div class="local">
                 <b>{stationData[moused].city}</b>
@@ -84,8 +84,8 @@
                 </div>
             </div> -->
         </div>
-    {/if}
-</MediaQuery>
+    <!-- {/if}
+</MediaQuery> -->
 
 <style>
     nav {
