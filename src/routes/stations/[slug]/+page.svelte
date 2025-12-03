@@ -39,7 +39,7 @@
         <Intro style="color: #{stationData[$INDEX].mosaicBg};"/>
     {/if}
 
-    <nav>
+    <nav style="color: #{stationData[$INDEX].mosaicBg}">
       <span id="city">{stationData[activeIndex].city}</span>
       <span id="country">{stationData[activeIndex].country}</span>
     </nav>
@@ -100,11 +100,10 @@
     h2 {
         position: fixed;
         top: 0px;
-        left: 600px;
+        left: 630px;
         height: 44px;
-        padding-left: 30px;
+        padding-left: 10px;
 		justify-content: center;
-        
         font-size: 32px;
         line-height: 44px;
         margin: auto 0;
