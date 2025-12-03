@@ -16,8 +16,7 @@
     import Intro  from '$lib/intro.svelte';
 
     export let data; // or whatever your load function returns
-    const station = data.station; // if that's your structure
-
+    const station = data.station; 
     // scrolling dial
 	let activeIndex = 0;
 
@@ -45,7 +44,7 @@
 
     <nav style="color: #{stationData[$INDEX].mosaicBg}">
         <span><Time /></span>
-        <span id="city">{stationData[$INDEX].city}</span>
+        <b id="city">{stationData[$INDEX].city}</b>
         <span id="country">{stationData[$INDEX].country}</span>
     </nav>
 </MediaQuery>
@@ -79,11 +78,11 @@
                 <b>{stationData[moused].city}</b>
                 <p>{stationData[moused].country}</p>
             </div>
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+            <!-- <div id="flyover" style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
                 <div class="blurb">
 	                <h4>{stationData[moused].name}</h4>
                 </div>
-            </div>
+            </div> -->
         </div>
     {/if}
 </MediaQuery>
