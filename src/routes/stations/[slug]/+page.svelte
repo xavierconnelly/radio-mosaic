@@ -73,11 +73,11 @@
 
 <!-- <MediaQuery query="(min-width: 1280px)" let:matches>
     {#if matches} -->
-        <div class="image-wrap">
+        <!-- <div class="image-wrap">
             <div class="local">
                 <b>{stationData[moused].city}</b>
                 <p>{stationData[moused].country}</p>
-            </div>
+            </div> -->
             <!-- <div id="flyover" style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
                 <div class="blurb">
 	                <h4>{stationData[moused].name}</h4>
