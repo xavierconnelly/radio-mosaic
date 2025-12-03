@@ -73,7 +73,7 @@
         top: 0;
         right: 44px;
         height: 44px;
-        padding-right: 30px;
+        padding-right: 10px;
         display: flex;
         flex-direction: row;
         gap: 20px;
@@ -100,9 +100,9 @@
     h2 {
         position: fixed;
         top: 0px;
-        left: 300px;
+        left: 600px;
         height: 44px;
-        padding: 0 10px;
+        padding-left: 30px;
 		justify-content: center;
         
         font-size: 32px;
