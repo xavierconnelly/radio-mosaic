@@ -37,7 +37,7 @@
 </audio> -->
 
 <button onclick={() => paused = !paused}>
-	{paused ? "⏵" : "◼️"}
+	{paused ? "⏵" : "◼"}
 </button>
 <!-- output of the number
 {Math.floor(volume * 100)} -->

@@ -72,15 +72,15 @@
 <MediaQuery query="(min-width: 1280px)" let:matches>
     {#if matches}
         <div class="image-wrap">
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$HOVER].slug}.webp">
                 <div class="blurb">
-	                <h4>{stationData[moused].name}</h4>
+	                <h4>{stationData[$HOVER].name}</h4>
                 </div>
             </div>
         </div>
         <div class="local">
-            <p>{stationData[moused].city}</p>
-            <p>{stationData[moused].country}</p>
+            <p>{stationData[$HOVER].city}</p>
+            <p>{stationData[$HOVER].country}</p>
         </div>
     {/if}
 </MediaQuery>
@@ -221,15 +221,22 @@
         color: var(--yang);
     }
     .local {
-        height: 20px;
-        padding: 0 20px;
+        width: 20px;
+        padding: 20px 12px 48px 12px;
         position: fixed;
+        display: flex;
         bottom: 0;
+        gap: 20px;
+        font-size: 14px;
+        align-items: center;
         left: 0;
-        writing-mode: rl;
+        border-radius: 2px;
+        z-index: 19999;
+        writing-mode: sideways-rl;
         background-color: var(--yang);
         color: var(--yin);
     }
+
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {
 

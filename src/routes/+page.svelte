@@ -54,7 +54,7 @@
             </div>
             <div class="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
             </div>
-            <div class="flyover"  style="background-image: url(../images/mosaic.png">
+            <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
             </div>
         </div>
     {/if}
@@ -62,12 +62,18 @@
 
 <style>
     .local {
-        height: 20px;
-        padding: 0 20px;
+        width: 20px;
+        padding: 20px 12px 48px 12px;
         position: fixed;
+        display: flex;
         bottom: 0;
+        gap: 20px;
+        font-size: 14px;
+        align-items: center;
         left: 0;
-        writing-mode: rl;
+        border-radius: 2px;
+        z-index: 19999;
+        writing-mode: sideways-rl;
         background-color: var(--yang);
         color: var(--yin);
     }
