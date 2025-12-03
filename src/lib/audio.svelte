@@ -37,7 +37,7 @@
 </audio> -->
 
 <button onclick={() => paused = !paused}>
-	{paused ? "PLAY" : "STOP"}
+	{paused ? "⏵" : "◼️"}
 </button>
 <!-- output of the number
 {Math.floor(volume * 100)} -->
@@ -52,8 +52,9 @@
 button {
 	position: fixed;
 	top: 0;
-	right: 100px;
+	right: 0px;
 	height: 44px;
+	width: 44px;
 	border: none;
 	z-index: 999;
 }
@@ -67,7 +68,7 @@ button {
       -webkit-appearance: none;
       background-color: var(--yin);
 		/* transform: rotate(270deg) translate(calc(-50% + 15px), calc(-50vh + 50%)); */
-		transform: rotate(270deg) translate(calc(50% - 15px), calc(50vh - 50%));
+		transform: rotate(270deg) translate(calc(-50% + 22px),calc(50vh - 100%));
 		position: fixed;
 		top: 44px;
 		right: 0;
@@ -75,14 +76,14 @@ button {
     }
     
     input[type='range']::-webkit-slider-runnable-track {
-      height: 30px;
+      height: 44px;
       -webkit-appearance: none;
       color: red;
       margin-top: -1px;
     }
     
     input[type='range']::-webkit-slider-thumb {
-      width: 30px;
+      width: 44px;
       -webkit-appearance: none;
       height: 10px;
       cursor: cursor;

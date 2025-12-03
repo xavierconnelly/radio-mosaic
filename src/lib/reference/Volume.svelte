@@ -27,11 +27,6 @@
 		margin: 0;
 	}
 	
-	body {
-		background: #F4F2EA;
-		margin: 0;
-	}
-	
 	div{
 		position: fixed;
 		left: 100px;
