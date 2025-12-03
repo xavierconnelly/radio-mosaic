@@ -63,14 +63,14 @@
 <style>
     .local {
         width: 20px;
-        padding: 16px 12px 48px 12px;
+        padding: 16px 12px 24px 12px;
         position: fixed;
         display: flex;
-        bottom: 0;
+        bottom: 20px;
+        left: 20px;
         gap: 20px;
         font-size: 14px;
         align-items: center;
-        left: 0;
         border: 1px solid;
         border-radius: 2px;
         z-index: 19999;
