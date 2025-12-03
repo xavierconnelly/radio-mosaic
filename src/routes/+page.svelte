@@ -15,10 +15,9 @@
     // hovering things
 
     // variable for current hovered on
-	let moused;	
-	
-	// something to do with above
-	const something = HOVER.subscribe(value => moused = value);
+	// let moused;	
+	// const something = HOVER.subscribe(value => moused = value);
+    $: moused = $HOVER;
 
     // scrolling dial
 	let activeIndex = 0;
@@ -51,7 +50,7 @@
 <MediaQuery query="(min-width: 1280px)" let:matches>
     {#if matches}
         <div class="image-wrap">
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.pwebpg">
+            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
             </div>
         </div>
     {/if}

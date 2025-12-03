@@ -56,9 +56,11 @@ button {
 	height: 44px;
 	font-size: 32px;
 	background-color: unset;
+	color: var(--yang);
 	width: 44px;
 	border: none;
 	z-index: 999;
+
 }
 
 /*Chrome*/

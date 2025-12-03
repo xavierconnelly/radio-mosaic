@@ -7,7 +7,7 @@ export const INDEX = writable(null);
 export const HOVER = writable(0);
 export const activeIndex = writable(null);
 
-export const stationData = [
+export const stationData = [ 
  {
    "name": "Dublab",
    "city": "Los Angeles",

@@ -23,10 +23,9 @@
 		activeIndex = i;
 	}
     // variable for current hovered on
-	let moused;	
-	
-	// something to do with above
-	const something = HOVER.subscribe(value => moused = value);
+	// let moused;	
+	// const something = HOVER.subscribe(value => moused = value);
+    $: moused = $HOVER;
 </script>
 
 <MediaQuery query="(max-width: 700px)" let:matches>
