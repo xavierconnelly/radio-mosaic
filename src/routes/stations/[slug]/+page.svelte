@@ -1,6 +1,6 @@
 <script>
     import { page } from '$app/stores';
-    import { INDEX, updateIndexFromSlug } from '$lib/store.js';
+    import { HOVER, INDEX, updateIndexFromSlug } from '$lib/store.js';
     import { stationData } from '/src/routes/stations/radioData.js';
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
@@ -22,6 +22,11 @@
 	function updateActive(i) {
 		activeIndex = i;
 	}
+    // variable for current hovered on
+	let moused;	
+	
+	// something to do with above
+	const something = HOVER.subscribe(value => moused = value);
 </script>
 
 <MediaQuery query="(max-width: 700px)" let:matches>
@@ -47,8 +52,8 @@
 
 {#if $INDEX !== null}
     <h2 style="color: #{stationData[$INDEX].mosaicBg};">{stationData[$INDEX].name}</h2>
-    <div class="image-wrap" style="background-color: #{stationData[$INDEX].mosaicBg}; color: #{stationData[$INDEX].fill}">
-        <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
+    <div class="background" style="background-color: #{stationData[$INDEX].mosaicBg}; color: #{stationData[$INDEX].fill}">
+        <div id="wallpaper"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
     </div>
     <!-- <aside style="background: #{stationData[$INDEX].fill}; color: #{stationData[$INDEX].sparkle};">
         <div id="bio" style="color: #{stationData[$INDEX].sparkle};">
@@ -66,6 +71,15 @@
         </div>
     </aside> -->
 {/if}
+
+<MediaQuery query="(min-width: 1280px)" let:matches>
+    {#if matches}
+        <div class="image-wrap">
+            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+            </div>
+        </div>
+    {/if}
+</MediaQuery>
 
 <style>
     nav {
@@ -120,7 +134,7 @@
         border-radius: 30px;
         padding: 4px 20px;
     }
-    .image-wrap {
+    .background {
         display: block;
         position: fixed;
         z-index: 3;
@@ -131,7 +145,7 @@
         width: calc(100vw);
         border: 0px solid;
 	}
-    #flyover {
+    #wallpaper {
         display: block;
         position: absolute;
         left: 0;
@@ -147,6 +161,40 @@
         z-index: 1;
         object-fit: cover;
         transition: 3s;
+    }
+
+    .image-wrap {
+		background: var(--yang);
+        display: block;
+        position: fixed;
+        z-index: 999;
+        top: 44px;
+        left: 0px;
+        height: calc(100vh - 44px);
+        width: calc(300px);
+	}
+
+     #flyover {
+        display: block;
+        /* opacity: 0; */
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 1;
+        padding: 10px;
+        height: calc(100vh - 44px);
+        width: calc(300px);
+        /* background-color: #F6F3F0; */
+        filter: grayscale(100%);
+        mix-blend-mode: screen;
+        color: inherit;
+        background-size: cover;
+        background-position: center;
+        z-index: 199;
+        object-fit: cover;
+        transition: 3s;
+        transition-delay: 20ms;
+        border-right: 1px solid var(--yang);
     }
 	/* media stylings ~ TABLET */
 	@media (min-width: 700px) and (max-width: 1280px) {
@@ -174,12 +222,12 @@
             /* background-color: var(--yin);
             color: var(--yang); */
         }
-		.image-wrap {
+		.background {
             top: 44px;
             height: calc(72vh);
             width: 100vw;
         }
-        #flyover {
+        #wallpaper {
             border: 10px solid var(--yin);
 		}
 	}
@@ -187,7 +235,7 @@
         h2 {
             top: calc(28px);
         }
-		.image-wrap {
+		.background {
             top: 28px;
         }
     }
