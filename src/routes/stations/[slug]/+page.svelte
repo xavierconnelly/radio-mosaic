@@ -74,7 +74,7 @@
 <MediaQuery query="(min-width: 1280px)" let:matches>
     {#if matches}
         <div class="image-wrap">
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$moused].slug}.webp">
+            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
                 <div class="blurb">
 	                <h4>{stationData[moused].name}</h4>
                 </div>
