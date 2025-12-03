@@ -44,8 +44,9 @@
     {/if}
 
     <nav style="color: #{stationData[$INDEX].mosaicBg}">
-      <span id="city">{stationData[$INDEX].city}</span>
-      <span id="country">{stationData[$INDEX].country}</span>
+        <span><Time /></span>
+        <span id="city">{stationData[$INDEX].city}</span>
+        <span id="country">{stationData[$INDEX].country}</span>
     </nav>
 </MediaQuery>
 
@@ -75,7 +76,6 @@
     {#if matches}
         <div class="image-wrap">
             <div class="local">
-                <p><Time /></p>
                 <b>{stationData[moused].city}</b>
                 <p>{stationData[moused].country}</p>
             </div>
