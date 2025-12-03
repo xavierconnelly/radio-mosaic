@@ -69,21 +69,21 @@
     </aside> -->
 {/if}
 
-<MediaQuery query="(min-width: 1280px)" let:matches>
-    {#if matches}
+<!-- <MediaQuery query="(min-width: 1280px)" let:matches>
+    {#if matches} -->
         <div class="image-wrap">
-            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[$HOVER].slug}.webp">
+            <div id="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
                 <div class="blurb">
-	                <h4>{stationData[$HOVER].name}</h4>
+	                <h4>{stationData[moused].name}</h4>
                 </div>
             </div>
         </div>
         <div class="local">
-            <p>{stationData[$HOVER].city}</p>
-            <p>{stationData[$HOVER].country}</p>
+            <p>{stationData[moused].city}</p>
+            <p>{stationData[moused].country}</p>
         </div>
-    {/if}
-</MediaQuery>
+    <!-- {/if}
+</MediaQuery> -->
 
 <style>
     nav {
