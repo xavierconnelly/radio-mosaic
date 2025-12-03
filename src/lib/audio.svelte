@@ -110,7 +110,7 @@ input[type="range"]::-ms-fill-upper {
 }
 
 	/* media stylings ~ TABLET */
-	@media (min-width: 700px) {
+	@media (max-width: 700px) {
 		input {
 			display:none;
 		}
