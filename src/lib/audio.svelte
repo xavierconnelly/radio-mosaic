@@ -80,6 +80,7 @@
         width: 32px;
         height: 32px;
         display: block;
+		fill: currentColor;
     }
 
 button {
@@ -146,9 +147,9 @@ input[type="range"]::-ms-fill-upper {
 			display:none;
 		}
 		.player-btn  {
-			/* height: 200px;
+			height: 200px;
 			width: 200px;
-			font-size: 200px; */
+			/* font-size: 200px; */
 			position: fixed;
 			top: calc(36vh + 44px);
 			right: unset;
