@@ -1,8 +1,8 @@
 <script>
 	let y;
 
-    export let name;
-	export let slug;
+    export let text;
+	export let fill;
 </script>
 
 <svelte:window bind:scrollY={y}/>
