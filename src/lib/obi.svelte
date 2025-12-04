@@ -2,7 +2,7 @@
 	let y;
 
     export let obi;
-	export let obi-text;
+	export let obiText;
 </script>
 
 <svelte:window bind:scrollY={y}/>

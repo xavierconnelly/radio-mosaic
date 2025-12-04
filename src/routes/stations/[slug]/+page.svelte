@@ -40,7 +40,7 @@
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
         <Obi 
-            text={stationData[$INDEX].obi-text}
+            text={stationData[$INDEX].obiText}
             fill={stationData[$INDEX].obi}/>
     {/if}
 </MediaQuery>
