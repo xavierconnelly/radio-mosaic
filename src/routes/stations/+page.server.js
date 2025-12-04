@@ -12,12 +12,13 @@ export function load() {
 			url: station.url,
 			about: station.about,
 			audio: station.audio,
-			highlight: station.highlight,
-			fill: station.fill,
+			tint: station.tint,
+			clockhand: station.clockhand,
+			obi: station.obi,
+			obiText: station.obiText,
+			title: station.title,
 			city: station.city,
-			country: station.country,
-			hero: station.hero,
-			tile: station.tile
+			country: station.country
 		}))
 	};
 }
