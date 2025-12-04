@@ -8,7 +8,7 @@
 <svelte:window bind:scrollY={y}/>
 
 
-<div class="theatre" style="color: {text}; background: {fill}">
+<div class="theatre" style="color: #{text}; background: #{fill}">
     <div class="scene">
         <div class="cube" style="transform: translateZ(-65em) rotateX({y}deg)">
             <div class="face one red">      
