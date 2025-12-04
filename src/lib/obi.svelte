@@ -11,9 +11,9 @@
 <div class="theatre" style="color: #{obiText}; background: #{obi}">
     <div class="scene">
         <div class="cube" style="transform: translateZ(-65em) rotateX({y}deg)">
-            <div class="face one red">      
-                <p lang="ru">
-                    Radio Mosaic — это сообщество, движение, способ объединить прошлое, будущее и настоящее. Хотя мы и живем в разных уголках земного шара, мы все едины. Это сообщество, движение, способ объединить прошлое, будущее и настоящее. Хотя мы и живем в разных уголках земного шара, мы все едины.
+            <div class="face one red">
+                <p lang="en">
+                    <b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
                 </p>
             </div>
             <div class="face two">
@@ -31,9 +31,9 @@
                 <p lang="ar" class="rtl">
                     راديو موزيك هو مجتمع، وحركة، وطريقة لجمع الماضي والمستقبل والحاضر معاً في آن واحد. على الرغم من أننا نعيش في أركان متفرقة من العالم، إلا أننا جميعاً واحد. هو مجتمع، وحركة، وطريقة لجمع الماضي والمستقبل والحاضر معاً في آن واحد. على الرغم من أننا نعيش في أركان متفرقة من العالم، إلا أننا جميعاً واحد.                </p>
             </div>
-            <div class="face five red">
-                <p lang="en">
-                    <b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+            <div class="face five red">      
+                <p lang="ru">
+                    Radio Mosaic — это сообщество, движение, способ объединить прошлое, будущее и настоящее. Хотя мы и живем в разных уголках земного шара, мы все едины. Это сообщество, движение, способ объединить прошлое, будущее и настоящее. Хотя мы и живем в разных уголках земного шара, мы все едины.
                 </p>
             </div>
             <div class="face six">
