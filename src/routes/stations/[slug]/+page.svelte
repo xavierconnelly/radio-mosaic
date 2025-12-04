@@ -40,8 +40,8 @@
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
         <Obi 
-            text={stationData[activeIndex].sparkle}
-            fill={stationData[activeIndex].fill}/>
+            text={stationData[$INDEX].sparkle}
+            fill={stationData[$INDEX].fill}/>
     {/if}
 </MediaQuery>
 
