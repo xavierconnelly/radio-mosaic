@@ -40,8 +40,8 @@
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
         <Obi 
-            text={stationData[$INDEX].sparkle}
-            fill={stationData[$INDEX].fill}/>
+            text={stationData[$INDEX].obi-text}
+            fill={stationData[$INDEX].obi}/>
     {/if}
 </MediaQuery>
 
@@ -53,8 +53,8 @@
 
 
 {#if $INDEX !== null}
-    <h2 style="color: #{stationData[$INDEX].mosaicBg};">{stationData[$INDEX].name}</h2>
-    <div class="background" style="background-color: #{stationData[$INDEX].mosaicBg}; color: #{stationData[$INDEX].fill}">
+    <h2 style="color: #{stationData[$INDEX].title};">{stationData[$INDEX].name}</h2>
+    <div class="background" style="background-color: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}">
         <div id="wallpaper"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
 
 
@@ -62,15 +62,15 @@
 
 
     </div>
-    <!-- <aside style="background: #{stationData[$INDEX].fill}; color: #{stationData[$INDEX].sparkle};">
-        <div id="bio" style="color: #{stationData[$INDEX].sparkle};">
+    <!-- <aside style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].tint};">
+        <div id="bio" style="color: #{stationData[$INDEX].tint};">
             <span>
                 <p>{@html stationData[$INDEX].about}</p>
                 <br/>
                 <a
                     href="{stationData[$INDEX].url}"
                     target="_blank"
-                    style="background: #{stationData[$INDEX].highlight}; color: #{stationData[$INDEX].fill};"
+                    style="background: #{stationData[$INDEX].highlight}; color: #{stationData[$INDEX].tint};"
                 >
                     view site
                 </a>
