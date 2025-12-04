@@ -72,6 +72,9 @@
 		background-color: unset;
 		color: var(--yang);
 		width: 44px;
+		display: flex;
+    	justify-content: center;
+    	align-items: center;
 		z-index: 999;
     }
 

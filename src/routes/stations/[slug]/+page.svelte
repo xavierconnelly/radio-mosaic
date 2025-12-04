@@ -13,7 +13,7 @@
         updateIndexFromSlug($page.params.slug, stationData);
     }
 
-    import Intro  from '$lib/intro.svelte';
+    import Obi  from '$lib/obi.svelte';
 
     export let data; // or whatever your load function returns
     const station = data.station; 
@@ -39,7 +39,9 @@
 
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
-        <Intro style="color: #{stationData[$INDEX].mosaicBg};"/>
+        <Obi 
+            text={stationData[activeIndex].sparkle}
+            fill={stationData[activeIndex].fill}/>
     {/if}
 </MediaQuery>
 

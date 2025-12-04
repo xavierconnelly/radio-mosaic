@@ -6,7 +6,7 @@
     // shared components
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
-	import Intro from '$lib/intro.svelte';
+	import Obi from '$lib/obi.svelte';
     import Painting from '$lib/painting.svelte';
 
     // local components
@@ -38,7 +38,7 @@
 
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
-        <Intro />
+        <Obi />
         <ClockBigger />
     {/if}
 </MediaQuery>

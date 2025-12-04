@@ -1,11 +1,14 @@
 <script>
 	let y;
+
+    export let name;
+	export let slug;
 </script>
 
 <svelte:window bind:scrollY={y}/>
 
 
-<div class="theatre">
+<div class="theatre" style="color: {text}; background: {fill}">
     <div class="scene">
         <div class="cube" style="transform: translateZ(-65em) rotateX({y}deg)">
             <div class="face one red">      
