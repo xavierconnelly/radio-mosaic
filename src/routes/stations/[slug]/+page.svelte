@@ -45,7 +45,7 @@
     {/if}
 </MediaQuery>
 
-    <nav style="color: #{stationData[$INDEX].mosaicBg}">
+    <nav style="color: #{stationData[$INDEX].tint}">
         <span><Time /></span>
         <b id="city">{stationData[$INDEX].city}</b>
         <span id="country">{stationData[$INDEX].country}</span>

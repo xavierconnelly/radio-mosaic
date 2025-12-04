@@ -6,8 +6,8 @@
 	export let name;
 	export let slug;
 	export let utc;
-	export let fill;
-	export let highlight;
+	export let tint;
+	export let clockhand;
 
 	// Rotation calculation
 	let radius = 360 / stationData.length;
@@ -29,9 +29,9 @@
 <a  href="./stations/{slug}"
 	class="hand"
     on:mouseenter={mouseOver}
-	style="transform: rotate(calc({i} * {radius}deg)) translateX(50%);  color:#{highlight}">
+	style="transform: rotate(calc({i} * {radius}deg)) translateX(50%);  color:#{clockhand}">
 	<span   class="details" 
-    	    style="background-color: #{fill}">
+    	    style="background-color: #{tint}">
 		<span class="name">{name}</span>
 		<span class="utc">{utc}</span>
 	</span>

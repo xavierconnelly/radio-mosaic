@@ -21,8 +21,8 @@
                 name={station.name}
                 slug={station.slug}
                 utc={station.utc}
-                highlight={station.highlight}
-                fill={station.fill}
+                highclockhandlight={station.clockhand}
+                tint={station.tint}
             />
         {/each}
     </div>

@@ -24,8 +24,8 @@
 <div id="house">
     <div    data-sveltekit-noscroll
             class="clock" 
-            style=" color: #{stationData[$INDEX].sparkle}; 
-                    background: #{stationData[$INDEX].fill}; 
+            style=" color: #{stationData[$INDEX].clockhand}; 
+                    background: #{stationData[$INDEX].tint}; 
                     transform: translate(-50%, -50%) rotate({y}deg)">
         {#each stationData as station, i}
             <Clockhand  
@@ -33,8 +33,8 @@
                 name={station.name}
                 slug={station.slug}
                 utc={station.utc}
-                highlight={station.highlight}
-                fill={station.fill}
+                clockhand={station.clockhand}
+                tint={station.tint}
             />
         {/each}
     </div>
