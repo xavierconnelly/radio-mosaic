@@ -13,8 +13,8 @@
 	export let name;
 	export let slug;
 	export let utc;
-	export let fill;
-	export let highlight;
+	export let tint;
+	export let clockhand;
 
 	// Rotation calculation
 	let radius = 360 / stationData.length;

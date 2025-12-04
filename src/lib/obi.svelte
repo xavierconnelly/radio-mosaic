@@ -1,8 +1,8 @@
 <script>
 	let y;
 
-    export let text;
-	export let fill;
+    export let obi;
+	export let obi-text;
 </script>
 
 <svelte:window bind:scrollY={y}/>

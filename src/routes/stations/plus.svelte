@@ -25,7 +25,7 @@ $: console.log($page.params.slug);
 	<a
 		href="/stations/{stationData[nextIndex].slug}"
 		class="scanning plus"
-		style="background: #{stationData[$INDEX].fill}; color: #{stationData[$INDEX].sparkle}"
+		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
 	>
 		{stationData[nextIndex].name}
 	</a>

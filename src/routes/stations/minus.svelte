@@ -18,7 +18,7 @@
 	<a
 		href="/stations/{stationData[prevIndex].slug}"
 		class="scanning minus"
-		style="background: #{stationData[$INDEX].fill}; color: #{stationData[$INDEX].sparkle}"
+		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
 	>
 		{stationData[prevIndex].name}
 	</a>

@@ -31,7 +31,7 @@
     {/if}
 </MediaQuery>
 
-<div class="shell highlight" style="background:#{stationData[$INDEX].highlight}"> 
+<div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 
 </div>
 
 <style>
