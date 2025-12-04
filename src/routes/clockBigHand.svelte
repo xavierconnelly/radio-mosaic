@@ -29,7 +29,7 @@
 <a  href="./stations/{slug}"
 	class="hand"
     on:mouseenter={mouseOver}
-	style="transform: rotate(calc({i} * {radius}deg)) translateX(50%);  color:#{clockhand}">
+	style="transform: rotate(calc({i} * {radius}deg)) translateX(50%); color:#{clockhand}">
 	<span   class="details" 
     	    style="background-color: #{tint}">
 		<span class="name">{name}</span>

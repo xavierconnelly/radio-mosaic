@@ -21,7 +21,7 @@
                 name={station.name}
                 slug={station.slug}
                 utc={station.utc}
-                highclockhandlight={station.clockhand}
+                clockhand={station.clockhand}
                 tint={station.tint}
             />
         {/each}
