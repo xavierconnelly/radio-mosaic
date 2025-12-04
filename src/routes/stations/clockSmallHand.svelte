@@ -27,7 +27,7 @@
 	style="transform: rotate(calc({i} * {radius}deg)) translateX(50%);"
 >
     <span class="station-name">{name}</span>
-    <span class="utc" style="color: {fill};">{utc}</span>
+    <span class="utc" style="color: {tint};">{utc}</span>
 </a>
 
 <style>
