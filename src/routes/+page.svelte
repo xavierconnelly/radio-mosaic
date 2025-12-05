@@ -22,6 +22,16 @@
 	function updateActive(i) {
 		activeIndex = i;
 	}
+    
+    // flyover
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        stationData.forEach(s => {
+        const img = new Image();
+        img.src = `/images/glimpse/${s.slug}.webp`;
+        });
+    });
 </script>
 
 <MediaQuery query="(max-width: 700px)" let:matches>
