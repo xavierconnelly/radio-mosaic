@@ -50,7 +50,7 @@
                 <p>{stationData[moused].city}</p>
                 <p>{stationData[moused].country}</p>
             </div>
-            <div class="flyover"  style="background-image: url(../images/flyover/{stationData[moused].slug}.webp">
+            <div class="flyover"  style="background-image: url(../images/glimpse/{stationData[moused].slug}.webp">
             </div>
             <!-- <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
             </div> -->
