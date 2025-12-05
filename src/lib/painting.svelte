@@ -4,8 +4,8 @@
 	// Props passed from parent each block
 	export let name;
 	export let slug;
-	export let city;
-	export let country;
+	// export let city;
+	// export let country;
 </script>
 
 <div id="glimpse">
@@ -17,7 +17,11 @@
 	<h4>{name}</h4>
 	<!-- <p>{city}</p>
 	<p>{country}</p> -->
-    <a data-sveltekit-noscroll href="/stations/{slug}">play</a>
+    <a data-sveltekit-noscroll href="/stations/{slug}">
+            <svg class="icon" viewBox="0 0 24 24">
+            <polygon points="6,4 20,12 6,20" />
+        </svg>
+    </a>
 </div>
 
 <style>

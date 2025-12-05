@@ -54,22 +54,22 @@
     {/if}
 </MediaQuery>
 
-<MediaQuery query="(min-width: 1280px)" let:matches>
-    {#if matches}
+<!-- <MediaQuery query="(min-width: 1280px)" let:matches>
+    {#if matches} -->
         <div class="image-wrap">
-            <div class="local">
-                <p>{stationData[moused].city}</p>
-                <p>{stationData[moused].country}</p>
-            </div>
             <!-- <div class="flyover"  style="background-image: url(../images/glimpse/{stationData[moused].slug}.webp">
             </div> -->
             {#if stationData[moused]}
-            <Flyover slug={stationData[moused].slug} />
+                <div class="local">
+                    <p>{stationData[moused].city}</p>
+                    <p>{stationData[moused].country}</p>
+                </div>
+                <Flyover slug={stationData[moused].slug} />
             {/if}            <!-- <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
             </div> -->
         </div>
-    {/if}
-</MediaQuery>
+    <!-- {/if}
+</MediaQuery> -->
 
 <style>
     .local {
