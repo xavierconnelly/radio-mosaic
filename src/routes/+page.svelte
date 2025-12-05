@@ -8,7 +8,7 @@
     import Scroller from "$lib/scroller.svelte";
 	import Obi from '$lib/obi.svelte';
     import Painting from '$lib/painting.svelte';
-    import Flyover from '$lib/Flyover.svelte';
+    import Flyover from '$lib/flyover.svelte';
 
     // local components
 	import ClockBigger from './clockBigger.svelte';
@@ -22,7 +22,7 @@
 	function updateActive(i) {
 		activeIndex = i;
 	}
-    
+
     // flyover
     import { onMount } from 'svelte';
 
