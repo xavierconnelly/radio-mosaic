@@ -8,6 +8,7 @@
     import Scroller from "$lib/scroller.svelte";
 	import Obi from '$lib/obi.svelte';
     import Painting from '$lib/painting.svelte';
+    import Flyover from '$lib/Flyover.svelte';
 
     // local components
 	import ClockBigger from './clockBigger.svelte';
@@ -50,8 +51,9 @@
                 <p>{stationData[moused].city}</p>
                 <p>{stationData[moused].country}</p>
             </div>
-            <div class="flyover"  style="background-image: url(../images/glimpse/{stationData[moused].slug}.webp">
-            </div>
+            <!-- <div class="flyover"  style="background-image: url(../images/glimpse/{stationData[moused].slug}.webp">
+            </div> -->
+            <Flyover slug={stationData[moused].slug} />
             <!-- <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
             </div> -->
         </div>
