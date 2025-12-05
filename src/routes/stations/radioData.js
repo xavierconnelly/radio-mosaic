@@ -1124,7 +1124,7 @@ export const stationData = [
    "country": "Estonia",
    "utc": "+3",
    "timezone": "Europe/Tallinn",
-   "slug": "ida-radio",
+   "slug": "ida-radio-tallinn",
    "url": "https://idaidaida.net/",
    "audio": "https://broadcast.idaidaida.net:8000/stream",
    "obi": "F7DAE2",
