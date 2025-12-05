@@ -63,8 +63,9 @@
             </div>
             <!-- <div class="flyover"  style="background-image: url(../images/glimpse/{stationData[moused].slug}.webp">
             </div> -->
+            {#if stationData[moused]}
             <Flyover slug={stationData[moused].slug} />
-            <!-- <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
+            {/if}            <!-- <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
             </div> -->
         </div>
     {/if}
