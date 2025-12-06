@@ -15,7 +15,7 @@
 </script>
 
 {#if $INDEX !== null}
-	<a
+	<a	data-sveltekit-noscroll 
 		href="/stations/{stationData[prevIndex].slug}"
 		class="scanning minus"
 		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"

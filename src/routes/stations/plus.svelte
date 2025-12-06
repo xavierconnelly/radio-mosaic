@@ -22,7 +22,7 @@ $: console.log($page.params.slug);
     <!-- not working -->
 
 {#if $INDEX !== null}
-	<a
+	<a	data-sveltekit-noscroll 
 		href="/stations/{stationData[nextIndex].slug}"
 		class="scanning plus"
 		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
