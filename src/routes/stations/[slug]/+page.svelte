@@ -62,6 +62,7 @@
         <span id="country">{stationData[$INDEX].country}</span>
     </nav>
 
+        <div class="image-wrap">
 
 {#if stationData[moused]}
     <div class="local">
@@ -70,6 +71,7 @@
     </div>
     <Flyover slug={stationData[moused].slug} />
 {/if}  
+</div>
 
 {#if $INDEX !== null}
     <h2 style="color: #{stationData[$INDEX].title};">{stationData[$INDEX].name}</h2>
@@ -115,7 +117,16 @@
 </MediaQuery> -->
 
 <style>
-
+    .image-wrap {
+		background: var(--yang);
+        display: block;
+        position: fixed;
+        z-index: 999;
+        top: 44px;
+        left: 0px;
+        height: calc(100vh - 44px);
+        width: calc(300px);
+	}
         .local {
         width: 20px;
         padding: 16px 12px 24px 12px;
