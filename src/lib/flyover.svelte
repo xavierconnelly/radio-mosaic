@@ -24,6 +24,10 @@
       on:transitionend={() => remove(item.id)}
     />
   {/each}
+  <!-- <div class="local">
+    <p>{stationData[moused].city}</p>
+    <p>{stationData[moused].country}</p>
+  </div> -->
 </div>
 
 <style>
@@ -40,6 +44,7 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
+    opacity: 1;
     /* filter: grayscale(100%);
     mix-blend-mode: screen; */
     transition: opacity 3000ms ease;

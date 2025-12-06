@@ -6,6 +6,7 @@
     import Scroller from "$lib/scroller.svelte";
     import Painting from '$lib/painting.svelte';
     import Time from "$lib/time.svelte";
+    import Flyover from '$lib/flyover.svelte';
 
 
     // Keep INDEX synced with the current URL slug
@@ -25,6 +26,16 @@
 	}
     // variable for current hovered on
     $: moused = $HOVER;
+
+    // flyover
+    import { onMount } from 'svelte';
+
+    onMount(() => {
+        stationData.forEach(s => {
+        const img = new Image();
+        img.src = `/images/glimpse/${s.slug}.webp`;
+        });
+    });
 </script>
 
 <MediaQuery query="(max-width: 700px)" let:matches>
@@ -51,6 +62,14 @@
         <span id="country">{stationData[$INDEX].country}</span>
     </nav>
 
+
+{#if stationData[moused]}
+    <div class="local">
+        <p>{stationData[moused].city}</p>
+        <p>{stationData[moused].country}</p>
+    </div>
+    <Flyover slug={stationData[moused].slug} />
+{/if}  
 
 {#if $INDEX !== null}
     <h2 style="color: #{stationData[$INDEX].title};">{stationData[$INDEX].name}</h2>
@@ -96,6 +115,24 @@
 </MediaQuery> -->
 
 <style>
+
+        .local {
+        width: 20px;
+        padding: 16px 12px 24px 12px;
+        position: fixed;
+        display: flex;
+        bottom: 20px;
+        left: 20px;
+        gap: 20px;
+        font-size: 14px;
+        align-items: center;
+        border: 1px solid;
+        border-radius: 2px;
+        z-index: 19999;
+        writing-mode: sideways-rl;
+        background-color: var(--yang);
+        color: var(--yin);
+    }
     nav {
         position: fixed;
         top: 0;
