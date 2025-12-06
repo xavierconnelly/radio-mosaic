@@ -5,7 +5,7 @@
 
   // fade in newest image
   $: if (slug) {
-    const src = `/images/glimpse/${slug}.webp`;
+    const src = `/images/glimpse/${slug}1x.webp`;
     const id = crypto.randomUUID();
     stack = [...stack, { id, src }];
   }
@@ -39,9 +39,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.1;
-    filter: grayscale(100%);
-    mix-blend-mode: screen;
+    opacity: 0;
+    /* filter: grayscale(100%);
+    mix-blend-mode: screen; */
     transition: opacity 3000ms ease;
   }
 
