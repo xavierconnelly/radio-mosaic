@@ -422,11 +422,11 @@ export const stationData = [
    "slug": "radio-panik",
    "url": "https://www.radiopanik.org/",
    "audio": "https://streaming.domainepublic.net/radiopanik.ogg",
-   "obi": "331614",
-   "obiText": "FF008A",
-   "tint": "DF888A",
-   "clockhand": "331614",
-   "title": "FF008A"
+   "obi": "DCCABF",
+   "obiText": "7C5465",
+   "tint": "CB9C95",
+   "clockhand": "553D6C",
+   "title": "BA5E76"
  },
  {
    "name": "Lyl Radio",
@@ -948,7 +948,7 @@ export const stationData = [
    "url": "http://trnstnradio.com",
    "audio": "",
    "obi": "3B071E",
-   "obiText": "3B071E",
+   "obiText": "24F58C",
    "tint": "24F58C",
    "clockhand": "3B071E",
    "title": "3B071E"
@@ -1007,7 +1007,7 @@ export const stationData = [
    "slug": "retreat-radio",
    "url": "https://www.retreatradio.net/",
    "audio": "https://retreatradio.out.airtime.pro/retreatradio_b",
-   "obi": "331614",
+   "obi": "F7DAE2",
    "obiText": "331614",
    "tint": "24F58C",
    "clockhand": "3F5C3B",
@@ -1098,7 +1098,7 @@ export const stationData = [
    "url": "https://panafricanspacestation.org.za/",
    "audio": "https://pass.airtime.pro/embed/player?stream=auto",
    "obi": "DBCDC2",
-   "obiText": "9B5E2F",
+   "obiText": "331614",
    "tint": "ABA294",
    "clockhand": "331614",
    "title": "9B5E2F"
@@ -1263,7 +1263,7 @@ export const stationData = [
    "url": "https://mutantradio.net/",
    "audio": "https://listen.radioking.com/radio/282820/stream/328621",
    "obi": "96B8E3",
-   "obiText": "96B8E3",
+   "obiText": "331614",
    "tint": "D03D02",
    "clockhand": "331614",
    "title": "96B8E3"
@@ -1307,7 +1307,7 @@ export const stationData = [
    "slug": "hong-kong-community-radio",
    "url": "https://www.hkcr.live/",
    "audio": "https://stream.hkcr.live/audio/stream.m3u8",
-   "obi": "24F58C",
+   "obi": "0A6329",
    "obiText": "24F58C",
    "tint": "D9EAD3",
    "clockhand": "3B071E",
@@ -1357,21 +1357,6 @@ export const stationData = [
    "tint": "24F58C",
    "clockhand": "331614",
    "title": "331614"
- },
- {
-   "name": "Hope St Radio",
-   "city": "Melbourne",
-   "country": "Australia",
-   "utc": "+10",
-   "timezone": "Australia/Melbourne",
-   "slug": "hope-st-radio",
-   "url": "https://www.hopestradio.community/",
-   "audio": "https://hope-st-radeio.radiocult.fm/stream",
-   "obi": "DBCDC2",
-   "obiText": "331614",
-   "tint": "F4F2EA",
-   "clockhand": "331614",
-   "title": "C8A048"
  },
  {
    "name": "Skylab Radio",
