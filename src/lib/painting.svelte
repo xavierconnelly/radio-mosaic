@@ -87,5 +87,8 @@ img {
         .station {
             bottom: calc(17vh - 11px);
         }
+        :global(#box:hover + #glimpse) {
+            display: none;
+        }
     }
 </style>

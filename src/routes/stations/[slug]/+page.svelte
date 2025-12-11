@@ -352,5 +352,8 @@
     .local {
         display: none;
     }
+            :global(#box:hover + #glimpse) {
+            display: none;
+        }
     }
 </style>
