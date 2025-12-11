@@ -126,14 +126,18 @@
     }
 @media (max-width: 700px) {
     .image-wrap {
-		background: var(--yang);
-        display: block;
-        position: fixed;
         z-index: 1;
-        top: 44px;
-        left: 0px;
-        height: calc(70vh - 44px);
+        height: calc(75vh - 44px);
         width: 100%;
 	}
+}
+@media (max-width: 700px) {
+    .image-wrap {
+        top: 28px;
+        height: calc(75vh - 28px);
+	}
+    .local {
+        display: none;
+    }
 }
 </style>
