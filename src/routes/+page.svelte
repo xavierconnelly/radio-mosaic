@@ -124,4 +124,16 @@
     .mosaic {
         background-size: 300px;
     }
+@media (max-width: 500px) {
+    .image-wrap {
+		background: var(--yang);
+        display: block;
+        position: fixed;
+        z-index: 1;
+        top: 44px;
+        left: 0px;
+        height: calc(70vh - 44px);
+        width: 100%;
+	}
+}
 </style>
