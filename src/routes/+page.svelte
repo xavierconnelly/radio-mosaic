@@ -131,7 +131,7 @@
         width: 100%;
 	}
 }
-@media (max-width: 700px) {
+@media (max-width: 500px) {
     .image-wrap {
         top: 28px;
         height: calc(75vh - 28px);

@@ -332,6 +332,11 @@
         #wallpaper {
             border: 10px solid var(--yin);
 		}
+    .image-wrap {
+        z-index: 1;
+        height: calc(75vh - 44px);
+        width: 100%;
+	}
 	}
     @media (max-width: 500px) {
         h2 {
@@ -340,5 +345,12 @@
 		.background {
             top: 28px;
         }
+    .image-wrap {
+        top: 28px;
+        height: calc(75vh - 28px);
+	}
+    .local {
+        display: none;
+    }
     }
 </style>
