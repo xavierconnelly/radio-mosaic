@@ -39,6 +39,8 @@
     #house {
         height: calc(100vh - 44px);
         width: calc(100vw - 600px);
+        height: 80vmin;
+        width: 80vmin; 
         padding: 20px 20px 20px 20px;
         position: fixed;
         right: 0;

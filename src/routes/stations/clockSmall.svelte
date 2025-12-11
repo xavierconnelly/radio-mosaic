@@ -58,6 +58,8 @@
         transform: translate(-50%, -50%);
         height: calc(100vw - 800px);
         width: calc(100vw - 800px);
+        height: 80vmin;
+        width: 80vmin;   
         border-radius: 50%;
     }
 	#filler{
