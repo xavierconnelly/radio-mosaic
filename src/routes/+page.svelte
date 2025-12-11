@@ -124,7 +124,7 @@
     .mosaic {
         background-size: 300px;
     }
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .image-wrap {
 		background: var(--yang);
         display: block;
