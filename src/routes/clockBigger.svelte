@@ -39,8 +39,6 @@
     #house {
         height: calc(100vh - 44px);
         width: calc(100vw - 600px);
-        height: 80vmin;
-        width: 80vmin; 
         padding: 20px 20px 20px 20px;
         position: fixed;
         right: 0;
@@ -55,6 +53,8 @@
         left: 50%;
         height: calc(80%);
         width: calc(80%);
+        height: 80vmin;
+        width: 80vmin; 
         border-radius: 50%;
     }
     /* media stylings ~ TABLET */
