@@ -13,16 +13,14 @@
 
 </div>
 
-<div class="station">
-	<h4>{name}</h4>
-	<!-- <p>{city}</p>
-	<p>{country}</p> -->
-    <a data-sveltekit-noscroll href="/stations/{slug}">
-            <svg class="icon" viewBox="0 0 24 24">
-            <polygon points="6,4 20,12 6,20" />
-        </svg>
-    </a>
-</div>
+<a class="station" data-sveltekit-noscroll href="/stations/{slug}">
+    <h4>{name}</h4>
+    <!-- <p>{city}</p>
+    <p>{country}</p> -->
+    <svg class="icon" viewBox="0 0 24 24">
+        <polygon points="6,4 20,12 6,20" />
+    </svg>
+</a>
 
 <style>
 
@@ -73,6 +71,10 @@ img {
     z-index: 99;
     background-color: var(--yin);
     color: var(--yang);
+}
+
+.icon {
+    fill: currentColor;
 }
 
 /* media stylings ~ TABLET */
