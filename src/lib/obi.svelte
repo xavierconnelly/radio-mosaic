@@ -121,10 +121,10 @@
 
 .theatre {
     width: 300px;
-    height: calc(100vh - 44px);
+    height: calc(100vh - 32px);
     padding: 10px 0px;
     position: fixed;
-    top: 44px;
+    top: 32px;
     left: 300px;
     background-color: var(--yin);
     z-index: 80;

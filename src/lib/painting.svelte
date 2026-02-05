@@ -29,7 +29,7 @@
     width: 100dvw;
     height: calc(72dvh);
     position: fixed;
-    top: 44px;
+    top: 32px;
     left: 0;
     transform: translate(0%, 0%);
     border: 10px solid var(--yin);

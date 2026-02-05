@@ -63,7 +63,7 @@
 
 #box {
     width: 100vw;
-    height: calc(28vh - 44px);
+    height: calc(28vh - 32px);
     z-index: 99;
 	overflow: hidden;
     position: fixed;
@@ -96,7 +96,7 @@
     border-right: 0.5px solid;
     writing-mode: sideways-lr;
     width: 24px;
-    height: calc(28vh - 44px);
+    height: calc(28vh - 32px);
     font-size: 7px;
     padding-bottom: 10px;
     position: absolute;

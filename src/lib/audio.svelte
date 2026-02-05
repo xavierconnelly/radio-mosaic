@@ -94,7 +94,7 @@ button {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     input[type='range'] {
       overflow: hidden;
-      width: calc(100vh - 44px);
+      width: calc(100vh - 32px);
 			
       -webkit-appearance: none;
       background-color: var(--yin);
@@ -154,7 +154,7 @@ input[type="range"]::-ms-fill-upper {
 			width: 200px;
 			/* font-size: 200px; */
 			position: fixed;
-			top: calc(36vh + 44px);
+			top: calc(36vh + 32px);
 			right: unset;
 			left: 50%;
 			display: flex;
