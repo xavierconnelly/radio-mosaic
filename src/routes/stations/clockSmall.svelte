@@ -42,7 +42,7 @@
 
 <style>
    #house {
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: calc(100vw - 600px);
         padding: 20px 20px 20px 20px;
         position: fixed;

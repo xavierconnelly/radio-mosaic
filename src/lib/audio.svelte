@@ -67,11 +67,11 @@
 		position: fixed;
 		top: 0;
 		right: 0px;
-		height: 44px;
-		font-size: 32px;
+		height: 32px;
+		font-size: 24px;
 		background-color: unset;
 		color: var(--yang);
-		width: 44px;
+		width: 32px;
 		display: flex;
     	justify-content: center;
     	align-items: center;

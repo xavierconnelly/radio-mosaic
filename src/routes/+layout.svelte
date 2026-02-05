@@ -9,7 +9,7 @@
 
 <header>
     <h1>
-        <a href="/">RADIO MOSAIC </a>
+        <a href="/">RADIO MOSAIC</a>
     </h1>
     <Audio/>
 </header>
@@ -24,7 +24,7 @@
         left: 0;
         z-index: 99;
         background-color: var(--yin);
-        height: 44px;
+        height: 32px;
         color: var(--yang);
         border-bottom: 1px solid;
         width: 100vw;

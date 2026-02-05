@@ -94,9 +94,9 @@
         display: block;
         position: fixed;
         z-index: 999;
-        top: 44px;
+        top: 32px;
         left: 0px;
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: calc(300px);
 	}
     .flyover {
@@ -107,7 +107,7 @@
         top: 0;
         opacity: 1;
         padding: 10px;
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: calc(300px);
         /* background-color: #F6F3F0; */
         filter: grayscale(100%);
@@ -127,7 +127,7 @@
 @media (max-width: 700px) {
     .image-wrap {
         z-index: 1;
-        height: calc(75vh - 44px);
+        height: calc(75vh - 32px);
         width: 100%;
 	}
 }

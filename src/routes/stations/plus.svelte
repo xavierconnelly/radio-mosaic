@@ -35,8 +35,8 @@ $: console.log($page.params.slug);
 :global(.scanning) {
     text-transform: uppercase;
 	position: fixed;
-	top: 44px;
-	height: calc(100% - 44px);
+	top: 32px;
+	height: calc(100% - 32px);
 	width: 30px;
 	line-height: 30px;
 	text-align: center;
