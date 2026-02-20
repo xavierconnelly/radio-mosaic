@@ -122,9 +122,9 @@
         display: block;
         position: fixed;
         z-index: 999;
-        top: 44px;
+        top: 32px;
         left: 0px;
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: calc(300px);
 	}
         .local {
@@ -147,8 +147,8 @@
     nav {
         position: fixed;
         top: 0;
-        right: 44px;
-        height: 44px;
+        right: 32px;
+        height: 32px;
         padding-right: 10px;
         display: flex;
         flex-direction: row;
@@ -158,10 +158,10 @@
         z-index: 99;
     }
     aside {
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: 300px;
         position: fixed;
-        top: 44px;
+        top: 32px;
         left: 300px;
         font-size: 13px;
         line-height: 1.4em;
@@ -177,7 +177,6 @@
         position: fixed;
         top: 0px;
         left: 630px;
-        height: 44px;
         padding-left: 10px;
 		justify-content: center;
         font-size: 20px;
@@ -200,7 +199,7 @@
         display: block;
         position: fixed;
         z-index: 3;
-        top: 44px;
+        top: 32px;
         background: var(--yang);
         left: 0;
         height: calc(100vh - 44px);
@@ -230,9 +229,9 @@
         display: block;
         position: fixed;
         z-index: 999;
-        top: 44px;
+        top: 32px;
         left: 0px;
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: calc(300px);
 	}
 
@@ -244,7 +243,7 @@
         top: 0;
         opacity: 1;
         padding: 10px;
-        height: calc(100vh - 44px);
+        height: calc(100vh - 32px);
         width: calc(300px);
         /* background-color: #F6F3F0; */
         filter: grayscale(100%);
@@ -325,7 +324,7 @@
             color: var(--yang); */
         }
 		.background {
-            top: 44px;
+            top: 32px;
             height: calc(72vh);
             width: 100vw;
         }
