@@ -180,7 +180,7 @@
         height: 44px;
         padding-left: 10px;
 		justify-content: center;
-        font-size: 18px;
+        font-size: 20px;
         line-height: 32px;
         margin: auto 0;
         z-index: 99;

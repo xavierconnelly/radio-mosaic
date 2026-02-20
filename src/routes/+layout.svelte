@@ -25,8 +25,6 @@
         z-index: 99;
         background-color: var(--yin);
         height: 32px;
-        line-height: 32px;
-        font-size: 10px;
         color: var(--yang);
         border-bottom: 1px solid;
         width: 100vw;
@@ -34,6 +32,8 @@
     }
     h1 {
         margin: auto 0;
+        font-size: 20px;
+        line-height: 32px;
     }
 	@media (max-width: 700px) {
 		header {
