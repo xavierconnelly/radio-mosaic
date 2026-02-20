@@ -153,8 +153,8 @@
         display: flex;
         flex-direction: row;
         gap: 20px;
-        font-size: 24px;
-        line-height: 44px;
+        font-size: 10px;
+        line-height: 32px;
         z-index: 99;
     }
     aside {
@@ -180,8 +180,8 @@
         height: 44px;
         padding-left: 10px;
 		justify-content: center;
-        font-size: 32px;
-        line-height: 44px;
+        font-size: 18px;
+        line-height: 32px;
         margin: auto 0;
         z-index: 99;
     }

@@ -16,8 +16,8 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  font-size: 24px;
-  line-height: 44px;
+  font-size: 10px;
+  line-height: 32px;
   z-index: 99;
 }
 

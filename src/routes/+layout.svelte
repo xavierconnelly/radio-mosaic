@@ -26,7 +26,7 @@
         background-color: var(--yin);
         height: 32px;
         line-height: 32px;
-        font-size: 24px;
+        font-size: 10px;
         color: var(--yang);
         border-bottom: 1px solid;
         width: 100vw;
