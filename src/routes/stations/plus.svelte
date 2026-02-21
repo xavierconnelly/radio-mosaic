@@ -63,7 +63,13 @@ $: console.log($page.params.slug);
     /* media stylings ~ MOBILE */
     @media (max-width: 500px) {
         :global(.scanning) {
-			display: none;
+			/* display: none; */
+			height: 80px;
+			width: 80px;
+			border-radius:40px;
+			top: unset;
+			bottom: 100px;
+			right: 50px;
 		}
     }
 </style>

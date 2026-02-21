@@ -27,9 +27,11 @@
     {#if matches}
         <Minus/>
         <ClockSmall/>
-        <Plus/> 
+
     {/if}
 </MediaQuery>
+
+        <Plus/> 
 
 <div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 
 </div>

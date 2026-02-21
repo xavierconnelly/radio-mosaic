@@ -339,7 +339,8 @@
 	}
     @media (max-width: 500px) {
         h2 {
-            margin: 20px;
+            top: 48px;
+            left: 20px;
             writing-mode: sideways-lr;
             background-color: var(--yin);
             border: 1px solid var(--yang);
