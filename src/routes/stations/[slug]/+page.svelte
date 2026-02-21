@@ -66,6 +66,9 @@
                 name={stationData[activeIndex].name}
                 slug={stationData[activeIndex].slug}
             />
+            <div id="showMeTheFab"> 
+                open
+            </div>
         {/if}
     {/if}
 </MediaQuery>
@@ -84,9 +87,7 @@
     <span id="country">{stationData[$INDEX].country}</span>
 </nav>
 
-<div id="showMeTheFab"> 
-    open
-</div>
+
 
 <div class="image-wrap">
     {#if stationData[moused]}
@@ -257,7 +258,7 @@ h2 {
     border-radius: 40px;
     background-color: var(--yin);
     color: var(--yang);
-    z-index: 99;
+    z-index: 999;
 }
 .image-wrap {
     background: var(--yang);
