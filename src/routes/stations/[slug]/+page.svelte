@@ -63,11 +63,11 @@
         {/if}
         
         {#if scrollUi.selected}
-            <button class+fab" on:click={toggle}> 
+            <button class="fab" on:click={toggle}> 
                 open
             </button>
         {:else}
-            <button class+fab"  on:click={toggle}>  
+            <button class="fab"  on:click={toggle}>  
                 close
             </button>
         {/if}
@@ -357,11 +357,11 @@
         #wallpaper {
             /* border: 10px solid var(--yin); */
 		}
-    .image-wrap {
-        z-index: 1;
-        height: calc(100vh - 32px);
-        width: 100%;
-	}
+        .image-wrap {
+            z-index: 1;
+            height: calc(100vh - 32px);
+            width: 100%;
+	    }
 	}
     @media (max-width: 500px) {
         h2 {
@@ -378,30 +378,30 @@
             opacity: 0.85;
         }
 
-            .fab {
-        display: block;
-        position: fixed;
-        bottom: 20px;
-                right: 10px;
-                height: 80px;
-                width: 80px;
-                border: 1px solid;
-                border-radius: 40px;
-                background-color: var(--yin);
-                color: var(--yang);
-                z-index: 99;
-    }
+        .fab {
+            display: block;
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+            height: 80px;
+            width: 80px;
+            border: 1px solid;
+            border-radius: 40px;
+            background-color: var(--yin);
+            color: var(--yang);
+            z-index: 99;
+        }
 		.background {
             top: 0px;
         }
-    .image-wrap {
-        top: 28px;
-        height: calc(100vh - 28px);
-	}
-    .local {
-        display: none;
-    }
-            :global(#box:hover + #glimpse) {
+        .image-wrap {
+            top: 28px;
+            height: calc(100vh - 28px);
+	    }
+        .local {
+            display: none;
+        }
+        :global(#box:hover + #glimpse) {
             display: none;
         }
     }
