@@ -107,19 +107,18 @@
 
 @media (max-width: 500px) {
     #box {
-        height: calc(28vh - 28px);
-        width: calc(100vw - 20px);
-        height: 80px;
-        bottom: 96px;
+        width: calc(100vw - 110px);
+        height: 96px;
+        bottom: 10px;
         left: 10px;
         border-radius: 28px;
         border-top: unset;
         border: 1px solid var(--yang);
-		opacity: 0.85;
+		opacity: 0.9;
     }
     .face {
         height: calc(28vh - 28px);
-        box-shadow: 7px 1px 15px 0px #00000024;
+        box-shadow: 9px 0px 10px #00000038;
         border-right: unset;
         height: 80px;
         color: #00000000;
