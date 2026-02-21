@@ -78,7 +78,7 @@ $: console.log($page.params.slug);
 			width: 56px;
 			border-radius: 40px;
 			top: unset;
-			bottom: 180px;
+			bottom: 196px;
 			z-index: 99;
 		}
 		.plus {

@@ -182,11 +182,17 @@ input[type="range"]::-ms-fill-upper {
 		}
 		.player-btn {
 			top: unset;
-			bottom: 120px;
+			bottom: 20px;
 			background: var(--yin);
 			border: 1px solid var(--yang);
-			border-radius: 40px;
-			width: 80vw;
+			border-radius: 56px;
+			width: 56px;
+			height: 56px;
+		}
+		.icon {
+			fill: var(--yang);
+			width: 32px;
+			height: 32px;
 		}
 	}
 </style>
