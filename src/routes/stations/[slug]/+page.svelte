@@ -78,10 +78,7 @@
     <div class="background" style="background-color: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}">
         <div id="wallpaper"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
 
-
             <!-- place station bio content here -->
-
-
     </div>
     <!-- <aside style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].tint};">
         <div id="bio" style="color: #{stationData[$INDEX].tint};">
@@ -339,16 +336,17 @@
 	}
     @media (max-width: 500px) {
         h2 {
-            top: 48px;
+            top: 38px;
             left: 10px;
             writing-mode: sideways-lr;
             background-color: var(--yin);
             border: 1px solid var(--yang);
             padding: 40px 0px;
             width: 56px;
-            height: calc(100vh - 266px);
+            height: calc(100vh - 275px);
             border-radius: 40px;
-                    z-index: 5;
+            z-index: 5;
+            opacity: 0.85;
         }
 		.background {
             top: 0px;

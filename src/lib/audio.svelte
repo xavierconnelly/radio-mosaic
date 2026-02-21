@@ -182,7 +182,7 @@ input[type="range"]::-ms-fill-upper {
 		}
 		.player-btn {
 			top: unset;
-			bottom: 182px;
+			bottom: 172px;
 			background: var(--yin);
 			border: 1px solid var(--yang);
 			border-radius: 56px;
