@@ -99,7 +99,7 @@ $: console.log($page.params.slug);
 		}
 		.plus {
 			left: unset;
-			right: 20px;
+			right: 10px;
 				writing-mode: unset;
 
 		}

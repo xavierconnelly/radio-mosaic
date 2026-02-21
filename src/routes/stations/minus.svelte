@@ -57,14 +57,13 @@
 @media (min-width: 500px) and (max-width: 1280px) {
 	.minus {
 		left: 300px;
-		left: 20px
 	}
 }
 
     /* media stylings ~ MOBILE */
     @media (max-width: 500px) {
 		.minus {
-			left: 20px;
+			left: 10px;
 				writing-mode: unset;
 
 		}

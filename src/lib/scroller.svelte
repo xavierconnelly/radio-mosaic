@@ -108,10 +108,10 @@
 @media (max-width: 500px) {
     #box {
         height: calc(28vh - 28px);
-        width: calc(100vw - 40px);
+        width: calc(100vw - 20px);
         height: 80px;
         bottom: 96px;
-        left: 20px;
+        left: 10px;
         border-radius: 28px;
         border-top: unset;
         border: 1px solid var(--yang);

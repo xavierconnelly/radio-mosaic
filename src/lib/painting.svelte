@@ -97,8 +97,8 @@ img {
             bottom: calc(17vh - 11px);
             bottom: 196px;
             height: 56px;
-            width: calc(100vw - 172px);
-            left: 86px;
+            width: calc(100vw - 152px);
+            left: 76px;
             transform: unset;
             border-radius: 111px;
         }

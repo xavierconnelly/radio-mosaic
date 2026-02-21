@@ -340,7 +340,7 @@
     @media (max-width: 500px) {
         h2 {
             top: 48px;
-            left: 20px;
+            left: 10px;
             writing-mode: sideways-lr;
             background-color: var(--yin);
             border: 1px solid var(--yang);
