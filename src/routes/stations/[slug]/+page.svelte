@@ -73,6 +73,10 @@
     {/if}
 </MediaQuery>
 
+            <div id="hello"> 
+                hello
+            </div>
+
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
         <Obi 
@@ -259,6 +263,10 @@ h2 {
     background-color: var(--yin);
     color: var(--yang);
     z-index: 999;
+    font-size: 400px;
+}
+#hello {
+    font-size: 400px;
 }
 .image-wrap {
     background: var(--yang);
