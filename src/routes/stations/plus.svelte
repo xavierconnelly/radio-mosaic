@@ -3,6 +3,9 @@
     import { INDEX, updateIndexFromSlug } from '$lib/store.js';
     import { stationData } from '/src/routes/stations/radioData.js';
 
+	import MediaQuery from '$lib/mediaQuery.svelte';
+
+
     // Keep INDEX synced with the current URL slug
     $: if ($page.params.slug) {
         updateIndexFromSlug($page.params.slug, stationData);
