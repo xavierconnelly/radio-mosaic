@@ -86,9 +86,9 @@ img {
         }
         .station {
             bottom: calc(17vh - 11px);
-            bottom: 160px;
+            bottom: 20px;
             height: 80px;
-            width: 80vw;
+            width: calc(100vw - 120px);
             left: 10vw;
             transform: unset;
             border-radius: 40px;

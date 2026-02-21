@@ -74,11 +74,11 @@ $: console.log($page.params.slug);
     @media (max-width: 500px) {
         :global(.scanning) {
 			/* display: none; */
-			height: 80px;
-			width: 80px;
+			height: 56px;
+			width: 56px;
 			border-radius: 40px;
 			top: unset;
-			bottom: 100px;
+			bottom: 180px;
 			z-index: 99;
 		}
 		.plus {

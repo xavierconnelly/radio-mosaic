@@ -345,7 +345,7 @@
             background-color: var(--yin);
             border: 1px solid var(--yang);
             padding: 40px 0px;
-            width: 60px;
+            width: 56px;
             border-radius: 40px;
         }
 		.background {
