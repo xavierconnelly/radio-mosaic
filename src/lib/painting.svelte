@@ -90,6 +90,7 @@ img {
             height: 80px;
             width: 80vw;
             left: 10vw;
+            transform: unset;
         }
         :global(#box:hover + #glimpse) {
             display: none;

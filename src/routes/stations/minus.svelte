@@ -36,6 +36,7 @@
 @media (min-width: 500px) and (max-width: 1280px) {
 	.minus {
 		left: 300px;
+		left: 20px
 	}
 }
 </style>

@@ -25,12 +25,12 @@
 
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
-        <Minus/>
+
         <ClockSmall/>
 
     {/if}
 </MediaQuery>
-
+        <Minus/>
         <Plus/> 
 
 <div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 

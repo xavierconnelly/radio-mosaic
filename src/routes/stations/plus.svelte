@@ -66,14 +66,14 @@ $: console.log($page.params.slug);
 			/* display: none; */
 			height: 80px;
 			width: 80px;
-			border-radius:40px;
+			border-radius: 40px;
 			top: unset;
 			bottom: 100px;
-			right: 50px;
 			z-index: 99;
 		}
 		.plus {
 			left: unset;
+			right: 20px;
 		}
     }
 </style>
