@@ -20,8 +20,16 @@
 		class="scanning minus"
 		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
 	>
-		{stationData[prevIndex].name}
-	</a>
+
+
+			<MediaQuery query="(min-width: 700px)" let:matches>
+			{#if matches}
+				{stationData[prevIndex].name}
+			{:else}
+				⬅
+			{/if}
+		</MediaQuery>
+			</a>
 {/if}
 
 <style>
@@ -43,7 +51,9 @@
     /* media stylings ~ MOBILE */
     @media (max-width: 500px) {
 		.minus {
-			left: 20px
+			left: 20px;
+				writing-mode: unset;
+
 		}
     }
 </style>

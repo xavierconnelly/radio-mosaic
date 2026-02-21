@@ -35,7 +35,7 @@ $: console.log($page.params.slug);
 			{#if matches}
 				{stationData[nextIndex].name}
 			{:else}
-				⬅️
+				→
 			{/if}
 		</MediaQuery>
 	</a>
@@ -84,6 +84,8 @@ $: console.log($page.params.slug);
 		.plus {
 			left: unset;
 			right: 20px;
+				writing-mode: unset;
+
 		}
     }
 </style>
