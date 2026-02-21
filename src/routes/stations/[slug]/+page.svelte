@@ -339,20 +339,20 @@
 	}
     @media (max-width: 500px) {
         h2 {
-            top: calc(28px);
-            left: 20px;
+            margin: 20px;
             writing-mode: sideways-lr;
-            background-color: white;
-            border: 1px solid blue;
-            padding: 0 20px;
-            height: 80px;
+            background-color: var(--yin);
+            border: 1px solid var(--yang);
+            padding: 40px 0px;
+            width: 60px;
+            border-radius: 40px;
         }
 		.background {
             top: 28px;
         }
     .image-wrap {
         top: 28px;
-        height: calc(75vh - 28px);
+        height: calc(100vh - 28px);
 	}
     .local {
         display: none;
