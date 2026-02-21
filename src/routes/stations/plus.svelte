@@ -27,7 +27,14 @@ $: console.log($page.params.slug);
 		class="scanning plus"
 		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
 	>
-		{stationData[nextIndex].name}
+
+		<MediaQuery query="(min-width: 700px)" let:matches>
+		{#if matches}
+			{stationData[nextIndex].name}
+		{:else}
+			⬅️
+		{/if}
+		</MediaQuery>
 	</a>
 {/if}
 
