@@ -46,15 +46,12 @@
     });
 </script>
 
-        <div class="fab"> 
-            open
-        </div>
-
+<div class="showMeTheFab"> 
+    open
+</div>
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
-
-
         <!-- {#if scrollUi.selected}
             <button class="fab" on:click={toggle}> 
                 open
@@ -64,7 +61,6 @@
                 close
             </button>
         {/if} -->
-
         {#if scrollUi.selected}
             <Minus/>
             <Plus/> 
@@ -74,7 +70,6 @@
                 slug={stationData[activeIndex].slug}
             />
         {/if}
-        
     {/if}
 </MediaQuery>
 
@@ -86,30 +81,29 @@
     {/if}
 </MediaQuery>
 
-    <nav style="color: #{stationData[$INDEX].title}">
-        <span><Time /></span>
-        <b id="city">{stationData[$INDEX].city}</b>
-        <span id="country">{stationData[$INDEX].country}</span>
-    </nav>
+<nav style="color: #{stationData[$INDEX].title}">
+    <span><Time /></span>
+    <b id="city">{stationData[$INDEX].city}</b>
+    <span id="country">{stationData[$INDEX].country}</span>
+</nav>
 
-        <div class="image-wrap">
-
-{#if stationData[moused]}
-    <div class="local">
-        <p>{stationData[moused].city}</p>
-        <p>{stationData[moused].country}</p>
-    </div>
-    <Flyover slug={stationData[moused].slug} />
-{/if}  
+<div class="image-wrap">
+    {#if stationData[moused]}
+        <div class="local">
+            <p>{stationData[moused].city}</p>
+            <p>{stationData[moused].country}</p>
+        </div>
+        <Flyover slug={stationData[moused].slug} />
+    {/if}  
 </div>
 
 {#if $INDEX !== null}
-    <h2 style="color: #{stationData[$INDEX].title};">{stationData[$INDEX].name}</h2>
-    <div class="background" style="background-color: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}">
-        <div id="wallpaper"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
+<h2 style="color: #{stationData[$INDEX].title};">{stationData[$INDEX].name}</h2>
+<div class="background" style="background-color: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}">
+    <div id="wallpaper"  style="background-image: url(../images/flyover/{stationData[$INDEX].slug}.webp)"></div>
 
-            <!-- place station bio content here -->
-    </div>
+    <!-- place station bio content here -->
+
     <!-- <aside style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].tint};">
         <div id="bio" style="color: #{stationData[$INDEX].tint};">
             <span>
@@ -125,6 +119,7 @@
             </span>
         </div>
     </aside> -->
+</div>
 {/if}
 
 <!-- <MediaQuery query="(min-width: 1280px)" let:matches>
@@ -144,268 +139,267 @@
 </MediaQuery> -->
 
 <style>
-    .image-wrap {
-		background: var(--yang);
-        display: block;
-        position: fixed;
-        z-index: 999;
-        top: 32px;
-        left: 0px;
-        height: calc(100vh - 32px);
-        width: calc(300px);
-	}
-        .local {
-        width: 20px;
-        padding: 16px 12px 24px 12px;
-        position: fixed;
-        display: flex;
-        bottom: 20px;
-        left: 20px;
-        gap: 20px;
-        font-size: 14px;
-        align-items: center;
-        border: 1px solid;
-        border-radius: 2px;
-        z-index: 19999;
-        writing-mode: sideways-rl;
-        background-color: var(--yang);
-        color: var(--yin);
-    }
-    nav {
-        position: fixed;
-        top: 0;
-        right: 32px;
-        height: 32px;
-        padding-right: 10px;
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        font-size: 20px;
-        line-height: 32px;
-        z-index: 99;
-    }
-    aside {
-        height: calc(100vh - 32px);
-        width: 300px;
-        position: fixed;
-        top: 32px;
-        left: 300px;
-        font-size: 13px;
-        line-height: 1.4em;
-		display: flex;
-		flex-direction: column;
-        overflow: hidden;
-        transition: 3s;
-        z-index: 80;
-        border-top: inherit;
-        display: none;
-	}
+.image-wrap {
+    background: var(--yang);
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 32px;
+    left: 0px;
+    height: calc(100vh - 32px);
+    width: calc(300px);
+}
+.local {
+    width: 20px;
+    padding: 16px 12px 24px 12px;
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    left: 20px;
+    gap: 20px;
+    font-size: 14px;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 2px;
+    z-index: 19999;
+    writing-mode: sideways-rl;
+    background-color: var(--yang);
+    color: var(--yin);
+}
+nav {
+    position: fixed;
+    top: 0;
+    right: 32px;
+    height: 32px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-size: 20px;
+    line-height: 32px;
+    z-index: 99;
+}
+aside {
+    height: calc(100vh - 32px);
+    width: 300px;
+    position: fixed;
+    top: 32px;
+    left: 300px;
+    font-size: 13px;
+    line-height: 1.4em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: 3s;
+    z-index: 80;
+    border-top: inherit;
+    display: none;
+}
+h2 {
+    position: fixed;
+    top: 0px;
+    left: 630px;
+    padding-left: 10px;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 32px;
+    margin: auto 0;
+    z-index: 99;
+}
+#bio {
+    display: flex;
+    gap: 20px;
+    padding: 10px 10px;
+    transition: 3s;
+    width: 300px;
+}
+#bio span a {
+    border-radius: 30px;
+    padding: 4px 20px;
+}
+.background {
+    display: block;
+    position: fixed;
+    z-index: 3;
+    top: 32px;
+    background: var(--yang);
+    left: 0;
+    height: calc(100vh - 44px);
+    width: calc(100vw);
+    border: 0px solid;
+}
+#wallpaper {
+    display: block;
+    position: absolute;
+    left: 0;
+    opacity: .75;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    /* filter: grayscale(100%); */
+    /* mix-blend-mode: screen; */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    object-fit: cover;
+    transition: 3s;
+}
+/* .fab {
+    display: none;
+} */
+.image-wrap {
+    background: var(--yang);
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 32px;
+    left: 0px;
+    height: calc(100vh - 32px);
+    width: calc(300px);
+}
+#flyover {
+    display: block;
+    /* opacity: 0; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    padding: 10px;
+    height: calc(100vh - 32px);
+    width: calc(300px);
+    /* background-color: #F6F3F0; */
+    filter: grayscale(100%);
+    mix-blend-mode: screen;
+    color: inherit;
+    background-size: cover;
+    background-position: center;
+    z-index: 199;
+    object-fit: cover;
+    transition: 3s;
+    transition-delay: 20ms;
+    border-right: 1px solid var(--yang);
+}
+.blurb {
+    height: 5vh;
+    padding: 0 30px;
+    position: fixed;
+    bottom: 50%;
+    left: calc(50% - 15px);
+    width: max-content;
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    gap: 10px;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    border: 1px solid;
+    border-radius: 2px;
+    justify-content: space-evenly;
+    z-index: 9999;
+    background-color: var(--yin);
+    color: var(--yang);
+}
+.local {
+    width: 20px;
+    padding: 16px 12px 24px 12px;
+    position: fixed;
+    display: flex;
+    bottom: 20px;
+    left: 20px;
+    gap: 20px;
+    font-size: 14px;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 2px;
+    z-index: 19999;
+    writing-mode: sideways-rl;
+    background-color: var(--yang);
+    color: var(--yin);
+}
+
+/* media stylings ~ TABLET */
+@media (min-width: 700px) and (max-width: 1280px) {
     h2 {
+        left: 330px;
+    }
+}
+
+/* media stylings ~ MOBILE */
+@media (max-width: 700px) {
+    h2 {
+        /* font-size: 12px; */
         position: fixed;
-        top: 0px;
-        left: 630px;
-        padding-left: 10px;
-		justify-content: center;
-        font-size: 20px;
-        line-height: 32px;
-        margin: auto 0;
-        z-index: 99;
-    }
-    #bio {
         display: flex;
-        gap: 20px;
-        padding: 10px 10px;
-        transition: 3s;
-        width: 300px;
-    }
-    #bio span a {
-        border-radius: 30px;
-        padding: 4px 20px;
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-evenly;
+                /* writing-mode: sideways-lr; */
+        top: 70vh;
+        left: 0;
+        /* width: 100dvw; */
+        text-align: center;
+        /* height: 70vh; */
+        z-index: 99;
+        line-height: unset;
+        place-items: center;
+        /* background-color: var(--yin);
+        color: var(--yang); */
     }
     .background {
-        display: block;
-        position: fixed;
-        z-index: 3;
-        top: 32px;
-        background: var(--yang);
-        left: 0;
-        height: calc(100vh - 44px);
-        width: calc(100vw);
-        border: 0px solid;
-	}
+        top: 0px;
+        height: calc(100vh);
+        width: 100vw;
+    }
     #wallpaper {
-        display: block;
-        position: absolute;
-        left: 0;
-        opacity: .75;
-        padding: 10px;
-        height: 100%;
-        width: 100%;
-        border-radius: 2px;
-        /* filter: grayscale(100%); */
-        /* mix-blend-mode: screen; */
-        background-size: cover;
-        background-position: center;
-        z-index: 1;
-        object-fit: cover;
-        transition: 3s;
+        /* border: 10px solid var(--yin); */
     }
-    /* .fab {
-        display: none;
-    } */
     .image-wrap {
-		background: var(--yang);
-        display: block;
-        position: fixed;
-        z-index: 999;
-        top: 32px;
-        left: 0px;
+        z-index: 1;
         height: calc(100vh - 32px);
-        width: calc(300px);
-	}
-
-     #flyover {
-        display: block;
-        /* opacity: 0; */
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 1;
-        padding: 10px;
-        height: calc(100vh - 32px);
-        width: calc(300px);
-        /* background-color: #F6F3F0; */
-        filter: grayscale(100%);
-        mix-blend-mode: screen;
-        color: inherit;
-        background-size: cover;
-        background-position: center;
-        z-index: 199;
-        object-fit: cover;
-        transition: 3s;
-        transition-delay: 20ms;
-        border-right: 1px solid var(--yang);
+        width: 100%;
     }
-    .blurb {
-        height: 5vh;
-        padding: 0 30px;
+}
+@media (max-width: 500px) {
+    h2 {
+        top: 38px;
+        left: 10px;
+        writing-mode: sideways-lr;
+        background-color: var(--yin);
+        border: 1px solid var(--yang);
+        padding: 40px 0px;
+        width: 56px;
+        height: calc(100vh - 275px);
+        border-radius: 40px;
+        z-index: 5;
+        opacity: 0.85;
+    }
+
+    .showMeTheFab {
+        /* display: block; */
         position: fixed;
-        bottom: 50%;
-        left: calc(50% - 15px);
-        width: max-content;
-        display: flex;
-        margin: auto;
-        flex-direction: row;
-        gap: 10px;
-        transform: translate(-50%, -50%);
-        align-items: center;
+        bottom: 20px;
+        right: 10px;
+        height: 80px;
+        width: 80px;
         border: 1px solid;
-        border-radius: 2px;
-        justify-content: space-evenly;
-        z-index: 9999;
+        border-radius: 40px;
         background-color: var(--yin);
         color: var(--yang);
+        z-index: 99;
+    }
+    .background {
+        top: 0px;
+    }
+    .image-wrap {
+        top: 28px;
+        height: calc(100vh - 28px);
     }
     .local {
-        width: 20px;
-        padding: 16px 12px 24px 12px;
-        position: fixed;
-        display: flex;
-        bottom: 20px;
-        left: 20px;
-        gap: 20px;
-        font-size: 14px;
-        align-items: center;
-        border: 1px solid;
-        border-radius: 2px;
-        z-index: 19999;
-        writing-mode: sideways-rl;
-        background-color: var(--yang);
-        color: var(--yin);
+        display: none;
     }
-
-	/* media stylings ~ TABLET */
-	@media (min-width: 700px) and (max-width: 1280px) {
-        h2 {
-            left: 330px;
-        }
-	}
-
-	/* media stylings ~ MOBILE */
-	@media (max-width: 700px) {
-        h2 {
-            /* font-size: 12px; */
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            justify-content: space-evenly;
-                  /* writing-mode: sideways-lr; */
-            top: 70vh;
-            left: 0;
-            /* width: 100dvw; */
-            text-align: center;
-            /* height: 70vh; */
-            z-index: 99;
-            line-height: unset;
-            place-items: center;
-            /* background-color: var(--yin);
-            color: var(--yang); */
-        }
-		.background {
-            top: 0px;
-            height: calc(100vh);
-            width: 100vw;
-        }
-        #wallpaper {
-            /* border: 10px solid var(--yin); */
-		}
-        .image-wrap {
-            z-index: 1;
-            height: calc(100vh - 32px);
-            width: 100%;
-	    }
-	}
-    @media (max-width: 500px) {
-        h2 {
-            top: 38px;
-            left: 10px;
-            writing-mode: sideways-lr;
-            background-color: var(--yin);
-            border: 1px solid var(--yang);
-            padding: 40px 0px;
-            width: 56px;
-            height: calc(100vh - 275px);
-            border-radius: 40px;
-            z-index: 5;
-            opacity: 0.85;
-        }
-
-        .fab {
-            /* display: block; */
-            position: fixed;
-            bottom: 20px;
-            right: 10px;
-            height: 80px;
-            width: 80px;
-            border: 1px solid;
-            border-radius: 40px;
-            background-color: var(--yin);
-            color: var(--yang);
-            z-index: 99;
-        }
-		.background {
-            top: 0px;
-        }
-        .image-wrap {
-            top: 28px;
-            height: calc(100vh - 28px);
-	    }
-        .local {
-            display: none;
-        }
-        :global(#box:hover + #glimpse) {
-            display: none;
-        }
+    :global(#box:hover + #glimpse) {
+        display: none;
     }
+}
 </style>
