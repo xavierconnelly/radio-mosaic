@@ -113,12 +113,15 @@
         bottom: 96px;
         left: 20px;
         border-radius: 28px;
+        border-top: unset;
+        border: 1px solid var(--yang);
     }
     .face {
         height: calc(28vh - 28px);
-        box-shadow: 5px 1px 7px 0 rgba(0, 0, 0, 0.14) inset;
+        box-shadow: 7px 1px 15px 0px #00000024;
         border-right: unset;
         height: 80px;
+        color: #00000000;
     }
 }
 </style>
