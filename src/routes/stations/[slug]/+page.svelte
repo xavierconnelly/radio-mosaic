@@ -51,6 +51,17 @@
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
+
+        {#if scrollUi.selected}
+            <button class="fab" on:click={toggle}> 
+                open
+            </button>
+        {:else}
+            <button class="fab"  on:click={toggle}>  
+                close
+            </button>
+        {/if}
+
         {#if scrollUi.selected}
         <!-- show all the swiping things -->
             <Minus/>
@@ -62,16 +73,6 @@
             />
         {/if}
         
-        {#if scrollUi.selected}
-            <button class="fab" on:click={toggle}> 
-                open
-            </button>
-        {:else}
-            <button class="fab"  on:click={toggle}>  
-                close
-            </button>
-        {/if}
-
     {/if}
 </MediaQuery>
 

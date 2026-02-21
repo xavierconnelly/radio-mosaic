@@ -12,8 +12,7 @@
 </script>
 
 <div id="glimpse">
-<img src="../images/flyover/{slug}.webp" alt="" />
-
+    <img src="../images/flyover/{slug}.webp" alt="" />
 </div>
 
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}"
@@ -92,6 +91,7 @@ img {
 @media (max-width: 500px) {
         #glimpse {
             top: 28px;
+            display: none;
         }
         .station {
             bottom: calc(17vh - 11px);
