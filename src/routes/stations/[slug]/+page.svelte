@@ -11,6 +11,12 @@
     import Flyover from '$lib/flyover.svelte';
 
 
+// fab hideing
+	let scrollUi = { selected: true };
+	function toggle() {
+		scrollUi.selected = !scrollUi.selected;
+	}
+
     // Keep INDEX synced with the current URL slug
     $: if ($page.params.slug) {
         updateIndexFromSlug($page.params.slug, stationData);
@@ -40,8 +46,13 @@
     });
 </script>
 
+
+
+
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
+    {#if scrollUi.selected}
+	<!-- show all the swiping things -->
         <Minus/>
         <Plus/> 
         <Scroller data-sveltekit-noscroll items={stationData} onActiveChange={updateActive} />
@@ -49,8 +60,10 @@
             name={stationData[activeIndex].name}
             slug={stationData[activeIndex].slug}
         />
+        {/if}
         <span id="fab">
-            <!-- {#if matches} -->
+{#if scrollUi.selected}
+	<button on:click={toggle}> 
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
                 <path d="M6 18.0757C6 15.8666 7.79086 14.0757 10 14.0757H30C30 16.2849 28.2091 18.0757 26 18.0757H6Z" fill="#3D2A2A"/>
                 <path d="M6 24.0757H30V28.0757H10C7.79086 28.0757 6 26.2849 6 24.0757Z" fill="#3D2A2A"/>
@@ -60,7 +73,10 @@
                 <path d="M10 14.0757L10 28.0757C7.79086 28.0757 6 26.2849 6 24.0757V18.0757C6 15.8666 7.79086 14.0757 10 14.0757Z" fill="#3D2A2A"/>
                 <path d="M26 4.07574C28.2091 4.07574 30 5.8666 30 8.07574V14.0757C30 16.2849 28.2091 18.0757 26 18.0757V4.07574Z" fill="#3D2A2A"/>
             </svg>
-            <!-- {:else}
+            </button>
+{:else}
+	<button on:click={toggle}> Open 
+
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
                 <path d="M6 18.0757C6 15.8666 7.79086 14.0757 10 14.0757H30C30 16.2849 28.2091 18.0757 26 18.0757H6Z" fill="#3D2A2A"/>
                 <path d="M6 24.0757H30V28.0757H10C7.79086 28.0757 6 26.2849 6 24.0757Z" fill="#3D2A2A"/>
@@ -70,7 +86,8 @@
                 <path d="M10 14.0757L10 28.0757C7.79086 28.0757 6 26.2849 6 24.0757V18.0757C6 15.8666 7.79086 14.0757 10 14.0757Z" fill="#3D2A2A"/>
                 <path d="M26 4.07574C28.2091 4.07574 30 5.8666 30 8.07574V14.0757C30 16.2849 28.2091 18.0757 26 18.0757V4.07574Z" fill="#3D2A2A"/>
             </svg>
-            {/if} -->
+            </button>
+{/if}
         </span>
     {/if}
 </MediaQuery>
