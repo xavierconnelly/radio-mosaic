@@ -86,6 +86,10 @@ img {
         }
         .station {
             bottom: calc(17vh - 11px);
+            bottom: 160px;
+            height: 80px;
+            width: 80vw;
+            left: 10vw;
         }
         :global(#box:hover + #glimpse) {
             display: none;

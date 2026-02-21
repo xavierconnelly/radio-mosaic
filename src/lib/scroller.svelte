@@ -110,6 +110,8 @@
         height: calc(28vh - 28px);
         width: 80vw;
         height: 80px;
+        bottom: 100px;
+        left: 10vw;
         border-radius: 80px;
     }
     .face {
