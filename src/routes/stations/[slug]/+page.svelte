@@ -5,6 +5,8 @@
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import Scroller from "$lib/scroller.svelte";
     import Painting from '$lib/painting.svelte';
+	import Plus from './plus.svelte';
+	import Minus from './minus.svelte';
     import Time from "$lib/time.svelte";
     import Flyover from '$lib/flyover.svelte';
 
@@ -40,6 +42,8 @@
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
+        <Minus/>
+        <Plus/> 
         <Scroller data-sveltekit-noscroll items={stationData} onActiveChange={updateActive} />
         <Painting  
             name={stationData[activeIndex].name}
