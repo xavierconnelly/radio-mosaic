@@ -188,6 +188,8 @@ input[type="range"]::-ms-fill-upper {
 			border-radius: 56px;
 			width: 56px;
 			height: 56px;
+			transform: unset;
+        	left: 20px;
 		}
 		.icon {
 			fill: var(--yang);
