@@ -46,17 +46,16 @@
     });
 </script>
 
-
+        <div class="fab"> 
+            open
+        </div>
 
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
 
 
-               <span class="fab" > 
-                open
-               </span>
-        {#if scrollUi.selected}
+        <!-- {#if scrollUi.selected}
             <button class="fab" on:click={toggle}> 
                 open
             </button>
@@ -64,10 +63,9 @@
             <button class="fab"  on:click={toggle}>  
                 close
             </button>
-        {/if}
+        {/if} -->
 
         {#if scrollUi.selected}
-        <!-- show all the swiping things -->
             <Minus/>
             <Plus/> 
             <Scroller data-sveltekit-noscroll items={stationData} onActiveChange={updateActive} />
