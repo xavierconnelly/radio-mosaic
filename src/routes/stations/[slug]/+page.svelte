@@ -250,9 +250,9 @@
         object-fit: cover;
         transition: 3s;
     }
-    .fab {
+    /* .fab {
         display: none;
-    }
+    } */
     .image-wrap {
 		background: var(--yang);
         display: block;
@@ -382,7 +382,7 @@
         }
 
         .fab {
-            display: block;
+            /* display: block; */
             position: fixed;
             bottom: 20px;
             right: 10px;
