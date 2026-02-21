@@ -52,6 +52,10 @@
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
 
+
+               <button class="fab" on:click={toggle}> 
+                open
+            </button>
         {#if scrollUi.selected}
             <button class="fab" on:click={toggle}> 
                 open
