@@ -176,8 +176,17 @@ input[type="range"]::-ms-fill-upper {
 		input {
 			display:none;
 		}
+		/* big one */
 		button {
 			top: calc(36vh + 28px);
+		}
+		button {
+			top: unset;
+			bottom: 120px;
+			background: var(--yin);
+			border: 1px solid var(--yang);
+			border-radius: 40px;
+			width: 80vw;
 		}
 	}
 </style>

@@ -108,15 +108,15 @@
 @media (max-width: 500px) {
     #box {
         height: calc(28vh - 28px);
-        width: 80vw;
+        width: calc(100vw - 20px);
         height: 80px;
-        bottom: 100px;
-        left: 10vw;
+        bottom: 120px;
+        left: 20px;
         border-radius: 80px;
     }
     .face {
         height: calc(28vh - 28px);
-
+        box-shadow: 5px 1px 7px 0 rgba(0, 0, 0, 0.14) inset;
     }
 }
 </style>
