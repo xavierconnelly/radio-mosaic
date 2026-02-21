@@ -394,6 +394,7 @@
             z-index: 5;
             opacity: 0.85;
         }
+
             #fab {
         display: block;
         position: fixed;
@@ -405,8 +406,7 @@
                 border-radius: 40px;
                 background-color: var(--yin);
                 color: var(--yang);
-
-
+                z-index: 99;
     }
 		.background {
             top: 0px;
