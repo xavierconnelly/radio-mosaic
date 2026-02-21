@@ -108,9 +108,13 @@
 @media (max-width: 500px) {
     #box {
         height: calc(28vh - 28px);
+        width: 80vw;
+        height: 80px;
+        border-radius: 80px;
     }
     .face {
         height: calc(28vh - 28px);
+
     }
 }
 </style>

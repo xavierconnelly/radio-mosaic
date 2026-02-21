@@ -69,9 +69,11 @@ $: console.log($page.params.slug);
 			border-radius:40px;
 			top: unset;
 			bottom: 100px;
-			left: unset;
 			right: 50px;
 			z-index: 99;
+		}
+		.plus {
+			left: unset;
 		}
     }
 </style>

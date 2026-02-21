@@ -349,7 +349,7 @@
             border-radius: 40px;
         }
 		.background {
-            top: 28px;
+            top: 0px;
         }
     .image-wrap {
         top: 28px;
