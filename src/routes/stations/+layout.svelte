@@ -1,8 +1,6 @@
 <script>
     // local components
 	import ClockSmall from './clockSmall.svelte';
-	import Plus from './plus.svelte';
-	import Minus from './minus.svelte';
 
     // shared components
 	// import Audio from '$lib/audio.svelte';
@@ -30,8 +28,7 @@
 
     {/if}
 </MediaQuery>
-        <Minus/>
-        <Plus/> 
+
 
 <div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 
 </div>

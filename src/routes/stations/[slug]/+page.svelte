@@ -49,6 +49,29 @@
             name={stationData[activeIndex].name}
             slug={stationData[activeIndex].slug}
         />
+        <span id="fab">
+            <!-- {#if matches} -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
+                <path d="M6 18.0757C6 15.8666 7.79086 14.0757 10 14.0757H30C30 16.2849 28.2091 18.0757 26 18.0757H6Z" fill="#3D2A2A"/>
+                <path d="M6 24.0757H30V28.0757H10C7.79086 28.0757 6 26.2849 6 24.0757Z" fill="#3D2A2A"/>
+                <path d="M6 4.07574H26C28.2091 4.07574 30 5.8666 30 8.07574H6V4.07574Z" fill="#3D2A2A"/>
+                <path d="M10 0L10 12.1506L0 6.07531L10 0Z" fill="#3D2A2A"/>
+                <path d="M24.0753 32.1886L24.0753 20.038L34.0753 26.1133L24.0753 32.1886Z" fill="#3D2A2A"/>
+                <path d="M10 14.0757L10 28.0757C7.79086 28.0757 6 26.2849 6 24.0757V18.0757C6 15.8666 7.79086 14.0757 10 14.0757Z" fill="#3D2A2A"/>
+                <path d="M26 4.07574C28.2091 4.07574 30 5.8666 30 8.07574V14.0757C30 16.2849 28.2091 18.0757 26 18.0757V4.07574Z" fill="#3D2A2A"/>
+            </svg>
+            <!-- {:else}
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="33" viewBox="0 0 35 33" fill="none">
+                <path d="M6 18.0757C6 15.8666 7.79086 14.0757 10 14.0757H30C30 16.2849 28.2091 18.0757 26 18.0757H6Z" fill="#3D2A2A"/>
+                <path d="M6 24.0757H30V28.0757H10C7.79086 28.0757 6 26.2849 6 24.0757Z" fill="#3D2A2A"/>
+                <path d="M6 4.07574H26C28.2091 4.07574 30 5.8666 30 8.07574H6V4.07574Z" fill="#3D2A2A"/>
+                <path d="M10 0L10 12.1506L0 6.07531L10 0Z" fill="#3D2A2A"/>
+                <path d="M24.0753 32.1886L24.0753 20.038L34.0753 26.1133L24.0753 32.1886Z" fill="#3D2A2A"/>
+                <path d="M10 14.0757L10 28.0757C7.79086 28.0757 6 26.2849 6 24.0757V18.0757C6 15.8666 7.79086 14.0757 10 14.0757Z" fill="#3D2A2A"/>
+                <path d="M26 4.07574C28.2091 4.07574 30 5.8666 30 8.07574V14.0757C30 16.2849 28.2091 18.0757 26 18.0757V4.07574Z" fill="#3D2A2A"/>
+            </svg>
+            {/if} -->
+        </span>
     {/if}
 </MediaQuery>
 
@@ -224,7 +247,9 @@
         object-fit: cover;
         transition: 3s;
     }
-
+    #fab {
+        display: none;
+    }
     .image-wrap {
 		background: var(--yang);
         display: block;
@@ -352,6 +377,20 @@
             z-index: 5;
             opacity: 0.85;
         }
+            #fab {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+                right: 10px;
+                height: 80px;
+                width: 80px;
+                border: 1px solid;
+                border-radius: 40px;
+                background-color: var(--yin);
+                color: var(--yang);
+
+
+    }
 		.background {
             top: 0px;
         }
