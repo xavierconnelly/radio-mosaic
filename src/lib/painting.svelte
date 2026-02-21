@@ -91,6 +91,7 @@ img {
             width: 80vw;
             left: 10vw;
             transform: unset;
+            border-radius: 40px;
         }
         :global(#box:hover + #glimpse) {
             display: none;

@@ -39,4 +39,11 @@
 		left: 20px
 	}
 }
+
+    /* media stylings ~ MOBILE */
+    @media (max-width: 500px) {
+		.minus {
+			left: 20px
+		}
+    }
 </style>
