@@ -5,6 +5,8 @@
 	// Props passed from parent each block
 	export let name;
 	export let slug;
+	export let tint;
+	export let clockhand;
 	// export let city;
 	// export let country;
 </script>
@@ -15,7 +17,7 @@
 </div>
 
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}"
-		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
+		style="background: #{tint}; color: #{clockhand}"
 >
     <h4>{name}</h4>
     <!-- <p>{city}</p>
