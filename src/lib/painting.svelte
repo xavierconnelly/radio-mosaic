@@ -95,7 +95,7 @@ img {
         }
         .station {
             bottom: calc(17vh - 11px);
-            bottom: 116px;
+            bottom: 126px;
             height: 36px;
             width: calc(100vw - 152px);
             left: 76px;

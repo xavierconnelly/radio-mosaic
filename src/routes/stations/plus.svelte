@@ -89,7 +89,7 @@ $: console.log($page.params.slug);
 			width: 56px;
 			border-radius: 40px;
 			top: unset;
-			bottom: 116px;
+			bottom: 126px;
 			z-index: 99;
 		display: flex;
     	justify-content: center;

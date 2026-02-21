@@ -346,6 +346,7 @@
             border: 1px solid var(--yang);
             padding: 40px 0px;
             width: 56px;
+            height: calc(100vh - 226px);
             border-radius: 40px;
         }
 		.background {

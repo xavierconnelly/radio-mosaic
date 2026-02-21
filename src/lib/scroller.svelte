@@ -109,7 +109,7 @@
     #box {
         width: calc(100vw - 110px);
         height: 96px;
-        bottom: 10px;
+        bottom: 20px;
         left: 10px;
         border-radius: 28px;
         border-top: unset;
@@ -120,7 +120,7 @@
         height: calc(28vh - 28px);
         box-shadow: 9px 0px 10px #00000038;
         border-right: unset;
-        height: 80px;
+        height: 96px;
         color: #00000000;
     }
 }
