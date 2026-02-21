@@ -53,9 +53,9 @@
     {#if matches}
 
 
-               <button class="fab" on:click={toggle}> 
+               <span class="fab" > 
                 open
-            </button>
+               </span>
         {#if scrollUi.selected}
             <button class="fab" on:click={toggle}> 
                 open
