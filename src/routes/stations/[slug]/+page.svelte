@@ -329,17 +329,23 @@
             width: 100vw;
         }
         #wallpaper {
-            border: 10px solid var(--yin);
+            /* border: 10px solid var(--yin); */
 		}
     .image-wrap {
         z-index: 1;
-        height: calc(75vh - 44px);
+        height: calc(100vh - 32px);
         width: 100%;
 	}
 	}
     @media (max-width: 500px) {
         h2 {
             top: calc(28px);
+            left: 20px;
+            writing-mode: sideways-lr;
+            background-color: white;
+            border: 1px solid blue;
+            padding: 0 20px;
+            height: 80px;
         }
 		.background {
             top: 28px;
