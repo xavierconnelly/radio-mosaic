@@ -8,6 +8,9 @@
         updateIndexFromSlug($page.params.slug, stationData);
     }
 
+		import MediaQuery from '$lib/mediaQuery.svelte';
+
+
 	const lastStation = stationData.length - 1;
 
 	// reactive previous index
