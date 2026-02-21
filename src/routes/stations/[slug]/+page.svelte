@@ -66,16 +66,12 @@
                 name={stationData[activeIndex].name}
                 slug={stationData[activeIndex].slug}
             />
-            <div id="showMeTheFab"> 
-                open
-            </div>
+
         {/if}
     {/if}
 </MediaQuery>
 
-            <div id="hello"> 
-                hello
-            </div>
+
 
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
@@ -251,23 +247,7 @@ h2 {
     object-fit: cover;
     transition: 3s;
 }
-#showMeTheFab {
-    display: block;
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    height: 80px;
-    width: 80px;
-    border: 1px solid;
-    border-radius: 40px;
-    background-color: var(--yin);
-    color: var(--yang);
-    z-index: 999;
-    font-size: 400px;
-}
-#hello {
-    font-size: 400px;
-}
+
 .image-wrap {
     background: var(--yang);
     display: block;

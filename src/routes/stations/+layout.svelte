@@ -29,6 +29,9 @@
     {/if}
 </MediaQuery>
 
+            <div id="showMeTheFab"> 
+                open
+            </div>
 
 <div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 
 </div>
@@ -42,5 +45,20 @@
     top: 0;
     left: 0;
     z-index: 2;
+}
+
+#showMeTheFab {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid;
+    border-radius: 40px;
+    background-color: var(--yin);
+    color: var(--yang);
+    z-index: 999;
+    font-size: 400px;
 }
 </style>
