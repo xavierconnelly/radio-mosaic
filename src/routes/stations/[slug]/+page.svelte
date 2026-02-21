@@ -8,8 +8,7 @@
 	import Plus from './plus.svelte';
 	import Minus from './minus.svelte';
     import Time from "$lib/time.svelte";
-    import Fab from "$lib/fab.svelte";
-
+    import Fab from "./fab.svelte";
     import Flyover from '$lib/flyover.svelte';
 
 
