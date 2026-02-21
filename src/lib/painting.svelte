@@ -1,6 +1,7 @@
 <script>
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
 
+    
 	// Props passed from parent each block
 	export let name;
 	export let slug;
@@ -13,7 +14,9 @@
 
 </div>
 
-<a class="station" data-sveltekit-noscroll href="/stations/{slug}">
+<a class="station" data-sveltekit-noscroll href="/stations/{slug}"
+		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
+>
     <h4>{name}</h4>
     <!-- <p>{city}</p>
     <p>{country}</p> -->

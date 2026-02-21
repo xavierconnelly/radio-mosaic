@@ -94,8 +94,8 @@ $: console.log($page.params.slug);
 		display: flex;
     	justify-content: center;
     	align-items: center;
-		background-color: var(yin);
-		border: 1px solid var(yang);
+		background-color: var(--yin);
+		border: 1px solid var(--yang);
 		}
 		.plus {
 			left: unset;
