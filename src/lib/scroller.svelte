@@ -115,6 +115,7 @@
         border-radius: 28px;
         border-top: unset;
         border: 1px solid var(--yang);
+		opacity: 0.85;
     }
     .face {
         height: calc(28vh - 28px);

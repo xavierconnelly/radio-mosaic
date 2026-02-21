@@ -22,9 +22,9 @@
     <h4>{name}</h4>
     <!-- <p>{city}</p>
     <p>{country}</p> -->
-    <svg class="icon" viewBox="0 0 24 24">
+    <!-- <svg class="icon" viewBox="0 0 24 24">
         <polygon points="6,4 20,12 6,20" />
-    </svg>
+    </svg> -->
 </a>
 
 <style>
@@ -101,6 +101,7 @@ img {
             left: 76px;
             transform: unset;
             border-radius: 111px;
+            opacity: 0.85;
         }
         :global(#box:hover + #glimpse) {
             display: none;

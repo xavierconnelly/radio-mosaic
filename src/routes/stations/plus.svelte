@@ -96,6 +96,8 @@ $: console.log($page.params.slug);
     	align-items: center;
 		background-color: var(--yin);
 		border: 1px solid var(--yang);
+		            opacity: 0.85;
+
 		}
 		.plus {
 			left: unset;

@@ -190,6 +190,7 @@ input[type="range"]::-ms-fill-upper {
 			height: 56px;
 			transform: unset;
         	left: 10px;
+		    opacity: 0.85;
 		}
 		.icon {
 			fill: var(--yang);
