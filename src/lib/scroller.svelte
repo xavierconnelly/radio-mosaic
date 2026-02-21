@@ -108,7 +108,7 @@
 @media (max-width: 500px) {
     #box {
         height: calc(28vh - 28px);
-        width: calc(100vw - 20px);
+        width: calc(100vw - 40px);
         height: 80px;
         bottom: 120px;
         left: 20px;

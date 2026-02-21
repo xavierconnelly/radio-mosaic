@@ -86,12 +86,12 @@ img {
         }
         .station {
             bottom: calc(17vh - 11px);
-            bottom: 20px;
-            height: 80px;
-            width: calc(100vw - 120px);
-            left: 10vw;
+            bottom: 180px;
+            height: 56px;
+            width: calc(100vw - 172px);
+            left: 86px;
             transform: unset;
-            border-radius: 40px;
+            border-radius: 111px;
         }
         :global(#box:hover + #glimpse) {
             display: none;

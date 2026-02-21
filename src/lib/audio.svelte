@@ -180,7 +180,7 @@ input[type="range"]::-ms-fill-upper {
 		button {
 			top: calc(36vh + 28px);
 		}
-		button {
+		.player-btn {
 			top: unset;
 			bottom: 120px;
 			background: var(--yin);
