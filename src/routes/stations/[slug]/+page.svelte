@@ -46,9 +46,6 @@
     });
 </script>
 
-<div class="showMeTheFab"> 
-    open
-</div>
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
@@ -86,6 +83,10 @@
     <b id="city">{stationData[$INDEX].city}</b>
     <span id="country">{stationData[$INDEX].country}</span>
 </nav>
+
+<div id="showMeTheFab"> 
+    open
+</div>
 
 <div class="image-wrap">
     {#if stationData[moused]}
@@ -245,9 +246,19 @@ h2 {
     object-fit: cover;
     transition: 3s;
 }
-/* .fab {
-    display: none;
-} */
+#showMeTheFab {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid;
+    border-radius: 40px;
+    background-color: var(--yin);
+    color: var(--yang);
+    z-index: 99;
+}
 .image-wrap {
     background: var(--yang);
     display: block;
@@ -375,19 +386,7 @@ h2 {
         opacity: 0.85;
     }
 
-    .showMeTheFab {
-        /* display: block; */
-        position: fixed;
-        bottom: 20px;
-        right: 10px;
-        height: 80px;
-        width: 80px;
-        border: 1px solid;
-        border-radius: 40px;
-        background-color: var(--yin);
-        color: var(--yang);
-        z-index: 99;
-    }
+
     .background {
         top: 0px;
     }
