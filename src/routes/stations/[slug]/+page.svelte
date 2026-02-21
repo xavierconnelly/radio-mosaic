@@ -324,8 +324,8 @@
             color: var(--yang); */
         }
 		.background {
-            top: 32px;
-            height: calc(72vh);
+            top: 0px;
+            height: calc(100vh);
             width: 100vw;
         }
         #wallpaper {
