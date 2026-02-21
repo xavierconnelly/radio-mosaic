@@ -28,7 +28,7 @@ $: console.log($page.params.slug);
 		style="background: #{stationData[$INDEX].tint}; color: #{stationData[$INDEX].clockhand}"
 	>
 
-		<MediaQuery query="(min-width: 700px)" let:matches>
+		<MediaQuery query="(min-width: 700px)">
 		{#if matches}
 			{stationData[nextIndex].name}
 		{:else}
