@@ -45,6 +45,10 @@
     opacity: 0;
 }
 
+h4 {
+    font-size: 12px;
+}
+
 img {
     object-fit: cover;
     filter: grayscale(1);

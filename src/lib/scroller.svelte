@@ -117,6 +117,8 @@
     .face {
         height: calc(28vh - 28px);
         box-shadow: 5px 1px 7px 0 rgba(0, 0, 0, 0.14) inset;
+        border-right: unset;
+        height: 80px;
     }
 }
 </style>
