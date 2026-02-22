@@ -9,11 +9,9 @@
     import Painting from '$lib/painting.svelte';
     import Scroller from "$lib/scroller.svelte";
     import Time from "$lib/time.svelte";
-
-    // scoped components
-	import Plus from './plus.svelte';
-	import Minus from './minus.svelte';
-    import Fab from "./fab.svelte";
+	import Plus from '$lib/plus.svelte';
+	import Minus from '$lib/minus.svelte';
+    import Fab from "$lib/fab.svelte";
 
     // fab hiding
 	let scrollUi = { selected: true };
