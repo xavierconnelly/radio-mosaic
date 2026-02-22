@@ -63,15 +63,16 @@
 }
 
 #box {
-    width: 100vw;
-    height: calc(28vh - 32px);
     z-index: 99;
 	overflow: hidden;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    border-top: 1px solid var(--yang);
+    bottom: 20px;
+    left: 10px;
+    width: calc(100vw - 110px);
+    height: 120px;
+    color: var(--yang);
     background: var(--yin);
+    border: 1px solid;
 }
 
 .scene {
@@ -95,33 +96,13 @@
     color: var(--yang);
     background: var(--yin);
     border-right: 0.5px solid;
-    writing-mode: sideways-lr;
     width: 24px;
+    height: 120px;
     height: calc(28vh - 32px);
-    font-size: 7px;
+    font-size: 12px;
     padding-bottom: 10px;
     position: absolute;
     display: flex;
     align-items: center;
-    opacity: 1;
-}
-
-@media (max-width: 500px) {
-    #box {
-        width: calc(100vw - 110px);
-        height: 120px;
-        bottom: 20px;
-        left: 10px;
-        border-radius: 28px;
-        border-top: unset;
-        color: var(--yang);
-        border: 1px solid;
-		opacity: 0.9;
-    }
-    .face {
-        height: 120px;
-        border-right: unset;
-        height: 96px;
-    }
 }
 </style>
