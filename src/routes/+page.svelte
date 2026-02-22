@@ -42,8 +42,10 @@
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
-    {:else if}
-        <Obi />
+    {/if}
+</MediaQuery>
+
+        <!-- <Obi />
         <ClockBigger />
         <div class="image-wrap">
             {#if stationData[moused]}
@@ -53,9 +55,9 @@
                 </div>
                 <Flyover slug={stationData[moused].slug} />
             {/if}           
-        </div>
-    {/if}
-</MediaQuery>
+        </div> -->
+
+
 
 
 
