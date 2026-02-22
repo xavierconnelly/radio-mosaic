@@ -354,7 +354,7 @@ h2 {
         border: 1px solid var(--yang);
         padding: 40px 0px;
         width: 56px;
-        height: calc(100vh - 295px);
+        height: calc(100dvh - 295px);
         border-radius: 40px;
         z-index: 5;
         opacity: 0.85;

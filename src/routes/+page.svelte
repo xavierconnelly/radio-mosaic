@@ -35,8 +35,8 @@
 
 
 
-<MediaQuery query="(max-width: 700px)" let:matches>
-    {#if matches}
+<MediaQuery query="(max-width: 700px)" let:mobile>
+    {#if mobile}
         <div>
             <p lang="en">
                 <b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
@@ -46,8 +46,8 @@
     {/if}
 </MediaQuery>
 
-<MediaQuery query="(min-width: 700px)" let:matches>
-    {#if matches}
+<MediaQuery query="(min-width: 700px)" let:desktop>
+    {#if desktop}
         <Obi />
         <ClockBigger />
         <div class="image-wrap">
