@@ -43,7 +43,8 @@
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
                                             translateZ({radius}em)">
-                    <img src={item.src}/>
+                    <img    src={item.src}
+                            alt="an aerial landscapr view of {item.city}"/>
                     {item.name}
                 </div>
             {/each}
