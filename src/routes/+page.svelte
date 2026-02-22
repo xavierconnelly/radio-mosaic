@@ -42,7 +42,7 @@
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
-    {:else}
+    {:else if}
         <Obi />
         <ClockBigger />
         <div class="image-wrap">
