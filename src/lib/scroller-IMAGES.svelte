@@ -39,14 +39,15 @@
             style="transform: translateZ(-{radius}em) rotateY({x}deg)"
         >
             {#each items as item, i}
-                <div    data-sveltekit-noscroll 
+                <a    data-sveltekit-noscroll 
+                        href="/{slug}"
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
                                             translateZ({radius}em)">
                     <img    src="../images/glimpse/{item.slug}.webp"                    
                             alt="an aerial landscapr view of {item.city}"/>
                     {item.name}
-                </div>
+                </a>
             {/each}
         </div>
     </div>
@@ -67,17 +68,17 @@
     z-index: 99;
 	overflow: hidden;
     position: fixed;
-    bottom: 20px;
-    left: 10px;
-    width: calc(100vw - 110px);
-    height: 120px;
+    bottom: 0px;
+    left: 0px;
+    width: calc(100vw);
+    height: 350px;
     color: var(--yang);
     background: var(--yin);
     border: 1px solid;
 }
 
 .scene {
-    width: 24px;
+    width: 80px;
     height: 100%;
     perspective: 20000px;
     position: absolute;
@@ -97,13 +98,17 @@
     color: var(--yang);
     background: var(--yin);
     border-right: 0.5px solid;
-    width: 24px;
+    width: 80px;
     height: 120px;
-    height: calc(28vh - 32px);
     font-size: 12px;
     padding-bottom: 10px;
     position: absolute;
     display: flex;
     align-items: center;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 </style>
