@@ -14,7 +14,7 @@
 	export let slug;
 	export let utc;
 	export let tint;
-	export let clockhand;
+	// export let clockhand;
 
 	// Rotation calculation
 	let radius = 360 / stationData.length;
@@ -109,9 +109,9 @@
         font-size: 5px;
         line-height: 14px;
     }
-    .details {
+    /* .details {
         border-top-left-radius: 14px;
         border-bottom-left-radius: 14px;
-    }
+    } */
 }
 </style>

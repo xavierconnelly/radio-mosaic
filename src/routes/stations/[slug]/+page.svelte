@@ -2,17 +2,20 @@
     import { page } from '$app/stores';
     import { INDEX, updateIndexFromSlug } from '$lib/store.js';
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
+
+    // global components
+    import Flyover from '$lib/flyover.svelte';
 	import MediaQuery from '$lib/mediaQuery.svelte';
-    import Scroller from "$lib/scroller.svelte";
     import Painting from '$lib/painting.svelte';
+    import Scroller from "$lib/scroller.svelte";
+    import Time from "$lib/time.svelte";
+
+    // scoped components
 	import Plus from './plus.svelte';
 	import Minus from './minus.svelte';
-    import Time from "$lib/time.svelte";
     import Fab from "./fab.svelte";
-    import Flyover from '$lib/flyover.svelte';
 
-
-// fab hideing
+    // fab hiding
 	let scrollUi = { selected: true };
 	function toggle() {
 		scrollUi.selected = !scrollUi.selected;
@@ -61,8 +64,8 @@
             </button>
         {/if} -->
         {#if scrollUi.selected}
-            <Minus/>
-            <Plus/> 
+            <Minus />
+            <Plus /> 
             <Scroller data-sveltekit-noscroll items={stationData} onActiveChange={updateActive} />
             <Painting  
                 name={stationData[activeIndex].name}
