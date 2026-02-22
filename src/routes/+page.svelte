@@ -5,9 +5,8 @@
 
     // shared components
 	import MediaQuery from '$lib/mediaQuery.svelte';
-    import Scroller from "$lib/scroller.svelte";
+    import ScrollerImages from "$lib/scroller-IMAGES.svelte";
 	import Obi from '$lib/obi.svelte';
-    import Painting from '$lib/painting.svelte';
     import Flyover from '$lib/flyover.svelte';
 
     // local components
@@ -34,18 +33,14 @@
     });
 </script>
 
+
 <MediaQuery query="(max-width: 700px)" let:matches>
+    
     {#if matches}
-        <Scroller items={stationData} onActiveChange={updateActive} />
-        <Painting  
-            name={stationData[activeIndex].name}
-            slug={stationData[activeIndex].slug}
-            city={stationData[activeIndex].city}
-            country={stationData[activeIndex].country}
-        />
-        <!-- <a data-sveltekit-noscroll id="play-me" href="/stations/{stationData[activeIndex].slug}">play</a> -->
+        <ScrollerImages items={stationData} onActiveChange={updateActive} />
     {/if}
 </MediaQuery>
+
 
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
