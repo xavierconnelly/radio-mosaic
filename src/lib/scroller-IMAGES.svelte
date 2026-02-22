@@ -44,7 +44,7 @@
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
                                             translateZ({radius}em)">
-                    <img    src="../images/glimpse/{item.slug}.webp"                    
+                    <img    src="/images/glimpse/{item.slug}.webp"                    
                             alt="an aerial landscapr view of {item.city}"/>
                     {item.name}
                 </a>
