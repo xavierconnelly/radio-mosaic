@@ -78,6 +78,19 @@ function _page($$renderer, $$props) {
             $$renderer3.push(`<!---->`);
           } else {
             $$renderer3.push("<!--[!-->");
+          }
+          $$renderer3.push(`<!--]-->`);
+        }
+      }
+    });
+    $$renderer2.push(`<!----> `);
+    MediaQuery($$renderer2, {
+      query: "(min-width: 700px)",
+      children: invalid_default_snippet,
+      $$slots: {
+        default: ($$renderer3, { matches }) => {
+          if (matches) {
+            $$renderer3.push("<!--[-->");
             Obi($$renderer3, {});
             $$renderer3.push(`<!----> `);
             ClockBigger($$renderer3);
@@ -91,11 +104,14 @@ function _page($$renderer, $$props) {
               $$renderer3.push("<!--[!-->");
             }
             $$renderer3.push(`<!--]--></div>`);
+          } else {
+            $$renderer3.push("<!--[!-->");
           }
           $$renderer3.push(`<!--]-->`);
         }
       }
     });
+    $$renderer2.push(`<!---->`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
   });
 }

@@ -47,6 +47,7 @@
 </MediaQuery>
 
 <MediaQuery query="(min-width: 700px)" let:matches>
+    {#if matches}
         <Obi />
         <ClockBigger />
         <div class="image-wrap">
