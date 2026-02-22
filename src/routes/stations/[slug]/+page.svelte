@@ -11,7 +11,7 @@
     import Time from "$lib/time.svelte";
 	import Plus from '$lib/plus.svelte';
 	import Minus from '$lib/minus.svelte';
-    import Fab from "$lib/fab.svelte";
+    // import Fab from "$lib/fab.svelte";
 
     // fab hiding
 	let scrollUi = { selected: true };
@@ -49,7 +49,7 @@
 </script>
 
 
-<Fab />
+<!-- <Fab /> -->
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
         <!-- {#if scrollUi.selected}
@@ -265,7 +265,7 @@ h2 {
     transition-delay: 20ms;
     border-right: 1px solid var(--yang);
 }
-.blurb {
+/* .blurb {
     height: 5vh;
     padding: 0 30px;
     position: fixed;
@@ -284,7 +284,7 @@ h2 {
     z-index: 9999;
     background-color: var(--yin);
     color: var(--yang);
-}
+} */
 .local {
     width: 20px;
     padding: 16px 12px 24px 12px;
@@ -354,7 +354,7 @@ h2 {
         border: 1px solid var(--yang);
         padding: 40px 0px;
         width: 56px;
-        height: calc(100vh - 275px);
+        height: calc(100vh - 295px);
         border-radius: 40px;
         z-index: 5;
         opacity: 0.85;

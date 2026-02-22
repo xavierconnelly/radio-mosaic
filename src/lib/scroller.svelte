@@ -109,6 +109,8 @@
     #box {
         width: calc(100vw - 110px);
         height: 96px;
+        width: calc(100vw - 20px);
+        height: 80px;
         bottom: 20px;
         left: 10px;
         border-radius: 28px;

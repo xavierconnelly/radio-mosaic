@@ -90,14 +90,14 @@ $: console.log($page.params.slug);
 			border-radius: 40px;
 			top: unset;
 			bottom: 126px;
+			bottom: 110px;
 			z-index: 99;
-		display: flex;
-    	justify-content: center;
-    	align-items: center;
-		background-color: var(--yin);
-		border: 1px solid var(--yang);
-		            opacity: 0.85;
-
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--yin);
+			border: 1px solid var(--yang);
+			opacity: 0.85;
 		}
 		.plus {
 			left: unset;
