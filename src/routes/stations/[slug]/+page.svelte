@@ -90,8 +90,6 @@
     <span id="country">{stationData[$INDEX].country}</span>
 </nav>
 
-
-
 <div class="image-wrap">
     {#if stationData[moused]}
         <div class="local">

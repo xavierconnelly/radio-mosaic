@@ -61,6 +61,10 @@
 
 
 <style>
+
+:global(body) {
+    background-color: var(--yin);
+}
     .local {
         width: 20px;
         padding: 16px 12px 24px 12px;
