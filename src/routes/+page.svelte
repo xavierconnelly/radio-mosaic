@@ -91,28 +91,6 @@
         height: calc(100vh - 32px);
         width: calc(300px);
 	}
-    .flyover {
-        display: block;
-        /* opacity: 0; */
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 1;
-        padding: 10px;
-        height: calc(100vh - 32px);
-        width: calc(300px);
-        /* background-color: #F6F3F0; */
-        filter: grayscale(100%);
-        mix-blend-mode: screen;
-        color: inherit;
-        background-size: cover;
-        background-position: center;
-        z-index: 199;
-        object-fit: cover;
-        transition: 3s;
-        /* transition-delay: 20ms; */
-        border-right: 1px solid var(--yang);
-    }
 @media (max-width: 700px) {
     .image-wrap {
         z-index: 1;

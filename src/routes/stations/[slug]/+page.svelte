@@ -182,22 +182,6 @@ nav {
     line-height: 32px;
     z-index: 99;
 }
-aside {
-    height: calc(100vh - 32px);
-    width: 300px;
-    position: fixed;
-    top: 32px;
-    left: 300px;
-    font-size: 13px;
-    line-height: 1.4em;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    transition: 3s;
-    z-index: 80;
-    border-top: inherit;
-    display: none;
-}
 h2 {
     position: fixed;
     top: 0px;
@@ -209,7 +193,7 @@ h2 {
     margin: auto 0;
     z-index: 99;
 }
-#bio {
+/* #bio {
     display: flex;
     gap: 20px;
     padding: 10px 10px;
@@ -219,7 +203,7 @@ h2 {
 #bio span a {
     border-radius: 30px;
     padding: 4px 20px;
-}
+} */
 .background {
     display: block;
     position: fixed;
