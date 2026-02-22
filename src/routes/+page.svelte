@@ -43,7 +43,10 @@
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
-    {:else}
+    {/if}
+</MediaQuery>
+
+<MediaQuery query="(min-width: 700px)" let:matches>
         <Obi />
         <ClockBigger />
         <div class="image-wrap">
