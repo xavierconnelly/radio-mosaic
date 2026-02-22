@@ -42,7 +42,7 @@
         </div>
         <!-- <ScrollerImages items={stationData} onActiveChange={updateActive} /> -->
 
-<MediaQuery query="(max-width: 700px)" let:matches>
+<MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
          <Obi />
         <ClockBigger />
