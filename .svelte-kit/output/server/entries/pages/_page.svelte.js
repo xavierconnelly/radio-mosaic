@@ -1,10 +1,10 @@
-import { Z as attr_style, a0 as ensure_array_like, V as attr, $ as bind_props, _ as stringify, U as store_get, W as unsubscribe_stores } from "../../chunks/index2.js";
+import { Z as attr_style, a0 as ensure_array_like, V as attr, _ as stringify, $ as bind_props, U as store_get, W as unsubscribe_stores } from "../../chunks/index2.js";
 import { s as stationData, H as HOVER } from "../../chunks/radioData.js";
 /* empty css               */
 import { M as MediaQuery } from "../../chunks/mediaQuery.js";
 import { f as fallback } from "../../chunks/equality.js";
 import { e as escape_html, i as invalid_default_snippet } from "../../chunks/context.js";
-import { F as Flyover, O as Obi } from "../../chunks/flyover.js";
+import { O as Obi, F as Flyover } from "../../chunks/flyover.js";
 function Scroller_IMAGES($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let count, angleStep, radius, angle, activeIndex;
@@ -23,7 +23,7 @@ function Scroller_IMAGES($$renderer, $$props) {
     const each_array = ensure_array_like(items);
     for (let i = 0, $$length = each_array.length; i < $$length; i++) {
       let item = each_array[i];
-      $$renderer2.push(`<div data-sveltekit-noscroll="" class="face svelte-1qzm4qi"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em)`)}><img${attr("src", item.src)}/> ${escape_html(item.name)}</div>`);
+      $$renderer2.push(`<div data-sveltekit-noscroll="" class="face svelte-1qzm4qi"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em)`)}><img${attr("src", `../images/glimpse/${stringify(item.slug)}.webp`)}${attr("alt", `an aerial landscapr view of ${stringify(item.city)}`)}/> ${escape_html(item.name)}</div>`);
     }
     $$renderer2.push(`<!--]--></div></div></div>`);
     bind_props($$props, { items, onActiveChange });
@@ -73,43 +73,29 @@ function _page($$renderer, $$props) {
         default: ($$renderer3, { matches }) => {
           if (matches) {
             $$renderer3.push("<!--[-->");
+            $$renderer3.push(`<div><p lang="en"><b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.</p></div> `);
             Scroller_IMAGES($$renderer3, { items: stationData, onActiveChange: updateActive });
-          } else {
-            $$renderer3.push("<!--[!-->");
-          }
-          $$renderer3.push(`<!--]-->`);
-        }
-      }
-    });
-    $$renderer2.push(`<!----> `);
-    MediaQuery($$renderer2, {
-      query: "(min-width: 700px)",
-      children: invalid_default_snippet,
-      $$slots: {
-        default: ($$renderer3, { matches }) => {
-          if (matches) {
-            $$renderer3.push("<!--[-->");
-            Obi($$renderer3, {});
-            $$renderer3.push(`<!----> `);
-            ClockBigger($$renderer3);
             $$renderer3.push(`<!---->`);
           } else {
             $$renderer3.push("<!--[!-->");
+            Obi($$renderer3, {});
+            $$renderer3.push(`<!----> `);
+            ClockBigger($$renderer3);
+            $$renderer3.push(`<!----> <div class="image-wrap svelte-1uha8ag">`);
+            if (stationData[moused]) {
+              $$renderer3.push("<!--[-->");
+              $$renderer3.push(`<div class="local svelte-1uha8ag"><p>${escape_html(stationData[moused].city)}</p> <p>${escape_html(stationData[moused].country)}</p></div> `);
+              Flyover($$renderer3, { slug: stationData[moused].slug });
+              $$renderer3.push(`<!---->`);
+            } else {
+              $$renderer3.push("<!--[!-->");
+            }
+            $$renderer3.push(`<!--]--></div>`);
           }
           $$renderer3.push(`<!--]-->`);
         }
       }
     });
-    $$renderer2.push(`<!----> <div class="image-wrap svelte-1uha8ag">`);
-    if (stationData[moused]) {
-      $$renderer2.push("<!--[-->");
-      $$renderer2.push(`<div class="local svelte-1uha8ag"><p>${escape_html(stationData[moused].city)}</p> <p>${escape_html(stationData[moused].country)}</p></div> `);
-      Flyover($$renderer2, { slug: stationData[moused].slug });
-      $$renderer2.push(`<!---->`);
-    } else {
-      $$renderer2.push("<!--[!-->");
-    }
-    $$renderer2.push(`<!--]--></div>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
   });
 }
