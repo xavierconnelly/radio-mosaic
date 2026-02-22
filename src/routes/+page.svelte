@@ -33,6 +33,8 @@
     });
 </script>
 
+
+
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
         <div>
@@ -41,33 +43,22 @@
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
-    {/if}
-</MediaQuery>
-
-
-<MediaQuery query="(min-width: 700px)" let:matches>
-    {#if matches}
+    {:else}
         <Obi />
         <ClockBigger />
-    {/if}
-</MediaQuery>
-
-<!-- <MediaQuery query="(min-width: 1280px)" let:matches>
-    {#if matches} -->
         <div class="image-wrap">
-            <!-- <div class="flyover"  style="background-image: url(../images/glimpse/{stationData[moused].slug}.webp">
-            </div> -->
             {#if stationData[moused]}
                 <div class="local">
                     <p>{stationData[moused].city}</p>
                     <p>{stationData[moused].country}</p>
                 </div>
                 <Flyover slug={stationData[moused].slug} />
-            {/if}            <!-- <div class="flyover mosaic"  style="background-image: url(../images/mosaic.png">
-            </div> -->
+            {/if}           
         </div>
-    <!-- {/if}
-</MediaQuery> -->
+    {/if}
+</MediaQuery>
+
+
 
 <style>
     .local {
@@ -118,9 +109,6 @@
         transition: 3s;
         /* transition-delay: 20ms; */
         border-right: 1px solid var(--yang);
-    }
-    .mosaic {
-        background-size: 300px;
     }
 @media (max-width: 700px) {
     .image-wrap {
