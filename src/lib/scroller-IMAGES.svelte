@@ -48,8 +48,8 @@
                     <!-- <img    src="../images/flyover/{item.slug}.webp"                    
                             alt="an aerial landscapr view of {item.city}"/> -->
                     <span id="name"
-                            style="background-color: #{item.tint};
-                                    color: #{item.fill}">
+                            style="background-color: #{item.clockhand};
+                                    color: #{item.title}">
                             {item.name}</span>
                 </a>
             {/each}
@@ -120,6 +120,7 @@
     bottom: 10px;
     left: 0px;
     margin: 10px;
+    font-family: monospace;
 }
 /* img {
     width: 100%;
