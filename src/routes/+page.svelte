@@ -35,7 +35,7 @@
 
 
 
-       <div>
+       <div id="intro">
             <p lang="en">
                 <b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
             </p>
@@ -103,6 +103,12 @@
 	}
 }
 @media (max-width: 500px) {
+    #intro {
+        padding: 10px;
+        margin-top: 28px;
+        font-size: 22px;
+        font-weight: 500;
+    }
     .image-wrap {
         top: 28px;
         height: calc(75vh - 28px);
