@@ -12,7 +12,7 @@
     let rawX = 0;
     const x = spring(0, {
         stiffness: 0.03, //how fast it cactches up
-        damping: 0.7 // springiness
+        damping: 0.7 // springiness when stopping
     });
 
     $: angle = ($x % 360 + 360) % 360;
@@ -75,9 +75,8 @@
 #box {
     z-index: 99;
 	overflow: hidden;
-    position: relative;
-    bottom: 0px;
-    left: 0px;
+    position: sticky;
+    top: 27px;
     width: calc(100vw);
     height: 40vh;
     color: var(--yang);

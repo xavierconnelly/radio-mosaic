@@ -38,13 +38,13 @@
     {#if matches}
        <div id="intro">
             <p>
-                <b>RADIO MOSAIC</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+                <b>RADIO MOSAIC</b> is a collection of online radio community radio stations from all corners of the world.
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
        <div>
             <p>
-                Music naturally brings people together. This site hopes to connect disparate but connected communities from across the globe.
+                Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
             </p>
         
             <p>.</p>
@@ -124,14 +124,17 @@
 }
 @media (max-width: 500px) {
     div {
+        font-size: 14px;
         padding: 10px;
-        font-size: 22px;
         font-weight: 500;
         position: relative;
     }
 
     #intro {
         margin-top: 28px;
+    }
+    #intro p {
+        font-size: 22px;
     }
     .image-wrap {
         top: 28px;
