@@ -122,6 +122,8 @@
     }
     .face {
         height: calc(28vh - 28px);
+        width: 21px;
+        top: -2px;
         box-shadow: 9px 0px 10px #00000038;
         border-right: unset;
         height: 96px;
