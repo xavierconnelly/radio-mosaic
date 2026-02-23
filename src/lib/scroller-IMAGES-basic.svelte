@@ -1,7 +1,9 @@
 <script>
+    import { spring } from 'svelte/motion';
+    import { onMount } from 'svelte';
+
     export let items = [];
     export let onActiveChange;
-    import { spring } from 'svelte/motion';
 
     const faceWidth = 8;
 
@@ -11,8 +13,13 @@
 
     let rawX = 0;
     const x = spring(0, {
-        stiffness: 0.03, //how fast it cactches up
-        damping: 0.7 // springiness when stopping
+        stiffness: 0.03,
+        damping: 0.7
+    });
+
+    onMount(() => {
+        rawX = Math.random() * 360;
+        x.set(rawX, { hard: true });
     });
 
     $: angle = ($x % 360 + 360) % 360;

@@ -63,7 +63,7 @@
             <p>.</p>
         </div>
         <div>
-            <h4>Disclaimer<h5/>
+            <b>Disclaimer</b>
             <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
             <p>.</p>
         </div>

@@ -71,13 +71,7 @@
             />
 
         {/if}
-    {/if}
-</MediaQuery>
-
-
-
-<MediaQuery query="(min-width: 700px)" let:matches>
-    {#if matches}
+    {:else}
         <Obi 
             obiText={stationData[$INDEX].obiText}
             obi={stationData[$INDEX].obi}/>
