@@ -66,7 +66,7 @@
                     style="transform: rotateY({i * angleStep}deg) translateZ({radius}em);
                             background-color: #{item.tint}"
                 >
-                    <div class="facepaint" style="background-image: url(../images/small/{item.slug}.webp)">
+                    <div class="facepaint" style="background-image: url(../images/small/{item.slug}1x.webp)">
                         <span id="name"
                             style="background-color: #{item.clockhand};
                                 color: #{item.tint}">
