@@ -40,7 +40,7 @@
         >
             {#each items as item, i}
                 <a    data-sveltekit-noscroll 
-                        href="/{slug}"
+                        href="/{item.slug}"
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
                                             translateZ({radius}em)">
