@@ -49,7 +49,7 @@
                             alt="an aerial landscapr view of {item.city}"/> -->
                     <span id="name"
                             style="background-color: #{item.clockhand};
-                                    color: #{item.title}">
+                                    color: #{item.tint}">
                             {item.name}</span>
                 </a>
             {/each}
