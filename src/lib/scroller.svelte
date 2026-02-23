@@ -42,8 +42,9 @@
                 <div    data-sveltekit-noscroll 
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
-                                            translateZ({radius}em)"
-                                background-color="{item.fill}">
+                                            translateZ({radius}em);
+                                background-color: #{item.tint};
+                                color: #{item.fill}">
                     {item.name}
                 </div>
             {/each}
