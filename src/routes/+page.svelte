@@ -37,11 +37,24 @@
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
        <div id="intro">
-            <p lang="en">
+            <p>
                 <b>RADIO MOSAIC</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
+       <div>
+            <p>
+                Music naturally brings people together. This site hopes to connect disparate but connected communities from across the globe.
+            </p>
+        
+            <p>.</p>
+             <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+
+        </div>
+
 {:else}
          <Obi />
         <ClockBigger />
@@ -102,12 +115,15 @@
 	}
 }
 @media (max-width: 500px) {
-    #intro {
+    div {
         padding: 10px;
-        margin-top: 28px;
         font-size: 22px;
         font-weight: 500;
-        position: fixed;
+        position: relative;
+    }
+
+    #intro {
+        margin-top: 28px;
     }
     .image-wrap {
         top: 28px;

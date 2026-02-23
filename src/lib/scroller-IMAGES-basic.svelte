@@ -39,7 +39,6 @@
         lastTouch = e.touches[0].clientX;
         x.set(rawX);
     }
-
 </script>
 
 <div 
@@ -76,7 +75,7 @@
 #box {
     z-index: 99;
 	overflow: hidden;
-    position: fixed;
+    position: relative;
     bottom: 0px;
     left: 0px;
     width: calc(100vw);
