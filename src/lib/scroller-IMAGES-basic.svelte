@@ -64,14 +64,16 @@
                     href="/stations/{item.slug}"
                     class="face"
                     style="transform: rotateY({i * angleStep}deg) translateZ({radius}em);
-                           background-image: url(../images/small/{item.slug}.webp)"
+                            background-color: #{item.tint}"
                 >
-                    <span id="name"
-                        style="background-color: #{item.clockhand};
-                               color: #{item.tint}">
-                        {item.name}
-                    </span>
-                </a>
+                    <div class="facepaint" style="background-image: url(../images/small/{item.slug}.webp)">
+                        <span id="name"
+                            style="background-color: #{item.clockhand};
+                                color: #{item.tint}">
+                            {item.name}
+                        </span>
+                    </div>
+                </a> 
             {/each}
         </div>
     </div>
@@ -121,8 +123,18 @@
     position: absolute;
     display: flex;
     align-items: center;
-    background-size: cover;
     border: 5px solid var(--yin);
+}
+.facepaint {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    background-size: cover;
+    object-fit: cover;
+    opacity: 0.8;
+    background-position: center;
 }
 #name {
     padding: 8px 2px;

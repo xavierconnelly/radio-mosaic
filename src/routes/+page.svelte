@@ -39,7 +39,7 @@
        <div id="intro">
             
             <p>
-                A collection of online radio community radio stations from all corners of the world.
+                A collection of online community radio stations from all corners of the world.
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />

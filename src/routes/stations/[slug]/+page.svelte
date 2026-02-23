@@ -213,7 +213,7 @@ h2 {
     display: block;
     position: absolute;
     left: 0;
-    opacity: .75;
+    opacity: 0.8;
     padding: 10px;
     height: 100%;
     width: 100%;
