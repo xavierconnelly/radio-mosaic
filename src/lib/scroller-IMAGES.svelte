@@ -4,7 +4,7 @@
     // export let y
 
     // width of your "face" in CSS units — must match .face width
-    const faceWidth = 3; // em units
+    const faceWidth = 8; // em units
 
     $: count = items.length;
     $: angleStep = 360 / count;
@@ -40,13 +40,15 @@
         >
             {#each items as item, i}
                 <a    data-sveltekit-noscroll 
-                        href="/{item.slug}"
+                        href="/stations/{item.slug}"
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
-                                            translateZ({radius}em)">
-                    <img    src="/images/glimpse/{item.slug}.webp"                    
-                            alt="an aerial landscapr view of {item.city}"/>
-                    {item.name}
+                                            translateZ({radius}em);
+                                background-image: url(../images/flyover/{item.slug}.webp)">
+                    <!-- <img    src="../images/flyover/{item.slug}.webp"                    
+                            alt="an aerial landscapr view of {item.city}"/> -->
+                    <span id="name"
+                            style="background-color: #{item.tint}">{item.name}</span>
                 </a>
             {/each}
         </div>
@@ -97,18 +99,27 @@
 .face {
     color: var(--yang);
     background: var(--yin);
+    background-color: red;
     border-right: 0.5px solid;
-    width: 80px;
-    height: 120px;
+    width: 96px;
+    height: 100%;
     font-size: 12px;
     padding-bottom: 10px;
     position: absolute;
     display: flex;
     align-items: center;
 }
-
-img {
+#name {
+    padding: 8px 2px;
+    border-radius: 99px;
+    writing-mode: sideways-rl;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    margin: 10px;
+}
+/* img {
     width: 100%;
     height: 100%;
-}
+} */
 </style>
