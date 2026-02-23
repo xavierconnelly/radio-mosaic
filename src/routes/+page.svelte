@@ -39,13 +39,17 @@
        <div id="intro">
             
             <p>
-                <b>RADIO MOSAIC</b> is a collection of online radio community radio stations from all corners of the world.
+                A collection of online radio community radio stations from all corners of the world.
             </p>
         </div>
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
        <div>
             <p>
-                Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+                Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
+            </p>
+            <br>
+            <p>
+                Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
             </p>
         
             <p>.</p>
@@ -136,10 +140,10 @@
     }
 
     #intro {
-        margin-top: 28px;
+        margin-top: 58px;
     }
     #intro p {
-        font-size: 22px;
+        font-size: 32px;
     }
     .image-wrap {
         top: 28px;

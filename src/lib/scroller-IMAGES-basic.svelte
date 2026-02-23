@@ -85,7 +85,7 @@
     position: sticky;
     top: 27px;
     width: calc(100vw);
-    height: 40vh;
+    height: 35vh;
     color: var(--yang);
     background: var(--yin);
     border-top: 1px solid;
