@@ -52,7 +52,15 @@
             <p>.</p>
             <p>.</p>
             <p>.</p>
-
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>email@email.com</p>
+            <p>.</p>
+             <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
         </div>
 
 {:else}

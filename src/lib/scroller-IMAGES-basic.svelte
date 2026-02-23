@@ -11,8 +11,8 @@
 
     let rawX = 0;
     const x = spring(0, {
-        stiffness: 0.08,
-        damping: 0.9
+        stiffness: 0.05, //how fast it cactches up
+        damping: 0.8 // springiness
     });
 
     $: angle = ($x % 360 + 360) % 360;
@@ -79,10 +79,12 @@
     bottom: 0px;
     left: 0px;
     width: calc(100vw);
-    height: 40dvh;
+    height: 40vh;
     color: var(--yang);
     background: var(--yin);
-    border: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
 }
 
 .scene {
@@ -121,7 +123,7 @@
     border-radius: 99px;
     writing-mode: sideways-rl;
     position: absolute;
-    bottom: 10px;
+    bottom: 0px;
     left: 0px;
     margin: 10px;
     font-family: monospace;
