@@ -44,7 +44,7 @@
                         class="face"
                         style= "transform:  rotateY({i * angleStep}deg)
                                             translateZ({radius}em);
-                                background-image: url(../images/flyover/{item.slug}.webp)">
+                                background-image: url(../images/small/{item.slug}.webp)">
                     <!-- <img    src="../images/flyover/{item.slug}.webp"                    
                             alt="an aerial landscapr view of {item.city}"/> -->
                     <span id="name"
