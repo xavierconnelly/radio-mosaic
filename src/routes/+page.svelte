@@ -108,6 +108,7 @@
         margin-top: 28px;
         font-size: 22px;
         font-weight: 500;
+        position: fixed;
     }
     .image-wrap {
         top: 28px;

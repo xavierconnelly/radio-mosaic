@@ -48,7 +48,9 @@
                     <!-- <img    src="../images/flyover/{item.slug}.webp"                    
                             alt="an aerial landscapr view of {item.city}"/> -->
                     <span id="name"
-                            style="background-color: #{item.tint}">{item.name}</span>
+                            style="background-color: #{item.tint};
+                                    color: #{item.fill}">
+                            {item.name}</span>
                 </a>
             {/each}
         </div>
@@ -73,7 +75,7 @@
     bottom: 0px;
     left: 0px;
     width: calc(100vw);
-    height: 350px;
+    height: 40dvh;
     color: var(--yang);
     background: var(--yin);
     border: 1px solid;
@@ -99,7 +101,6 @@
 .face {
     color: var(--yang);
     background: var(--yin);
-    background-color: red;
     border-right: 0.5px solid;
     width: 96px;
     height: 100%;
@@ -108,6 +109,8 @@
     position: absolute;
     display: flex;
     align-items: center;
+    background-size: cover;
+    border: 5px solid var(--yin);
 }
 #name {
     padding: 8px 2px;
