@@ -1,49 +1,70 @@
 <script>
     export let items = [];
-    export let onActiveChange; // callback from parent
-    // export let y
+    export let onActiveChange;
+    import { spring } from 'svelte/motion';
 
-    // width of your "face" in CSS units — must match .face width
-    const faceWidth = 8; // em units
+    const faceWidth = 8;
 
     $: count = items.length;
     $: angleStep = 360 / count;
-
-    // radians
     $: radius = (faceWidth / 2) / Math.tan(Math.PI / count);
 
-    // normalize angle to 0–360
-    $: angle = (x % 360 + 360) % 360;
+    let rawX = 0;
+    const x = spring(0, {
+        stiffness: 0.08,
+        damping: 0.9
+    });
 
-    // deduce which face is forward
+    $: angle = ($x % 360 + 360) % 360;
     $: activeIndex = Math.floor((angle + angleStep / 2) / angleStep) % count;
-
     $: activeItem = items[activeIndex];
-    // notify parent
     $: onActiveChange?.(activeIndex);
+
+    let lastTouch = null;
+
+    function onWheel(e) {
+        e.preventDefault();
+        rawX += e.deltaX || e.deltaY;
+        x.set(rawX);
+    }
+
+    function onTouchStart(e) {
+        lastTouch = e.touches[0].clientX;
+    }
+
+    function onTouchMove(e) {
+        e.preventDefault();
+        const delta = lastTouch - e.touches[0].clientX;
+        rawX += delta;
+        lastTouch = e.touches[0].clientX;
+        x.set(rawX);
+    }
+
 </script>
 
-
-<div data-sveltekit-noscroll id="box">
-    <div    data-sveltekit-noscroll 
-            class="scene">
-        <div data-sveltekit-noscroll 
+<div 
+    id="box"
+    on:wheel|nonpassive={onWheel}
+    on:touchstart={onTouchStart}
+    on:touchmove|nonpassive={onTouchMove}
+>
+    <div class="scene">
+        <div 
             class="cube"
-            style="transform: translateZ(-{radius}em) rotateY({x}deg)"
+            style="transform: translateZ(-{radius}em) rotateY({$x}deg)"
         >
             {#each items as item, i}
-                <a    data-sveltekit-noscroll 
-                        href="/stations/{item.slug}"
-                        class="face"
-                        style= "transform:  rotateY({i * angleStep}deg)
-                                            translateZ({radius}em);
-                                background-image: url(../images/small/{item.slug}.webp)">
-                    <!-- <img    src="../images/flyover/{item.slug}.webp"                    
-                            alt="an aerial landscapr view of {item.city}"/> -->
+                <a  
+                    href="/stations/{item.slug}"
+                    class="face"
+                    style="transform: rotateY({i * angleStep}deg) translateZ({radius}em);
+                           background-image: url(../images/small/{item.slug}.webp)"
+                >
                     <span id="name"
-                            style="background-color: #{item.clockhand};
-                                    color: #{item.tint}">
-                            {item.name}</span>
+                        style="background-color: #{item.clockhand};
+                               color: #{item.tint}">
+                        {item.name}
+                    </span>
                 </a>
             {/each}
         </div>

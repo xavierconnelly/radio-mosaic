@@ -5,7 +5,7 @@
 
     // shared components
 	import MediaQuery from '$lib/mediaQuery.svelte';
-    import ScrollerImages from "$lib/scroller-IMAGES.svelte";
+    import ScrollerImages from "$lib/scroller-IMAGES-basic.svelte"; 
 	import Obi from '$lib/obi.svelte';
     import Flyover from '$lib/flyover.svelte';
 
