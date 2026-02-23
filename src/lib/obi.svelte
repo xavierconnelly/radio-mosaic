@@ -72,48 +72,6 @@
                 </p>
             </div>
         </div>
-        <!-- <div class="cube" style="transform: translateZ(-65em) rotateX({y}deg)">  
-            <p lang="en" class="face one red">
-                <b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
-            </p>
-            <p lang="ja" class="face two">
-                <b>radio mosaic</b> 是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-                是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-            </p>
-            <p lang="es" class="face three red">
-                <b>radio mosaic</b> es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno. es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno. es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno.
-            </p>
-            <p lang="ar" class="face four rtl">
-                <b> فسيفساء الراديو </b>  هي مجتمع، حركة، وطريقة لدمج الماضي والمستقبل والحاضر في وقت واحد. رغم أننا قد نعيش في زوايا متفرقة من العالم، نحن جميعًا واحد  أننا قد نعيش في زوايا متفرقة من العالم، نحن جميعًا واحد.
-            </p>
-            <p lang="en" class="face five red">
-                <b>radio mosaic</b> is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
-            </p>
-            <p lang="ja" class="face six">
-                <b>radio mosaic</b> 是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-                是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-            </p>
-            <p lang="es" class="face seven red">
-                <b>radio mosaic</b> es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno. es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno. es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno.
-            </p>
-            <p lang="ja" class="face eight">
-                <b>radio mosaic</b> 是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-                是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-            </p>
-            <p lang="ar"  class="face nine red rtl">
-                <b> فسيفساء الراديو </b> هي مجتمع، حركة، وطريقة لدمج الماضي والمستقبل والحاضر في وقت واحد. رغم أننا قد نعيش في زوايا متفرقة من العالم، نحن جميعًا واحد  أننا قد نعيش في زوايا متفرقة من العالم، نحن جميعًا واحد.
-            </p>
-            <p lang="ja" class="face ten">
-                <b>radio mosaic</b> 是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-                是一个社区，一个运动，一种将过去、未来与现在同时融合的方式。虽然我们生活在世界各个分散的角落，但我们都是一个整体。
-            </p>
-            <p lang="es" class="face eleven red">
-                <b>radio mosaic</b> es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno. es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno. es una comunidad, un movimiento, una manera de reunir pasado, futuro y presente al mismo tiempo. Aunque vivamos en rincones fragmentados del mundo, todos somos uno.
-            </p>
-            <p lang="ar" class="face twelve rtl">
-                <b> فسيفساء الراديو </b> هي مجتمع، حركة، وطريقة لدمج الماضي والمستقبل والحاضر في وقت واحد. رغم أننا قد نعيش في زوايا متفرقة من العالم، نحن جميعًا واحد  أننا قد نعيش في زوايا متفرقة من العالم، نحن جميعًا واحد.
-            </p>
-        </div> -->
     </div>
 </div>
 
