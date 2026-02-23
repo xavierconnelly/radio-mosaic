@@ -25,8 +25,8 @@
 
 let rawX = 0;
 const x = spring(0, {
-    stiffness: 0.08,
-    damping: 0.9
+        stiffness: 0.03, //how fast it cactches up
+        damping: 0.7 // springiness when stopping
 });
 
 let lastTouch = null;

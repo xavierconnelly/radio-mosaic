@@ -11,8 +11,8 @@
 
     let rawX = 0;
     const x = spring(0, {
-        stiffness: 0.05, //how fast it cactches up
-        damping: 0.8 // springiness
+        stiffness: 0.03, //how fast it cactches up
+        damping: 0.7 // springiness
     });
 
     $: angle = ($x % 360 + 360) % 360;
