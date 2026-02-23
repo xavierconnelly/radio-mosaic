@@ -37,6 +37,7 @@
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
        <div id="intro">
+            
             <p>
                 <b>RADIO MOSAIC</b> is a collection of online radio community radio stations from all corners of the world.
             </p>
@@ -56,13 +57,16 @@
         <div>
             <h4>Contact</h4>
             <p>email@email.com</p>
-            <p>.</p>
+            <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
              <p>.</p>
             <p>.</p>
             <p>.</p>
+        </div>
+        <div>
+            <h4>Disclaimer<h5/>
+            <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
             <p>.</p>
         </div>
-
 {:else}
          <Obi />
         <ClockBigger />
@@ -126,6 +130,7 @@
     div {
         font-size: 14px;
         padding: 10px;
+        padding-bottom: 30px;
         font-weight: 500;
         position: relative;
     }
