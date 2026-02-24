@@ -1,44 +1,51 @@
-import { V as attr, Z as attr_style, _ as stringify, $ as bind_props, a0 as ensure_array_like, U as store_get, W as unsubscribe_stores } from "../../../../chunks/index2.js";
+import { V as attr, Z as attr_style, _ as stringify, $ as bind_props, U as store_get, a0 as ensure_array_like, W as unsubscribe_stores } from "../../../../chunks/index2.js";
 import { p as page, u as updateIndexFromSlug, I as INDEX } from "../../../../chunks/store.js";
 import { s as stationData, H as HOVER } from "../../../../chunks/radioData.js";
-import { F as Flyover, O as Obi } from "../../../../chunks/flyover.js";
+import { s as spring, F as Flyover, O as Obi } from "../../../../chunks/flyover.js";
 import { M as MediaQuery } from "../../../../chunks/mediaQuery.js";
 import { e as escape_html, i as invalid_default_snippet } from "../../../../chunks/context.js";
 import { f as fallback } from "../../../../chunks/equality.js";
 import "clsx";
-function Painting($$renderer, $$props) {
+function Dial_controls($$renderer, $$props) {
   let name = $$props["name"];
   let slug = $$props["slug"];
   let tint = $$props["tint"];
   let clockhand = $$props["clockhand"];
-  $$renderer.push(`<div id="glimpse" class="svelte-txub1z"><img${attr("src", `../images/flyover/${stringify(
+  $$renderer.push(`<a class="station svelte-14tac32" data-sveltekit-noscroll=""${attr("href", `/stations/${stringify(
     // export let city;
     // export let country;
     slug
-  )}.webp`)} alt="" class="svelte-txub1z"/></div> <a class="station svelte-txub1z" data-sveltekit-noscroll=""${attr("href", `/stations/${stringify(slug)}`)}${attr_style(`background: #${stringify(tint)}; color: #${stringify(clockhand)}`)}><h4 class="svelte-txub1z">${escape_html(name)}</h4></a>`);
+  )}`)}${attr_style(`background: #${stringify(tint)}; color: #${stringify(clockhand)}`)}><h4 class="svelte-14tac32">${escape_html(name)}</h4></a>`);
   bind_props($$props, { name, slug, tint, clockhand });
 }
-function Scroller($$renderer, $$props) {
+function Scroller_JS($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
+    var $$store_subs;
     let count, angleStep, radius, angle, activeIndex;
     let items = fallback($$props["items"], () => [], true);
     let onActiveChange = $$props["onActiveChange"];
     const faceWidth = 3;
-    let x = 0;
+    const x = spring(0, {
+      stiffness: 0.03,
+      //how fast it cactches up
+      damping: 0.7
+      // springiness when stopping
+    });
     count = items.length;
     angleStep = 360 / count;
     radius = faceWidth / 2 / Math.tan(Math.PI / count);
-    angle = (x % 360 + 360) % 360;
+    angle = (store_get($$store_subs ??= {}, "$x", x) % 360 + 360) % 360;
     activeIndex = Math.floor((angle + angleStep / 2) / angleStep) % count;
     items[activeIndex];
     onActiveChange?.(activeIndex);
-    $$renderer2.push(`<div id="filler" class="svelte-uq7f89"></div> <div data-sveltekit-noscroll="" id="box" class="svelte-uq7f89"><div data-sveltekit-noscroll="" class="scene svelte-uq7f89"><div data-sveltekit-noscroll="" class="cube svelte-uq7f89"${attr_style(`transform: translateZ(-${stringify(radius)}em) rotateY(${stringify(x)}deg)`)}><!--[-->`);
+    $$renderer2.push(`<div id="box" class="svelte-5li7vp"><div class="scene svelte-5li7vp"><div class="cube svelte-5li7vp"${attr_style(`transform: translateZ(-${stringify(radius)}em) rotateY(${stringify(store_get($$store_subs ??= {}, "$x", x))}deg)`)}><!--[-->`);
     const each_array = ensure_array_like(items);
     for (let i = 0, $$length = each_array.length; i < $$length; i++) {
       let item = each_array[i];
-      $$renderer2.push(`<div data-sveltekit-noscroll="" class="face svelte-uq7f89"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em)`)}>${escape_html(item.name)}</div>`);
+      $$renderer2.push(`<div class="face svelte-5li7vp"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em); background-color: #${stringify(item.tint)}; color: #${stringify(item.fill)}`)}>${escape_html(item.name)}</div>`);
     }
     $$renderer2.push(`<!--]--></div></div></div>`);
+    if ($$store_subs) unsubscribe_stores($$store_subs);
     bind_props($$props, { items, onActiveChange });
   });
 }
@@ -120,9 +127,6 @@ function Minus($$renderer, $$props) {
     if ($$store_subs) unsubscribe_stores($$store_subs);
   });
 }
-function Fab($$renderer) {
-  $$renderer.push(`<button id="banana" title="controls" class="svelte-156upb8"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="47" viewBox="0 0 56 47" fill="none"><rect x="6.36401" y="1.5" width="30" height="30" rx="3" stroke="black" stroke-width="3"></rect><rect x="16.364" y="12.5" width="30" height="30" rx="3" fill="white"></rect><rect x="19.364" y="15.5" width="30" height="30" rx="3" fill="white" stroke="black" stroke-width="3"></rect><path d="M47.6569 12.7071C48.0474 13.0976 48.6806 13.0976 49.0711 12.7071L55.4351 6.34315C55.8256 5.95262 55.8256 5.31946 55.4351 4.92893C55.0446 4.53841 54.4114 4.53841 54.0209 4.92893L48.364 10.5858L42.7072 4.92893C42.3166 4.53841 41.6835 4.53841 41.2929 4.92893C40.9024 5.31946 40.9024 5.95262 41.2929 6.34315L47.6569 12.7071ZM39.364 1V2H43.364V1V0H39.364V1ZM48.364 6H47.364V12H48.364H49.364V6H48.364ZM43.364 1V2C45.5732 2 47.364 3.79086 47.364 6H48.364H49.364C49.364 2.68629 46.6777 0 43.364 0V1Z" fill="black"></path><path d="M8.07112 33.7929C7.6806 33.4024 7.04743 33.4024 6.65691 33.7929L0.292946 40.1569C-0.0975776 40.5474 -0.0975777 41.1805 0.292946 41.5711C0.68347 41.9616 1.31664 41.9616 1.70716 41.5711L7.36401 35.9142L13.0209 41.5711C13.4114 41.9616 14.0446 41.9616 14.4351 41.5711C14.8256 41.1805 14.8256 40.5474 14.4351 40.1569L8.07112 33.7929ZM16.364 45.5L16.364 44.5L12.364 44.5L12.364 45.5L12.364 46.5L16.364 46.5L16.364 45.5ZM7.36401 40.5L8.36401 40.5L8.36401 34.5L7.36401 34.5L6.36401 34.5L6.36401 40.5L7.36401 40.5ZM12.364 45.5L12.364 44.5C10.1549 44.5 8.36401 42.7091 8.36401 40.5L7.36401 40.5L6.36401 40.5C6.36401 43.8137 9.05031 46.5 12.364 46.5L12.364 45.5Z" fill="black"></path><path d="M30.1421 23.2217L40.864 30.9998L30.1421 38.778L30.1421 23.2217Z" fill="black"></path></svg></button>`);
-}
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     var $$store_subs;
@@ -137,8 +141,6 @@ function _page($$renderer, $$props) {
       updateIndexFromSlug(store_get($$store_subs ??= {}, "$page", page).params.slug, stationData);
     }
     moused = store_get($$store_subs ??= {}, "$HOVER", HOVER);
-    Fab($$renderer2);
-    $$renderer2.push(`<!----> `);
     MediaQuery($$renderer2, {
       query: "(max-width: 700px)",
       children: invalid_default_snippet,
@@ -152,13 +154,13 @@ function _page($$renderer, $$props) {
               $$renderer3.push(`<!----> `);
               Plus($$renderer3);
               $$renderer3.push(`<!----> `);
-              Scroller($$renderer3, {
+              Scroller_JS($$renderer3, {
                 "data-sveltekit-noscroll": true,
                 items: stationData,
                 onActiveChange: updateActive
               });
               $$renderer3.push(`<!----> `);
-              Painting($$renderer3, {
+              Dial_controls($$renderer3, {
                 name: stationData[activeIndex].name,
                 slug: stationData[activeIndex].slug
               });
@@ -167,25 +169,10 @@ function _page($$renderer, $$props) {
             $$renderer3.push(`<!--]-->`);
           } else {
             $$renderer3.push("<!--[!-->");
-          }
-          $$renderer3.push(`<!--]-->`);
-        }
-      }
-    });
-    $$renderer2.push(`<!----> `);
-    MediaQuery($$renderer2, {
-      query: "(min-width: 700px)",
-      children: invalid_default_snippet,
-      $$slots: {
-        default: ($$renderer3, { matches }) => {
-          if (matches) {
-            $$renderer3.push("<!--[-->");
             Obi($$renderer3, {
               obiText: stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].obiText,
               obi: stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].obi
             });
-          } else {
-            $$renderer3.push("<!--[!-->");
           }
           $$renderer3.push(`<!--]-->`);
         }

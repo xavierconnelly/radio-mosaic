@@ -4,7 +4,7 @@ import { s as stationData } from "../../../chunks/radioData.js";
 import { e as escape_html, i as invalid_default_snippet } from "../../../chunks/context.js";
 import { M as MediaQuery } from "../../../chunks/mediaQuery.js";
 /* empty css                  */
-function ClockSmallHand($$renderer, $$props) {
+function Clock_STATIONS_hand($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     var $$store_subs;
     let i = $$props["i"];
@@ -21,25 +21,25 @@ function ClockSmallHand($$renderer, $$props) {
       // export let clockhand;
       // Rotation calculation
       slug
-    )}`)}${attr_class("hand svelte-j1oipw", void 0, {
+    )}`)}${attr_class("hand svelte-1n9jyum", void 0, {
       "selected": i === store_get($$store_subs ??= {}, "$INDEX", INDEX)
-    })}${attr_style(`transform: rotate(calc(${stringify(i)} * ${stringify(radius)}deg)) translateX(50%);`)}><span class="station-name svelte-j1oipw">${escape_html(name)}</span> <span class="utc svelte-j1oipw"${attr_style(`color: ${stringify(tint)};`)}>${escape_html(utc)}</span></a>`);
+    })}${attr_style(`transform: rotate(calc(${stringify(i)} * ${stringify(radius)}deg)) translateX(50%);`)}><span class="station-name svelte-1n9jyum">${escape_html(name)}</span> <span class="utc svelte-1n9jyum"${attr_style(`color: ${stringify(tint)};`)}>${escape_html(utc)}</span></a>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
     bind_props($$props, { i, name, slug, utc, tint });
   });
 }
-function ClockSmall($$renderer, $$props) {
+function Clock_STATIONS($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     var $$store_subs;
     let y = 0;
     if (store_get($$store_subs ??= {}, "$page", page).params.slug) {
       updateIndexFromSlug(store_get($$store_subs ??= {}, "$page", page).params.slug, stationData);
     }
-    $$renderer2.push(`<div id="filler" class="svelte-1ofcxbl"></div> <div id="house" class="svelte-1ofcxbl"><div data-sveltekit-noscroll="" class="clock svelte-1ofcxbl"${attr_style(` color: #${stringify(stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].clockhand)}; background: #${stringify(stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].tint)}; transform: translate(-50%, -50%) rotate(${stringify(y)}deg)`)}><!--[-->`);
+    $$renderer2.push(`<div id="filler" class="svelte-1dk0g4w"></div> <div id="house" class="svelte-1dk0g4w"><div data-sveltekit-noscroll="" class="clock svelte-1dk0g4w"${attr_style(` color: #${stringify(stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].clockhand)}; background: #${stringify(stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].tint)}; transform: translate(-50%, -50%) rotate(${stringify(y)}deg)`)}><!--[-->`);
     const each_array = ensure_array_like(stationData);
     for (let i = 0, $$length = each_array.length; i < $$length; i++) {
       let station = each_array[i];
-      ClockSmallHand($$renderer2, {
+      Clock_STATIONS_hand($$renderer2, {
         i,
         name: station.name,
         slug: station.slug,
@@ -68,7 +68,7 @@ function _layout($$renderer, $$props) {
         default: ($$renderer3, { matches }) => {
           if (matches) {
             $$renderer3.push("<!--[-->");
-            ClockSmall($$renderer3);
+            Clock_STATIONS($$renderer3);
           } else {
             $$renderer3.push("<!--[!-->");
           }

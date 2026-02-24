@@ -1,6 +1,6 @@
 <script>
     // local components
-	import ClockSmall from './clockSmall.svelte';
+	import ClockSmall from './clock-STATIONS.svelte';
 
     // shared components
 	// import Audio from '$lib/audio.svelte';
