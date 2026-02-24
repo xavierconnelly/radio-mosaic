@@ -63,7 +63,7 @@
             <p>.</p>
             <p>.</p>
         </div>
-        <div>
+        <div class="small-print">
             <h4>Contact</h4>
             <p>email@email.com</p>
             <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
@@ -71,7 +71,7 @@
             <p>.</p>
             <p>.</p>
         </div>
-        <div>
+        <div class="small-print">
             <b>Disclaimer</b>
             <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
             <p>.</p>
@@ -100,7 +100,7 @@
 #display-font{
     color: inherit;
     margin-top: 40px;
-    padding: 10px 10px 40vh 10px;
+    padding: 10px 10px 30vh 10px;
     font-size: 60px;
     font-weight: 800;
     display: flex;
@@ -144,13 +144,12 @@
 }
 @media (max-width: 500px) {
     div {
-        font-size: 14px;
+        font-size: 16px;
         padding: 10px;
         padding-bottom: 30px;
         font-weight: 500;
         position: relative;
     }
-
     #intro {
         margin-top: 58px;
     }
@@ -158,6 +157,9 @@
         font-size: 28px;
         line-height: 32px;
         font-weight: 600;
+    }
+    .small-print {
+        font-size: 14px;
     }
     .image-wrap {
         top: 28px;
