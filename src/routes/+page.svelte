@@ -37,8 +37,8 @@
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
     <div id="display-font">
-        <h2 class="medula-one-regular">Radio</h2>
-        <h2 class="medula-one-regular">Mosaic</h2>
+        <h1 class="medula-one-regular">Radio</h1>
+        <h1 class="medula-one-regular">Mosaic</h1>
     </div>
     
     <ClockHome />
@@ -60,8 +60,7 @@
         <h4>Contact</h4>
         <p>email@email.com</p>
         <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
-    </div>
-    <div class="small-print">
+        <br>
         <b>Disclaimer</b>
         <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
     </div>
@@ -88,10 +87,10 @@
 }
     #display-font{
         color: inherit;
-        margin-top: 40px;
-        padding: 10px 10px 10px 10px;
-        font-size: 60px;
-        line-height: 72px;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 40px;
+        line-height: 44px;
         font-weight: 800;
         display: flex;
         flex-direction: row;
@@ -153,7 +152,7 @@
         position: relative;
     }
     .small-print {
-        padding: 40px 0px 40px 0px;
+        padding: 40px 0px 120px 0px;
     }
     .small-print * {
         font-size: 14px;

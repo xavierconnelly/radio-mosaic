@@ -1,18 +1,26 @@
 <script>
     // import { fly } from 'svelte/transition';
     // import { page } from '$app/state';
+    	import MediaQuery from '$lib/mediaQuery.svelte';
     
     import Audio from '$lib/audio.svelte';
 </script>
 
 
+<MediaQuery query="(min-width: 700px)" let:matches>
+    {#if matches}
+        <header>
+            <a href="/">
+                <h1 class="medula-one-regular">
+                    RADIO MOSAIC
+                </h1>
+            </a>
+        </header>
+    {/if}
+</MediaQuery>
 
-<header>
-    <h1>
-        <a href="/">RADIO MOSAIC</a>
-    </h1>
-    <Audio/>
-</header>
+<Audio/>
+
 
 <slot />
 
@@ -38,6 +46,15 @@
 	@media (max-width: 700px) {
 		header {
             padding: 0 10px;
+        }
+        h1{
+            position: relative;
+            padding: 10px 10px 10px 10px;
+            font-size: 60px;
+            line-height: 72px;
+            font-weight: 800;
+            border-bottom: unset;
+            text-align: justify;
         }
     }
 
