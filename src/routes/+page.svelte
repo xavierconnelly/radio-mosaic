@@ -59,7 +59,6 @@
     <div class="small-print">
         <h4>Contact</h4>
         <p>email@email.com</p>
-            <p>.</p>
         <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
     </div>
     <div class="small-print">
@@ -87,18 +86,17 @@
 :global(body) {
     background-color: var(--yin);
 }
-#display-font{
-    color: inherit;
-    margin-top: 40px;
-    padding: 10px 10px 10px 10px;
-    font-size: 60px;
-    line-height: 72px;
-    font-weight: 800;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
+    #display-font{
+        color: inherit;
+        margin-top: 40px;
+        padding: 10px 10px 10px 10px;
+        font-size: 60px;
+        line-height: 72px;
+        font-weight: 800;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .local {
         width: 20px;
         padding: 16px 12px 24px 12px;
@@ -138,21 +136,35 @@
         font-size: 28px;
         line-height: 32px;
         font-weight: 600;
+        padding-bottom: 40px;
     }
     .buffer {
-        padding-top: 50px;
+        padding-top: 40px;
+    }
+    p,
+    .small-print h4,
+    .small-print b {
+        padding: 10px;
     }
     p {
         font-size: 20px;
         line-height: 22px;
-        padding: 10px 10px 30px 10px;
         font-weight: 600;
         position: relative;
     }
     .small-print {
+        padding: 40px 0px 40px 0px;
+    }
+    .small-print * {
         font-size: 14px;
         line-height: 16px;
         font-weight: 500;
+    }
+    .small-print h4 {
+        font-weight: 600;
+    }
+    .small-print p {
+        padding: 4px 10px 4px 10px;
     }
     .image-wrap {
         top: 28px;
