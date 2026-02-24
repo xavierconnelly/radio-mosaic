@@ -36,6 +36,11 @@
 
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
+    <div id="display-font">
+        <h2 class="medula-one-regular">Radio</h2>
+        <h2 class="medula-one-regular">Mosaic</h2>
+    </div>
+
        <div id="intro">
             
             <p>
@@ -88,14 +93,21 @@
 
 
 
-
-
-
-
 <style>
 :global(body) {
     background-color: var(--yin);
 }
+#display-font{
+    color: inherit;
+    margin-top: 40px;
+    padding: 10px 10px 40vh 10px;
+    font-size: 60px;
+    font-weight: 800;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
     .local {
         width: 20px;
         padding: 16px 12px 24px 12px;
@@ -143,7 +155,9 @@
         margin-top: 58px;
     }
     #intro p {
-        font-size: 32px;
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 600;
     }
     .image-wrap {
         top: 28px;

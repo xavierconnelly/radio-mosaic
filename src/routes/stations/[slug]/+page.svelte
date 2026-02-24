@@ -6,7 +6,7 @@
     // global components
     import Flyover from '$lib/flyover.svelte';
 	import MediaQuery from '$lib/mediaQuery.svelte';
-    import Painting from '$lib/painting.svelte';
+    import Painting from '$lib/dial-controls.svelte';
     import Scroller from "$lib/scroller-JS.svelte";
     import Time from "$lib/time.svelte";
 	import Plus from '$lib/plus.svelte';

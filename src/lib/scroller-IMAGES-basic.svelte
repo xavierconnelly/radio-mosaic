@@ -1,9 +1,18 @@
 <script>
     import { spring } from 'svelte/motion';
     import { onMount } from 'svelte';
+    import { HOVER, stationData } from '/src/routes/stations/radioData.js';
+
 
     export let items = [];
     export let onActiveChange;
+
+	// export let name;
+	// export let city;
+	// export let country;
+
+   // variable for current hovered on
+    $: moused = $HOVER;
 
     const faceWidth = 8;
 
@@ -79,6 +88,16 @@
     </div>
 </div>
 
+<span class="station">
+    <h4>Kiosk Radio</h4>
+    <p>Berlin</p>
+    <p>Germany</p>
+    <!-- <h4>{stationData[moused].name}</h4>
+    <p>{stationData[moused].city}</p>
+    <p>{stationData[moused].country}</p> -->
+</span>
+
+
 
 <style>
 #box {
@@ -145,6 +164,24 @@
     left: 0px;
     margin: 10px;
     font-family: monospace;
+}
+.station {
+    font-size: 12px;
+    text-transform: uppercase;
+    height: 20px;
+    width: 100%;
+    padding: 0 8px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: 1px solid;
+    background-color: var(--yin);
+    color: var(--yang);
+    z-index: 99;
 }
 /* img {
     width: 100%;

@@ -1,6 +1,5 @@
 <script>
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
-
     
 	// Props passed from parent each block
 	export let name;
@@ -11,9 +10,6 @@
 	// export let country;
 </script>
 
-<div id="glimpse">
-    <img src="../images/flyover/{slug}.webp" alt="" />
-</div>
 
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}"
 		style="background: #{tint}; color: #{clockhand}"
@@ -27,39 +23,9 @@
 </a>
 
 <style>
-
-#glimpse {
-    display: none;
-    width: 100dvw;
-    height: calc(72dvh);
-    position: fixed;
-    top: 32px;
-    left: 0;
-    transform: translate(0%, 0%);
-    border: 10px solid var(--yin);
-    background-color: var(--yang);
-    overflow: hidden;
-    z-index: 4;
-    transition: 2s;
-    opacity: 0;
-}
-
 h4 {
     font-size: 12px;
 }
-
-img {
-    object-fit: cover;
-    filter: grayscale(1);
-    mix-blend-mode: screen;
-}
-
-:global(#box:hover + #glimpse) {
-    display: block;
-    transition: 2s;
-    opacity: 1;
-}
-
 .station {
     height: 5vh;
     padding: 0 30px;
@@ -81,30 +47,20 @@ img {
     color: var(--yang);
 }
 
-.icon {
-    fill: currentColor;
-    width: 1.2em;
-    height: 1.2em;
-}
-
 /* media stylings ~ TABLET */
 @media (max-width: 500px) {
-        #glimpse {
-            top: 28px;
-            display: none;
-        }
-        .station {
-            bottom: 126px;
-            bottom: 110px;
-            height: 36px;
-            width: calc(100vw - 152px);
-            left: 76px;
-            transform: unset;
-            border-radius: 111px;
-            opacity: 0.85;
-        }
-        :global(#box:hover + #glimpse) {
-            display: none;
-        }
+    .station {
+        bottom: 126px;
+        bottom: 110px;
+        height: 36px;
+        width: calc(100vw - 152px);
+        left: 76px;
+        transform: unset;
+        border-radius: 111px;
+        opacity: 0.85;
     }
+    :global(#box:hover + #glimpse) {
+        display: none;
+    }
+}
 </style>
