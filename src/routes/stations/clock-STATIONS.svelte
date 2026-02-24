@@ -5,7 +5,7 @@
     import { stationData } from '/src/routes/stations/radioData.js';
 
     // local components
-	import Clockhand from './clockSmallHand.svelte';
+	import Clockhand from './clock-STATIONS-hand.svelte';
 
     // Set variable to kick off the scroller
     let y = 0;

@@ -1,6 +1,6 @@
 <script>
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
-	import Clockhand from './clockBigHand.svelte'; 
+	import Clockhand from './clock-HOME-hand.svelte'; 
 
     let y = 0;
 
@@ -80,13 +80,20 @@
     }
 
     /* media stylings ~ TABLET */
-    @media (min-width: 500px) and (max-width: 700px) {
+    @media (max-width: 700px) {
+        #filler {
+            display: none;
+        }
         #house {
-            width: calc(100vw - 300px);
+            width: 100vw;
+            height: 100vw;
+            position: relative;
+            background-color: unset;
+
         }
 		.clock {
-            height: calc(100vw - 200px);
-            width: calc(100vw - 200px);
+            height: 80vw;
+            width: 80vw;
 		}
     }
 </style>

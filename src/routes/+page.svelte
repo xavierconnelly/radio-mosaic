@@ -10,7 +10,7 @@
     import Flyover from '$lib/flyover.svelte';
 
     // local components
-	import ClockBigger from './clockBigger.svelte';
+	import ClockHome from './clock-HOME.svelte';
 
     // hovering things
     $: moused = $HOVER;
@@ -40,45 +40,48 @@
         <h2 class="medula-one-regular">Radio</h2>
         <h2 class="medula-one-regular">Mosaic</h2>
     </div>
+    
+    <ClockHome />
+    
+    <div id="intro">
+        <p>
+            A collection of online community radio stations from all corners of the world.
+        </p>
+    </div>
 
-       <div id="intro">
-            
-            <p>
-                A collection of online community radio stations from all corners of the world.
-            </p>
-        </div>
-        <ScrollerImages items={stationData} onActiveChange={updateActive} />
-       <div>
-            <p>
-                Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
-            </p>
-            <br>
-            <p>
-                Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
-            </p>
-        
+    <ScrollerImages items={stationData} onActiveChange={updateActive} />
+
+    <div>
+        <p>
+            Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
+        </p>
+        <br>
+        <p>
+            Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+        </p>
+    
+        <p>.</p>
             <p>.</p>
-             <p>.</p>
+        <p>.</p>
+        <p>.</p>
+        <p>.</p>
+    </div>
+    <div class="small-print">
+        <h4>Contact</h4>
+        <p>email@email.com</p>
             <p>.</p>
-            <p>.</p>
-            <p>.</p>
-        </div>
-        <div class="small-print">
-            <h4>Contact</h4>
-            <p>email@email.com</p>
-            <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
-             <p>.</p>
-            <p>.</p>
-            <p>.</p>
-        </div>
-        <div class="small-print">
-            <b>Disclaimer</b>
-            <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
-            <p>.</p>
-        </div>
+        <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
+        <p>.</p>
+        <p>.</p>
+    </div>
+    <div class="small-print">
+        <b>Disclaimer</b>
+        <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
+        <p>.</p>
+    </div>
 {:else}
          <Obi />
-        <ClockBigger />
+        <ClockHome />
         <div class="image-wrap">
             {#if stationData[moused]}
                 <div class="local">
@@ -100,7 +103,7 @@
 #display-font{
     color: inherit;
     margin-top: 40px;
-    padding: 10px 10px 30vh 10px;
+    padding: 10px 10px 10px 10px;
     font-size: 60px;
     font-weight: 800;
     display: flex;
