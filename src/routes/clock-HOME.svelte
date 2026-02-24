@@ -88,6 +88,7 @@
             width: 100vw;
             height: 100vw;
             position: relative;
+            top: -40px;
             background-color: unset;
 
         }

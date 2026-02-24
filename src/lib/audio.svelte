@@ -191,7 +191,7 @@ input[type="range"]::-ms-fill-upper {
 			transform: unset;
         	left: 10px;
 		    opacity: 0.85;
-			z-index: 99;
+			z-index: 999;
 		}
 		.icon {
 			fill: var(--yang);

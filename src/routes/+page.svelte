@@ -43,41 +43,28 @@
     
     <ClockHome />
     
-    <div id="intro">
-        <p>
-            A collection of online community radio stations from all corners of the world.
-        </p>
-    </div>
+    <p id="tagline">
+        A collection of online community radio stations from all corners of the world.
+    </p>
 
     <ScrollerImages items={stationData} onActiveChange={updateActive} />
 
-    <div>
-        <p>
-            Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
-        </p>
-        <br>
-        <p>
-            Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
-        </p>
-    
-        <p>.</p>
-            <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-    </div>
+    <p class="buffer">
+        Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
+    </p>
+    <p>
+        Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+    </p>
+
     <div class="small-print">
         <h4>Contact</h4>
         <p>email@email.com</p>
             <p>.</p>
         <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
-        <p>.</p>
-        <p>.</p>
     </div>
     <div class="small-print">
         <b>Disclaimer</b>
         <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
-        <p>.</p>
     </div>
 {:else}
          <Obi />
@@ -105,6 +92,7 @@
     margin-top: 40px;
     padding: 10px 10px 10px 10px;
     font-size: 60px;
+    line-height: 72px;
     font-weight: 800;
     display: flex;
     flex-direction: row;
@@ -146,23 +134,25 @@
 	}
 }
 @media (max-width: 500px) {
-    div {
-        font-size: 16px;
-        padding: 10px;
-        padding-bottom: 30px;
-        font-weight: 500;
-        position: relative;
-    }
-    #intro {
-        margin-top: 58px;
-    }
-    #intro p {
+    #tagline {
         font-size: 28px;
         line-height: 32px;
         font-weight: 600;
     }
+    .buffer {
+        padding-top: 50px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 22px;
+        padding: 10px 10px 30px 10px;
+        font-weight: 600;
+        position: relative;
+    }
     .small-print {
         font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
     }
     .image-wrap {
         top: 28px;

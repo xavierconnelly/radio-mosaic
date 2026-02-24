@@ -99,7 +99,7 @@
 
 .details .utc {
     margin: 0;
-    color:  #F6F3F0;
+    color:  var(--yin);
     position: absolute;
     top: 50%;
     font-size: 10px;
@@ -123,6 +123,10 @@
     .details {
         border-top-left-radius: 14px;
         border-bottom-left-radius: 14px;
+    }
+    .details .utc {
+        color:  var(--yang);
+
     }
 }
 </style>
