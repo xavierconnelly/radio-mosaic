@@ -22,8 +22,14 @@
         damping: 0.7
     });
 
+    // onMount(() => {
+    //     rawX = Math.random() * 360;
+    //     x.set(rawX, { hard: true });
+    // });
+
     onMount(() => {
-        rawX = Math.random() * 360;
+        const randomFace = Math.floor(Math.random() * count);
+        rawX = randomFace * angleStep;
         x.set(rawX, { hard: true });
     });
 
@@ -54,10 +60,10 @@
 </script>
 
 <DialControls  
-    name={stationData[(activeIndex + 54) % stationData.length].name}
-    slug={stationData[(activeIndex + 54) % stationData.length].slug}
-    city={stationData[(activeIndex + 54) % stationData.length].city}
-    country={stationData[(activeIndex + 54) % stationData.length].country}
+    name={stationData[(activeIndex + 0) % stationData.length].name}
+    slug={stationData[(activeIndex + 0) % stationData.length].slug}
+    city={stationData[(activeIndex + 0) % stationData.length].city}
+    country={stationData[(activeIndex + 0) % stationData.length].country}
 />
 
 <div    id="box"
@@ -65,7 +71,7 @@
         on:touchstart={onTouchStart}
         on:touchmove|nonpassive={onTouchMove}>
     <div class="scene">
-        <div class="cube" style="transform: translateZ(-{radius}em) rotateY({$x}deg)">
+        <div class="cube" style="transform: translateZ(-{radius}em) rotateY(-{$x}deg)">
             {#each items as item, i}
                 <a  href="/stations/{item.slug}" class="face"
                     style="transform: rotateY({i * angleStep}deg) translateZ({radius}em); background-color: #{item.tint}">
