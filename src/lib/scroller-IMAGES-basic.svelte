@@ -53,6 +53,13 @@
     }
 </script>
 
+<DialControls  
+    name={stationData[(activeIndex + 54) % stationData.length].name}
+    slug={stationData[(activeIndex + 54) % stationData.length].slug}
+    city={stationData[(activeIndex + 54) % stationData.length].city}
+    country={stationData[(activeIndex + 54) % stationData.length].country}
+/>
+
 <div    id="box"
         on:wheel|nonpassive={onWheel}
         on:touchstart={onTouchStart}
@@ -73,12 +80,6 @@
     </div>
 </div>
 
-<DialControls  
-    name={stationData[(activeIndex + 54) % stationData.length].name}
-    slug={stationData[(activeIndex + 54) % stationData.length].slug}
-    city={stationData[(activeIndex + 54) % stationData.length].city}
-    country={stationData[(activeIndex + 54) % stationData.length].country}
-/>
 
 <style>
 #box {

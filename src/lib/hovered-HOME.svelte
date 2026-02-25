@@ -11,9 +11,9 @@
 
 
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}">
-    <b>{city}</b>
+    <span>{city}</span>
     <h4>{name}</h4>
-    <b>{country}</b>
+    <span>{country}<spanb>
 </a>
 
 
@@ -21,17 +21,17 @@
 .station {
     font-size: 11px;
     text-transform: uppercase;
-    height: 20px;
+    height: 28px;
     width: 100%;
     padding: 0 8px;
     margin: auto;
-    margin-bottom: 10px;
+    padding: 10px 10px;
     display: flex;
     flex-direction: row;
     gap: 1px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid;
+    border-top: 1px solid;
     background-color: var(--yin);
     color: var(--yang);
     z-index: 99;
