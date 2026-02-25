@@ -87,8 +87,8 @@
 }
     #display-font{
         color: inherit;
-        margin-top: 20px;
-        padding: 10px;
+        margin-top: 30px;
+        padding: 10px 20px;
         font-size: 40px;
         line-height: 44px;
         font-weight: 800;
@@ -136,6 +136,7 @@
         line-height: 32px;
         font-weight: 600;
         padding-bottom: 40px;
+        color: var(--yang);
     }
     .buffer {
         padding-top: 40px;

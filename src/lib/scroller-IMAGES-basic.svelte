@@ -104,14 +104,13 @@
     z-index: 99;
 	overflow: hidden;
     position: sticky;
-    top: 27px;
-    width: calc(100vw);
-    height: 35vh;
+    top: -1px;
+    width: 100vw;
+    height: 40vh;
     color: var(--yang);
     background: var(--yin);
     border-top: 1px solid;
     border-bottom: 1px solid;
-
 }
 
 .scene {
