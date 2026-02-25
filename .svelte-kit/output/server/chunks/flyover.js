@@ -1,6 +1,6 @@
 import { w as writable } from "./index.js";
 import { n as noop } from "./equality.js";
-import { Z as attr_style, $ as bind_props, _ as stringify, a0 as ensure_array_like, V as attr } from "./index2.js";
+import { Z as attr_style, _ as stringify, $ as bind_props, a0 as ensure_array_like, V as attr } from "./index2.js";
 const now = () => Date.now();
 const raf = {
   // don't access requestAnimationFrame eagerly outside method

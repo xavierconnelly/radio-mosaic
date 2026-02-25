@@ -4,7 +4,7 @@
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
 
     // global components
-    import DialControls from '$lib/dial-controls.svelte';
+    import DialControls from '$lib/hovered-STATIONS.svelte';
     // import Fab from "$lib/fab.svelte";
     import Flyover from '$lib/flyover.svelte';
 	import MediaQuery from '$lib/mediaQuery.svelte';
