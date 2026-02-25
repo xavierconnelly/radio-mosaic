@@ -1,4 +1,5 @@
 <script>
+    // bringing in the data of all stations and current 'selected'
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
     
 	// Props passed from parent each block
@@ -6,61 +7,52 @@
 	export let slug;
 	export let tint;
 	export let clockhand;
-	// export let city;
-	// export let country;
 </script>
 
 
+
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}"
-		style="background: #{tint}; color: #{clockhand}"
->
+		style="background: #{tint}; color: #{clockhand}">
     <h4>{name}</h4>
-    <!-- <p>{city}</p>
-    <p>{country}</p> -->
-    <!-- <svg class="icon" viewBox="0 0 24 24">
-        <polygon points="6,4 20,12 6,20" />
-    </svg> -->
 </a>
+
+
 
 <style>
 h4 {
     font-size: 12px;
 }
 .station {
-    height: 5vh;
-    padding: 0 30px;
     position: fixed;
     bottom: calc(17vh - 22px);
     left: 50%;
+    height: 5vh;
     width: max-content;
-    display: flex;
+    padding: 0 30px;
     margin: auto;
+    display: flex;
     flex-direction: row;
     gap: 10px;
     transform: translateX(-50%);
     align-items: center;
+    /* justify-content: space-evenly; */
     border: 1px solid;
     border-radius: 2px;
-    justify-content: space-evenly;
-    z-index: 99;
     background-color: var(--yin);
     color: var(--yang);
+    z-index: 99;
 }
 
 /* media stylings ~ TABLET */
 @media (max-width: 500px) {
     .station {
-        bottom: 126px;
         bottom: 110px;
+        left: 76px;
         height: 36px;
         width: calc(100vw - 152px);
-        left: 76px;
         transform: unset;
         border-radius: 111px;
         opacity: 0.85;
-    }
-    :global(#box:hover + #glimpse) {
-        display: none;
     }
 }
 </style>

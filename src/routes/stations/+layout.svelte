@@ -21,10 +21,19 @@
 <!-- <Audio/> -->
 <slot />
 
+
 <MediaQuery query="(min-width: 700px)" let:matches>
     {#if matches}
         <ClockSmall/>
     {/if}
+
+   <header>
+    <a href="/">
+        <h1 class="medula-one-regular">
+            RADIO MOSAIC
+        </h1>
+    </a>
+</header> 
 </MediaQuery>
 
 <div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 
