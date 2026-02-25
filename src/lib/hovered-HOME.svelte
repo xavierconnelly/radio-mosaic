@@ -7,13 +7,12 @@
 	export let slug;
 	export let city;
 	export let country;
-    export let i
 </script>
 
 
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}">
     <b>{city}</b>
-    <h4>{name}{i}</h4>
+    <h4>{name}</h4>
     <b>{country}</b>
 </a>
 
