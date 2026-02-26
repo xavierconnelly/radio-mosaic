@@ -44,7 +44,7 @@
     onMount(() => {
         stationData.forEach(s => {
         const img = new Image();
-        img.src = `/images/glimpse/${s.slug}.webp`;
+        img.src = `/images/glimpse/${s.slug}1x.webp`;
         });
     });
 </script>
