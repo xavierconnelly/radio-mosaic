@@ -96,7 +96,7 @@
     border-left: 1px solid var(--yang);
     background-color: transparent;
     will-change: background-color;
-    transition: background-color 5s ; /* slow fade out */
+    transition: background-color 2s ; /* slow fade out */
 }
 
 .bounds.active {
@@ -110,11 +110,12 @@
     margin: 0 auto;
     border-radius: 50%;
     /* background: var(--yang); */
-    opacity: 0.8;
+    opacity: 0.5;
     cursor: pointer;
-    background: var(--yang);
+    /* background: var(--yang); */
+    background: var(--clockhand);
     will-change: background-color;
-    transition: background 5s ; /* slow fade out */
+    transition: background 2s ; /* slow fade out */
 }
 
 .dot:hover, .dot.hovered {
