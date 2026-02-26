@@ -2,7 +2,7 @@
     import { spring } from 'svelte/motion';
     import { onMount } from 'svelte';
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
-    import DialControls from '$lib/hovered-HOME.svelte';
+    import HoveredHome from '$lib/hovered-HOME.svelte';
     import Grid from '$lib/grid.svelte';
 
 
@@ -64,11 +64,13 @@
 
 <Grid activeIndex={activeIndex} />
 
-<DialControls  
+<HoveredHome  
     name={stationData[(activeIndex + 0) % stationData.length].name}
     slug={stationData[(activeIndex + 0) % stationData.length].slug}
     city={stationData[(activeIndex + 0) % stationData.length].city}
     country={stationData[(activeIndex + 0) % stationData.length].country}
+    tint={stationData[(activeIndex + 0) % stationData.length].tint}
+    clockhand={stationData[(activeIndex + 0) % stationData.length].clockhand}
 />
 
 <div    id="box"
@@ -81,7 +83,7 @@
                 <a  href="/stations/{item.slug}" class="face"
                     style="transform: rotateY({i * angleStep}deg) translateZ({radius}em); background-color: #{item.tint}">
                     <div class="facepaint" style="background-image: url(../images/small/{item.slug}1x.webp)">
-                        <span id="name" style="background-color: #{item.clockhand}; color: #{item.tint}">
+                        <span id="name" style="background-color: #{item.tint}; color: #{item.clockhand}">
                             {item.name}
                         </span>
                     </div>
