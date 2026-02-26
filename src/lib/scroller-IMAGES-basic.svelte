@@ -5,7 +5,6 @@
     import HoveredHome from '$lib/hovered-HOME.svelte';
     import Grid from '$lib/grid.svelte';
 
-
     export let items = [];
     export let onActiveChange;
 
@@ -136,6 +135,7 @@
     position: absolute;
     display: flex;
     align-items: center;
+    will-change: transform;
     border: 5px solid var(--yin);
 }
 .facepaint {
