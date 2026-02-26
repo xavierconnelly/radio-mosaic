@@ -95,6 +95,7 @@
     border-bottom: 1px solid var(--yang);
     border-left: 1px solid var(--yang);
     background-color: transparent;
+    will-change: background-color;
     transition: background-color 5s ; /* slow fade out */
 }
 
@@ -112,6 +113,7 @@
     opacity: 0.8;
     cursor: pointer;
     background: var(--yang);
+    will-change: background-color;
     transition: background 5s ; /* slow fade out */
 }
 
