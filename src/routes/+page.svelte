@@ -8,7 +8,7 @@
     import ScrollerImages from "$lib/scroller-IMAGES-basic.svelte"; 
 	import Obi from '$lib/obi.svelte';
     import Flyover from '$lib/flyover.svelte';
-    import Grid from '$lib/grid.svelte';
+    // import Grid from '$lib/grid.svelte';
 
 
     // local components
@@ -58,7 +58,7 @@
         Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
     </p>
 
-    <Grid />
+    <!-- <Grid /> -->
 
 
     <div class="small-print">

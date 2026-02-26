@@ -1,9 +1,26 @@
 <script>
-    import { INDEX, HOVER, stationData } from '/src/routes/stations/radioData.js';
+    import { HOVER, stationData } from '/src/routes/stations/radioData.js';
 
-    $: activeSlug = $INDEX !== null ? stationData[$INDEX]?.slug : null;
+    export let activeIndex = 0;
+    $: activeSlug = stationData[activeIndex]?.slug;
     $: hoveredSlug = $HOVER;
 
+    // generate all 220 cells (13 rows x 20 cols)
+    const allCells = [];
+    for (let row = 1; row <= 11; row++) {
+        for (let col = 1; col <= 20; col++) {
+            allCells.push({ row, col });
+        }
+    }
+
+    // cells that already have content
+    $: occupiedCells = new Set([
+        ...stationData.map(s => `${s.col}-${s.row}`),
+        // UTC label row
+        ...Array.from({length: 20}, (_, i) => `${i+1}-9`)
+    ]);
+
+    $: emptyCells = allCells.filter(c => !occupiedCells.has(`${c.col}-${c.row}`));
 </script>
     
 <div id="timezone-grid">
@@ -32,16 +49,23 @@
 
     <!-- dots -->
     {#each stationData as station}
-        <span  class="bounds"
-                style="background-color: #{station.obi}">
+        <span   class="bounds"
+                class:active={station.slug === activeSlug}
+                style="grid-column: {station.col}; grid-row: {station.row};
+                        --tint: #{station.tint};">
             <a  href="/stations/{station.slug}"
                 class="dot"
                 class:active={station.slug === activeSlug}
                 class:hovered={station.slug === hoveredSlug}
-                style="grid-column: {station.col}; grid-row: {station.row}; background: #{station.tint}"
+                style="--clockhand: #{station.clockhand}"
                 title={station.name}>
             </a>
         </span>
+
+    {/each}
+
+    {#each emptyCells as cell}
+        <div class="bounds" style="grid-column: {cell.col}; grid-row: {cell.row}"></div>
     {/each}
 
 </div>
@@ -51,20 +75,34 @@
 #timezone-grid {
     display: inline-grid;
     align-self: stretch;
-    grid-template-rows: repeat(13,fit-content(100%));
+    grid-template-rows: repeat(11,fit-content(100%));
     grid-template-columns: repeat(20,fit-content(100%));
     /* padding: 16px; */
     width: 100%;
     box-sizing: border-box;
     transform-origin: top left;
+    border-top: 1px solid var(--yang);
+    /* background-image: 
+        linear-gradient(var(--yang) 1px, transparent 1px),
+        linear-gradient(90deg, var(--yang) 1px, transparent 1px);
+    background-size: calc(100% / 20) calc(100% / 11); */
 }
 .bounds {
     height: calc(100vw / 20);
     width: calc(100vw / 20);
     display: flex;
     align-items: center;
-    border: 1px solid var(--yang);
+    border-bottom: 1px solid var(--yang);
+    border-left: 1px solid var(--yang);
+    background-color: transparent;
+    transition: background-color 5s ; /* slow fade out */
 }
+
+.bounds.active {
+ background-color: var(--tint);
+    transition: background-color 0s ease; /* snap in */
+}
+
 .dot {
     width: 60%;
     height: 60%;
@@ -72,18 +110,19 @@
     border-radius: 50%;
     /* background: var(--yang); */
     opacity: 0.8;
-    transition: opacity 0.2s, transform 0.2s, background 0.2s;
     cursor: pointer;
+    background: var(--yang);
+    transition: background 5s ; /* slow fade out */
 }
 
 .dot:hover, .dot.hovered {
     opacity: 1;
-    background: #2c16d4;
+    /* background: #2c16d4; */
 }
 
 .dot.active {
-    background: #E84B2A;
-    opacity: 1;
+    background: var(--clockhand);
+    transition: background 0s ease; /* snap in */
 }
 
 .utc-label {

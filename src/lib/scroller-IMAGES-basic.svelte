@@ -3,6 +3,8 @@
     import { onMount } from 'svelte';
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
     import DialControls from '$lib/hovered-HOME.svelte';
+    import Grid from '$lib/grid.svelte';
+
 
     export let items = [];
     export let onActiveChange;
@@ -58,6 +60,9 @@
         x.set(rawX);
     }
 </script>
+
+
+<Grid activeIndex={activeIndex} />
 
 <DialControls  
     name={stationData[(activeIndex + 0) % stationData.length].name}
