@@ -1,17 +1,107 @@
-import { V as attr, _ as stringify, $ as bind_props, U as store_get, Z as attr_style, a0 as ensure_array_like, W as unsubscribe_stores, Y as attr_class } from "../../chunks/index2.js";
-import { H as HOVER, s as stationData, I as INDEX } from "../../chunks/radioData.js";
+import { V as attr, Z as attr_style, _ as stringify, $ as bind_props, U as store_get, a0 as ensure_array_like, Y as attr_class, W as unsubscribe_stores } from "../../chunks/index2.js";
+import { s as stationData, H as HOVER } from "../../chunks/radioData.js";
+import { w as writable } from "../../chunks/index.js";
 /* empty css               */
 import { M as MediaQuery } from "../../chunks/mediaQuery.js";
 import { s as spring, O as Obi, F as Flyover } from "../../chunks/flyover.js";
 import { f as fallback } from "../../chunks/equality.js";
 import { e as escape_html, i as invalid_default_snippet } from "../../chunks/context.js";
+const HOVEREREDFEATURE = writable(null);
+const monthlyShows = [
+  {
+    "name": "LAVI with BoogzBrown",
+    "city": "Ghana",
+    "country": "Ghana",
+    "stations": "Ghana",
+    "about-original": "it's a journey through traditional maloya, from the 70s to today.",
+    "url": "https://oroko.live/radio/lavi-1225",
+    "slug": "lavi"
+  },
+  {
+    "name": "Xavisphone",
+    "city": "Lyon",
+    "country": "France",
+    "stations": "Lyl Radio",
+    "about-original": "Brazilian, french-based Baile Funk producer Xavisphone lands on our stream for one hour of quality Baile, in line with his huuuuge release on DDS. Banger after banger after banger, dive in!",
+    "url": "https://lyl.live/episode/xavisphone",
+    "slug": "lavi"
+  },
+  {
+    "name": "Sonrisita",
+    "city": "Los Angeles",
+    "country": "USA",
+    "stations": "Dublab",
+    "about-original": "Coming up as a vinyl collector in her hometown of San Diego, Sonrisita pursued DJing as a means to create space for underground sounds and communities. Now based in Los Angeles, Sonrisita uses her foundation as a record digger to build eclectic sets that weave together both the new and nostalgic. Sonrisita’s played in various cities across the U.S., Mexico and Canada and has opened up for artists like Quantic, Durand Jones and the Indications, and Dam-Funk. Over the years her dedication to music has also extended outside of the booth. Most notably she is working on a book that chronicles the history of the iconic East Side Story compilations based on her original research. She has also been a Researcher on the award-winning music podcast KCRW’s Lost Notes. Sonrisita’s passion and curiosity for music in all of its rich diversity is evident in everything she does.",
+    "url": "https://www.dublab.com/djs/sonrisita",
+    "slug": "sonrisita"
+  },
+  {
+    "name": "getdizzzy",
+    "city": "Tokyo",
+    "country": "Japan",
+    "stations": "Data Fruits",
+    "about-original": "Joined - 2019-05-25 Last here - 2026-02-27",
+    "url": "https://datafruits.fm/djs/getdizzzy",
+    "slug": "getdizzzy"
+  },
+  {
+    "name": "Verticale",
+    "city": "Milan",
+    "country": "Italy",
+    "stations": "Radio Raheem",
+    "about-original": "Verticale significa andare in profondità. Un focus su un artista o una scena ogni volta differente per scoprire parte della sua produzione musicale, passando dai brani conosciuti alle gemme più nascoste.",
+    "url": "https://www.radioraheem.it/shows/verticale",
+    "slug": "verticale"
+  }
+];
 function Hovered_HOME($$renderer, $$props) {
   let name = $$props["name"];
   let slug = $$props["slug"];
   let city = $$props["city"];
   let country = $$props["country"];
-  $$renderer.push(`<a class="station svelte-9oqwnm" data-sveltekit-noscroll=""${attr("href", `/stations/${stringify(slug)}`)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(country)}<spanb></spanb></span></a>`);
-  bind_props($$props, { name, slug, city, country });
+  let tint = $$props["tint"];
+  let clockhand = $$props["clockhand"];
+  $$renderer.push(`<a class="station svelte-9oqwnm" data-sveltekit-noscroll=""${attr("href", `/stations/${stringify(slug)}`)}${attr_style(`background-color: #${stringify(tint)}; color: #${stringify(clockhand)}`)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(country)}</span></a>`);
+  bind_props($$props, { name, slug, city, country, tint, clockhand });
+}
+function Grid($$renderer, $$props) {
+  $$renderer.component(($$renderer2) => {
+    var $$store_subs;
+    let activeSlug, hoveredSlug, occupiedCells, emptyCells;
+    let activeIndex = fallback($$props["activeIndex"], 0);
+    const allCells = [];
+    for (let row = 1; row <= 11; row++) {
+      for (let col = 1; col <= 20; col++) {
+        allCells.push({ row, col });
+      }
+    }
+    activeSlug = stationData[activeIndex]?.slug;
+    hoveredSlug = store_get($$store_subs ??= {}, "$HOVER", HOVER);
+    occupiedCells = /* @__PURE__ */ new Set([
+      ...stationData.map((s) => `${s.col}-${s.row}`),
+      // UTC label row
+      ...Array.from({ length: 20 }, (_, i) => `${i + 1}-9`)
+    ]);
+    emptyCells = allCells.filter((c) => !occupiedCells.has(`${c.col}-${c.row}`));
+    $$renderer2.push(`<div id="timezone-grid" class="svelte-xyo4pr"><div class="utc-label bounds svelte-xyo4pr" style="grid-column: 1; grid-row: 9">-8</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 2; grid-row: 9">-6</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 3; grid-row: 9">-5</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 4; grid-row: 9">-3</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 5; grid-row: 9">0</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 6; grid-row: 9">0</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 7; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 8; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 9; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 10; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 11; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 12; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 13; grid-row: 9">+2</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 14; grid-row: 9">+2</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 15; grid-row: 9">+3</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 16; grid-row: 9">+4</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 17; grid-row: 9">+7</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 18; grid-row: 9">+8</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 19; grid-row: 9">+9</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 20; grid-row: 9">+11</div> <!--[-->`);
+    const each_array = ensure_array_like(stationData);
+    for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+      let station = each_array[$$index];
+      $$renderer2.push(`<span${attr_class("bounds svelte-xyo4pr", void 0, { "active": station.slug === activeSlug })}${attr_style(`grid-column: ${stringify(station.col)}; grid-row: ${stringify(station.row)}; --tint: #${stringify(station.tint)};`)}><a${attr("href", `/stations/${stringify(station.slug)}`)}${attr_class("dot svelte-xyo4pr", void 0, {
+        "active": station.slug === activeSlug,
+        "hovered": station.slug === hoveredSlug
+      })}${attr_style(`--clockhand: #${stringify(station.clockhand)}`)}${attr("title", station.name)}></a></span>`);
+    }
+    $$renderer2.push(`<!--]--> <!--[-->`);
+    const each_array_1 = ensure_array_like(emptyCells);
+    for (let $$index_1 = 0, $$length = each_array_1.length; $$index_1 < $$length; $$index_1++) {
+      let cell = each_array_1[$$index_1];
+      $$renderer2.push(`<div class="bounds svelte-xyo4pr"${attr_style(`grid-column: ${stringify(cell.col)}; grid-row: ${stringify(cell.row)}`)}></div>`);
+    }
+    $$renderer2.push(`<!--]--></div>`);
+    if ($$store_subs) unsubscribe_stores($$store_subs);
+    bind_props($$props, { activeIndex });
+  });
 }
 function Scroller_IMAGES_basic($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
@@ -29,40 +119,52 @@ function Scroller_IMAGES_basic($$renderer, $$props) {
     activeIndex = Math.floor((angle + angleStep / 2) / angleStep) % count;
     items[activeIndex];
     onActiveChange?.(activeIndex);
+    Grid($$renderer2, { activeIndex });
+    $$renderer2.push(`<!----> `);
     Hovered_HOME($$renderer2, {
       name: stationData[(activeIndex + 0) % stationData.length].name,
       slug: stationData[(activeIndex + 0) % stationData.length].slug,
       city: stationData[(activeIndex + 0) % stationData.length].city,
-      country: stationData[(activeIndex + 0) % stationData.length].country
+      country: stationData[(activeIndex + 0) % stationData.length].country,
+      tint: stationData[(activeIndex + 0) % stationData.length].tint,
+      clockhand: stationData[(activeIndex + 0) % stationData.length].clockhand
     });
     $$renderer2.push(`<!----> <div id="box" class="svelte-9dvek7"><div class="scene svelte-9dvek7"><div class="cube svelte-9dvek7"${attr_style(`transform: translateZ(-${stringify(radius)}em) rotateY(-${stringify(store_get($$store_subs ??= {}, "$x", x))}deg)`)}><!--[-->`);
     const each_array = ensure_array_like(items);
     for (let i = 0, $$length = each_array.length; i < $$length; i++) {
       let item = each_array[i];
-      $$renderer2.push(`<a${attr("href", `/stations/${stringify(item.slug)}`)} class="face svelte-9dvek7"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em); background-color: #${stringify(item.tint)}`)}><div class="facepaint svelte-9dvek7"${attr_style(`background-image: url(../images/small/${stringify(item.slug)}1x.webp)`)}><span id="name"${attr_style(`background-color: #${stringify(item.clockhand)}; color: #${stringify(item.tint)}`)} class="svelte-9dvek7">${escape_html(item.name)}</span></div></a>`);
+      $$renderer2.push(`<a${attr("href", `/stations/${stringify(item.slug)}`)} class="face svelte-9dvek7"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em); background-color: #${stringify(item.tint)}`)}><div class="facepaint svelte-9dvek7"${attr_style(`background-image: url(../images/small/${stringify(item.slug)}1x.webp)`)}><span id="name"${attr_style(`background-color: #${stringify(item.tint)}; color: #${stringify(item.clockhand)}`)} class="svelte-9dvek7">${escape_html(item.name)}</span></div></a>`);
     }
     $$renderer2.push(`<!--]--></div></div></div>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
     bind_props($$props, { items, onActiveChange });
   });
 }
-function Grid($$renderer, $$props) {
+function Featured($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     var $$store_subs;
-    let activeSlug, hoveredSlug;
-    activeSlug = store_get($$store_subs ??= {}, "$INDEX", INDEX) !== null ? stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)]?.slug : null;
-    hoveredSlug = store_get($$store_subs ??= {}, "$HOVER", HOVER);
-    $$renderer2.push(`<div id="timezone-grid" class="svelte-xyo4pr"><div class="utc-label bounds svelte-xyo4pr" style="grid-column: 1; grid-row: 9">-8</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 2; grid-row: 9">-6</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 3; grid-row: 9">-5</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 4; grid-row: 9">-3</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 5; grid-row: 9">0</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 6; grid-row: 9">0</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 7; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 8; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 9; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 10; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 11; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 12; grid-row: 9">+1</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 13; grid-row: 9">+2</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 14; grid-row: 9">+2</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 15; grid-row: 9">+3</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 16; grid-row: 9">+4</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 17; grid-row: 9">+7</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 18; grid-row: 9">+8</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 19; grid-row: 9">+9</div> <div class="utc-label bounds svelte-xyo4pr" style="grid-column: 20; grid-row: 9">+11</div> <!--[-->`);
-    const each_array = ensure_array_like(stationData);
-    for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
-      let station = each_array[$$index];
-      $$renderer2.push(`<span class="bounds svelte-xyo4pr"${attr_style(`background-color: #${stringify(station.obi)}`)}><a${attr("href", `/stations/${stringify(station.slug)}`)}${attr_class("dot svelte-xyo4pr", void 0, {
-        "active": station.slug === activeSlug,
-        "hovered": station.slug === hoveredSlug
-      })}${attr_style(`grid-column: ${stringify(station.col)}; grid-row: ${stringify(station.row)}; background: #${stringify(station.tint)}`)}${attr("title", station.name)}></a></span>`);
+    let count, angleStep, radius, angle, showIndex;
+    let shows = fallback($$props["shows"], () => [], true);
+    let onShowGlipmse = $$props["onShowGlipmse"];
+    const faceWidth = 8;
+    const x = spring(0, { stiffness: 0.03, damping: 0.7 });
+    store_get($$store_subs ??= {}, "$HOVEREREDFEATURE", HOVEREREDFEATURE);
+    count = shows.length;
+    angleStep = 360 / count;
+    radius = faceWidth / 2 / Math.tan(Math.PI / count);
+    angle = (store_get($$store_subs ??= {}, "$x", x) % 360 + 360) % 360;
+    showIndex = Math.floor((angle + angleStep / 2) / angleStep) % count;
+    shows[showIndex];
+    onShowGlipmse?.(showIndex);
+    $$renderer2.push(`<div id="box" class="svelte-1706gl1"><div class="scene svelte-1706gl1"><div class="cube svelte-1706gl1"${attr_style(`transform: translateZ(-${stringify(radius)}em) rotateY(-${stringify(store_get($$store_subs ??= {}, "$x", x))}deg)`)}><!--[-->`);
+    const each_array = ensure_array_like(shows);
+    for (let i = 0, $$length = each_array.length; i < $$length; i++) {
+      let show = each_array[i];
+      $$renderer2.push(`<a${attr("href", show.slug)} class="face svelte-1706gl1"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em);`)}><div class="facepaint svelte-1706gl1"${attr_style(`background-image: url(../images/small/${stringify(show.slug)}.webp)`)}><span id="name" class="svelte-1706gl1">${escape_html(show.name)}</span></div></a>`);
     }
-    $$renderer2.push(`<!--]--></div>`);
+    $$renderer2.push(`<!--]--></div></div></div>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
+    bind_props($$props, { shows, onShowGlipmse });
   });
 }
 function Clock_HOME_hand($$renderer, $$props) {
@@ -101,7 +203,10 @@ function _page($$renderer, $$props) {
     let moused;
     function updateActive(i) {
     }
+    function showActive(i) {
+    }
     moused = store_get($$store_subs ??= {}, "$HOVER", HOVER);
+    store_get($$store_subs ??= {}, "$HOVEREREDFEATURE", HOVEREREDFEATURE);
     MediaQuery($$renderer2, {
       query: "(max-width: 700px)",
       children: invalid_default_snippet,
@@ -113,9 +218,9 @@ function _page($$renderer, $$props) {
             Clock_HOME($$renderer3);
             $$renderer3.push(`<!----> <p id="tagline" class="svelte-1uha8ag">A collection of online community radio stations from all corners of the world.</p> `);
             Scroller_IMAGES_basic($$renderer3, { items: stationData, onActiveChange: updateActive });
-            $$renderer3.push(`<!----> <p class="buffer svelte-1uha8ag">Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe.</p> <p class="svelte-1uha8ag">Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.</p> `);
-            Grid($$renderer3);
-            $$renderer3.push(`<!----> <div class="small-print svelte-1uha8ag"><h4 class="svelte-1uha8ag">Contact</h4> <p class="svelte-1uha8ag">email@email.com</p> <p class="svelte-1uha8ag">This project is a labour of love, if you would like to help in any way please get in touch.</p> <br class="svelte-1uha8ag"/> <b class="svelte-1uha8ag">Disclaimer</b> <p class="svelte-1uha8ag">If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p></div>`);
+            $$renderer3.push(`<!----> `);
+            Featured($$renderer3, { shows: monthlyShows, onShowGlipmse: showActive });
+            $$renderer3.push(`<!----> <p class="buffer svelte-1uha8ag">Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe.</p> <p class="svelte-1uha8ag">Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.</p> <div class="small-print svelte-1uha8ag"><h4 class="svelte-1uha8ag">Contact</h4> <p class="svelte-1uha8ag">email@email.com</p> <p class="svelte-1uha8ag">This project is a labour of love, if you would like to help in any way please get in touch.</p> <br class="svelte-1uha8ag"/> <b class="svelte-1uha8ag">Disclaimer</b> <p class="svelte-1uha8ag">If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p></div>`);
           } else {
             $$renderer3.push("<!--[!-->");
             Obi($$renderer3, {});

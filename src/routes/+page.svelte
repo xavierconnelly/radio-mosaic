@@ -1,11 +1,14 @@
 <script>
     // passing in data
     import { HOVER, stationData } from '/src/routes/stations/radioData.js';
+    import { HOVEREREDFEATURE, monthlyShows } from '/src/routes/stations/featured.js';
+
     import '../app.css'
 
     // shared components
 	import MediaQuery from '$lib/mediaQuery.svelte';
     import ScrollerImages from "$lib/scroller-IMAGES-basic.svelte"; 
+    import FeaturedShows from "$lib/featured.svelte"; 
 	import Obi from '$lib/obi.svelte';
     import Flyover from '$lib/flyover.svelte';
     // import Grid from '$lib/grid.svelte';
@@ -24,15 +27,24 @@
 		activeIndex = i;
 	}
 
-    // flyover
-    import { onMount } from 'svelte';
+    // Featured shows
+    $: show = $HOVEREREDFEATURE;
 
-    onMount(() => {
-        stationData.forEach(s => {
-        const img = new Image();
-        img.src = `/images/glimpse/${s.slug}.webp`;
-        });
-    });
+    let showIndex = 0;
+
+	function showActive(i) {
+		showIndex = i;
+	}
+
+    // flyover
+    // import { onMount } from 'svelte';
+
+    // onMount(() => {
+    //     stationData.forEach(s => {
+    //     const img = new Image();
+    //     img.src = `/images/glimpse/${s.slug}1x.webp`;
+    //     });
+    // });
 </script>
 
 
@@ -50,6 +62,9 @@
     </p>
 
     <ScrollerImages items={stationData} onActiveChange={updateActive} />
+
+    <FeaturedShows shows={monthlyShows} onShowGlipmse={showActive}/>
+
 
     <p class="buffer">
         Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
@@ -70,7 +85,7 @@
         <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
     </div>
 {:else}
-         <Obi />
+        <Obi />
         <ClockHome />
         <div class="image-wrap">
             {#if stationData[moused]}

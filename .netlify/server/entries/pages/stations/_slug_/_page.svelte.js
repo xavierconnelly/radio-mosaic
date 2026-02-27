@@ -139,6 +139,13 @@ function _page($$renderer, $$props) {
     moused = store_get($$store_subs ??= {}, "$HOVER", HOVER);
     $$renderer2.push(`<nav${attr_style(`color: #${stringify(
       // flyover
+      // import { onMount } from 'svelte';
+      // onMount(() => {
+      //     stationData.forEach(s => {
+      //     const img = new Image();
+      //     img.src = `/images/glimpse/${s.slug}1x.webp`;
+      //     });
+      // });
       stationData[store_get($$store_subs ??= {}, "$INDEX", INDEX)].title
     )}`)} class="svelte-1r1gk1s"><span>`);
     Time($$renderer2, {});

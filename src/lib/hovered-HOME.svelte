@@ -15,7 +15,7 @@
 <a class="station" data-sveltekit-noscroll href="/stations/{slug}" style="background-color: #{tint}; color: #{clockhand}">
     <span>{city}</span>
     <h4>{name}</h4>
-    <span>{country}<spanb>
+    <span>{country}</span>
 </a>
 
 

@@ -39,14 +39,14 @@
     $: moused = $HOVER;
 
     // flyover
-    import { onMount } from 'svelte';
+    // import { onMount } from 'svelte';
 
-    onMount(() => {
-        stationData.forEach(s => {
-        const img = new Image();
-        img.src = `/images/glimpse/${s.slug}1x.webp`;
-        });
-    });
+    // onMount(() => {
+    //     stationData.forEach(s => {
+    //     const img = new Image();
+    //     img.src = `/images/glimpse/${s.slug}1x.webp`;
+    //     });
+    // });
 </script>
 
 <!-- current station header -->
