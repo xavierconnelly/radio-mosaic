@@ -31,7 +31,7 @@ const monthlyShows = [
     "city": "Los Angeles",
     "country": "USA",
     "station": "Dublab",
-    "about": "Coming up as a vinyl collector in her hometown of San Diego, Sonrisita pursued DJing as a means to create space for underground sounds and communities. Now based in Los Angeles, Sonrisita uses her foundation as a record digger to build eclectic sets that weave together both the new and nostalgic. Sonrisita’s played in various cities across the U.S., Mexico and Canada and has opened up for artists like Quantic, Durand Jones and the Indications, and Dam-Funk. Over the years her dedication to music has also extended outside of the booth. Most notably she is working on a book that chronicles the history of the iconic East Side Story compilations based on her original research. She has also been a Researcher on the award-winning music podcast KCRW’s Lost Notes. Sonrisita’s passion and curiosity for music in all of its rich diversity is evident in everything she does.",
+    "about": "Coming up as a vinyl collector in her hometown of San Diego, Sonrisita pursued DJing as a means to create space for underground sounds and communities. Now based in Los Angeles, Sonrisita uses her foundation as a record digger to build eclectic sets that weave together both the new and nostalgic.",
     "url": "https://www.dublab.com/djs/sonrisita",
     "slug": "sonrisita"
   },
@@ -155,7 +155,7 @@ function HOVERED_SHOW($$renderer, $$props) {
   let city = $$props["city"];
   let station = $$props["station"];
   let about = $$props["about"];
-  $$renderer.push(`<a class="show svelte-1jhgz3k"${attr("href", url)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(station)}</span></a> <caption class="svelte-1jhgz3k">${escape_html(about)}</caption>`);
+  $$renderer.push(`<a class="show svelte-1jhgz3k"${attr("href", url)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(station)}</span></a> <div id="caption" class="svelte-1jhgz3k">${escape_html(about)}</div>`);
   bind_props($$props, { url, name, city, station, about });
 }
 function Featured($$renderer, $$props) {
