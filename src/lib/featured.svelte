@@ -11,7 +11,7 @@
    // variable for current hovered on
     $: show = $HOVEREREDFEATURE;
 
-    const faceWidth = 8;
+    const faceWidth = 16;
 
     $: count = shows.length;
     $: angleStep = 360 / count;
@@ -100,6 +100,7 @@
     width: 200px;
     height: 100%;
     perspective: 20000px;
+    perspective: 200px;
     position: absolute;
     top: 0;
     left: 50%;

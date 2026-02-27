@@ -21,7 +21,7 @@ export const monthlyShows = [
    "stations": "Lyl Radio",
    "about-original": "Brazilian, french-based Baile Funk producer Xavisphone lands on our stream for one hour of quality Baile, in line with his huuuuge release on DDS. Banger after banger after banger, dive in!",
    "url": "https://lyl.live/episode/xavisphone",
-   "slug": "lavi",
+   "slug": "xavisphone",
  },
  {
    "name": "Sonrisita",
@@ -41,7 +41,16 @@ export const monthlyShows = [
    "url": "https://datafruits.fm/djs/getdizzzy",
    "slug": "getdizzzy",
  },
- {
+  {
+   "name": "Breakfast with Flo",
+   "city": "London",
+   "country": "England",
+   "stations": "NTS",
+   "about-original": "Lorem",
+   "url": "https://www.nts.live/shows/the-breakfast-show-flo",
+   "slug": "flo",
+},
+  {
    "name": "Verticale",
    "city": "Milan",
    "country": "Italy",

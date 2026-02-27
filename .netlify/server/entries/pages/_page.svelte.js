@@ -24,7 +24,7 @@ const monthlyShows = [
     "stations": "Lyl Radio",
     "about-original": "Brazilian, french-based Baile Funk producer Xavisphone lands on our stream for one hour of quality Baile, in line with his huuuuge release on DDS. Banger after banger after banger, dive in!",
     "url": "https://lyl.live/episode/xavisphone",
-    "slug": "lavi"
+    "slug": "xavisphone"
   },
   {
     "name": "Sonrisita",
@@ -43,6 +43,15 @@ const monthlyShows = [
     "about-original": "Joined - 2019-05-25 Last here - 2026-02-27",
     "url": "https://datafruits.fm/djs/getdizzzy",
     "slug": "getdizzzy"
+  },
+  {
+    "name": "Breakfast with Flo",
+    "city": "London",
+    "country": "England",
+    "stations": "NTS",
+    "about-original": "Lorem",
+    "url": "https://www.nts.live/shows/the-breakfast-show-flo",
+    "slug": "flo"
   },
   {
     "name": "Verticale",
@@ -146,7 +155,7 @@ function Featured($$renderer, $$props) {
     let count, angleStep, radius, angle, showIndex;
     let shows = fallback($$props["shows"], () => [], true);
     let onShowGlipmse = $$props["onShowGlipmse"];
-    const faceWidth = 8;
+    const faceWidth = 16;
     const x = spring(0, { stiffness: 0.03, damping: 0.7 });
     store_get($$store_subs ??= {}, "$HOVEREREDFEATURE", HOVEREREDFEATURE);
     count = shows.length;
@@ -160,7 +169,7 @@ function Featured($$renderer, $$props) {
     const each_array = ensure_array_like(shows);
     for (let i = 0, $$length = each_array.length; i < $$length; i++) {
       let show = each_array[i];
-      $$renderer2.push(`<a${attr("href", show.slug)} class="face svelte-1706gl1"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em);`)}><div class="facepaint svelte-1706gl1"${attr_style(`background-image: url(../images/small/${stringify(show.slug)}.webp)`)}><span id="name" class="svelte-1706gl1">${escape_html(show.name)}</span></div></a>`);
+      $$renderer2.push(`<a${attr("href", show.slug)} class="face svelte-1706gl1"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em);`)}><div class="facepaint svelte-1706gl1"${attr_style(`background-image: url(../images/featuredShows/${stringify(show.slug)}.webp)`)}><span id="name" class="svelte-1706gl1">${escape_html(show.name)}</span></div></a>`);
     }
     $$renderer2.push(`<!--]--></div></div></div>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);

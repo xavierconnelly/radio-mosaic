@@ -1,0 +1,1 @@
+import{s as n}from"./CWV6PxT7.js";import{a9 as o}from"./Bk596e7j.js";const a=()=>{const s=n;return{page:{subscribe:s.page.subscribe},navigating:{subscribe:s.navigating.subscribe},updated:s.updated}},c={subscribe(s){return a().page.subscribe(s)}},u=o(null);function g(s,e){const t=e.findIndex(r=>r.slug===s);t!==-1&&u.set(t)}export{u as I,c as p,g as u};
