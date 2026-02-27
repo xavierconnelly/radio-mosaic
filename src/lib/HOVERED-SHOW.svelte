@@ -18,6 +18,8 @@
 
 </a>
 
+<!-- need to move this  -->
+
 <div id="caption">
     {about}
 </div>
