@@ -47,44 +47,41 @@
     // });
 </script>
 
-
 <MediaQuery query="(max-width: 700px)" let:matches>
     {#if matches}
-    <div id="display-font">
-        <h1 class="medula-one-regular">Radio</h1>
-        <h1 class="medula-one-regular">Mosaic</h1>
-    </div>
+        <div id="display-font">
+            <h1 class="medula-one-regular">Radio</h1>
+            <h1 class="medula-one-regular">Mosaic</h1>
+        </div>
     
-    <ClockHome />
+        <ClockHome />
     
-    <p id="tagline">
-        A collection of online community radio stations from all corners of the world.
-    </p>
+        <p id="tagline">
+            A collection of online community radio stations from all corners of the world.
+        </p>
 
-    <ScrollerImages items={stationData} onActiveChange={updateActive} />
+        <ScrollerImages items={stationData} onActiveChange={updateActive} />
 
-    <FeaturedShows shows={monthlyShows} onShowGlipmse={showActive}/>
+        <p class="buffer">
+            Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
+        </p>
+        <p>
+            Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+        </p>
 
+        <FeaturedShows shows={monthlyShows} onShowGlipmse={showActive}/>
 
-    <p class="buffer">
-        Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
-    </p>
-    <p>
-        Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
-    </p>
+        <!-- <Grid /> -->
 
-    <!-- <Grid /> -->
-
-
-    <div class="small-print">
-        <h4>Contact</h4>
-        <p>email@email.com</p>
-        <p>This project is a labour of love, if you would like to help in any way please get in touch.</p>
-        <br>
-        <b>Disclaimer</b>
-        <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
-    </div>
-{:else}
+        <div class="small-print buffer">
+            <h4>Contact</h4>
+            <p>email@email.com</p>
+            <p>This project is a labour of love, if you would like to help in any way please get in touch. Whether that's to recommend a show, let me know a link is broken etc.</p>
+            <br>
+            <b>Disclaimer</b>
+            <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
+        </div>
+    {:else}
         <Obi />
         <ClockHome />
         <div class="image-wrap">
@@ -100,8 +97,8 @@
 </MediaQuery>
 
 
-
 <style>
+
 :global(body) {
     background-color: var(--yin);
 }
@@ -159,7 +156,7 @@
         color: var(--yang);
     }
     .buffer {
-        padding-top: 40px;
+        padding-top: 44px;
     }
     p,
     .small-print h4,

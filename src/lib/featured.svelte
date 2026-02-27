@@ -2,8 +2,8 @@
     import { spring } from 'svelte/motion';
     import { onMount } from 'svelte';
     import { HOVEREREDFEATURE, monthlyShows } from '/src/routes/stations/featured.js';
+    import HoveredShow from '$lib/hovered-SHOW.svelte';
 
-    // import HoveredHome from '$lib/hovered-HOME.svelte';
 
     export let shows = [];
     export let onShowGlipmse;
@@ -60,15 +60,26 @@
     }
 </script>
 
+<h2>
+    Featured shows
+</h2>
+
+<HoveredShow  
+    name={monthlyShows[(showIndex + 0) % monthlyShows.length].name}
+    url={monthlyShows[(showIndex + 0) % monthlyShows.length].url}
+    city={monthlyShows[(showIndex + 0) % monthlyShows.length].city}
+    station={monthlyShows[(showIndex + 0) % monthlyShows.length].station}
+/>
 
 <div    id="box"
         on:wheel|nonpassive={onWheel}
         on:touchstart={onTouchStart}
         on:touchmove|nonpassive={onTouchMove}>
+
     <div class="scene">
         <div class="cube" style="transform: translateZ(-{radius}em) rotateY(-{$x}deg)">
             {#each shows as show, i}
-                <a  href="{show.slug}" class="face"
+                <a  href="{show.url}" class="face" target="_blank"
                     style="transform: rotateY({i * angleStep}deg) translateZ({radius}em);">
                     <div class="facepaint" style="background-image: url(../images/featuredShows/{show.slug}.webp)">
                         <span id="name">
@@ -81,8 +92,20 @@
     </div>
 </div>
 
+<HoveredShow  
+    about={monthlyShows[(showIndex + 0) % monthlyShows.length].about}
+    url={monthlyShows[(showIndex + 0) % monthlyShows.length].url}
+/>
+
+<p>
+    A selection of our favourite presenters from across the globe
+</p>
 
 <style>
+h2 {
+    padding-top: 80px;
+}
+
 #box {
     z-index: 99;
 	overflow: hidden;
@@ -99,11 +122,11 @@
 .scene {
     width: 200px;
     height: 100%;
-    perspective: 20000px;
+    /* perspective: 20000px; */
     perspective: 200px;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 50%; 
     transform: translate(-50%, 0%);
 }
 
@@ -116,7 +139,7 @@
 
 .face {
     color: var(--yang);
-    background: var(--yin);
+    background: var(--yang);
     border-right: 0.5px solid;
     width: 200px;
     height: 100%;
@@ -138,6 +161,8 @@
     object-fit: cover;
     opacity: 0.8;
     background-position: center;
+    mix-blend-mode: screen;
+    filter: grayscale(1);
 }
 #name {
     padding: 8px 2px;
@@ -148,5 +173,12 @@
     left: 0px;
     margin: 10px;
     font-family: monospace;
+}
+
+p {
+    font-size: 24px;
+    line-height: 26px;
+    padding: 20px 10px 60px 10px;
+    font-weight: 600;
 }
 </style>

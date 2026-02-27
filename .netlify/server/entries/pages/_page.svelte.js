@@ -12,8 +12,8 @@ const monthlyShows = [
     "name": "LAVI with BoogzBrown",
     "city": "Ghana",
     "country": "Ghana",
-    "stations": "Ghana",
-    "about-original": "it's a journey through traditional maloya, from the 70s to today.",
+    "station": "Ghana",
+    "about": "it's a journey through traditional maloya, from the 70s to today.",
     "url": "https://oroko.live/radio/lavi-1225",
     "slug": "lavi"
   },
@@ -21,8 +21,8 @@ const monthlyShows = [
     "name": "Xavisphone",
     "city": "Lyon",
     "country": "France",
-    "stations": "Lyl Radio",
-    "about-original": "Brazilian, french-based Baile Funk producer Xavisphone lands on our stream for one hour of quality Baile, in line with his huuuuge release on DDS. Banger after banger after banger, dive in!",
+    "station": "Lyl Radio",
+    "about": "Brazilian, french-based Baile Funk producer Xavisphone lands on our stream for one hour of quality Baile, in line with his huuuuge release on DDS. Banger after banger after banger, dive in!",
     "url": "https://lyl.live/episode/xavisphone",
     "slug": "xavisphone"
   },
@@ -30,8 +30,8 @@ const monthlyShows = [
     "name": "Sonrisita",
     "city": "Los Angeles",
     "country": "USA",
-    "stations": "Dublab",
-    "about-original": "Coming up as a vinyl collector in her hometown of San Diego, Sonrisita pursued DJing as a means to create space for underground sounds and communities. Now based in Los Angeles, Sonrisita uses her foundation as a record digger to build eclectic sets that weave together both the new and nostalgic. Sonrisita’s played in various cities across the U.S., Mexico and Canada and has opened up for artists like Quantic, Durand Jones and the Indications, and Dam-Funk. Over the years her dedication to music has also extended outside of the booth. Most notably she is working on a book that chronicles the history of the iconic East Side Story compilations based on her original research. She has also been a Researcher on the award-winning music podcast KCRW’s Lost Notes. Sonrisita’s passion and curiosity for music in all of its rich diversity is evident in everything she does.",
+    "station": "Dublab",
+    "about": "Coming up as a vinyl collector in her hometown of San Diego, Sonrisita pursued DJing as a means to create space for underground sounds and communities. Now based in Los Angeles, Sonrisita uses her foundation as a record digger to build eclectic sets that weave together both the new and nostalgic. Sonrisita’s played in various cities across the U.S., Mexico and Canada and has opened up for artists like Quantic, Durand Jones and the Indications, and Dam-Funk. Over the years her dedication to music has also extended outside of the booth. Most notably she is working on a book that chronicles the history of the iconic East Side Story compilations based on her original research. She has also been a Researcher on the award-winning music podcast KCRW’s Lost Notes. Sonrisita’s passion and curiosity for music in all of its rich diversity is evident in everything she does.",
     "url": "https://www.dublab.com/djs/sonrisita",
     "slug": "sonrisita"
   },
@@ -39,8 +39,8 @@ const monthlyShows = [
     "name": "getdizzzy",
     "city": "Tokyo",
     "country": "Japan",
-    "stations": "Data Fruits",
-    "about-original": "Joined - 2019-05-25 Last here - 2026-02-27",
+    "station": "Data Fruits",
+    "about": "Joined - 2019-05-25 Last here - 2026-02-27",
     "url": "https://datafruits.fm/djs/getdizzzy",
     "slug": "getdizzzy"
   },
@@ -48,8 +48,8 @@ const monthlyShows = [
     "name": "Breakfast with Flo",
     "city": "London",
     "country": "England",
-    "stations": "NTS",
-    "about-original": "Lorem",
+    "station": "NTS",
+    "about": "Lorem",
     "url": "https://www.nts.live/shows/the-breakfast-show-flo",
     "slug": "flo"
   },
@@ -57,8 +57,8 @@ const monthlyShows = [
     "name": "Verticale",
     "city": "Milan",
     "country": "Italy",
-    "stations": "Radio Raheem",
-    "about-original": "Verticale significa andare in profondità. Un focus su un artista o una scena ogni volta differente per scoprire parte della sua produzione musicale, passando dai brani conosciuti alle gemme più nascoste.",
+    "station": "Radio Raheem",
+    "about": "Verticale significa andare in profondità. Un focus su un artista o una scena ogni volta differente per scoprire parte della sua produzione musicale, passando dai brani conosciuti alle gemme più nascoste.",
     "url": "https://www.radioraheem.it/shows/verticale",
     "slug": "verticale"
   }
@@ -149,6 +149,15 @@ function Scroller_IMAGES_basic($$renderer, $$props) {
     bind_props($$props, { items, onActiveChange });
   });
 }
+function HOVERED_SHOW($$renderer, $$props) {
+  let url = $$props["url"];
+  let name = $$props["name"];
+  let city = $$props["city"];
+  let station = $$props["station"];
+  let about = $$props["about"];
+  $$renderer.push(`<a class="show svelte-1jhgz3k"${attr("href", url)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(station)}</span></a> <caption class="svelte-1jhgz3k">${escape_html(about)}</caption>`);
+  bind_props($$props, { url, name, city, station, about });
+}
 function Featured($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     var $$store_subs;
@@ -165,13 +174,25 @@ function Featured($$renderer, $$props) {
     showIndex = Math.floor((angle + angleStep / 2) / angleStep) % count;
     shows[showIndex];
     onShowGlipmse?.(showIndex);
-    $$renderer2.push(`<div id="box" class="svelte-1706gl1"><div class="scene svelte-1706gl1"><div class="cube svelte-1706gl1"${attr_style(`transform: translateZ(-${stringify(radius)}em) rotateY(-${stringify(store_get($$store_subs ??= {}, "$x", x))}deg)`)}><!--[-->`);
+    $$renderer2.push(`<h2 class="svelte-1706gl1">Featured shows</h2> `);
+    HOVERED_SHOW($$renderer2, {
+      name: monthlyShows[(showIndex + 0) % monthlyShows.length].name,
+      url: monthlyShows[(showIndex + 0) % monthlyShows.length].url,
+      city: monthlyShows[(showIndex + 0) % monthlyShows.length].city,
+      station: monthlyShows[(showIndex + 0) % monthlyShows.length].station
+    });
+    $$renderer2.push(`<!----> <div id="box" class="svelte-1706gl1"><div class="scene svelte-1706gl1"><div class="cube svelte-1706gl1"${attr_style(`transform: translateZ(-${stringify(radius)}em) rotateY(-${stringify(store_get($$store_subs ??= {}, "$x", x))}deg)`)}><!--[-->`);
     const each_array = ensure_array_like(shows);
     for (let i = 0, $$length = each_array.length; i < $$length; i++) {
       let show = each_array[i];
-      $$renderer2.push(`<a${attr("href", show.slug)} class="face svelte-1706gl1"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em);`)}><div class="facepaint svelte-1706gl1"${attr_style(`background-image: url(../images/featuredShows/${stringify(show.slug)}.webp)`)}><span id="name" class="svelte-1706gl1">${escape_html(show.name)}</span></div></a>`);
+      $$renderer2.push(`<a${attr("href", show.url)} class="face svelte-1706gl1" target="_blank"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em);`)}><div class="facepaint svelte-1706gl1"${attr_style(`background-image: url(../images/featuredShows/${stringify(show.slug)}.webp)`)}><span id="name" class="svelte-1706gl1">${escape_html(show.name)}</span></div></a>`);
     }
-    $$renderer2.push(`<!--]--></div></div></div>`);
+    $$renderer2.push(`<!--]--></div></div></div> `);
+    HOVERED_SHOW($$renderer2, {
+      about: monthlyShows[(showIndex + 0) % monthlyShows.length].about,
+      url: monthlyShows[(showIndex + 0) % monthlyShows.length].url
+    });
+    $$renderer2.push(`<!----> <p class="svelte-1706gl1">A selection of our favourite presenters from across the globe</p>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
     bind_props($$props, { shows, onShowGlipmse });
   });
@@ -227,9 +248,9 @@ function _page($$renderer, $$props) {
             Clock_HOME($$renderer3);
             $$renderer3.push(`<!----> <p id="tagline" class="svelte-1uha8ag">A collection of online community radio stations from all corners of the world.</p> `);
             Scroller_IMAGES_basic($$renderer3, { items: stationData, onActiveChange: updateActive });
-            $$renderer3.push(`<!----> `);
+            $$renderer3.push(`<!----> <p class="buffer svelte-1uha8ag">Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe.</p> <p class="svelte-1uha8ag">Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.</p> `);
             Featured($$renderer3, { shows: monthlyShows, onShowGlipmse: showActive });
-            $$renderer3.push(`<!----> <p class="buffer svelte-1uha8ag">Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe.</p> <p class="svelte-1uha8ag">Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.</p> <div class="small-print svelte-1uha8ag"><h4 class="svelte-1uha8ag">Contact</h4> <p class="svelte-1uha8ag">email@email.com</p> <p class="svelte-1uha8ag">This project is a labour of love, if you would like to help in any way please get in touch.</p> <br class="svelte-1uha8ag"/> <b class="svelte-1uha8ag">Disclaimer</b> <p class="svelte-1uha8ag">If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p></div>`);
+            $$renderer3.push(`<!----> <div class="small-print buffer svelte-1uha8ag"><h4 class="svelte-1uha8ag">Contact</h4> <p class="svelte-1uha8ag">email@email.com</p> <p class="svelte-1uha8ag">This project is a labour of love, if you would like to help in any way please get in touch. Whether that's to recommend a show, let me know a link is broken etc.</p> <br class="svelte-1uha8ag"/> <b class="svelte-1uha8ag">Disclaimer</b> <p class="svelte-1uha8ag">If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p></div>`);
           } else {
             $$renderer3.push("<!--[!-->");
             Obi($$renderer3, {});

@@ -160,7 +160,7 @@ function Flyover($$renderer, $$props) {
   const each_array = ensure_array_like(stack);
   for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
     let item = each_array[$$index];
-    $$renderer.push(`<img class="img svelte-1pl8ebu"${attr("src", item.src)}/>`);
+    $$renderer.push(`<img alt="a overview of the selected city" class="img svelte-1pl8ebu"${attr("src", item.src)}/>`);
   }
   $$renderer.push(`<!--]--></div>`);
   bind_props($$props, { slug });

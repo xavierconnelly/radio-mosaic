@@ -110,7 +110,8 @@
 .scene {
     width: 80px;
     height: 100%;
-    perspective: 20000px;
+    /* perspective: 20000px; */
+    perspective: 240px;
     position: absolute;
     top: 0;
     left: 50%;

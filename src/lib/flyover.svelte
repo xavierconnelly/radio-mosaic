@@ -18,6 +18,7 @@
 <div class="flyover-wrap">
   {#each stack as item (item.id)}
     <img
+      alt="a overview of the selected city"
       class="img"
       src={item.src}
       on:load={(e) => e.target.classList.add('visible')}
