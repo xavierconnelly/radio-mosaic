@@ -931,7 +931,32 @@ const options = {
   service_worker: false,
   service_worker_options: void 0,
   templates: {
-    app: ({ head, body, assets, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets + '/favicon.ico" />\n		<link rel="style" href="../app.css" />\n		<meta name="viewport" content="width=device-width, initial-scale=1">\n		<title>RADIO MOSAIC</title>\n		<meta name="description" content="Collection of online radios">\n		<meta name="keywords" content="Radio, online">\n		<meta name="author" content="RADIO MOSAIC">\n		<!-- Chrome, Firefox OS and Opera -->\n		<meta name="theme-color" content="#F6F3EF">\n		<!-- Fonts -->\n		<link rel="preconnect" href="https://fonts.googleapis.com">\n		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Funnel+Display:wght@300..800&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">\n		<link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet">\n		' + head + '\n	</head>\n\n	<body data-sveltekit-preload-data="hover">\n		<div id="contents">\n			' + body + "\n		</div>\n	</body>\n</html>\n\n\n<style>\n#contents {\n	/* display: contents; */\n}\n\n	/* media stylings ~ MOBILE */\n	@media (max-width: 500px) {\n		#contents{\n    		height: 100%;\n			overflow-x: hidden;\n			width: 100%;\n			/* display: flex; */\n			/* position: fixed; */\n			top: 0;\n			left: 0;\n		}\n	}\n</style>\n\n\n",
+    app: ({ head, body, assets, nonce, env }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets + `/favicon.ico" />
+		<link rel="style" href="../app.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>RADIO MOSAIC</title>
+		<meta name="description" content="Collection of online radios">
+		<meta name="keywords" content="Radio, online">
+		<meta name="author" content="RADIO MOSAIC">
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#F6F3EF">
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Funnel+Display:wght@300..800&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet">
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CR7JZWETXE"><\/script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-CR7JZWETXE');
+		<\/script>
+
+		` + head + '\n	</head>\n\n	<body data-sveltekit-preload-data="hover">\n		<div id="contents">\n			' + body + "\n		</div>\n	</body>\n</html>\n\n\n<style>\n#contents {\n	/* display: contents; */\n}\n\n	/* media stylings ~ MOBILE */\n	@media (max-width: 500px) {\n		#contents{\n    		height: 100%;\n			overflow-x: hidden;\n			width: 100%;\n			/* display: flex; */\n			/* position: fixed; */\n			top: 0;\n			left: 0;\n		}\n	}\n</style>\n\n\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -1003,7 +1028,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1w9pwkd"
+  version_hash: "jhp1pz"
 };
 async function get_hooks() {
   let handle;

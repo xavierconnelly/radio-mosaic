@@ -149,13 +149,13 @@ function Scroller_IMAGES_basic($$renderer, $$props) {
     bind_props($$props, { items, onActiveChange });
   });
 }
-function HOVERED_SHOW($$renderer, $$props) {
+function Hovered_SHOW($$renderer, $$props) {
   let url = $$props["url"];
   let name = $$props["name"];
   let city = $$props["city"];
   let station = $$props["station"];
   let about = $$props["about"];
-  $$renderer.push(`<a class="show svelte-1jhgz3k"${attr("href", url)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(station)}</span></a> <div id="caption" class="svelte-1jhgz3k">${escape_html(about)}</div>`);
+  $$renderer.push(`<a class="show svelte-1p5664w"${attr("href", url)}><span>${escape_html(city)}</span> <h4>${escape_html(name)}</h4> <span>${escape_html(station)}</span></a> <div id="caption" class="svelte-1p5664w">${escape_html(about)}</div>`);
   bind_props($$props, { url, name, city, station, about });
 }
 function Featured($$renderer, $$props) {
@@ -175,7 +175,7 @@ function Featured($$renderer, $$props) {
     shows[showIndex];
     onShowGlipmse?.(showIndex);
     $$renderer2.push(`<h2 class="svelte-1706gl1">Featured shows</h2> `);
-    HOVERED_SHOW($$renderer2, {
+    Hovered_SHOW($$renderer2, {
       name: monthlyShows[(showIndex + 0) % monthlyShows.length].name,
       url: monthlyShows[(showIndex + 0) % monthlyShows.length].url,
       city: monthlyShows[(showIndex + 0) % monthlyShows.length].city,
@@ -188,7 +188,7 @@ function Featured($$renderer, $$props) {
       $$renderer2.push(`<a${attr("href", show.url)} class="face svelte-1706gl1" target="_blank"${attr_style(`transform: rotateY(${stringify(i * angleStep)}deg) translateZ(${stringify(radius)}em);`)}><div class="facepaint svelte-1706gl1"${attr_style(`background-image: url(../images/featuredShows/${stringify(show.slug)}.webp)`)}><span id="name" class="svelte-1706gl1">${escape_html(show.name)}</span></div></a>`);
     }
     $$renderer2.push(`<!--]--></div></div></div> `);
-    HOVERED_SHOW($$renderer2, {
+    Hovered_SHOW($$renderer2, {
       about: monthlyShows[(showIndex + 0) % monthlyShows.length].about,
       url: monthlyShows[(showIndex + 0) % monthlyShows.length].url
     });
