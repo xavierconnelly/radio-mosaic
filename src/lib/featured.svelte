@@ -2,7 +2,9 @@
     import { spring } from 'svelte/motion';
     import { onMount } from 'svelte';
     import { HOVEREREDFEATURE, monthlyShows } from '/src/routes/stations/featured.js';
-    import HoveredShow from '$lib/hovered-SHOW.svelte';
+    // import HoveredShow from '$lib/hovered-SHOW.svelte';
+    import HoveredShow from '/src/lib/hovered-SHOW.svelte';
+
 
 
     export let shows = [];
