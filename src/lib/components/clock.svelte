@@ -101,6 +101,19 @@
 </script>
 
 <div id="house" class="house-{variant}">
+
+<!-- Mobile: mark then data sit below the clock in natural flow -->
+{#if mobile.matches && mobileStation}
+    <div class="mobile-station">
+        <div class="stationHoverDetails">
+            <span class="city">{mobileStation.city}</span>
+            <span class="name">{mobileStation.name}</span>
+            <span class="country">{mobileStation.country}</span>
+        </div>
+        <div class="six-mark"></div>
+    </div>
+{/if}
+
     <div class="alessi" bind:this={houseEl}>
         <div bind:this={clockEl} class="clock clock-{variant}">
             {#each stationData as station, i}
@@ -116,25 +129,13 @@
         </div>
     </div>
 
-<!-- Mobile: mark then data sit below the clock in natural flow -->
-{#if mobile.matches && mobileStation}
-    <div class="mobile-station">
-        <div class="six-mark"></div>
-        <div class="stationHoverDetails">
-            <span class="city">{mobileStation.city}</span>
-            <span class="name">{mobileStation.name}</span>
-            <span class="country">{mobileStation.country}</span>
-        </div>
-    </div>
-{:else}
-    {#if hovered}
+    {#if !mobile.matches && hovered}
         <div class="stationHoverDetails">
             <span class="city">{hovered.city} <span class="time">{hoveredTime}</span></span>
             <span class="name">{hovered.name}</span>
             <span class="country">{hovered.country}</span>
         </div>
     {/if}
-{/if}
     <div class="tbc">
         A Radio Mosaic é uma comunidade, um movimento, uma forma de reunir o passado, o futuro e o presente ao mesmo tempo. Embora vivamos em cantos fragmentados do globo, somos todos um só. É uma comunidade, um movimento, uma forma de reunir o passado, o futuro e o presente ao mesmo tempo. Embora vivamos em cantos fragmentados do globo, somos todos um só.
     </div>
@@ -178,7 +179,7 @@
         width: 400px;
         display: flex;
         align-items: center;
-        background-color: var(--bg);
+        /* background-color: var(--bg); */
         position: relative;
     }
 
@@ -223,8 +224,6 @@
         flex-direction: row;
         font-size: 10px;
         justify-content: space-between;
-        /* position: absolute; */
-        bottom: 10px;
         width: 100%;
         color: var(--fg);
         padding: 0px 10px 15px 10px;
@@ -285,6 +284,10 @@
         }
         .house-corner {
             height: auto;
+            background-color: var(--fg);
+            background-color: unset;
+            border-left: unset;
+            border-top: 1px solid var(--yang)
         }
         .house-corner .alessi {
             min-height: calc(100vw - 40px);
@@ -303,19 +306,21 @@
             height: 95%;
             width: 95%;
         }
-
-    }
-
-    @media (max-width: 700px) {
         .mobile-station {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            padding: 4px 0 16px;
+            padding: 16px 0 4px;
             width: 100%;
-            color: var(--fg);
+            color:  var(--yang);
             font-size: 10px;
+        }
+
+        .stationHoverDetails {
+            width: 100%;
+            color:  var(--yang);
+            padding: 15px 10px 0px 10px;
         }
 
         /* Subtle tick at 6 o'clock — sits between clock edge and station label */

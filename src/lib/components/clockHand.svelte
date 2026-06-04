@@ -162,6 +162,13 @@
         font-size: 5px;
         line-height: 14px;
     }
+    .hand-corner .details .name {
+       color:  var(--yang);
+    }    
+
+    .hand-corner {
+        border-top: 0.5px solid var(--bg);
+    }
     .hand-hero .details .name {
         padding-right: 0px;
         font-size: 5px;
@@ -173,7 +180,6 @@
     }
     .details .utc {
         color:  var(--yang);
-
     }
 }
 </style>
