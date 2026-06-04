@@ -293,6 +293,7 @@
             min-height: 70vw;
             width: 70vw;
             height: auto;
+            padding-bottom: 50px;
         }
 
         .house-hero .alessi {
@@ -307,7 +308,14 @@
             left: 50%;
         }
         
+        .house-hero .mobile-station {
+            color:  var(--yin);
+        }
         
+        .house-hero .stationHoverDetails {
+            color:  var(--yin);
+        }             
+
         .house-corner {
             height: auto;
             background-color: var(--fg);
@@ -339,13 +347,18 @@
             gap: 20px;
             padding: 16px 0 4px;
             width: 100%;
-            color:  var(--yang);
             font-size: 10px;
         }
 
+        .house-corner .mobile-station {
+            color:  var(--yang);
+        }
+        .house-corner .stationHoverDetails {
+            color:  var(--yin);
+        }        
+
         .stationHoverDetails {
             width: 100%;
-            color:  var(--yang);
             padding: 15px 10px 0px 10px;
         }
 

@@ -20,6 +20,7 @@
 
 <style>
 .show {
+    color: var(--yang);
     font-size: 11px;
     text-transform: uppercase;
     height: 28px;

@@ -103,6 +103,10 @@
     Featured shows
 </h2>
 
+<p>
+    A selection of our favourite presenters from across the globe
+</p>
+
 <HoveredShow  
     name={activeMonthlyShow.name}
     url={activeMonthlyShow.url}
@@ -137,14 +141,18 @@
     url={activeMonthlyShow.url}
 />
 
-<p>
-    A selection of our favourite presenters from across the globe
-</p>
-
 
 <style>
 h2 {
-    padding-top: 80px;
+    padding: 80px 10px 0px;
+    color: var(--yang);
+}
+p {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 20px 10px 60px 10px;
+    font-weight: 600;
+    color: var(--yang);
 }
 
 #box {
@@ -221,12 +229,5 @@ h2 {
     left: 0px;
     margin: 10px;
     font-family: monospace;
-}
-
-p {
-    font-size: 24px;
-    line-height: 26px;
-    padding: 20px 10px 60px 10px;
-    font-weight: 600;
 }
 </style>

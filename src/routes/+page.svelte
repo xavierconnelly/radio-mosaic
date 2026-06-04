@@ -46,7 +46,7 @@
         <p>
             Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
         </p>
-        <p>
+        <p class="last">
             Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.
         </p>
 
@@ -82,10 +82,12 @@
 <style>
     #display-font{
         color: inherit;
-        margin-top: 30px;
+        /* margin-top: 30px; */
         padding: 10px 20px;
-        font-size: 40px;
-        line-height: 44px;
+        padding: 0 10px;
+        font-size: 16px;
+        line-height: 32px;
+        border-bottom: 1px solid;
         font-weight: 800;
         display: flex;
         flex-direction: row;
@@ -127,10 +129,10 @@
 }
 @media (max-width: 500px) {
     #tagline {
-        font-size: 28px;
-        line-height: 32px;
-        font-weight: 600;
-        padding-bottom: 40px;
+        padding-top: 20vh;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: 800;
         color: var(--yang);
     }
     .buffer {
@@ -142,10 +144,13 @@
         padding: 10px;
     }
     p {
-        font-size: 20px;
-        line-height: 22px;
-        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 500;
         position: relative;
+    }
+    .last {
+        padding-bottom: 40px;
     }
     .small-print {
         padding: 40px 0px 120px 0px;
