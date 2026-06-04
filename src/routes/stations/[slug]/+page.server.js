@@ -1,5 +1,5 @@
-import { error } from '@sveltejs/kit';
-    import { stationData } from '/src/routes/stations/radioData.js';
+import { error } 						from '@sveltejs/kit';
+import { ui, stationData } 				from '$lib/data/stations.svelte.js';
 
 export function load({ params }) {
   const station = stationData.find(s => s.slug === params.slug);

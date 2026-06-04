@@ -1,52 +1,19 @@
 <script>
-    // local components
-	import ClockSmall from './clock-STATIONS.svelte';
+    import { page }                         from '$app/state';
+    import { INDEX, updateIndexFromSlug }   from '$lib/utils/store.js';
+	import { ui, stationData } 				from '$lib/data/stations.svelte.js';
+	// import Audio                         from '$lib/audio.svelte';
 
-    // shared components
-	// import Audio from '$lib/audio.svelte';
-	import MediaQuery from '$lib/mediaQuery.svelte';
+    let { children } = $props();
 
-    // passing in data
-	import '/src/app.css'
-    import { page } from '$app/stores';
-    import { INDEX, updateIndexFromSlug } from '$lib/store.js';
-    import { stationData } from '/src/routes/stations/radioData.js';
-
-    // Keep INDEX synced with the current URL slug
-    $: if ($page.params.slug) {
-        updateIndexFromSlug($page.params.slug, stationData);
-    }
+    // Syncs INDEX to the URL slug.
+    // Revisit once you've decided whether INDEX means "viewed" or "playing" —
+    // if "playing", this shouldn't run on navigation.
+    $effect(() => {
+        if (page.params.slug) {
+            updateIndexFromSlug(page.params.slug, stationData);
+        }
+    });
 </script>
 
-<!-- <Audio/> -->
-<slot />
-
-
-<MediaQuery query="(min-width: 700px)" let:matches>
-    {#if matches}
-        <ClockSmall/>
-    {/if}
-
-   <header>
-    <a href="/">
-        <h1 class="medula-one-regular">
-            RADIO MOSAIC
-        </h1>
-    </a>
-</header> 
-</MediaQuery>
-
-<div class="shell highlight" style="background:#{stationData[$INDEX].tint}"> 
-</div>
-
-<style>
-.shell {
-    height: calc(40vh + 28px);
-    width: 100vw;
-    transition: background 2s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-</style>
+{@render children()}

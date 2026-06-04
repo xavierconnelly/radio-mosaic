@@ -1,63 +1,48 @@
 <script>
     // passing in data
-    import { HOVER, stationData } from '/src/routes/stations/radioData.js';
-    import { HOVEREREDFEATURE, monthlyShows } from '/src/routes/stations/featured.js';
-
-    import '../app.css'
+	import { ui, stationData } 				    from '$lib/data/stations.svelte.js';
+    import { monthlyShows }                     from '$lib/data/featured.js';
 
     // shared components
-	import MediaQuery from '$lib/mediaQuery.svelte';
-    import ScrollerImages from "$lib/scroller-IMAGES-basic.svelte"; 
-    import FeaturedShows from "$lib/featured.svelte"; 
-	import Obi from '$lib/obi.svelte';
-    import Flyover from '$lib/flyover.svelte';
-    // import Grid from '$lib/grid.svelte';
-
+    import { mediaQuery }                       from '$lib/utils/mediaQuery.svelte.js';
+    import ScrollerImages                       from "$lib/layout/scroller-IMAGES-basic.svelte"; 
+    import FeaturedShows                        from "$lib/layout/featured.svelte"; 
+    import Flyover                              from '$lib/layout/flyover.svelte';
+    // import Grid                              from '$lib/grid.svelte';
 
     // local components
-	import ClockHome from './clock-HOME.svelte';
+	// import ClockHome                         from './clock-HOME.svelte';
 
-    // hovering things
-    $: moused = $HOVER;
+    const mobile = mediaQuery('(max-width: 700px)');
 
     // scrolling dial
-	let activeIndex = 0;
+	let activeIndex = $state(0);
 
 	function updateActive(i) {
 		activeIndex = i;
 	}
 
     // Featured shows
-    $: show = $HOVEREREDFEATURE;
-
-    let showIndex = 0;
+    let showIndex = $state(0);
 
 	function showActive(i) {
 		showIndex = i;
 	}
-
-    // flyover
-    // import { onMount } from 'svelte';
-
-    // onMount(() => {
-    //     stationData.forEach(s => {
-    //     const img = new Image();
-    //     img.src = `/images/glimpse/${s.slug}1x.webp`;
-    //     });
-    // });
 </script>
 
-<MediaQuery query="(max-width: 700px)" let:matches>
-    {#if matches}
+{#if mobile.matches}
         <div id="display-font">
-            <h1 class="medula-one-regular">Radio</h1>
-            <h1 class="medula-one-regular">Mosaic</h1>
+            <h1>Radio</h1>
+            <h1>Mosaic</h1>
         </div>
     
-        <ClockHome />
+        <!-- <ClockHome /> -->
     
         <p id="tagline">
             A collection of online community radio stations from all corners of the world.
+        </p>
+        <p>
+            Over the past decade or more online community radio has blossomed, creating a space outside of traditional channels. This site brings together those stations from each corner of the world.
         </p>
 
         <ScrollerImages items={stationData} onActiveChange={updateActive} />
@@ -82,26 +67,19 @@
             <p>If your station is listed and you prefer it wasn't, sorry, please contact me and I'll take it down</p>
         </div>
     {:else}
-        <Obi />
-        <ClockHome />
         <div class="image-wrap">
-            {#if stationData[moused]}
+            {#if stationData[ui.hover]}
                 <div class="local">
-                    <p>{stationData[moused].city}</p>
-                    <p>{stationData[moused].country}</p>
+                    <p>{stationData[ui.hover].city}</p>
+                    <p>{stationData[ui.hover].country}</p>
                 </div>
-                <Flyover slug={stationData[moused].slug} />
+                <Flyover slug={stationData[ui.hover].slug} />
             {/if}           
         </div>
     {/if}
-</MediaQuery>
 
 
 <style>
-
-:global(body) {
-    background-color: var(--yin);
-}
     #display-font{
         color: inherit;
         margin-top: 30px;

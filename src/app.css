@@ -4,13 +4,25 @@
     font-display: swap
 }
 
+/* Sun movements */
+:root[data-stage="dawn"]                { --bg: #807A76; --mg: #392C26; --fg: #392C26; --blend: soft-light; --tx: 1}
+/* :root[data-stage="sunrise"]             { --bg: #D3CAC5; --fg: #392C26; } */
+:root[data-stage="morning"]             { --bg: #D3CAC5; --mg: #807A76; --fg: #392C26; --blend: soft-light; --tx: 1}
+:root[data-stage="noon"]                { --bg: #F6F3F0; --mg: #807A76; --fg: #392C26; --blend: soft-light; --tx: 1}
+:root[data-stage="afternoon"]           { --bg: #D3CAC5; --mg: #807A76; --fg: #392C26; --blend: soft-light; --tx: 1}
+/* :root[data-stage="sunset"]              { --bg: #D3CAC5; --fg: #392C26; } */
+:root[data-stage="dusk"]                { --bg: #807A76; --mg: #392C26; --fg: #392C26; --blend: soft-light; --tx: 1}
+/* :root[data-stage="twilight"]            { --bg: #3a2418; --fg: #f0c896; } */
+:root[data-stage="night"]               { --bg: #392C26; --mg: #807A76; --fg: #F6F3F0; --blend: multiply; --tx: 0.3}
+
+
 :root {
     --yin: #F6F3F0;
     --yang: #392C26;
-  }
+}
 
-  .yin { background-color: var(--yin)}
-  .yang { background-color: var(--yang)}
+.yin { background-color: var(--bg)}
+.yang { background-color: var(--fg)}
 
 * {
     /* font-size: 16px; */
@@ -30,13 +42,13 @@
     font-optical-sizing: auto;
 }
 
-html,
+/* html,
 body,
 #app {
     height: 100%;
-    background: var(--yin);
-    color: var(--yang);
-}
+    background: var(--yang);
+    color: var(--yin);
+} */
 
 body {
     width: 100vw;
@@ -47,10 +59,19 @@ a {
     color: inherit;
 	cursor: pointer;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
-.medula-one-regular {
-  font-family: "Medula One", system-ui;
-  font-weight: 400;
-  font-style: normal;
+h4 {
+    all: unset;
+        font-weight: bold;
+
+}
+
+:root {
+    --header-h: 32px;
+    --clock-w: 0px;  /* hero variant — clock fills right panel */
+}
+:root[data-route="station"] {
+    --clock-w: 380px;  /* corner variant — clock reserves this space */
 }
