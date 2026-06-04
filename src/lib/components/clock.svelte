@@ -100,14 +100,15 @@
             rotation += d;
             gsap.set(clockEl, { rotation });                       // track the finger exactly
             const dt = e.timeStamp - lastT;
-            if (dt > 0) velocity = d / dt;
+            if (dt > 0) velocity = velocity * 0.6 + (d / dt) * 0.4; // smoothed, so flicks read reliably
             lastAngle = a;
             lastT = e.timeStamp;
         }
 
-        function onTouchEnd() {
+        function onTouchEnd(e) {
+            if (e.timeStamp - lastT > 120) return; // paused before lifting → not a flick
             let v = velocity * 16;                 // deg per ~16ms frame at release
-            if (Math.abs(v) < 0.2) return;         // gentle release: just stop where it is
+            if (Math.abs(v) < 0.15) return;        // gentle release: just stop where it is
             const spin = () => {
                 v *= 0.96;                         // friction
                 rotation += v;
@@ -207,6 +208,7 @@
 
     .alessi {
         width: 100%;
+        touch-action: none;   /* own touch gestures so light swipes spin the dial instead of scrolling the page */
     }
 
     .house-corner .alessi {
