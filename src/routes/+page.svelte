@@ -8,6 +8,7 @@
     import ScrollerImages                       from "$lib/layout/scroller-IMAGES-basic.svelte"; 
     import FeaturedShows                        from "$lib/layout/featured.svelte"; 
     import Flyover                              from '$lib/layout/flyover.svelte';
+    import Clock                                from '$lib/components/clock.svelte';
     // import Grid                              from '$lib/grid.svelte';
 
     // local components
@@ -35,28 +36,27 @@
             <h1>Radio</h1>
             <h1>Mosaic</h1>
         </div>
-    
-        <!-- <ClockHome /> -->
-    
+
         <p id="tagline">
             A collection of online community radio stations from all corners of the world.
         </p>
         <p>
             Over the past decade or more online community radio has blossomed, creating a space outside of traditional channels. This site brings together those stations from each corner of the world.
         </p>
-
-        <ScrollerImages items={stationData} onActiveChange={updateActive} />
-
-        <p class="buffer">
+        <p>
             Though is a also community, a movement a way of bringing the past, future and present together at once. This site hopes to connect disparate but connected communities from across the globe. 
         </p>
         <p>
-            Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one. 
+            Music naturally brings people together. While we may live in fragmented corners of the globe, we are all one. is a community, a movement a way of bringing the past, future and present together at once. While we may live in fragmented corners of the globe, we are all one.
         </p>
 
-        <FeaturedShows shows={monthlyShows} onShowGlipmse={showActive}/>
+        <!-- Mobile-only: clock flows here between intro and featured shows.
+             On desktop the layout renders the persistent clock instead. -->
+        <Clock variant="hero" />
 
         <!-- <Grid /> -->
+        <!-- <ScrollerImages items={stationData} onActiveChange={updateActive} /> -->
+        <FeaturedShows shows={monthlyShows} onShowGlipmse={showActive}/>
 
         <div class="small-print buffer">
             <h4>Contact</h4>

@@ -37,7 +37,13 @@
     {#if !mobile.matches}
         <Obi {variant} />
    {/if}  
-<Clock {variant} />
+
+    <!-- Persistent clock for every route EXCEPT mobile-home (the home page
+         renders its own there so it can flow between the intro and featured shows).
+         Keeping it here on all desktop routes preserves the home→station transition. -->
+    {#if !(mobile.matches && page.route.id === '/')}
+        <Clock {variant} />
+    {/if}
 
     <div class="tbc">
         A Radio Mosaic é uma comunidade, um movimento, uma forma de reunir o passado, o futuro e o presente ao mesmo tempo. Embora vivamos em cantos fragmentados do globo, somos todos um só. É uma comunidade, um movimento, uma forma de reunir o passado, o futuro e o presente ao mesmo tempo. Embora vivamos em cantos fragmentados do globo, somos todos um só.

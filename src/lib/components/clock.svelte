@@ -284,6 +284,30 @@
             /* top: -40px; */
             /* background-color: unset; */
         }
+         /* .house-hero {
+            display: none;
+         } */
+        .house-hero {
+            min-height: calc(100vw - 40px);
+            width: calc(100vw - 40px);
+            min-height: 70vw;
+            width: 70vw;
+            height: auto;
+        }
+
+        .house-hero .alessi {
+            min-height: calc(100vw - 40px);
+            width: calc(100vw - 40px);
+            min-height: 70vw;
+            width: 70vw;
+            position: relative;
+        }
+        .house-hero .alessi .clock {
+            top: 50%;
+            left: 50%;
+        }
+        
+        
         .house-corner {
             height: auto;
             background-color: var(--fg);
@@ -296,7 +320,7 @@
             width: calc(100vw - 40px);
             min-height: 70vw;
             width: 70vw;
-            /* background-color: unset; */
+            position: relative;
         }
         .clock-corner {
             top: 50%;
