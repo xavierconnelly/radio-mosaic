@@ -87,6 +87,7 @@
         padding: 0 10px;
         font-size: 16px;
         line-height: 32px;
+        text-transform: uppercase;
         border-bottom: 1px solid;
         font-weight: 800;
         display: flex;
