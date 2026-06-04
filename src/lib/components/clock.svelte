@@ -192,6 +192,8 @@
     }
 
     .clock-hero {
+            mix-blend-mode: luminosity;
+
         position: absolute;
         top: 50%;
         left: 50%;

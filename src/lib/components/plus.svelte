@@ -37,8 +37,7 @@
 
 {#if $INDEX !== null}
 	{#if mobile.matches}
-		<a	data-sveltekit-noscroll 
-			href="/stations/{stationData[nextIndex].slug}"
+		<a	href="/stations/{stationData[nextIndex].slug}"
 			class="scanning plus"
 			style="color: var(--yang)"
 			aria-label="button"
@@ -48,8 +47,7 @@
 			</svg>
 		</a>
 	{:else}
-		<a	data-sveltekit-noscroll 
-			href="/stations/{stationData[nextIndex].slug}"
+		<a	href="/stations/{stationData[nextIndex].slug}"
 			class="scanning plus"
 		>
 			{stationData[nextIndex].name}

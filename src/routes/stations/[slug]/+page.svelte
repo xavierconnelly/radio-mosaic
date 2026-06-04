@@ -50,6 +50,16 @@
     // currently hovered station (desktop glimpse)
     let moused = $derived(ui.hover);
 
+    // reset scroll to top when navigating between stations.
+    // #main is its own scroll container (overflow: scroll) on desktop, so
+    // SvelteKit's window-level reset can't reach it — do it manually.
+    let mainEl = $state();
+    $effect(() => {
+        station.slug;                  // re-run whenever the station changes
+        mainEl?.scrollTo({ top: 0 });
+        window.scrollTo({ top: 0 });
+    });
+
     // flyover preload
     // import { onMount } from 'svelte';
     // onMount(() => {
@@ -83,7 +93,7 @@
         </span>
     </nav>
 
-    <div id="main">
+    <div id="main" bind:this={mainEl}>
         <div id="wallpaper" style="background-image: url(../images/flyover/{station.slug}.webp)">
             <Minus />
             <Plus />
@@ -107,7 +117,7 @@
     <!-- title and main view -->
     <h2 style="color: #{station.title};">{station.name}</h2>
 
-    <div id="main">
+    <div id="main" bind:this={mainEl}>
         <div id="wallpaper" style="background-image: url(../images/flyover/{station.slug}.webp)">
             <Minus />
             <Plus />

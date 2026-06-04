@@ -12,7 +12,7 @@
 <a  href="/stations/{slug}"
     class="hand hand-{variant}"
     onmouseenter={mouseOver}
-    style="transform: rotate(calc({i} * {radius}deg)) translateX(50%)">
+    style="transform: rotate(calc({i} * {radius}deg)) translateX(50%); background: #{tint}">
     <span class="details">
         <span class="name">{name}</span>
         <span class="utc">{utc}</span>
@@ -35,9 +35,9 @@
 
 .hand-hero {
     /* the top must minus half the height ~ maybe better as 6 + 3 */
-    height: 28px;
-    top: calc(50% - 14px); 
-    border-bottom-left-radius: 28px;
+    height: 32px;
+    top: calc(50% - 16px); 
+    border-bottom-left-radius: 32px;
     /* border-radius: 3px; */
     color: var(--yang);
     border-top: 0.5px solid var(--yin);

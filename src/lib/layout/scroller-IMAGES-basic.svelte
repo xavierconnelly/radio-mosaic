@@ -17,13 +17,15 @@
     let angleStep = $derived(360 / count);
     let radius = $derived((faceWidth / 2) / Math.tan(Math.PI / count));
 
-    let rot   = $state(0);   // rendered rotation (deg), driven by GSAP
-    let rawX  = 0;           // target rotation we're tweening toward
+    // GSAP drives the spinner's rotateY directly on the DOM element — no per-frame
+    // Svelte state writes (that reactive flush every frame was the mobile freeze).
+    // Only activeIndex is reactive, written solely when the centred face changes.
+    let spinnerEl;           // the rotating ring (bind:this)
+    let target   = 0;        // rotation we're tweening toward (deg)
     let rotateTo;            // gsap.quickTo setter
     let snapTimer;
 
-    let angle = $derived(((rot % 360) + 360) % 360);
-    let activeIndex = $derived(Math.floor((angle + angleStep / 2) / angleStep) % count);
+    let activeIndex   = $state(0);
     let activeStation = $derived(stationData[activeIndex % stationData.length]);
 
     $effect(() => {
@@ -33,21 +35,28 @@
     let lastTouch = null;
     let boxEl = $state();
 
+    // read the live rotation straight off the element; update the index only on change
+    function refreshActive() {
+        const rot = -gsap.getProperty(spinnerEl, 'rotationY');
+        const angle = ((rot % 360) + 360) % 360;
+        const idx = Math.floor((angle + angleStep / 2) / angleStep) % count;
+        if (idx !== activeIndex) activeIndex = idx;
+    }
+
     onMount(() => {
         // start on a random face
-        rawX = Math.floor(Math.random() * count) * angleStep;
-        rot  = rawX;
+        target = Math.floor(Math.random() * count) * angleStep;
+        gsap.set(spinnerEl, { rotationY: -target });
+        refreshActive();
 
-        // GSAP smooths every retarget; power3.out settles without spring overshoot
-        const proxy = { v: rawX };
-        rotateTo = gsap.quickTo(proxy, 'v', {
+        rotateTo = gsap.quickTo(spinnerEl, 'rotationY', {
             duration: 0.6,
             ease: 'power3.out',
-            onUpdate: () => { rot = proxy.v; }
+            onUpdate: refreshActive
         });
 
         return () => {
-            gsap.killTweensOf(proxy);
+            gsap.killTweensOf(spinnerEl);
             clearTimeout(snapTimer);
         };
     });
@@ -56,15 +65,15 @@
     function scheduleSnap() {
         clearTimeout(snapTimer);
         snapTimer = setTimeout(() => {
-            rawX = Math.round(rawX / angleStep) * angleStep;
-            rotateTo?.(rawX);
+            target = Math.round(target / angleStep) * angleStep;
+            rotateTo?.(-target);
         }, 140);
     }
 
     function onWheel(e) {
         e.preventDefault();
-        rawX += e.deltaX || e.deltaY;
-        rotateTo?.(rawX);
+        target += e.deltaX || e.deltaY;
+        rotateTo?.(-target);
         scheduleSnap();
     }
 
@@ -75,9 +84,9 @@
     function onTouchMove(e) {
         e.preventDefault();
         const delta = lastTouch - e.touches[0].clientX;
-        rawX += delta;
+        target += delta;
         lastTouch = e.touches[0].clientX;
-        rotateTo?.(rawX);
+        rotateTo?.(-target);
         scheduleSnap();
     }
 
@@ -109,17 +118,19 @@
         bind:this={boxEl}
         ontouchstart={onTouchStart}>
     <div class="scene">
-        <div class="cube" style="transform: translateZ(-{radius}em) rotateY(-{rot}deg)">
-            {#each items as item, i}
-                <a  href="/stations/{item.slug}" class="face"
-                    style="transform: rotateY({i * angleStep}deg) translateZ({radius}em); background-color: #{item.tint}">
-                    <div class="facepaint" style="background-image: url(../images/small/{item.slug}1x.webp)">
-                        <span id="name" style="background-color: #{item.tint}; color: var(--yang)">
-                            {item.name}
-                        </span>
-                    </div>
-                </a> 
-            {/each}
+        <div class="cube" style="transform: translateZ(-{radius}em)">
+            <div class="spinner" bind:this={spinnerEl}>
+                {#each items as item, i}
+                    <a  href="/stations/{item.slug}" class="face"
+                        style="transform: rotateY({i * angleStep}deg) translateZ({radius}em); background-color: #{item.tint}">
+                        <div class="facepaint" style="background-image: url(../images/small/{item.slug}1x.webp)">
+                            <span id="name" style="background-color: #{item.tint}; color: var(--yang)">
+                                {item.name}
+                            </span>
+                        </div>
+                    </a>
+                {/each}
+            </div>
         </div>
     </div>
 </div>
@@ -153,6 +164,13 @@
     width: 100%;
     height: 100%;
     position: relative;
+    transform-style: preserve-3d;
+}
+
+.spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     transform-style: preserve-3d;
 }
 
