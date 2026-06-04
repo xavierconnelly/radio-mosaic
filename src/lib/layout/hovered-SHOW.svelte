@@ -2,23 +2,27 @@
     let { url, name, city, station, about } = $props();
 </script>
 
+<span>
+    <a class="show" href="{url}">
+        <span>{city}</span>
+        <h4>{name}</h4>
+        <span>{station}</span>
 
-<a class="show" href="{url}">
-    <span>{city}</span>
-    <h4>{name}</h4>
-    <span>{station}</span>
+    </a>
 
-</a>
+    <!-- need to move this  -->
 
-<!-- need to move this  -->
-
-<div id="caption">
-    {about}
-</div>
-
+    <div id="caption">
+        {about}
+    </div>
+</span>
 
 
 <style>
+
+span {
+    width: 50%;
+}
 .show {
     color: var(--yang);
     font-size: 11px;

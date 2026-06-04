@@ -69,32 +69,67 @@
             rotateTo(rotation);
         }
 
-        // Touch: horizontal drag spins the clock
-        let touchStartX = 0;
-        let rotationAtTouchStart = 0;
+        // Touch: grab & spin around the centre like a record.
+        // 1:1 while the finger is down (no easing), then a flick coasts to a stop.
+        let centreX = 0, centreY = 0;
+        let lastAngle = 0, lastT = 0, velocity = 0;   // velocity in deg/ms
+        let momentumId = 0;
+
+        const angleAt = (x, y) => Math.atan2(y - centreY, x - centreX) * 180 / Math.PI;
+
+        function stopMomentum() {
+            if (momentumId) { cancelAnimationFrame(momentumId); momentumId = 0; }
+        }
 
         function onTouchStart(e) {
-            touchStartX = e.touches[0].clientX;
-            rotationAtTouchStart = rotation;
+            stopMomentum();
+            gsap.killTweensOf(clockEl);
+            const r = clockEl.getBoundingClientRect();
+            centreX = r.left + r.width / 2;
+            centreY = r.top  + r.height / 2;
+            lastAngle = angleAt(e.touches[0].clientX, e.touches[0].clientY);
+            lastT = e.timeStamp;
+            velocity = 0;
         }
 
         function onTouchMove(e) {
             e.preventDefault();
-            const dx = e.touches[0].clientX - touchStartX;
-            rotation = rotationAtTouchStart + dx * 0.5;
-            rotateTo(rotation);
+            const a = angleAt(e.touches[0].clientX, e.touches[0].clientY);
+            let d = a - lastAngle;
+            if (d > 180) d -= 360; else if (d < -180) d += 360;   // unwrap across ±180
+            rotation += d;
+            gsap.set(clockEl, { rotation });                       // track the finger exactly
+            const dt = e.timeStamp - lastT;
+            if (dt > 0) velocity = d / dt;
+            lastAngle = a;
+            lastT = e.timeStamp;
+        }
+
+        function onTouchEnd() {
+            let v = velocity * 16;                 // deg per ~16ms frame at release
+            if (Math.abs(v) < 0.2) return;         // gentle release: just stop where it is
+            const spin = () => {
+                v *= 0.96;                         // friction
+                rotation += v;
+                gsap.set(clockEl, { rotation });
+                momentumId = Math.abs(v) > 0.1 ? requestAnimationFrame(spin) : 0;
+            };
+            momentumId = requestAnimationFrame(spin);
         }
 
         houseEl.addEventListener('wheel',      onWheel,      { passive: false });
         houseEl.addEventListener('touchstart', onTouchStart, { passive: true  });
         houseEl.addEventListener('touchmove',  onTouchMove,  { passive: false });
+        houseEl.addEventListener('touchend',   onTouchEnd,   { passive: true  });
 
         const tick = setInterval(() => { now = new Date(); }, 1000);
 
         return () => {
+            stopMomentum();
             houseEl.removeEventListener('wheel',      onWheel);
             houseEl.removeEventListener('touchstart', onTouchStart);
             houseEl.removeEventListener('touchmove',  onTouchMove);
+            houseEl.removeEventListener('touchend',   onTouchEnd);
             clearInterval(tick);
         };
     });
@@ -344,7 +379,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 10px;
             padding: 16px 0 4px;
             width: 100%;
             font-size: 10px;

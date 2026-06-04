@@ -154,6 +154,8 @@
     }
     .small-print {
         padding: 40px 0px 120px 0px;
+        background-color: var(--yang);
+        color: var(--yin);
     }
     .small-print * {
         font-size: 14px;

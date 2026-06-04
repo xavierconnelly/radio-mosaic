@@ -21,6 +21,7 @@
     let target   = 0;        // rotation we're tweening toward (deg)
     let rotateTo;            // gsap.quickTo setter
     let snapTimer;
+    let velocity = 0, lastT = 0, momentumId = 0;   // flick momentum
 
     let showIndex         = $state(0);
     let activeMonthlyShow = $derived(monthlyShows[showIndex % monthlyShows.length]);
@@ -53,6 +54,7 @@
         });
 
         return () => {
+            stopMomentum();
             gsap.killTweensOf(spinnerEl);
             clearTimeout(snapTimer);
         };
@@ -74,17 +76,53 @@
         scheduleSnap();
     }
 
+    function stopMomentum() {
+        if (momentumId) { cancelAnimationFrame(momentumId); momentumId = 0; }
+    }
+
+    function settle() {
+        target = Math.round(target / angleStep) * angleStep;
+        rotateTo?.(-target);                            // eased settle onto the nearest face
+    }
+
     function onTouchStart(e) {
+        stopMomentum();
+        clearTimeout(snapTimer);
+        gsap.killTweensOf(spinnerEl);
         lastTouch = e.touches[0].clientX;
+        lastT = e.timeStamp;
+        velocity = 0;
     }
 
     function onTouchMove(e) {
         e.preventDefault();
-        const delta = lastTouch - e.touches[0].clientX;
+        const x = e.touches[0].clientX;
+        const delta = lastTouch - x;
         target += delta;
-        lastTouch = e.touches[0].clientX;
-        rotateTo?.(-target);
-        scheduleSnap();
+        gsap.set(spinnerEl, { rotationY: -target });    // 1:1 with the finger, no easing lag
+        refreshActive();
+        const dt = e.timeStamp - lastT;
+        if (dt > 0) velocity = delta / dt;
+        lastTouch = x;
+        lastT = e.timeStamp;
+    }
+
+    function onTouchEnd() {
+        let v = velocity * 16;                          // px(≈deg) per ~16ms frame at release
+        if (Math.abs(v) < 0.2) { settle(); return; }    // gentle release → just settle
+        const coast = () => {
+            v *= 0.94;                                  // friction
+            target += v;
+            gsap.set(spinnerEl, { rotationY: -target });
+            refreshActive();
+            if (Math.abs(v) > 0.3) {
+                momentumId = requestAnimationFrame(coast);
+            } else {
+                momentumId = 0;
+                settle();
+            }
+        };
+        momentumId = requestAnimationFrame(coast);
     }
 
     // wheel/touchmove must be non-passive to preventDefault.
@@ -116,9 +154,16 @@
 
 <div    id="box"
         bind:this={boxEl}
-        ontouchstart={onTouchStart}>
+        ontouchstart={onTouchStart}
+        ontouchend={onTouchEnd}>
+
+        <HoveredShow  
+            about={activeMonthlyShow.about}
+            url={activeMonthlyShow.url}
+        />
 
     <div class="scene">
+
         <div class="cube" style="transform: translateZ(-{radius}em)">
             <div class="spinner" bind:this={spinnerEl}>
                 {#each shows as show, i}
@@ -136,12 +181,6 @@
     </div>
 </div>
 
-<HoveredShow  
-    about={activeMonthlyShow.about}
-    url={activeMonthlyShow.url}
-/>
-
-
 <style>
 h2 {
     padding: 80px 10px 0px;
@@ -158,7 +197,9 @@ p {
 #box {
     z-index: 99;
 	overflow: hidden;
-    position: sticky;
+    position: relative;
+    display: flex;
+    flex-direction: row;
     top: -10vh;
     width: 100vw;
     height: 40vh;
@@ -175,7 +216,7 @@ p {
     perspective: 200px;
     position: absolute;
     top: 0;
-    left: 50%; 
+    left: 70%; 
     transform: translate(-50%, 0%);
 }
 

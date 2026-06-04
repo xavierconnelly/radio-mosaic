@@ -87,7 +87,7 @@ h1 {
     }
     .tbc {
         padding: 50px 10px 100px 10px;
-        display: block;
+        display: none;
     }
 }
 @media (max-width: 500px) {
