@@ -172,9 +172,9 @@
             <span class="country">{hovered.country}</span>
         </div>
     {/if}
-    <div class="tbc">
+    <!-- <div class="tbc">
         A Radio Mosaic é uma comunidade, um movimento, uma forma de reunir o passado, o futuro e o presente ao mesmo tempo. Embora vivamos em cantos fragmentados do globo, somos todos um só. É uma comunidade, um movimento, uma forma de reunir o passado, o futuro e o presente ao mesmo tempo. Embora vivamos em cantos fragmentados do globo, somos todos um só.
-    </div>
+    </div> -->
 </div>
 
 <style>
